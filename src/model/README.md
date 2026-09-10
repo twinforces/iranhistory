@@ -6,7 +6,7 @@ If you think we cheated a number, pick the accusation and open the file.
 
 | You think… | Open | Function |
 | --- | --- | --- |
-| Walk-away 1953 is presented as history | `cards.ts` `coup-1953` | Ending is tagged AL. Referee calls it a game rule. |
+| Walk-away 1953 is presented as history | `cards.ts` `coup-1953` | Ending is tagged AL. Referee calls it a game rule. 1953 titles split: Danger: Coup! in Tehran, To Coup or Not to Coup on Ike's desk. |
 | Soft Iran moves always kill you | `engine.ts` `iranLoseCheck` | Soft + IRGC under 35, or IRGC under 20 on any move. Same button, different grave. |
 | Bars are vibes | `engine.ts` `applyDeltas` | Integers, clamped 0–100. Delayed deltas land at the start of the next resolve. |
 | Historical choice is labelled on the button | `cards.ts` `historical` | Flag exists for tests and later tuning. ViewModel must not show it on the button. |

@@ -86,7 +86,7 @@ function nodeOf(state: GameState): GraphNode {
     cardId: card.id,
     year: card.year,
     yearLabel: card.yearLabel,
-    title: card.title,
+    title: (state.chair === "iran" ? card.titleIran : card.titleUs) ?? card.title,
     era: card.era,
     face,
     phase: state.phase,

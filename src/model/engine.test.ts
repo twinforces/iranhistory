@@ -70,6 +70,8 @@ describe("1953 US", () => {
     assert.equal(/game over|satrap|1979|may still come|stalin|turban|theocracy/i.test(blob), false);
     assert.match(card.situation ?? "", /would like to run a coup/);
     assert.match(card.referee.paragraphs.join(" "), /has not happened yet/);
+    assert.equal(card.titleUs, "To Coup or Not to Coup");
+    assert.equal(card.titleIran, "Danger: Coup!");
   });
 });
 
@@ -228,6 +230,11 @@ describe("Ike to Carter", () => {
     assert.equal(g.party, "D");
     g = applyChoice(g, "us-eagle-claw");
     assert.equal(g.phase, "playing");
+    assert.equal(g.cardId, "eagle-claw-1980");
+    g = applyChoice(g, "us-see-wreckage");
+    assert.equal(g.cardId, "you-him-fight-1980");
+    g = applyChoice(g, "us-let-saddam");
+    assert.equal(g.phase, "playing");
     assert.equal(g.cardId, "iran-iraq-1980");
     assert.equal(g.ending, null);
     g = applyChoice(g, "us-no-tilt");
@@ -290,9 +297,11 @@ describe("Ike to Carter", () => {
     assert.equal(resign.flags.iran_face, "banisadr");
     assert.equal(resign.ending, null);
     const seated = applyChoice(resign, "ir-sit-presidency");
-    assert.equal(seated.cardId, "iran-iraq-1980");
+    assert.equal(seated.cardId, "you-him-fight-1980");
     assert.equal(seated.phase, "playing");
-    const war = applyChoice(seated, "ir-guards-war");
+    const lined = applyChoice(seated, "ir-watch-lineup");
+    assert.equal(lined.cardId, "iran-iraq-1980");
+    const war = applyChoice(lined, "ir-guards-war");
     assert.equal(war.phase, "playing");
     assert.equal(war.cardId, "impeached-1981");
     assert.equal(war.flags.iran_face, "banisadr");
@@ -330,7 +339,9 @@ describe("Ike to Carter", () => {
     assert.equal(next.flags.iran_face, "banisadr");
     assert.equal(next.ending, null);
     const war = applyChoice(next, "ir-sit-presidency");
-    assert.equal(war.cardId, "iran-iraq-1980");
+    assert.equal(war.cardId, "you-him-fight-1980");
+    const invasion = applyChoice(war, "ir-watch-lineup");
+    assert.equal(invasion.cardId, "iran-iraq-1980");
   });
 
   it("historical choices do not carry graves; off-ramps do", () => {
@@ -426,6 +437,10 @@ describe("Ike to Carter", () => {
     assert.equal(cup.flags.shah_admitted, true);
     const impeach = newGame({ chair: "iran", party: "D", cardId: "impeached-1981" });
     assert.equal(impeach.flags.iran_face, "banisadr");
+    const lineup = newGame({ chair: "iran", party: "D", cardId: "you-him-fight-1980" });
+    assert.equal(lineup.flags.iran_face, "banisadr");
+    const claw = newGame({ chair: "us", party: "R", cardId: "eagle-claw-1980" });
+    assert.equal(claw.party, "D");
     const seated = newGame({ chair: "iran", party: "D", cardId: "seated-1981" });
     assert.equal(seated.flags.iran_face, "khamenei");
   });
@@ -558,14 +573,16 @@ describe("golden path", () => {
     const g = newGame({ chair: "iran", party: "D", cardId: "resigned-1979" });
     const next = applyChoice(g, "ir-refuse-letterhead");
     assert.equal(next.phase, "playing");
-    assert.equal(next.cardId, "iran-iraq-1980");
+    assert.equal(next.cardId, "you-him-fight-1980");
     assert.equal(next.ending, null);
     assert.equal(next.flags.letterhead_generic, true);
     assert.equal(next.lastResult?.title, "We congratulate you on your moral choice.");
     assert.match(next.lastResult?.body ?? "", /convenience store/);
     assert.match(next.lastResult?.body ?? "", /However, Iran continues on/);
-    const war = applyChoice(g, "ir-sit-presidency");
-    const artesh = applyChoice(war, "ir-artesh-war");
+    const sit = applyChoice(g, "ir-sit-presidency");
+    const lined = applyChoice(sit, "ir-watch-lineup");
+    assert.equal(lined.cardId, "iran-iraq-1980");
+    const artesh = applyChoice(lined, "ir-artesh-war");
     assert.equal(artesh.phase, "playing");
     assert.equal(artesh.cardId, "impeached-1981");
     assert.equal(artesh.lastResult?.title, "We congratulate you on your moral choice.");
@@ -786,5 +803,32 @@ describe("late rail", () => {
     const leave = applyChoice(g, "ir-leave-hamas");
     assert.equal(leave.cardId, "sit-pezeshkian-2024");
     assert.equal(leave.flags.hamas_cut_off, true);
+  });
+
+  it("authorizing the rescue explains Desert One; keep talking skips it; both chairs get you-and-him-fight before Saddam", () => {
+    const raid = applyChoice(newGame({ chair: "us", party: "R", cardId: "hostages-1979" }), "us-eagle-claw");
+    assert.equal(raid.cardId, "eagle-claw-1980");
+    const wreck = applyChoice(raid, "us-see-wreckage");
+    assert.equal(wreck.cardId, "you-him-fight-1980");
+    const war = applyChoice(wreck, "us-let-saddam");
+    assert.equal(war.cardId, "iran-iraq-1980");
+
+    const talk = applyChoice(newGame({ chair: "us", party: "R", cardId: "hostages-1979" }), "us-keep-talking");
+    assert.equal(talk.cardId, "you-him-fight-1980");
+
+    const claw = cardById("eagle-claw-1980");
+    assert.ok(claw);
+    assert.match(claw.title, /Desert One/);
+    assert.match(claw.situationUs ?? "", /Tabas/);
+    assert.match(claw.referee.paragraphs.join(" "), /Vance/);
+    assert.equal(claw.iranChoices.length, 0);
+
+    const lineup = cardById("you-him-fight-1980");
+    assert.ok(lineup);
+    assert.match(lineup.title, /you and him fight/i);
+    assert.match(lineup.situationUs ?? "", /Shia/);
+    assert.match(lineup.situationIran ?? "", /Saudis/);
+    assert.equal(lineup.usChoices.find((c) => c.id === "us-let-saddam")?.historical, true);
+    assert.equal(lineup.usChoices.find((c) => c.id === "us-warn-saddam")?.artisticLicense, "al-warn-saddam");
   });
 });

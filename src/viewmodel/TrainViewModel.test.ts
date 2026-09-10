@@ -97,6 +97,7 @@ describe("TrainViewModel", () => {
     assert.equal(ui.card.actionPrompt, "What do you want to do?");
     assert.equal(ui.canFurtherBack, true);
     assert.equal(ui.choices.length, 2);
+    assert.equal(ui.card.title, "To Coup or Not to Coup");
     for (const c of ui.choices) {
       assert.equal(/1979|satrap|game over|stalin|turban|theocracy/i.test(c.summary), false);
     }
@@ -104,6 +105,7 @@ describe("TrainViewModel", () => {
 
   it("1953 Iran advisors are the court and the street", () => {
     const ui = new TrainViewModel("iran", "D").getState();
+    assert.equal(ui.card.title, "Danger: Coup!");
     const ids = ui.card.briefings.map((b) => b.faction);
     assert.deepEqual(ids.sort(), ["leader", "street"]);
     assert.equal(
@@ -263,9 +265,33 @@ describe("TrainViewModel", () => {
     assert.equal(ids.includes("street"), false);
   });
 
+  it("keep talking skips Desert One and still meets the Saudis before Saddam", () => {
+    const vm = new TrainViewModel("us", "R", "hostages-1979");
+    vm.choose("us-keep-talking");
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "you-him-fight-1980");
+    assert.equal(ui.leader.id, "carter");
+    assert.match(ui.card.situation, /Shia/);
+    vm.choose("us-let-saddam");
+    assert.equal(vm.getState().card.id, "iran-iraq-1980");
+  });
+
   it("a rescue does not kill the chair; running again is history, not a grave", () => {
     const vm = new TrainViewModel("us", "R", "hostages-1979");
     vm.choose("us-eagle-claw");
+    const wreck = vm.getState();
+    assert.equal(wreck.phase, "playing");
+    assert.equal(wreck.card.id, "eagle-claw-1980");
+    assert.equal(wreck.leader.id, "carter");
+    assert.equal(wreck.endingTitle, null);
+    assert.match(wreck.card.title, /Desert One/);
+    assert.match(wreck.card.situation, /Tabas|Vance|eight/i);
+    vm.choose("us-see-wreckage");
+    const lineup = vm.getState();
+    assert.equal(lineup.card.id, "you-him-fight-1980");
+    assert.match(lineup.card.title, /you and him fight/i);
+    assert.match(lineup.card.situation, /Shia/);
+    vm.choose("us-let-saddam");
     const war = vm.getState();
     assert.equal(war.phase, "playing");
     assert.equal(war.card.id, "iran-iraq-1980");
@@ -439,7 +465,7 @@ describe("TrainViewModel", () => {
     vm.choose("ir-refuse-letterhead");
     const ui = vm.getState();
     assert.equal(ui.phase, "playing");
-    assert.equal(ui.card.id, "iran-iraq-1980");
+    assert.equal(ui.card.id, "you-him-fight-1980");
     assert.equal(ui.leader.id, "replacement");
     assert.equal(ui.leader.youAre, "You are the replacement");
     assert.equal(ui.leader.portrait, "/leaders/letterhead.jpg");
@@ -448,7 +474,7 @@ describe("TrainViewModel", () => {
     assert.match(ui.lastResult?.body ?? "", /However, Iran continues on/);
     vm.dismissResult();
     assert.equal(vm.getState().lastResult, null);
-    assert.equal(vm.getState().card.id, "iran-iraq-1980");
+    assert.equal(vm.getState().card.id, "you-him-fight-1980");
   });
 
   it("Hail Mary AL is still findable after the card advances to Reagan", () => {

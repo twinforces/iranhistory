@@ -1,5 +1,11 @@
 # RECENTGOALS
 
+## Danger: Coup, Desert One, Let's you and him fight, 2026-09-10
+
+What: Chair-specific 1953 titles. Eagle Claw result card after the rescue. Saudi you-and-him-fight before Saddam invades.
+
+Why: One cable for two desks. The raid had no wreck. The invasion had no incentive card.
+
 ## Headlines, JCPOA, Abraham Accords, 2026-09-10
 
 What: Titles name the event. JCPOA is the Joint Comprehensive Plan of Action, with missiles, reactors, enrichment, Congress, and pallets. Abraham Accords. Biden's public/private Saudi talks gate 7 October.

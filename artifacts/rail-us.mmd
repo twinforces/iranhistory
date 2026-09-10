@@ -4,7 +4,7 @@ flowchart TB
   classDef hold fill:#1a2e22,stroke:#5d9b6a,color:#f3ead8
   classDef collapse fill:#2a2433,stroke:#8a7bb8,color:#f3ead8
   classDef fork fill:#23333a,stroke:#6ab4c8,color:#f3ead8
-  us_coup_1953_us_playing_live_us_back_shah_us_walk["1953 Ajax is still a cable / ike"]:::fork
+  us_coup_1953_us_playing_live_us_back_shah_us_walk["1953 To Coup or Not to Coup / ike"]:::fork
   us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich["1957 Atoms for Peace / ike"]:::collapse
   us_coup_1953_us_ended_satrap_1953_{{"1953 GRAVE It was not that simple"}}:::grave
   us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks["1963 White Revolution / kennedy"]:::collapse
@@ -14,7 +14,9 @@ flowchart TB
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline["1975 Ford keeps selling American weapons / ford"]:::collapse
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out["1978–1979 The Shah's cancer, the square / carter"]:::collapse
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out["March 1979 The Imam repeals Family Protection / carter"]:::collapse
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 Students occupy the US embassy / carter"]:::collapse
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 Students occupy the US embassy / carter"]:::fork
+  us_eagle_claw_1980_us_playing_live_us_see_wreckage["April 1980 Eagle Claw crashes at Desert One / carter"]:::play
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam["Summer 1980 Let's you and him fight / carter"]:::collapse
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq["September 1980 Iraq invades Iran / carter"]:::collapse
   us_election_1980_us_playing_live_us_hail_mary_us_run_again["November 1980 Carter runs for re-election / carter"]:::collapse
   us_inaugurated_1981_us_playing_live_us_sit_reagan["January 1981 Reagan takes the oath / reagan"]:::play
@@ -66,8 +68,11 @@ flowchart TB
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -.->|"AL Keep him out"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"H Stay out"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_eagle_claw_1980_us_playing_live_us_see_wreckage
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
+  us_eagle_claw_1980_us_playing_live_us_see_wreckage -->|"H The hostages are still inside"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"H Stay out of the way"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -.->|"AL Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -.->|"AL Tilt to Iraq"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan

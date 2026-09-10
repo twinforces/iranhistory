@@ -150,6 +150,9 @@ export interface Card {
   readonly year: number;
   readonly yearLabel: string;
   readonly title: string;
+  /** Chair-specific headline. Play uses this over title when present. */
+  readonly titleUs?: string;
+  readonly titleIran?: string;
   readonly era: Era;
   readonly status: CardStatus;
   readonly branchPoint?: boolean;

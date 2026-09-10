@@ -4,7 +4,7 @@ flowchart TB
   classDef hold fill:#1a2e22,stroke:#5d9b6a,color:#f3ead8
   classDef collapse fill:#2a2433,stroke:#8a7bb8,color:#f3ead8
   classDef fork fill:#23333a,stroke:#6ab4c8,color:#f3ead8
-  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize["1953 Ajax is still a cable / mossadegh"]:::fork
+  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize["1953 Danger: Coup! / mossadegh"]:::fork
   iran_deposed_1953_shah_playing_live_ir_sit_throne["1953 You have been deposed / shah"]:::play
   iran_coup_1953_mossadegh_ended_mossadegh_street_{{"1953 GRAVE The street heard the lesson"}}:::grave
   iran_coup_1953_mossadegh_ended_mossadegh_falls_{{"1953 GRAVE It was not that simple"}}:::grave
@@ -20,6 +20,7 @@ flowchart TB
   iran_revolution_1979_shah_ended_shah_holds_(["1978–1979 The king still sits"]):::hold
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students["November 1979 Students occupy the US embassy / bazargan"]:::collapse
   iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency["November 1979 Bazargan resigns / banisadr"]:::collapse
+  iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup["Summer 1980 Let's you and him fight / banisadr"]:::play
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war["September 1980 Iraq invades Iran / banisadr"]:::collapse
   iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles["June 1981 The Majlis impeaches Banisadr / banisadr"]:::collapse
   iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei["October 1981 Khamenei takes the presidency / khamenei"]:::collapse
@@ -80,8 +81,9 @@ flowchart TB
   iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl -->|"H Let the Imam repeal it"| iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -->|"H Demand they leave =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -.->|"AL Let the students hold it =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
-  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
-  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup
+  iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup -->|"H Watch the neighborhood line up"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -->|"H Let the Guards have the war"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -.->|"AL Keep the regular army in command"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
   iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles -->|"H Leave the chair =  khamenei"| iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei

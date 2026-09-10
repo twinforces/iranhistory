@@ -9,8 +9,8 @@ over and over. The unique graph is small.
 
 | Chair | Unique nodes | Edges | Terminal path counts |
 | --- | --- | --- | --- |
-| US | 45 | 81 | 171798691841 |
-| Iran | 53 | 86 | 16131314706 |
+| US | 47 | 84 | 343597383681 |
+| Iran | 54 | 87 | 16131314706 |
 
 Collapses: 68 live (playing to the same next card).
 Cup continues to the robe. 2026 is history arriving.
@@ -47,7 +47,9 @@ flowchart TB
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline["1975 ford"]:::collapse
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out["1978–1979 carter"]:::collapse
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out["March 1979 carter"]:::collapse
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 carter"]:::collapse
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 carter"]:::fork
+  us_eagle_claw_1980_us_playing_live_us_see_wreckage["April 1980 carter"]:::play
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam["Summer 1980 carter"]:::collapse
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq["September 1980 carter"]:::collapse
   us_election_1980_us_playing_live_us_hail_mary_us_run_again["November 1980 carter"]:::collapse
   us_inaugurated_1981_us_playing_live_us_sit_reagan["January 1981 reagan"]:::play
@@ -99,8 +101,11 @@ flowchart TB
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -.->|"AL Keep him out"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"H Stay out"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_eagle_claw_1980_us_playing_live_us_see_wreckage
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
+  us_eagle_claw_1980_us_playing_live_us_see_wreckage -->|"H The hostages are still inside"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"H Stay out of the way"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -.->|"AL Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -.->|"AL Tilt to Iraq"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
@@ -193,6 +198,7 @@ flowchart TB
   iran_revolution_1979_shah_ended_shah_holds_(["1978–1979 shah_holds"]):::hold
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students["November 1979 bazargan"]:::collapse
   iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency["November 1979 banisadr"]:::collapse
+  iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup["Summer 1980 banisadr"]:::play
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war["September 1980 banisadr"]:::collapse
   iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles["June 1981 banisadr"]:::collapse
   iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei["October 1981 khamenei"]:::collapse
@@ -253,8 +259,9 @@ flowchart TB
   iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl -->|"H Let the Imam repeal it"| iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -->|"H Demand they leave =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -.->|"AL Let the students hold it =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
-  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
-  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup
+  iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup -->|"H Watch the neighborhood line up"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -->|"H Let the Guards have the war"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -.->|"AL Keep the regular army in command"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
   iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles -->|"H Leave the chair =  khamenei"| iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei
@@ -327,7 +334,7 @@ flowchart TB
   classDef hold fill:#1a2e22,stroke:#5d9b6a,color:#f3ead8
   classDef collapse fill:#2a2433,stroke:#8a7bb8,color:#f3ead8
   classDef fork fill:#23333a,stroke:#6ab4c8,color:#f3ead8
-  us_coup_1953_us_playing_live_us_back_shah_us_walk["1953 Ajax is still a cable / ike"]:::fork
+  us_coup_1953_us_playing_live_us_back_shah_us_walk["1953 To Coup or Not to Coup / ike"]:::fork
   us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich["1957 Atoms for Peace / ike"]:::collapse
   us_coup_1953_us_ended_satrap_1953_{{"1953 GRAVE It was not that simple"}}:::grave
   us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks["1963 White Revolution / kennedy"]:::collapse
@@ -337,7 +344,9 @@ flowchart TB
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline["1975 Ford keeps selling American weapons / ford"]:::collapse
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out["1978–1979 The Shah's cancer, the square / carter"]:::collapse
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out["March 1979 The Imam repeals Family Protection / carter"]:::collapse
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 Students occupy the US embassy / carter"]:::collapse
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 Students occupy the US embassy / carter"]:::fork
+  us_eagle_claw_1980_us_playing_live_us_see_wreckage["April 1980 Eagle Claw crashes at Desert One / carter"]:::play
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam["Summer 1980 Let's you and him fight / carter"]:::collapse
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq["September 1980 Iraq invades Iran / carter"]:::collapse
   us_election_1980_us_playing_live_us_hail_mary_us_run_again["November 1980 Carter runs for re-election / carter"]:::collapse
   us_inaugurated_1981_us_playing_live_us_sit_reagan["January 1981 Reagan takes the oath / reagan"]:::play
@@ -389,8 +398,11 @@ flowchart TB
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -.->|"AL Keep him out"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"H Stay out"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
-  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_eagle_claw_1980_us_playing_live_us_see_wreckage
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
+  us_eagle_claw_1980_us_playing_live_us_see_wreckage -->|"H The hostages are still inside"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"H Stay out of the way"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -.->|"AL Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -.->|"AL Tilt to Iraq"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
@@ -469,7 +481,7 @@ flowchart TB
   classDef hold fill:#1a2e22,stroke:#5d9b6a,color:#f3ead8
   classDef collapse fill:#2a2433,stroke:#8a7bb8,color:#f3ead8
   classDef fork fill:#23333a,stroke:#6ab4c8,color:#f3ead8
-  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize["1953 Ajax is still a cable / mossadegh"]:::fork
+  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize["1953 Danger: Coup! / mossadegh"]:::fork
   iran_deposed_1953_shah_playing_live_ir_sit_throne["1953 You have been deposed / shah"]:::play
   iran_coup_1953_mossadegh_ended_mossadegh_street_{{"1953 GRAVE The street heard the lesson"}}:::grave
   iran_coup_1953_mossadegh_ended_mossadegh_falls_{{"1953 GRAVE It was not that simple"}}:::grave
@@ -485,6 +497,7 @@ flowchart TB
   iran_revolution_1979_shah_ended_shah_holds_(["1978–1979 The king still sits"]):::hold
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students["November 1979 Students occupy the US embassy / bazargan"]:::collapse
   iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency["November 1979 Bazargan resigns / banisadr"]:::collapse
+  iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup["Summer 1980 Let's you and him fight / banisadr"]:::play
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war["September 1980 Iraq invades Iran / banisadr"]:::collapse
   iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles["June 1981 The Majlis impeaches Banisadr / banisadr"]:::collapse
   iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei["October 1981 Khamenei takes the presidency / khamenei"]:::collapse
@@ -545,8 +558,9 @@ flowchart TB
   iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl -->|"H Let the Imam repeal it"| iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -->|"H Demand they leave =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
   iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -.->|"AL Let the students hold it =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
-  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
-  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup
+  iran_you_him_fight_1980_banisadr_playing_live_ir_watch_lineup -->|"H Watch the neighborhood line up"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -->|"H Let the Guards have the war"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
   iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -.->|"AL Keep the regular army in command"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
   iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles -->|"H Leave the chair =  khamenei"| iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei
@@ -621,7 +635,7 @@ flowchart TB
 | us | 1975 | ford | Ford keeps selling American weapons | Keep selling / Slow the pipeline | The Shah's cancer, the square (carter) |
 | us | 1978–1979 | carter | The Shah's cancer, the square | Let him in for treatment / Keep him out | The Imam repeals Family Protection (carter) |
 | us | March 1979 | carter | The Imam repeals Family Protection | Issue a statement / Stay out | Students occupy the US embassy (carter) |
-| us | November 1979 | carter | Students occupy the US embassy | Authorize a rescue / Keep talking | Iraq invades Iran (carter) |
+| us | Summer 1980 | carter | Let's you and him fight | Stay out of the way / Tell Saddam no | Iraq invades Iran (carter) |
 | us | September 1980 | carter | Iraq invades Iran | Tilt to Iraq / Stay out of the war | Carter runs for re-election (carter) |
 | us | November 1980 | carter | Carter runs for re-election | Run again / Throw a Hail Mary | Reagan takes the oath (reagan) |
 | us | 1982 | reagan | Iran is winning. Reagan tilts to Iraq | Share the intel with Baghdad / Stay out of the war | Hezbollah bombs the Marines in Beirut (reagan) |
@@ -657,7 +671,7 @@ flowchart TB
 | iran | 1978–1979 | shah | The Shah's cancer, the square | Fire on the crowd / Leave | The Imam repeals Family Protection (bazargan) |
 | iran | March 1979 | bazargan | The Imam repeals Family Protection | Keep the Family Protection Law / Let the Imam repeal it | Students occupy the US embassy (bazargan) |
 | iran | November 1979 | bazargan | Students occupy the US embassy | Demand they leave / Let the students hold it | Bazargan resigns (banisadr) |
-| iran | November 1979 | banisadr | Bazargan resigns | Sit the presidency / Refuse the letterhead | Iraq invades Iran (banisadr) |
+| iran | November 1979 | banisadr | Bazargan resigns | Sit the presidency / Refuse the letterhead | Let's you and him fight (banisadr) |
 | iran | September 1980 | banisadr | Iraq invades Iran | Let the Guards have the war / Keep the regular army in command | The Majlis impeaches Banisadr (banisadr) |
 | iran | June 1981 | banisadr | The Majlis impeaches Banisadr | Leave the chair / Defy the Majlis | Khamenei takes the presidency (khamenei) |
 | iran | October 1981 | khamenei | Khamenei takes the presidency | Sit the presidency / Refuse the letterhead | Hezbollah bombs the Marines in Beirut (khamenei) |
@@ -691,10 +705,11 @@ flowchart TB
 
 | Chair | Year | Face | Card | Destinations |
 | --- | --- | --- | --- | --- |
-| us | 1953 | ike | Ajax is still a cable | atoms-1957 ike playing, coup-1953 ike ended/satrap_1953 |
+| us | 1953 | ike | To Coup or Not to Coup | atoms-1957 ike playing, coup-1953 ike ended/satrap_1953 |
+| us | November 1979 | carter | Students occupy the US embassy | eagle-claw-1980 carter playing, you-him-fight-1980 carter playing |
 | us | 2023 | biden | Saudi Arabia talks to Israel | oct7-2023 biden playing, sit-pezeshkian-2024 biden playing |
 | us | 2026 | trump | The campaign kills Ali Khamenei | the-leader-2026 trump ended/none, the-leader-2026 trump ended/the_leader |
-| iran | 1953 | mossadegh | Ajax is still a cable | coup-1953 mossadegh ended/mossadegh_falls, coup-1953 mossadegh ended/mossadegh_street, deposed-1953 shah playing |
+| iran | 1953 | mossadegh | Danger: Coup! | coup-1953 mossadegh ended/mossadegh_falls, coup-1953 mossadegh ended/mossadegh_street, deposed-1953 shah playing |
 | iran | 1975 | shah | Ford keeps selling American weapons | revolution-1979 shah playing, revolution-1979 shah playing |
 | iran | 1978–1979 | shah | The Shah's cancer, the square | revolution-1979 shah ended/shah_holds, veil-1979 bazargan playing |
 | iran | 1982–1983 | khamenei | Hezbollah bombs the Marines in Beirut | iran-contra-1985 khamenei playing, lebanon-1983 khamenei ended/face_no_guns |
@@ -726,7 +741,7 @@ forks yet. Flags that get set and then ignored are called out in the copy.
 | weapons-1972 | iran-contra-1985 | Both catalog buttons land on Ford's 1975 pipeline. Contra still appears. The crates are a later collapse too. | If they never bought the American catalog, Reagan is not selling spare parts for a fleet that is not there. Skip the channel, or change what is in the crate. |
 | weapons-1972 | revolution-1979 | Spend the oil on the villages sets hinterland_spent. 1979 Stay is a real hold. Leave still seats Bazargan. White Revolution still only moves liberals. | Shipped. Hinterland is the fork, not the feminists. Catalog still does not gate Contra. |
 | revolution-1979 | hostages-1979 | Let him in and keep him out both ride to the veil, then the embassy. The shah_admitted flag is set and then ignored for routing. | Historically the seizure follows the admission. Keeping him out might skip the embassy card, or change who takes it. |
-| hostages-1979 | iran-iraq-1980 | Authorize a rescue and keep talking both land on Saddam. eagle_claw is another dead flag. | A burned wreck in Tabas is not a different 1980s. Leave it as flavor unless a later card should read the raid. |
+| hostages-1979 | iran-iraq-1980 | Authorize a rescue lands on Desert One, then you-and-him-fight. Keep talking skips the wreck and lands on you-and-him-fight. Both still reach Saddam. eagle_claw is flavor plus a tutorial card. | A burned wreck in Tabas is not a different 1980s. The result card explains what happened. The invasion still comes. |
 | coup-1953 | revolution-1979 | Hire the British engineers is the street grave. Moscow is Stalin in a turban. There is no Mossadegh costume through Nixon. | Pruned. He is doomed even if Ike leaves him. The keep-the-chair path was a liberal fantasy. |
 | lebanon-1983 | iran-contra-1985 | Bring them home and stay-and-hit both land on the channel. Iran's keep-the-war-at-home is a grave, not a skip. | No Bekaa, maybe no later hostages, maybe no TOW trade. Or the war still eats spare parts without Beirut. |
 

@@ -58,7 +58,9 @@ const coup1953: Card = {
   id: "coup-1953",
   year: 1953,
   yearLabel: "1953",
-  title: "Ajax is still a cable",
+  title: "To Coup or Not to Coup",
+  titleUs: "To Coup or Not to Coup",
+  titleIran: "Danger: Coup!",
   era: "prologue",
   status: "playable",
   branchPoint: true,
@@ -906,8 +908,8 @@ const hostages1979: Card = {
   referee: {
     tags: ["LT", "IT"],
     paragraphs: [
-      "LT: 4 November 1979, students seize the US embassy. 52 Americans, 444 days. Bazargan resigns 6 November. Eagle Claw fails April 1980 in the Tabas desert.",
-      "IT: The smiling face asked. The Imam did not send them home. The raid photographs as strength until the wreckage photographs as the campaign.",
+      "LT: 4 November 1979, students seize the US embassy. 52 Americans will be held 444 days. Bazargan resigns 6 November. A raid is in the drawer. Talking is in the drawer.",
+      "IT: The smiling face asked. The Imam did not send them home. The raid photographs as strength until it does not. Talking photographs as patience until the other paper has a clip.",
     ],
   },
   artisticLicense: [
@@ -981,6 +983,7 @@ const hostages1979: Card = {
       historical: true,
       flags: { eagle_claw: true },
       deltas: { my_party: -8, opposing_party: 10, media: 14, cia: -6, europeans: -4, saudis: 4 },
+      nextCard: "eagle-claw-1980",
     },
     {
       id: "us-keep-talking",
@@ -990,6 +993,7 @@ const hostages1979: Card = {
       artisticLicense: "al-skip-raid",
       flags: { eagle_claw: false },
       deltas: { my_party: -10, opposing_party: 8, media: -6, cia: 4, europeans: 4, saudis: -6 },
+      nextCard: "you-him-fight-1980",
     },
   ],
   iranChoices: [
@@ -1020,7 +1024,7 @@ const hostages1979: Card = {
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
-  next: "iran-iraq-1980",
+  next: "you-him-fight-1980",
 };
 const resigned1979: Card = {
   id: "resigned-1979",
@@ -1075,7 +1079,7 @@ const resigned1979: Card = {
       kind: "hard",
       historical: true,
       face: "banisadr",
-      nextCard: "iran-iraq-1980",
+      nextCard: "you-him-fight-1980",
       deltas: { leader: 4, irgc: 4, street: -2 },
     },
     {
@@ -1085,7 +1089,7 @@ const resigned1979: Card = {
       kind: "hard",
       face: "banisadr",
       artisticLicense: "al-refuse-letterhead",
-      nextCard: "iran-iraq-1980",
+      nextCard: "you-him-fight-1980",
       flags: { iran_face: "banisadr", letterhead_generic: true },
       deltas: { leader: -4, irgc: 6, street: 2 },
       ...moralEpilogue(
@@ -1094,6 +1098,190 @@ const resigned1979: Card = {
     },
   ],
   sources: ["nara-hostages", "cfr-timeline"],
+  visibleFactions: REVOLUTION,
+  clocksOn: false,
+  sloganVolume: 2,
+  next: "you-him-fight-1980",
+};
+
+const eagleClaw1980: Card = {
+  id: "eagle-claw-1980",
+  year: 1980,
+  yearLabel: "April 1980",
+  title: "Eagle Claw crashes at Desert One",
+  era: "revolution",
+  status: "playable",
+  situationUs:
+    "You authorized the raid. Eight RH-53D helicopters off the USS Nimitz. A desert strip code-named Desert One, near Tabas.\n\nA sandstorm. Hydraulic failures. A helicopter hits a C-130. Eight Americans are dead. The wreckage is still in Iran. Cyrus Vance resigns as Secretary of State. The hostages are still inside. Saddam is watching.",
+  actionPrompt: "What do you want to do?",
+  referee: {
+    tags: ["LT", "IT"],
+    paragraphs: [
+      "LT: Operation Eagle Claw, 24-25 April 1980. Helicopters launch from the USS Nimitz toward Desert One near Tabas. A haboob, mechanical aborts, then a collision on the ground. Eight US dead. Classified documents and wreckage are left behind. Vance resigns. The 52 remaining hostages are scattered to new sites. They are not freed.",
+      "IT: The raid photographed as strength until the wreckage photographed as the campaign. A superpower that cannot land a helicopter in a desert is a sermon. Saddam is taking notes.",
+    ],
+  },
+  briefings: [
+    {
+      faction: "cia",
+      audience: "us",
+      rant: "The raid is wreckage. The hostages are scattered. We do not have a second night this week. The clip is already developing.",
+    },
+    {
+      faction: "my_party",
+      audience: "us",
+      rant: "Human rights was the campaign. This is the clip. Vance quit. The other paper has the film.",
+    },
+    {
+      faction: "opposing_party",
+      audience: "us",
+      rant: "Reckless. We had that sentence ready. We will use it until November.",
+    },
+    {
+      faction: "media",
+      audience: "us",
+      rant: "Nightline can open on a burned helicopter now. Process is dead. Hostages are not.",
+    },
+    {
+      faction: "europeans",
+      audience: "us",
+      rant: "We would like our own people out. We would like the oil to move. This is still a US-Iran problem.",
+    },
+    {
+      faction: "saudis",
+      audience: "us",
+      rant: "Do not look weaker. Do not start a war that lights us. There is a man in Baghdad who wants to take care of the Shia problem.",
+    },
+  ],
+  usChoices: [
+    {
+      id: "us-see-wreckage",
+      label: "The hostages are still inside",
+      summary: "Eight dead. Vance resigns. The clip is the campaign.",
+      kind: "walk",
+      historical: true,
+      deltas: { opposing_party: 4, media: 6, my_party: -4, cia: -4 },
+      nextCard: "you-him-fight-1980",
+    },
+  ],
+  iranChoices: [],
+  sources: ["frus-eagle-claw", "nara-hostages"],
+  visibleFactions: REVOLUTION,
+  clocksOn: false,
+  sloganVolume: 2,
+  next: "you-him-fight-1980",
+};
+
+const youHimFight1980: Card = {
+  id: "you-him-fight-1980",
+  year: 1980,
+  yearLabel: "Summer 1980",
+  title: "Let's you and him fight",
+  era: "war",
+  status: "playable",
+  situationUs:
+    "The Saudis would like Saddam to take care of the Shia problem. Europe would like neither side to win. A revolutionary republic next door is the nightmare. Baghdad is asking who will stop him.\n\nThe hostages are still inside. A raid may already be wreckage in the sand. Officially you are still the human-rights president. Officially you are neutral.",
+  situationIran:
+    "The neighborhood is lining up. The Saudis want Saddam to smash the Shia republic. Washington and Europe will not stop him. They would like you and him to fight.\n\nYou are the letterhead. The guns are not yours. The invasion is not a question of if.",
+  actionPrompt: "What do you want to do?",
+  referee: {
+    tags: ["LT", "IT", "AL"],
+    paragraphs: [
+      "LT: Gulf monarchies, led by Saudi Arabia, encourage Saddam and later write the checks. Carter's official line is neutrality because of the hostages. Europe will sell to both. Saddam invades on 22 September 1980.",
+      "IT: Let's you and him fight. A Shia republic that chants Death to America is a sermon Riyadh does not want preached to its own oil workers. Washington's incentive is two enemies bleeding each other. A 1992 British investigation put the European objective in one line: sustain the war so neither side wins.",
+      "Carter does not green-light the way a later ambassador will be accused of green-lighting Kuwait. He also does not stop it. Staying out of the way is the file.",
+    ],
+  },
+  artisticLicense: [
+    {
+      id: "al-warn-saddam",
+      title: "Tell Saddam no",
+      body: "Historically Carter does not stop the invasion. A warning from a president who cannot land a helicopter does not un-write the checks from Riyadh. Saddam still comes. Stamp it.",
+    },
+  ],
+  briefings: [
+    {
+      faction: "cia",
+      audience: "us",
+      rant: "Let them bleed. Do not put your fingerprints on an invasion while Americans are in a basement. The Saudis will write the check.",
+    },
+    {
+      faction: "my_party",
+      audience: "us",
+      rant: "The hostages are the exam. Saddam is a later file. Do not start a war that photographs as a rescue.",
+    },
+    {
+      faction: "opposing_party",
+      audience: "us",
+      rant: "If he green-lights a butcher we will run that clip. If he stays out we will call it weakness. We have both sentences.",
+    },
+    {
+      faction: "media",
+      audience: "us",
+      rant: "Hostages open the show. A quiet nod to Baghdad is a process story. Process dies.",
+    },
+    {
+      faction: "europeans",
+      audience: "us",
+      rant: "Sustain the war so neither side wins. Sell to both if you can. We would like the oil to move.",
+    },
+    {
+      faction: "saudis",
+      audience: "us",
+      rant: "Write the check to Baghdad. Do not put Americans on the front. A cleric winning is the nightmare. Take care of the Shia problem. We will not go first.",
+    },
+    {
+      faction: "irgc",
+      audience: "iran",
+      face: "banisadr",
+      rant: "Saddam is coming. The Shah's leftover cannot be trusted. Give us the war when it starts. The Imam's line is the line.",
+    },
+    {
+      faction: "leader",
+      audience: "iran",
+      face: "banisadr",
+      rant: "The war will be a blessing. It forges the parallel army. You stamp. We bury.",
+    },
+    {
+      faction: "street",
+      audience: "iran",
+      face: "banisadr",
+      rant: "The boys will be drafted. Groceries do not care whose barracks has the war. The Saudis want us dead. That is not a rumor.",
+    },
+  ],
+  usChoices: [
+    {
+      id: "us-let-saddam",
+      label: "Stay out of the way",
+      summary: "Let Saddam and the Saudis handle the Shia problem.",
+      kind: "walk",
+      historical: true,
+      deltas: { saudis: 8, europeans: 4, cia: 4, my_party: -2 },
+      nextCard: "iran-iraq-1980",
+    },
+    {
+      id: "us-warn-saddam",
+      label: "Tell Saddam no",
+      summary: "A human-rights president does not green-light an invasion.",
+      kind: "soft",
+      artisticLicense: "al-warn-saddam",
+      deltas: { saudis: -10, europeans: -4, media: 6, my_party: 4, cia: -6 },
+      nextCard: "iran-iraq-1980",
+    },
+  ],
+  iranChoices: [
+    {
+      id: "ir-watch-lineup",
+      label: "Watch the neighborhood line up",
+      summary: "The Saudis want Saddam to smash the republic. You cannot stop him.",
+      kind: "walk",
+      historical: true,
+      face: "banisadr",
+      deltas: { irgc: 6, leader: 4, street: -4, saudis: -8 },
+      nextCard: "iran-iraq-1980",
+    },
+  ],
+  sources: ["wiki-iran-iraq-aid", "us-iraq-tilt", "cfr-timeline"],
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
@@ -2246,6 +2434,8 @@ const RAIL: readonly Card[] = [
   veil1979,
   hostages1979,
   resigned1979,
+  eagleClaw1980,
+  youHimFight1980,
   iranIraq1980,
   election1980,
   inaugurated1981,

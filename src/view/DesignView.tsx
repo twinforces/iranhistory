@@ -17,7 +17,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "What actually forks?",
     freeze:
-      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold.",
+      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, and Contra crates only move meters. Eagle Claw now has a Desert One result card; keep talking skips it; both still meet the Saudis lining Saddam up before the invasion. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold.",
   },
   {
     q: "Mossadegh dead end?",
@@ -27,7 +27,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "How much 1953-78?",
     freeze:
-      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), the SOFA (Johnson: Vietnam is why you barely looked, and why Khomeini has a name), Sit Nixon, Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), the pipeline (Ford), Carter (stay out of the war, hostages are the exam), Reagan (1982 tilt, then Beirut). Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Quiet Next cards are tutorial stops. Do not skip years.",
+      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), the SOFA (Johnson: Vietnam is why you barely looked, and why Khomeini has a name), Sit Nixon, Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), the pipeline (Ford), Carter (stay out of the war, hostages are the exam, Desert One if you authorize the raid, then the Saudis lining Saddam up), Reagan (1982 tilt, then Beirut). 1953 titles split by chair: Danger: Coup! in Tehran, To Coup or Not to Coup on Ike's desk. Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Quiet Next cards are tutorial stops. Do not skip years.",
   },
   {
     q: "Cartoons per rant",

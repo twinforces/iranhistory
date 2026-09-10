@@ -157,7 +157,7 @@ function presentCard(card: Card, chair: Chair, party: Party, face: IranFace): Pr
     id: card.id,
     year: card.year,
     yearLabel: card.yearLabel,
-    title: card.title,
+    title: (chair === "iran" ? card.titleIran : card.titleUs) ?? card.title,
     era: card.era,
     status: card.status,
     situation,

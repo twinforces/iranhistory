@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T22:46:25.556Z",
+  "generated": "2026-09-10T23:09:03.095Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -9,7 +9,7 @@
           "cardId": "coup-1953",
           "year": 1953,
           "yearLabel": "1953",
-          "title": "Ajax is still a cable",
+          "title": "To Coup or Not to Coup",
           "era": "prologue",
           "face": "ike",
           "phase": "playing",
@@ -35,7 +35,7 @@
           "cardId": "coup-1953",
           "year": 1953,
           "yearLabel": "1953",
-          "title": "Ajax is still a cable",
+          "title": "To Coup or Not to Coup",
           "era": "prologue",
           "face": "ike",
           "phase": "ended",
@@ -141,6 +141,32 @@
           "yearLabel": "November 1979",
           "title": "Students occupy the US embassy",
           "era": "revolution",
+          "face": "carter",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:eagle-claw-1980:us:playing:live:us-see-wreckage",
+          "chair": "us",
+          "cardId": "eagle-claw-1980",
+          "year": 1980,
+          "yearLabel": "April 1980",
+          "title": "Eagle Claw crashes at Desert One",
+          "era": "revolution",
+          "face": "carter",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:you-him-fight-1980:us:playing:live:us-let-saddam,us-warn-saddam",
+          "chair": "us",
+          "cardId": "you-him-fight-1980",
+          "year": 1980,
+          "yearLabel": "Summer 1980",
+          "title": "Let's you and him fight",
+          "era": "war",
           "face": "carter",
           "phase": "playing",
           "endingId": null,
@@ -762,7 +788,7 @@
         },
         {
           "from": "us:hostages-1979:us:playing:live:us-eagle-claw,us-keep-talking",
-          "to": "us:iran-iraq-1980:us:playing:live:us-no-tilt,us-tilt-iraq",
+          "to": "us:eagle-claw-1980:us:playing:live:us-see-wreckage",
           "choiceId": "us-eagle-claw",
           "label": "Authorize a rescue",
           "historical": true,
@@ -772,11 +798,41 @@
         },
         {
           "from": "us:hostages-1979:us:playing:live:us-eagle-claw,us-keep-talking",
-          "to": "us:iran-iraq-1980:us:playing:live:us-no-tilt,us-tilt-iraq",
+          "to": "us:you-him-fight-1980:us:playing:live:us-let-saddam,us-warn-saddam",
           "choiceId": "us-keep-talking",
           "label": "Keep talking",
           "historical": false,
           "artisticLicense": "al-skip-raid",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:eagle-claw-1980:us:playing:live:us-see-wreckage",
+          "to": "us:you-him-fight-1980:us:playing:live:us-let-saddam,us-warn-saddam",
+          "choiceId": "us-see-wreckage",
+          "label": "The hostages are still inside",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:you-him-fight-1980:us:playing:live:us-let-saddam,us-warn-saddam",
+          "to": "us:iran-iraq-1980:us:playing:live:us-no-tilt,us-tilt-iraq",
+          "choiceId": "us-let-saddam",
+          "label": "Stay out of the way",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:you-him-fight-1980:us:playing:live:us-let-saddam,us-warn-saddam",
+          "to": "us:iran-iraq-1980:us:playing:live:us-no-tilt,us-tilt-iraq",
+          "choiceId": "us-warn-saddam",
+          "label": "Tell Saddam no",
+          "historical": false,
+          "artisticLicense": "al-warn-saddam",
           "ending": null,
           "faceChange": null
         },
@@ -1401,7 +1457,7 @@
           "faceChange": null
         }
       ],
-      "terminals": 171798691841
+      "terminals": 343597383681
     },
     "iran": {
       "nodes": [
@@ -1411,7 +1467,7 @@
           "cardId": "coup-1953",
           "year": 1953,
           "yearLabel": "1953",
-          "title": "Ajax is still a cable",
+          "title": "Danger: Coup!",
           "era": "prologue",
           "face": "mossadegh",
           "phase": "playing",
@@ -1437,7 +1493,7 @@
           "cardId": "coup-1953",
           "year": 1953,
           "yearLabel": "1953",
-          "title": "Ajax is still a cable",
+          "title": "Danger: Coup!",
           "era": "prologue",
           "face": "mossadegh",
           "phase": "ended",
@@ -1450,7 +1506,7 @@
           "cardId": "coup-1953",
           "year": 1953,
           "yearLabel": "1953",
-          "title": "Ajax is still a cable",
+          "title": "Danger: Coup!",
           "era": "prologue",
           "face": "mossadegh",
           "phase": "ended",
@@ -1608,6 +1664,19 @@
           "yearLabel": "November 1979",
           "title": "Bazargan resigns",
           "era": "revolution",
+          "face": "banisadr",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:you-him-fight-1980:banisadr:playing:live:ir-watch-lineup",
+          "chair": "iran",
+          "cardId": "you-him-fight-1980",
+          "year": 1980,
+          "yearLabel": "Summer 1980",
+          "title": "Let's you and him fight",
+          "era": "war",
           "face": "banisadr",
           "phase": "playing",
           "endingId": null,
@@ -2328,7 +2397,7 @@
         },
         {
           "from": "iran:resigned-1979:banisadr:playing:live:ir-refuse-letterhead,ir-sit-presidency",
-          "to": "iran:iran-iraq-1980:banisadr:playing:live:ir-artesh-war,ir-guards-war",
+          "to": "iran:you-him-fight-1980:banisadr:playing:live:ir-watch-lineup",
           "choiceId": "ir-sit-presidency",
           "label": "Sit the presidency",
           "historical": true,
@@ -2338,11 +2407,21 @@
         },
         {
           "from": "iran:resigned-1979:banisadr:playing:live:ir-refuse-letterhead,ir-sit-presidency",
-          "to": "iran:iran-iraq-1980:banisadr:playing:live:ir-artesh-war,ir-guards-war",
+          "to": "iran:you-him-fight-1980:banisadr:playing:live:ir-watch-lineup",
           "choiceId": "ir-refuse-letterhead",
           "label": "Refuse the letterhead",
           "historical": false,
           "artisticLicense": "al-refuse-letterhead",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:you-him-fight-1980:banisadr:playing:live:ir-watch-lineup",
+          "to": "iran:iran-iraq-1980:banisadr:playing:live:ir-artesh-war,ir-guards-war",
+          "choiceId": "ir-watch-lineup",
+          "label": "Watch the neighborhood line up",
+          "historical": true,
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -3068,14 +3147,14 @@
     },
     {
       "chair": "us",
-      "from": "us:hostages-1979:us:playing:live:us-eagle-claw,us-keep-talking",
-      "cardId": "hostages-1979",
-      "title": "Students occupy the US embassy",
-      "yearLabel": "November 1979",
+      "from": "us:you-him-fight-1980:us:playing:live:us-let-saddam,us-warn-saddam",
+      "cardId": "you-him-fight-1980",
+      "title": "Let's you and him fight",
+      "yearLabel": "Summer 1980",
       "face": "carter",
       "choiceLabels": [
-        "Authorize a rescue",
-        "Keep talking"
+        "Stay out of the way",
+        "Tell Saddam no"
       ],
       "landCardId": "iran-iraq-1980",
       "landTitle": "Iraq invades Iran",
@@ -3617,8 +3696,8 @@
         "Sit the presidency",
         "Refuse the letterhead"
       ],
-      "landCardId": "iran-iraq-1980",
-      "landTitle": "Iraq invades Iran",
+      "landCardId": "you-him-fight-1980",
+      "landTitle": "Let's you and him fight",
       "landFace": "banisadr"
     },
     {

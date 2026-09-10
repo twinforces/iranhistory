@@ -51,8 +51,8 @@ PLOT_NEXT = [
         "id": "claw-gates-nothing",
         "card": "hostages-1979",
         "later": "iran-iraq-1980",
-        "now": "Authorize a rescue and keep talking both land on Saddam. eagle_claw is another dead flag.",
-        "plot": "A burned wreck in Tabas is not a different 1980s. Leave it as flavor unless a later card should read the raid.",
+        "now": "Authorize a rescue lands on Desert One, then you-and-him-fight. Keep talking skips the wreck and lands on you-and-him-fight. Both still reach Saddam. eagle_claw is flavor plus a tutorial card.",
+        "plot": "A burned wreck in Tabas is not a different 1980s. The result card explains what happened. The invasion still comes.",
     },
     {
         "id": "mossadegh-holds-1979",

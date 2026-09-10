@@ -30,7 +30,11 @@ export function RailView() {
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-baseline gap-x-2">
                     <span className="font-mono text-xs text-muted">{card.yearLabel}</span>
-                    <span className="font-serif text-base text-fg">{card.title}</span>
+                    <span className="font-serif text-base text-fg">
+                      {card.titleUs && card.titleIran && card.titleUs !== card.titleIran
+                        ? `${card.titleUs} / ${card.titleIran}`
+                        : card.title}
+                    </span>
                   </span>
                   <span className="mt-1 flex flex-wrap gap-1.5">
                     <span className="font-mono text-2xs uppercase tracking-wide text-faint">

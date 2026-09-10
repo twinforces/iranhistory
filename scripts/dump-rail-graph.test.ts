@@ -100,4 +100,45 @@ describe("rail graph from the live engine", () => {
     );
     assert.equal(toBeirut, true);
   });
+
+  it("Desert One is the raid result; keep talking skips it; both chairs meet the Saudis before Saddam", () => {
+    assert.equal(
+      graph.chairs.us.edges.some(
+        (e) => e.choiceId === "us-eagle-claw" && e.to.includes("eagle-claw-1980"),
+      ),
+      true,
+    );
+    assert.equal(
+      graph.chairs.us.edges.some(
+        (e) => e.choiceId === "us-keep-talking" && e.to.includes("you-him-fight-1980"),
+      ),
+      true,
+    );
+    assert.equal(
+      graph.chairs.us.edges.some(
+        (e) => e.choiceId === "us-keep-talking" && e.to.includes("eagle-claw-1980"),
+      ),
+      false,
+    );
+    assert.equal(
+      graph.chairs.iran.nodes.some((n) => n.cardId === "eagle-claw-1980"),
+      false,
+    );
+    assert.equal(
+      graph.chairs.us.nodes.some((n) => n.cardId === "you-him-fight-1980" && n.phase === "playing"),
+      true,
+    );
+    assert.equal(
+      graph.chairs.iran.nodes.some((n) => n.cardId === "you-him-fight-1980" && n.phase === "playing"),
+      true,
+    );
+    assert.equal(
+      graph.chairs.us.nodes.find((n) => n.cardId === "coup-1953" && n.phase === "playing")?.title,
+      "To Coup or Not to Coup",
+    );
+    assert.equal(
+      graph.chairs.iran.nodes.find((n) => n.cardId === "coup-1953" && n.phase === "playing")?.title,
+      "Danger: Coup!",
+    );
+  });
 });

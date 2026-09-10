@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-10 - Danger: Coup, Desert One, Let's you and him fight
+
+What: 1953 titles split by chair. Iran sees Danger: Coup! Ike sees To Coup or Not to Coup. Authorizing the rescue now has a Desert One result card: eight dead, Tabas, Vance resigns, hostages still inside. Keep talking skips the wreck. Both chairs then get Let's you and him fight: the Saudis want Saddam to take care of the Shia problem, Washington and Europe stay out of the way, then Iraq invades Iran.
+
+Why: Ajax was one cable for two desks. The raid dumped the crash into a referee footnote. The invasion arrived without the incentive card that actually lined it up.
+
 ## 2026-09-10 - Headlines, JCPOA, Abraham Accords
 
 What: Card titles say the event. JCPOA is named Joint Comprehensive Plan of Action: missiles out, civilian reactor in, enrichment supposed to stay low under cameras, Congress will not ratify, cash on pallets. Abraham Accords 2020. Biden's 2023 Saudi talks: public and Hamas shops into 7 October, or private and Hamas is cut off.

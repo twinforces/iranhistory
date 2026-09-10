@@ -345,6 +345,7 @@ const BAZARGAN_ISOLATION = new Set(["veil-1979", "hostages-1979"]);
 
 const BANISADR_ISOLATION = new Set([
   "resigned-1979",
+  "you-him-fight-1980",
   "iran-iraq-1980",
   "election-1980",
   "inaugurated-1981",
@@ -395,6 +396,8 @@ const SEED_1979_CARDS = new Set([
   "veil-1979",
   "hostages-1979",
   "resigned-1979",
+  "eagle-claw-1980",
+  "you-him-fight-1980",
   "iran-iraq-1980",
   "election-1980",
   "inaugurated-1981",
@@ -437,6 +440,8 @@ const SEED_2019_CARDS = new Set([
 const SHAH_ADMITTED = new Set([
   "hostages-1979",
   "veil-1979",
+  "eagle-claw-1980",
+  "you-him-fight-1980",
   "iran-iraq-1980",
   "election-1980",
   "inaugurated-1981",
