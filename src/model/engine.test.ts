@@ -624,7 +624,10 @@ describe("late rail", () => {
       "robe-1989",
       "bounce-2019",
       "hormuz-2019",
+      "abraham-2020",
       "unleave-2021",
+      "saudi-accord-2023",
+      "oct7-2023",
       "twelve-days-2025",
       "the-leader-2026",
     ]) {
@@ -646,8 +649,11 @@ describe("late rail", () => {
       "jcpoa-2015",
       "bounce-2019",
       "hormuz-2019",
+      "abraham-2020",
       "unleave-2021",
       "mahsa-2022",
+      "saudi-accord-2023",
+      "oct7-2023",
       "sit-pezeshkian-2024",
       "the-leader-2026",
     ]) {
@@ -733,5 +739,52 @@ describe("late rail", () => {
         assert.equal(ids.has(src), true, `${card.id} cites missing receipt ${src}`);
       }
     }
+  });
+
+  it("the JCPOA card is named as the Joint Comprehensive Plan of Action", () => {
+    const card = cardById("jcpoa-2015");
+    assert.ok(card);
+    assert.match(card.title, /Joint Comprehensive Plan of Action/);
+    assert.match(card.situationUs ?? "", /missile/i);
+    assert.match(card.situationUs ?? "", /civilian reactor/i);
+    assert.match(card.situationUs ?? "", /pallets/);
+    assert.match(card.situationUs ?? "", /Congress will not ratify/i);
+    assert.equal(/^The deal$/i.test(card.title), false);
+  });
+
+  it("headlines say what happened, not a code name", () => {
+    for (const card of CARDS) {
+      if (card.secret) continue;
+      assert.equal(
+        /^(The deal|The un-leave|The airport|The warehouse|The robe|The wall|The myth|The pipeline|The SOFA|Sit Nixon|The cup|A cousin in the Bekaa|A channel in the dark|Green|Mahsa|Kuwait|The Leader)$/i.test(
+          card.title,
+        ),
+        false,
+        `${card.id} still has a sideways title: ${card.title}`,
+      );
+    }
+  });
+
+  it("a public Saudi-Israel courtship is how 7 October arrives; private cuts Hamas off", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "saudi-accord-2023" });
+    const pub = applyChoice(g, "us-public-saudi");
+    assert.equal(pub.phase, "playing");
+    assert.equal(pub.cardId, "oct7-2023");
+    const priv = applyChoice(g, "us-private-saudi");
+    assert.equal(priv.phase, "playing");
+    assert.equal(priv.cardId, "sit-pezeshkian-2024");
+    assert.equal(priv.flags.hamas_cut_off, true);
+    assert.equal(priv.lastResult?.title, "Hamas is cut off");
+    assert.match(priv.lastResult?.body ?? "", /7 October does not happen/);
+  });
+
+  it("Iran funding Hamas is how 7 October arrives; not funding skips it", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "saudi-accord-2023" });
+    assert.equal(g.flags.iran_face, "raisi");
+    const fund = applyChoice(g, "ir-fund-hamas");
+    assert.equal(fund.cardId, "oct7-2023");
+    const leave = applyChoice(g, "ir-leave-hamas");
+    assert.equal(leave.cardId, "sit-pezeshkian-2024");
+    assert.equal(leave.flags.hamas_cut_off, true);
   });
 });

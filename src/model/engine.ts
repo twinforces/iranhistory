@@ -376,10 +376,17 @@ const ROUHANI_ISOLATION = new Set([
   "bounce-2019",
   "hormuz-2019",
   "soleimani-2020",
+  "abraham-2020",
   "unleave-2021",
 ]);
 
-const RAISI_ISOLATION = new Set(["mahsa-2022", "oct7-2023", "direct-fire-2024", "sit-pezeshkian-2024"]);
+const RAISI_ISOLATION = new Set([
+  "mahsa-2022",
+  "saudi-accord-2023",
+  "oct7-2023",
+  "direct-fire-2024",
+  "sit-pezeshkian-2024",
+]);
 
 const PEZESHIKIAN_ISOLATION = new Set(["twelve-days-2025", "the-leader-2026"]);
 
@@ -416,8 +423,10 @@ const SEED_2019_CARDS = new Set([
   "bounce-2019",
   "hormuz-2019",
   "soleimani-2020",
+  "abraham-2020",
   "unleave-2021",
   "mahsa-2022",
+  "saudi-accord-2023",
   "oct7-2023",
   "direct-fire-2024",
   "sit-pezeshkian-2024",

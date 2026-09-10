@@ -1,6 +1,13 @@
 # CHANGELOG
 
+## 2026-09-10 - Headlines, JCPOA, Abraham Accords
+
+What: Card titles say the event. JCPOA is named Joint Comprehensive Plan of Action: missiles out, civilian reactor in, enrichment supposed to stay low under cameras, Congress will not ratify, cash on pallets. Abraham Accords 2020. Biden's 2023 Saudi talks: public and Hamas shops into 7 October, or private and Hamas is cut off.
+
+Why: Headlines were code. The deal was a nickname. The Accords were missing, and so was the fork that actually explains 7 October.
+
 ## 2026-09-10 - The rail to 2026
+
 
 What: Every quiet year is a card. Johnson's SOFA, Sit Nixon, Ford's pipeline, the 1989 robe, Kuwait, dual containment, Khobar, Khatami's wall, Natanz, Baghdad, Ahmadinejad's Holocaust denial, Green, Stuxnet, Kerry's JCPOA, White Wednesdays, the warehouse, Europe bouncing, Hormuz, Soleimani, Biden's un-leave, Mahsa (poisonings in the after-copy), Oct 7, direct fire, Sit Pezeshkian, Twelve Days, the 2026 campaign. Keep the limits is an olive hold. Side with Saddam is a grave. 2026 is history arriving. Dual plate: after the robe the Imam is Khamenei and the player is the letterhead.
 

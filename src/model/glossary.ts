@@ -358,6 +358,44 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
     definition:
       "3 July 1988, a US cruiser shoots down Iran Air 655 over the Strait. 290 dead. Washington calls it a mistake. Tehran calls it a massacre. The ceasefire follows.",
   },
+  {
+    id: "jcpoa",
+    term: "Joint Comprehensive Plan of Action",
+    aliases: [
+      "Joint Comprehensive Plan of Action",
+      "JCPOA",
+    ],
+    definition:
+      "The 2015 nuclear bargain. Not a treaty: Obama did not have sixty-seven Senate votes. Iran may keep a civilian reactor. Missiles are outside the deal. Enrichment is supposed to stay low, watched, and capped. They promise. Frozen cash comes back, some of it on pallets because they cannot use dollars. The next president can tear it up with a speech.",
+  },
+  {
+    id: "abraham-accords",
+    term: "Abraham Accords",
+    aliases: ["Abraham Accords"],
+    definition:
+      "2020. UAE and Bahrain recognize Israel, then Sudan and Morocco. No Palestinian state required. The US peels Arab capitals off the old boycott one at a time. Iran then has to drop Death to Israel or sit outside the new map.",
+  },
+  {
+    id: "sofa",
+    term: "Status of Forces",
+    aliases: ["Status of Forces", "status-of-forces", "SOFA"],
+    definition:
+      "1964. A bill that says American troops and advisors in Iran cannot be tried in an Iranian court. Two hundred million in military aid is tied to it. Khomeini calls it a document of slavery. The Shah exiles him. That is how the cleric gets a name.",
+  },
+  {
+    id: "soleimani",
+    term: "Qasem Soleimani",
+    aliases: ["Qasem Soleimani", "Soleimani"],
+    definition:
+      "Commander of the Quds Force, the IRGC's foreign arm. The man who ran the proxy layer in Iraq, Syria, Lebanon, and Gaza. A US drone kills him at Baghdad airport on 3 January 2020.",
+  },
+  {
+    id: "hamas",
+    term: "Hamas",
+    aliases: ["Hamas"],
+    definition:
+      "The Palestinian Islamist movement that runs Gaza. Iran's proxy file, with its own agenda. When a public Saudi-Israel courtship looks like the neighborhood is leaving, they shop for a sponsor.",
+  },
 ];
 
 const BY_ID = new Map(GLOSSARY.map((e) => [e.id, e]));

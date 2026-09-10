@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T19:58:56.131Z",
+  "generated": "2026-09-10T22:46:25.556Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -61,7 +61,7 @@
           "cardId": "sofa-1964",
           "year": 1964,
           "yearLabel": "1964",
-          "title": "The SOFA",
+          "title": "Status of Forces: US troops out of Iranian courts",
           "era": "shah",
           "face": "johnson",
           "phase": "playing",
@@ -74,7 +74,7 @@
           "cardId": "sit-nixon-1969",
           "year": 1969,
           "yearLabel": "1969",
-          "title": "Sit Nixon",
+          "title": "Nixon takes office",
           "era": "shah",
           "face": "nixon",
           "phase": "playing",
@@ -100,7 +100,7 @@
           "cardId": "pipeline-1975",
           "year": 1975,
           "yearLabel": "1975",
-          "title": "The pipeline",
+          "title": "Ford keeps selling American weapons",
           "era": "shah",
           "face": "ford",
           "phase": "playing",
@@ -126,7 +126,7 @@
           "cardId": "veil-1979",
           "year": 1979,
           "yearLabel": "March 1979",
-          "title": "They marched with him",
+          "title": "The Imam repeals Family Protection",
           "era": "revolution",
           "face": "carter",
           "phase": "playing",
@@ -139,7 +139,7 @@
           "cardId": "hostages-1979",
           "year": 1979,
           "yearLabel": "November 1979",
-          "title": "The embassy is occupied",
+          "title": "Students occupy the US embassy",
           "era": "revolution",
           "face": "carter",
           "phase": "playing",
@@ -152,7 +152,7 @@
           "cardId": "iran-iraq-1980",
           "year": 1980,
           "yearLabel": "September 1980",
-          "title": "Saddam is moving",
+          "title": "Iraq invades Iran",
           "era": "war",
           "face": "carter",
           "phase": "playing",
@@ -165,7 +165,7 @@
           "cardId": "election-1980",
           "year": 1980,
           "yearLabel": "November 1980",
-          "title": "The clip is the campaign",
+          "title": "Carter runs for re-election",
           "era": "war",
           "face": "carter",
           "phase": "playing",
@@ -178,7 +178,7 @@
           "cardId": "inaugurated-1981",
           "year": 1981,
           "yearLabel": "January 1981",
-          "title": "The oath, and the walk",
+          "title": "Reagan takes the oath",
           "era": "war",
           "face": "reagan",
           "phase": "playing",
@@ -191,7 +191,7 @@
           "cardId": "tilt-1982",
           "year": 1982,
           "yearLabel": "1982",
-          "title": "Iran is winning",
+          "title": "Iran is winning. Reagan tilts to Iraq",
           "era": "war",
           "face": "reagan",
           "phase": "playing",
@@ -204,7 +204,7 @@
           "cardId": "lebanon-1983",
           "year": 1983,
           "yearLabel": "1982–1983",
-          "title": "A cousin in the Bekaa",
+          "title": "Hezbollah bombs the Marines in Beirut",
           "era": "war",
           "face": "reagan",
           "phase": "playing",
@@ -217,7 +217,7 @@
           "cardId": "iran-contra-1985",
           "year": 1986,
           "yearLabel": "1985–1987",
-          "title": "A channel in the dark",
+          "title": "Iran-Contra: missiles for hostages",
           "era": "war",
           "face": "reagan",
           "phase": "playing",
@@ -230,7 +230,7 @@
           "cardId": "cup-1988",
           "year": 1988,
           "yearLabel": "1988",
-          "title": "The cup",
+          "title": "Khomeini drinks the poison chalice",
           "era": "war",
           "face": "reagan",
           "phase": "playing",
@@ -243,7 +243,7 @@
           "cardId": "robe-1989",
           "year": 1989,
           "yearLabel": "1989",
-          "title": "The robe",
+          "title": "Khomeini dies. Khamenei becomes Supreme Leader",
           "era": "war",
           "face": "bush41",
           "phase": "playing",
@@ -256,7 +256,7 @@
           "cardId": "kuwait-1990",
           "year": 1990,
           "yearLabel": "1990",
-          "title": "Kuwait",
+          "title": "Iraq invades Kuwait",
           "era": "war",
           "face": "bush41",
           "phase": "playing",
@@ -269,7 +269,7 @@
           "cardId": "dual-containment-1993",
           "year": 1993,
           "yearLabel": "1993",
-          "title": "Dual containment",
+          "title": "Clinton contains Iraq and Iran together",
           "era": "war",
           "face": "clinton",
           "phase": "playing",
@@ -282,7 +282,7 @@
           "cardId": "khobar-1996",
           "year": 1996,
           "yearLabel": "1996",
-          "title": "Khobar",
+          "title": "Khobar Towers: nineteen airmen dead",
           "era": "war",
           "face": "clinton",
           "phase": "playing",
@@ -295,7 +295,7 @@
           "cardId": "wall-1997",
           "year": 1997,
           "yearLabel": "1997",
-          "title": "The wall",
+          "title": "Khatami offers a dialogue of civilizations",
           "era": "street",
           "face": "clinton",
           "phase": "playing",
@@ -308,7 +308,7 @@
           "cardId": "natanz-2002",
           "year": 2002,
           "yearLabel": "2002",
-          "title": "Natanz",
+          "title": "The Natanz enrichment plant is revealed",
           "era": "nuclear",
           "face": "bush43",
           "phase": "playing",
@@ -321,7 +321,7 @@
           "cardId": "baghdad-2003",
           "year": 2003,
           "yearLabel": "2003",
-          "title": "Baghdad",
+          "title": "The United States takes Baghdad",
           "era": "nuclear",
           "face": "bush43",
           "phase": "playing",
@@ -334,7 +334,7 @@
           "cardId": "myth-2005",
           "year": 2005,
           "yearLabel": "2005",
-          "title": "The myth",
+          "title": "Ahmadinejad calls the Holocaust a myth",
           "era": "nuclear",
           "face": "bush43",
           "phase": "playing",
@@ -347,7 +347,7 @@
           "cardId": "green-2009",
           "year": 2009,
           "yearLabel": "2009",
-          "title": "Green",
+          "title": "Iran's Green Movement",
           "era": "street",
           "face": "obama",
           "phase": "playing",
@@ -360,7 +360,7 @@
           "cardId": "stuxnet-2010",
           "year": 2010,
           "yearLabel": "2010",
-          "title": "Stuxnet",
+          "title": "Stuxnet: a worm in the centrifuges",
           "era": "nuclear",
           "face": "obama",
           "phase": "playing",
@@ -373,7 +373,7 @@
           "cardId": "jcpoa-2015",
           "year": 2015,
           "yearLabel": "2015",
-          "title": "The deal",
+          "title": "JCPOA: Joint Comprehensive Plan of Action",
           "era": "nuclear",
           "face": "obama",
           "phase": "playing",
@@ -386,7 +386,7 @@
           "cardId": "white-wednesdays-2017",
           "year": 2017,
           "yearLabel": "2017",
-          "title": "White Wednesdays",
+          "title": "Women post unveiled on White Wednesdays",
           "era": "street",
           "face": "trump",
           "phase": "playing",
@@ -399,7 +399,7 @@
           "cardId": "archive-2018",
           "year": 2018,
           "yearLabel": "2018",
-          "title": "The warehouse",
+          "title": "Mossad steals Iran's nuclear archive",
           "era": "nuclear",
           "face": "trump",
           "phase": "playing",
@@ -412,7 +412,7 @@
           "cardId": "bounce-2019",
           "year": 2019,
           "yearLabel": "2019",
-          "title": "Europe bounced the check",
+          "title": "Europe does not pay. Iran starts leaving the JCPOA limits",
           "era": "nuclear",
           "face": "trump",
           "phase": "playing",
@@ -425,7 +425,7 @@
           "cardId": "hormuz-2019",
           "year": 2019,
           "yearLabel": "2019",
-          "title": "A drone, a tanker, the Strait",
+          "title": "Iran shoots down a US drone over Hormuz",
           "era": "late",
           "face": "trump",
           "phase": "playing",
@@ -438,7 +438,20 @@
           "cardId": "soleimani-2020",
           "year": 2020,
           "yearLabel": "2020",
-          "title": "The airport",
+          "title": "A drone kills Qasem Soleimani",
+          "era": "late",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:abraham-2020:us:playing:live:us-broker-accords,us-skip-accords",
+          "chair": "us",
+          "cardId": "abraham-2020",
+          "year": 2020,
+          "yearLabel": "2020",
+          "title": "Abraham Accords: Arab states recognize Israel",
           "era": "late",
           "face": "trump",
           "phase": "playing",
@@ -451,7 +464,7 @@
           "cardId": "unleave-2021",
           "year": 2021,
           "yearLabel": "2021",
-          "title": "The un-leave",
+          "title": "Biden tries to restore the JCPOA",
           "era": "late",
           "face": "biden",
           "phase": "playing",
@@ -464,8 +477,21 @@
           "cardId": "mahsa-2022",
           "year": 2022,
           "yearLabel": "2022",
-          "title": "Mahsa",
+          "title": "Mahsa Amini. Woman, Life, Freedom",
           "era": "street",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:saudi-accord-2023:us:playing:live:us-private-saudi,us-public-saudi",
+          "chair": "us",
+          "cardId": "saudi-accord-2023",
+          "year": 2023,
+          "yearLabel": "2023",
+          "title": "Saudi Arabia talks to Israel",
+          "era": "late",
           "face": "biden",
           "phase": "playing",
           "endingId": null,
@@ -477,20 +503,7 @@
           "cardId": "oct7-2023",
           "year": 2023,
           "yearLabel": "2023",
-          "title": "7 October",
-          "era": "late",
-          "face": "biden",
-          "phase": "playing",
-          "endingId": null,
-          "endingTitle": null
-        },
-        {
-          "id": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
-          "chair": "us",
-          "cardId": "direct-fire-2024",
-          "year": 2024,
-          "yearLabel": "2024",
-          "title": "Direct fire",
+          "title": "Hamas attacks Israel",
           "era": "late",
           "face": "biden",
           "phase": "playing",
@@ -503,7 +516,20 @@
           "cardId": "sit-pezeshkian-2024",
           "year": 2024,
           "yearLabel": "2024",
-          "title": "Sit Pezeshkian",
+          "title": "Raisi dies. Pezeshkian takes office",
+          "era": "late",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+          "chair": "us",
+          "cardId": "direct-fire-2024",
+          "year": 2024,
+          "yearLabel": "2024",
+          "title": "Iran fires missiles from Iranian soil",
           "era": "late",
           "face": "biden",
           "phase": "playing",
@@ -516,7 +542,7 @@
           "cardId": "twelve-days-2025",
           "year": 2025,
           "yearLabel": "2025",
-          "title": "Twelve days",
+          "title": "Twelve-Day War: the US bombs Fordow",
           "era": "late",
           "face": "trump",
           "phase": "playing",
@@ -529,7 +555,7 @@
           "cardId": "the-leader-2026",
           "year": 2026,
           "yearLabel": "2026",
-          "title": "The Leader",
+          "title": "The campaign kills Ali Khamenei",
           "era": "late",
           "face": "trump",
           "phase": "playing",
@@ -542,7 +568,7 @@
           "cardId": "the-leader-2026",
           "year": 2026,
           "yearLabel": "2026",
-          "title": "The Leader",
+          "title": "The campaign kills Ali Khamenei",
           "era": "late",
           "face": "trump",
           "phase": "ended",
@@ -555,7 +581,7 @@
           "cardId": "the-leader-2026",
           "year": 2026,
           "yearLabel": "2026",
-          "title": "The Leader",
+          "title": "The campaign kills Ali Khamenei",
           "era": "late",
           "face": "trump",
           "phase": "ended",
@@ -1088,7 +1114,7 @@
           "from": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
           "to": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
           "choiceId": "us-sign-jcpoa",
-          "label": "Sign",
+          "label": "Sign the JCPOA",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -1098,9 +1124,9 @@
           "from": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
           "to": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
           "choiceId": "us-walk-jcpoa",
-          "label": "Walk",
+          "label": "Walk away",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-walk-jcpoa",
           "ending": null,
           "faceChange": null
         },
@@ -1128,7 +1154,7 @@
           "from": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
           "to": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
           "choiceId": "us-leave-jcpoa",
-          "label": "Leave the deal",
+          "label": "Leave the JCPOA",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -1138,7 +1164,7 @@
           "from": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
           "to": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
           "choiceId": "us-stay-jcpoa",
-          "label": "Stay in the deal",
+          "label": "Stay in the JCPOA",
           "historical": false,
           "artisticLicense": "al-stay-deal",
           "ending": null,
@@ -1186,7 +1212,7 @@
         },
         {
           "from": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
-          "to": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "to": "us:abraham-2020:us:playing:live:us-broker-accords,us-skip-accords",
           "choiceId": "us-kill-soleimani",
           "label": "Kill him",
           "historical": true,
@@ -1196,11 +1222,31 @@
         },
         {
           "from": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
-          "to": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "to": "us:abraham-2020:us:playing:live:us-broker-accords,us-skip-accords",
           "choiceId": "us-hold-soleimani",
           "label": "Hold the shot",
           "historical": false,
           "artisticLicense": "al-hold-soleimani",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:abraham-2020:us:playing:live:us-broker-accords,us-skip-accords",
+          "to": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "choiceId": "us-broker-accords",
+          "label": "Broker the Accords",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:abraham-2020:us:playing:live:us-broker-accords,us-skip-accords",
+          "to": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "choiceId": "us-skip-accords",
+          "label": "Leave the boycott in place",
+          "historical": false,
+          "artisticLicense": "al-no-accords",
           "ending": null,
           "faceChange": null
         },
@@ -1226,7 +1272,7 @@
         },
         {
           "from": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
-          "to": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "to": "us:saudi-accord-2023:us:playing:live:us-private-saudi,us-public-saudi",
           "choiceId": "us-statement-mahsa",
           "label": "Issue a statement",
           "historical": true,
@@ -1236,11 +1282,31 @@
         },
         {
           "from": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
-          "to": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "to": "us:saudi-accord-2023:us:playing:live:us-private-saudi,us-public-saudi",
           "choiceId": "us-own-mahsa",
           "label": "Own the street",
           "historical": false,
           "artisticLicense": "al-own-mahsa",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:saudi-accord-2023:us:playing:live:us-private-saudi,us-public-saudi",
+          "to": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "choiceId": "us-public-saudi",
+          "label": "Do the talks in public",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:saudi-accord-2023:us:playing:live:us-private-saudi,us-public-saudi",
+          "to": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
+          "choiceId": "us-private-saudi",
+          "label": "Do the talks in private",
+          "historical": false,
+          "artisticLicense": "al-private-accord",
           "ending": null,
           "faceChange": null
         },
@@ -1265,6 +1331,16 @@
           "faceChange": null
         },
         {
+          "from": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
+          "to": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
+          "choiceId": "us-sit-2024",
+          "label": "Note the crash",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
           "from": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
           "to": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
           "choiceId": "us-help-shoot",
@@ -1280,16 +1356,6 @@
           "choiceId": "us-stay-out-fire",
           "label": "Stay out",
           "historical": false,
-          "artisticLicense": null,
-          "ending": null,
-          "faceChange": null
-        },
-        {
-          "from": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
-          "to": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
-          "choiceId": "us-sit-2024",
-          "label": "Note the crash",
-          "historical": true,
           "artisticLicense": null,
           "ending": null,
           "faceChange": null
@@ -1335,7 +1401,7 @@
           "faceChange": null
         }
       ],
-      "terminals": 68719476737
+      "terminals": 171798691841
     },
     "iran": {
       "nodes": [
@@ -1423,7 +1489,7 @@
           "cardId": "sofa-1964",
           "year": 1964,
           "yearLabel": "1964",
-          "title": "The SOFA",
+          "title": "Status of Forces: US troops out of Iranian courts",
           "era": "shah",
           "face": "shah",
           "phase": "playing",
@@ -1436,7 +1502,7 @@
           "cardId": "sit-nixon-1969",
           "year": 1969,
           "yearLabel": "1969",
-          "title": "Sit Nixon",
+          "title": "Nixon takes office",
           "era": "shah",
           "face": "shah",
           "phase": "playing",
@@ -1462,7 +1528,7 @@
           "cardId": "pipeline-1975",
           "year": 1975,
           "yearLabel": "1975",
-          "title": "The pipeline",
+          "title": "Ford keeps selling American weapons",
           "era": "shah",
           "face": "shah",
           "phase": "playing",
@@ -1501,7 +1567,7 @@
           "cardId": "veil-1979",
           "year": 1979,
           "yearLabel": "March 1979",
-          "title": "They marched with him",
+          "title": "The Imam repeals Family Protection",
           "era": "revolution",
           "face": "bazargan",
           "phase": "playing",
@@ -1527,7 +1593,7 @@
           "cardId": "hostages-1979",
           "year": 1979,
           "yearLabel": "November 1979",
-          "title": "The embassy is occupied",
+          "title": "Students occupy the US embassy",
           "era": "revolution",
           "face": "bazargan",
           "phase": "playing",
@@ -1540,7 +1606,7 @@
           "cardId": "resigned-1979",
           "year": 1979,
           "yearLabel": "November 1979",
-          "title": "The smiling face resigns",
+          "title": "Bazargan resigns",
           "era": "revolution",
           "face": "banisadr",
           "phase": "playing",
@@ -1553,7 +1619,7 @@
           "cardId": "iran-iraq-1980",
           "year": 1980,
           "yearLabel": "September 1980",
-          "title": "Saddam is moving",
+          "title": "Iraq invades Iran",
           "era": "war",
           "face": "banisadr",
           "phase": "playing",
@@ -1566,7 +1632,7 @@
           "cardId": "impeached-1981",
           "year": 1981,
           "yearLabel": "June 1981",
-          "title": "The Majlis has a vote",
+          "title": "The Majlis impeaches Banisadr",
           "era": "war",
           "face": "banisadr",
           "phase": "playing",
@@ -1579,7 +1645,7 @@
           "cardId": "seated-1981",
           "year": 1981,
           "yearLabel": "October 1981",
-          "title": "A new name on the stamp",
+          "title": "Khamenei takes the presidency",
           "era": "war",
           "face": "khamenei",
           "phase": "playing",
@@ -1592,7 +1658,7 @@
           "cardId": "lebanon-1983",
           "year": 1983,
           "yearLabel": "1982–1983",
-          "title": "A cousin in the Bekaa",
+          "title": "Hezbollah bombs the Marines in Beirut",
           "era": "war",
           "face": "khamenei",
           "phase": "playing",
@@ -1605,7 +1671,7 @@
           "cardId": "iran-contra-1985",
           "year": 1986,
           "yearLabel": "1985–1987",
-          "title": "A channel in the dark",
+          "title": "Iran-Contra: missiles for hostages",
           "era": "war",
           "face": "khamenei",
           "phase": "playing",
@@ -1618,7 +1684,7 @@
           "cardId": "lebanon-1983",
           "year": 1983,
           "yearLabel": "1982–1983",
-          "title": "A cousin in the Bekaa",
+          "title": "Hezbollah bombs the Marines in Beirut",
           "era": "war",
           "face": "khamenei",
           "phase": "ended",
@@ -1631,7 +1697,7 @@
           "cardId": "cup-1988",
           "year": 1988,
           "yearLabel": "1988",
-          "title": "The cup",
+          "title": "Khomeini drinks the poison chalice",
           "era": "war",
           "face": "khamenei",
           "phase": "playing",
@@ -1644,7 +1710,7 @@
           "cardId": "robe-1989",
           "year": 1989,
           "yearLabel": "1989",
-          "title": "The robe",
+          "title": "Khomeini dies. Khamenei becomes Supreme Leader",
           "era": "war",
           "face": "khamenei",
           "phase": "playing",
@@ -1657,7 +1723,7 @@
           "cardId": "cup-1988",
           "year": 1988,
           "yearLabel": "1988",
-          "title": "The cup",
+          "title": "Khomeini drinks the poison chalice",
           "era": "war",
           "face": "khamenei",
           "phase": "ended",
@@ -1670,7 +1736,7 @@
           "cardId": "kuwait-1990",
           "year": 1990,
           "yearLabel": "1990",
-          "title": "Kuwait",
+          "title": "Iraq invades Kuwait",
           "era": "war",
           "face": "rafsanjani",
           "phase": "playing",
@@ -1683,7 +1749,7 @@
           "cardId": "dual-containment-1993",
           "year": 1993,
           "yearLabel": "1993",
-          "title": "Dual containment",
+          "title": "Clinton contains Iraq and Iran together",
           "era": "war",
           "face": "rafsanjani",
           "phase": "playing",
@@ -1696,7 +1762,7 @@
           "cardId": "kuwait-1990",
           "year": 1990,
           "yearLabel": "1990",
-          "title": "Kuwait",
+          "title": "Iraq invades Kuwait",
           "era": "war",
           "face": "rafsanjani",
           "phase": "ended",
@@ -1709,7 +1775,7 @@
           "cardId": "khobar-1996",
           "year": 1996,
           "yearLabel": "1996",
-          "title": "Khobar",
+          "title": "Khobar Towers: nineteen airmen dead",
           "era": "war",
           "face": "rafsanjani",
           "phase": "playing",
@@ -1722,7 +1788,7 @@
           "cardId": "wall-1997",
           "year": 1997,
           "yearLabel": "1997",
-          "title": "The wall",
+          "title": "Khatami offers a dialogue of civilizations",
           "era": "street",
           "face": "rafsanjani",
           "phase": "playing",
@@ -1735,7 +1801,7 @@
           "cardId": "natanz-2002",
           "year": 2002,
           "yearLabel": "2002",
-          "title": "Natanz",
+          "title": "The Natanz enrichment plant is revealed",
           "era": "nuclear",
           "face": "khatami",
           "phase": "playing",
@@ -1748,7 +1814,7 @@
           "cardId": "baghdad-2003",
           "year": 2003,
           "yearLabel": "2003",
-          "title": "Baghdad",
+          "title": "The United States takes Baghdad",
           "era": "nuclear",
           "face": "khatami",
           "phase": "playing",
@@ -1761,7 +1827,7 @@
           "cardId": "myth-2005",
           "year": 2005,
           "yearLabel": "2005",
-          "title": "The myth",
+          "title": "Ahmadinejad calls the Holocaust a myth",
           "era": "nuclear",
           "face": "khatami",
           "phase": "playing",
@@ -1774,7 +1840,7 @@
           "cardId": "green-2009",
           "year": 2009,
           "yearLabel": "2009",
-          "title": "Green",
+          "title": "Iran's Green Movement",
           "era": "street",
           "face": "ahmadinejad",
           "phase": "playing",
@@ -1787,7 +1853,7 @@
           "cardId": "stuxnet-2010",
           "year": 2010,
           "yearLabel": "2010",
-          "title": "Stuxnet",
+          "title": "Stuxnet: a worm in the centrifuges",
           "era": "nuclear",
           "face": "ahmadinejad",
           "phase": "playing",
@@ -1800,7 +1866,7 @@
           "cardId": "jcpoa-2015",
           "year": 2015,
           "yearLabel": "2015",
-          "title": "The deal",
+          "title": "JCPOA: Joint Comprehensive Plan of Action",
           "era": "nuclear",
           "face": "ahmadinejad",
           "phase": "playing",
@@ -1813,7 +1879,7 @@
           "cardId": "white-wednesdays-2017",
           "year": 2017,
           "yearLabel": "2017",
-          "title": "White Wednesdays",
+          "title": "Women post unveiled on White Wednesdays",
           "era": "street",
           "face": "rouhani",
           "phase": "playing",
@@ -1826,7 +1892,7 @@
           "cardId": "archive-2018",
           "year": 2018,
           "yearLabel": "2018",
-          "title": "The warehouse",
+          "title": "Mossad steals Iran's nuclear archive",
           "era": "nuclear",
           "face": "rouhani",
           "phase": "playing",
@@ -1839,7 +1905,7 @@
           "cardId": "bounce-2019",
           "year": 2019,
           "yearLabel": "2019",
-          "title": "Europe bounced the check",
+          "title": "Europe does not pay. Iran starts leaving the JCPOA limits",
           "era": "nuclear",
           "face": "rouhani",
           "phase": "playing",
@@ -1852,7 +1918,7 @@
           "cardId": "hormuz-2019",
           "year": 2019,
           "yearLabel": "2019",
-          "title": "A drone, a tanker, the Strait",
+          "title": "Iran shoots down a US drone over Hormuz",
           "era": "late",
           "face": "rouhani",
           "phase": "playing",
@@ -1865,7 +1931,7 @@
           "cardId": "bounce-2019",
           "year": 2019,
           "yearLabel": "2019",
-          "title": "Europe bounced the check",
+          "title": "Europe does not pay. Iran starts leaving the JCPOA limits",
           "era": "nuclear",
           "face": "rouhani",
           "phase": "ended",
@@ -1878,7 +1944,20 @@
           "cardId": "soleimani-2020",
           "year": 2020,
           "yearLabel": "2020",
-          "title": "The airport",
+          "title": "A drone kills Qasem Soleimani",
+          "era": "late",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
+          "chair": "iran",
+          "cardId": "abraham-2020",
+          "year": 2020,
+          "yearLabel": "2020",
+          "title": "Abraham Accords: Arab states recognize Israel",
           "era": "late",
           "face": "rouhani",
           "phase": "playing",
@@ -1891,7 +1970,7 @@
           "cardId": "unleave-2021",
           "year": 2021,
           "yearLabel": "2021",
-          "title": "The un-leave",
+          "title": "Biden tries to restore the JCPOA",
           "era": "late",
           "face": "rouhani",
           "phase": "playing",
@@ -1904,8 +1983,21 @@
           "cardId": "mahsa-2022",
           "year": 2022,
           "yearLabel": "2022",
-          "title": "Mahsa",
+          "title": "Mahsa Amini. Woman, Life, Freedom",
           "era": "street",
+          "face": "raisi",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:saudi-accord-2023:raisi:playing:live:ir-fund-hamas,ir-leave-hamas",
+          "chair": "iran",
+          "cardId": "saudi-accord-2023",
+          "year": 2023,
+          "yearLabel": "2023",
+          "title": "Saudi Arabia talks to Israel",
+          "era": "late",
           "face": "raisi",
           "phase": "playing",
           "endingId": null,
@@ -1917,20 +2009,7 @@
           "cardId": "oct7-2023",
           "year": 2023,
           "yearLabel": "2023",
-          "title": "7 October",
-          "era": "late",
-          "face": "raisi",
-          "phase": "playing",
-          "endingId": null,
-          "endingTitle": null
-        },
-        {
-          "id": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
-          "chair": "iran",
-          "cardId": "direct-fire-2024",
-          "year": 2024,
-          "yearLabel": "2024",
-          "title": "Direct fire",
+          "title": "Hamas attacks Israel",
           "era": "late",
           "face": "raisi",
           "phase": "playing",
@@ -1943,7 +2022,20 @@
           "cardId": "sit-pezeshkian-2024",
           "year": 2024,
           "yearLabel": "2024",
-          "title": "Sit Pezeshkian",
+          "title": "Raisi dies. Pezeshkian takes office",
+          "era": "late",
+          "face": "raisi",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+          "chair": "iran",
+          "cardId": "direct-fire-2024",
+          "year": 2024,
+          "yearLabel": "2024",
+          "title": "Iran fires missiles from Iranian soil",
           "era": "late",
           "face": "raisi",
           "phase": "playing",
@@ -1956,7 +2048,7 @@
           "cardId": "twelve-days-2025",
           "year": 2025,
           "yearLabel": "2025",
-          "title": "Twelve days",
+          "title": "Twelve-Day War: the US bombs Fordow",
           "era": "late",
           "face": "pezeshkian",
           "phase": "playing",
@@ -1969,7 +2061,7 @@
           "cardId": "the-leader-2026",
           "year": 2026,
           "yearLabel": "2026",
-          "title": "The Leader",
+          "title": "The campaign kills Ali Khamenei",
           "era": "late",
           "face": "pezeshkian",
           "phase": "playing",
@@ -1982,7 +2074,7 @@
           "cardId": "the-leader-2026",
           "year": 2026,
           "yearLabel": "2026",
-          "title": "The Leader",
+          "title": "The campaign kills Ali Khamenei",
           "era": "late",
           "face": "pezeshkian",
           "phase": "ended",
@@ -1995,7 +2087,7 @@
           "cardId": "the-leader-2026",
           "year": 2026,
           "yearLabel": "2026",
-          "title": "The Leader",
+          "title": "The campaign kills Ali Khamenei",
           "era": "late",
           "face": "pezeshkian",
           "phase": "ended",
@@ -2578,7 +2670,7 @@
           "from": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
           "to": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
           "choiceId": "ir-accept-jcpoa",
-          "label": "Accept the limits",
+          "label": "Accept the JCPOA",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -2588,7 +2680,7 @@
           "from": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
           "to": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
           "choiceId": "ir-keep-spin-jcpoa",
-          "label": "Keep spinning",
+          "label": "Keep enriching",
           "historical": false,
           "artisticLicense": null,
           "ending": null,
@@ -2618,7 +2710,7 @@
           "from": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
           "to": "iran:bounce-2019:rouhani:playing:live:ir-keep-limits,ir-step-off",
           "choiceId": "ir-wait-europe",
-          "label": "Stay in the deal",
+          "label": "Stay in the JCPOA",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -2676,7 +2768,7 @@
         },
         {
           "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
-          "to": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "to": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
           "choiceId": "ir-missiles-752",
           "label": "Missiles, then the airliner",
           "historical": true,
@@ -2686,11 +2778,31 @@
         },
         {
           "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
-          "to": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "to": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
           "choiceId": "ir-eat-airport",
           "label": "Eat it",
           "historical": false,
           "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
+          "to": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "choiceId": "ir-keep-quds",
+          "label": "Keep Death to Israel",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
+          "to": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "choiceId": "ir-drop-quds",
+          "label": "Drop Death to Israel",
+          "historical": false,
+          "artisticLicense": "al-drop-quds",
           "ending": null,
           "faceChange": null
         },
@@ -2716,7 +2828,7 @@
         },
         {
           "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
-          "to": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "to": "iran:saudi-accord-2023:raisi:playing:live:ir-fund-hamas,ir-leave-hamas",
           "choiceId": "ir-crush-mahsa",
           "label": "Crush it",
           "historical": true,
@@ -2726,11 +2838,31 @@
         },
         {
           "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
-          "to": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "to": "iran:saudi-accord-2023:raisi:playing:live:ir-fund-hamas,ir-leave-hamas",
           "choiceId": "ir-fire-morality",
           "label": "Fire the morality police",
           "historical": false,
           "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:saudi-accord-2023:raisi:playing:live:ir-fund-hamas,ir-leave-hamas",
+          "to": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "choiceId": "ir-fund-hamas",
+          "label": "Fund Hamas",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:saudi-accord-2023:raisi:playing:live:ir-fund-hamas,ir-leave-hamas",
+          "to": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
+          "choiceId": "ir-leave-hamas",
+          "label": "Do not fund Hamas",
+          "historical": false,
+          "artisticLicense": "al-no-fund-hamas",
           "ending": null,
           "faceChange": null
         },
@@ -2755,6 +2887,16 @@
           "faceChange": null
         },
         {
+          "from": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
+          "to": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
+          "choiceId": "ir-sit-pezeshkian",
+          "label": "Sit the presidency",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "raisi -> pezeshkian"
+        },
+        {
           "from": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
           "to": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
           "choiceId": "ir-fire-iran",
@@ -2773,16 +2915,6 @@
           "artisticLicense": null,
           "ending": null,
           "faceChange": null
-        },
-        {
-          "from": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
-          "to": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
-          "choiceId": "ir-sit-pezeshkian",
-          "label": "Sit the presidency",
-          "historical": true,
-          "artisticLicense": null,
-          "ending": null,
-          "faceChange": "raisi -> pezeshkian"
         },
         {
           "from": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
@@ -2825,7 +2957,7 @@
           "faceChange": null
         }
       ],
-      "terminals": 6467638290
+      "terminals": 16131314706
     }
   },
   "collapses": [
@@ -2856,14 +2988,14 @@
         "Send him tanks instead"
       ],
       "landCardId": "sofa-1964",
-      "landTitle": "The SOFA",
+      "landTitle": "Status of Forces: US troops out of Iranian courts",
       "landFace": "johnson"
     },
     {
       "chair": "us",
       "from": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
       "cardId": "sofa-1964",
-      "title": "The SOFA",
+      "title": "Status of Forces: US troops out of Iranian courts",
       "yearLabel": "1964",
       "face": "johnson",
       "choiceLabels": [
@@ -2871,7 +3003,7 @@
         "Do not ask for the bill"
       ],
       "landCardId": "sit-nixon-1969",
-      "landTitle": "Sit Nixon",
+      "landTitle": "Nixon takes office",
       "landFace": "nixon"
     },
     {
@@ -2886,14 +3018,14 @@
         "Make him spend on the hinterland first"
       ],
       "landCardId": "pipeline-1975",
-      "landTitle": "The pipeline",
+      "landTitle": "Ford keeps selling American weapons",
       "landFace": "ford"
     },
     {
       "chair": "us",
       "from": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
       "cardId": "pipeline-1975",
-      "title": "The pipeline",
+      "title": "Ford keeps selling American weapons",
       "yearLabel": "1975",
       "face": "ford",
       "choiceLabels": [
@@ -2916,14 +3048,14 @@
         "Keep him out"
       ],
       "landCardId": "veil-1979",
-      "landTitle": "They marched with him",
+      "landTitle": "The Imam repeals Family Protection",
       "landFace": "carter"
     },
     {
       "chair": "us",
       "from": "us:veil-1979:us:playing:live:us-statement-women,us-stay-out",
       "cardId": "veil-1979",
-      "title": "They marched with him",
+      "title": "The Imam repeals Family Protection",
       "yearLabel": "March 1979",
       "face": "carter",
       "choiceLabels": [
@@ -2931,14 +3063,14 @@
         "Stay out"
       ],
       "landCardId": "hostages-1979",
-      "landTitle": "The embassy is occupied",
+      "landTitle": "Students occupy the US embassy",
       "landFace": "carter"
     },
     {
       "chair": "us",
       "from": "us:hostages-1979:us:playing:live:us-eagle-claw,us-keep-talking",
       "cardId": "hostages-1979",
-      "title": "The embassy is occupied",
+      "title": "Students occupy the US embassy",
       "yearLabel": "November 1979",
       "face": "carter",
       "choiceLabels": [
@@ -2946,14 +3078,14 @@
         "Keep talking"
       ],
       "landCardId": "iran-iraq-1980",
-      "landTitle": "Saddam is moving",
+      "landTitle": "Iraq invades Iran",
       "landFace": "carter"
     },
     {
       "chair": "us",
       "from": "us:iran-iraq-1980:us:playing:live:us-no-tilt,us-tilt-iraq",
       "cardId": "iran-iraq-1980",
-      "title": "Saddam is moving",
+      "title": "Iraq invades Iran",
       "yearLabel": "September 1980",
       "face": "carter",
       "choiceLabels": [
@@ -2961,14 +3093,14 @@
         "Stay out of the war"
       ],
       "landCardId": "election-1980",
-      "landTitle": "The clip is the campaign",
+      "landTitle": "Carter runs for re-election",
       "landFace": "carter"
     },
     {
       "chair": "us",
       "from": "us:election-1980:us:playing:live:us-hail-mary,us-run-again",
       "cardId": "election-1980",
-      "title": "The clip is the campaign",
+      "title": "Carter runs for re-election",
       "yearLabel": "November 1980",
       "face": "carter",
       "choiceLabels": [
@@ -2976,14 +3108,14 @@
         "Throw a Hail Mary"
       ],
       "landCardId": "inaugurated-1981",
-      "landTitle": "The oath, and the walk",
+      "landTitle": "Reagan takes the oath",
       "landFace": "reagan"
     },
     {
       "chair": "us",
       "from": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
       "cardId": "tilt-1982",
-      "title": "Iran is winning",
+      "title": "Iran is winning. Reagan tilts to Iraq",
       "yearLabel": "1982",
       "face": "reagan",
       "choiceLabels": [
@@ -2991,14 +3123,14 @@
         "Stay out of the war"
       ],
       "landCardId": "lebanon-1983",
-      "landTitle": "A cousin in the Bekaa",
+      "landTitle": "Hezbollah bombs the Marines in Beirut",
       "landFace": "reagan"
     },
     {
       "chair": "us",
       "from": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
       "cardId": "lebanon-1983",
-      "title": "A cousin in the Bekaa",
+      "title": "Hezbollah bombs the Marines in Beirut",
       "yearLabel": "1982–1983",
       "face": "reagan",
       "choiceLabels": [
@@ -3006,14 +3138,14 @@
         "Stay and hit the Bekaa"
       ],
       "landCardId": "iran-contra-1985",
-      "landTitle": "A channel in the dark",
+      "landTitle": "Iran-Contra: missiles for hostages",
       "landFace": "reagan"
     },
     {
       "chair": "us",
       "from": "us:iran-contra-1985:us:playing:live:us-keep-embargo,us-sell-missiles",
       "cardId": "iran-contra-1985",
-      "title": "A channel in the dark",
+      "title": "Iran-Contra: missiles for hostages",
       "yearLabel": "1985–1987",
       "face": "reagan",
       "choiceLabels": [
@@ -3021,14 +3153,14 @@
         "Keep the embargo"
       ],
       "landCardId": "cup-1988",
-      "landTitle": "The cup",
+      "landTitle": "Khomeini drinks the poison chalice",
       "landFace": "reagan"
     },
     {
       "chair": "us",
       "from": "us:cup-1988:us:playing:live:us-call-mistake,us-own-shot",
       "cardId": "cup-1988",
-      "title": "The cup",
+      "title": "Khomeini drinks the poison chalice",
       "yearLabel": "1988",
       "face": "reagan",
       "choiceLabels": [
@@ -3036,14 +3168,14 @@
         "Own the shot"
       ],
       "landCardId": "robe-1989",
-      "landTitle": "The robe",
+      "landTitle": "Khomeini dies. Khamenei becomes Supreme Leader",
       "landFace": "bush41"
     },
     {
       "chair": "us",
       "from": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
       "cardId": "robe-1989",
-      "title": "The robe",
+      "title": "Khomeini dies. Khamenei becomes Supreme Leader",
       "yearLabel": "1989",
       "face": "bush41",
       "choiceLabels": [
@@ -3051,14 +3183,14 @@
         "Do not send a note"
       ],
       "landCardId": "kuwait-1990",
-      "landTitle": "Kuwait",
+      "landTitle": "Iraq invades Kuwait",
       "landFace": "bush41"
     },
     {
       "chair": "us",
       "from": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
       "cardId": "kuwait-1990",
-      "title": "Kuwait",
+      "title": "Iraq invades Kuwait",
       "yearLabel": "1990",
       "face": "bush41",
       "choiceLabels": [
@@ -3066,14 +3198,14 @@
         "Go to Baghdad"
       ],
       "landCardId": "dual-containment-1993",
-      "landTitle": "Dual containment",
+      "landTitle": "Clinton contains Iraq and Iran together",
       "landFace": "clinton"
     },
     {
       "chair": "us",
       "from": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
       "cardId": "dual-containment-1993",
-      "title": "Dual containment",
+      "title": "Clinton contains Iraq and Iran together",
       "yearLabel": "1993",
       "face": "clinton",
       "choiceLabels": [
@@ -3081,14 +3213,14 @@
         "Pick one"
       ],
       "landCardId": "khobar-1996",
-      "landTitle": "Khobar",
+      "landTitle": "Khobar Towers: nineteen airmen dead",
       "landFace": "clinton"
     },
     {
       "chair": "us",
       "from": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
       "cardId": "khobar-1996",
-      "title": "Khobar",
+      "title": "Khobar Towers: nineteen airmen dead",
       "yearLabel": "1996",
       "face": "clinton",
       "choiceLabels": [
@@ -3096,14 +3228,14 @@
         "Strike"
       ],
       "landCardId": "wall-1997",
-      "landTitle": "The wall",
+      "landTitle": "Khatami offers a dialogue of civilizations",
       "landFace": "clinton"
     },
     {
       "chair": "us",
       "from": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
       "cardId": "wall-1997",
-      "title": "The wall",
+      "title": "Khatami offers a dialogue of civilizations",
       "yearLabel": "1997",
       "face": "clinton",
       "choiceLabels": [
@@ -3111,14 +3243,14 @@
         "Stay behind the wall"
       ],
       "landCardId": "natanz-2002",
-      "landTitle": "Natanz",
+      "landTitle": "The Natanz enrichment plant is revealed",
       "landFace": "bush43"
     },
     {
       "chair": "us",
       "from": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
       "cardId": "natanz-2002",
-      "title": "Natanz",
+      "title": "The Natanz enrichment plant is revealed",
       "yearLabel": "2002",
       "face": "bush43",
       "choiceLabels": [
@@ -3126,14 +3258,14 @@
         "Take the fax"
       ],
       "landCardId": "baghdad-2003",
-      "landTitle": "Baghdad",
+      "landTitle": "The United States takes Baghdad",
       "landFace": "bush43"
     },
     {
       "chair": "us",
       "from": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
       "cardId": "baghdad-2003",
-      "title": "Baghdad",
+      "title": "The United States takes Baghdad",
       "yearLabel": "2003",
       "face": "bush43",
       "choiceLabels": [
@@ -3141,14 +3273,14 @@
         "Stop at the border again"
       ],
       "landCardId": "myth-2005",
-      "landTitle": "The myth",
+      "landTitle": "Ahmadinejad calls the Holocaust a myth",
       "landFace": "bush43"
     },
     {
       "chair": "us",
       "from": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
       "cardId": "myth-2005",
-      "title": "The myth",
+      "title": "Ahmadinejad calls the Holocaust a myth",
       "yearLabel": "2005",
       "face": "bush43",
       "choiceLabels": [
@@ -3156,14 +3288,14 @@
         "Ignore"
       ],
       "landCardId": "green-2009",
-      "landTitle": "Green",
+      "landTitle": "Iran's Green Movement",
       "landFace": "obama"
     },
     {
       "chair": "us",
       "from": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
       "cardId": "green-2009",
-      "title": "Green",
+      "title": "Iran's Green Movement",
       "yearLabel": "2009",
       "face": "obama",
       "choiceLabels": [
@@ -3171,14 +3303,14 @@
         "Own the street"
       ],
       "landCardId": "stuxnet-2010",
-      "landTitle": "Stuxnet",
+      "landTitle": "Stuxnet: a worm in the centrifuges",
       "landFace": "obama"
     },
     {
       "chair": "us",
       "from": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
       "cardId": "stuxnet-2010",
-      "title": "Stuxnet",
+      "title": "Stuxnet: a worm in the centrifuges",
       "yearLabel": "2010",
       "face": "obama",
       "choiceLabels": [
@@ -3186,29 +3318,29 @@
         "Bomb instead"
       ],
       "landCardId": "jcpoa-2015",
-      "landTitle": "The deal",
+      "landTitle": "JCPOA: Joint Comprehensive Plan of Action",
       "landFace": "obama"
     },
     {
       "chair": "us",
       "from": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
       "cardId": "jcpoa-2015",
-      "title": "The deal",
+      "title": "JCPOA: Joint Comprehensive Plan of Action",
       "yearLabel": "2015",
       "face": "obama",
       "choiceLabels": [
-        "Sign",
-        "Walk"
+        "Sign the JCPOA",
+        "Walk away"
       ],
       "landCardId": "white-wednesdays-2017",
-      "landTitle": "White Wednesdays",
+      "landTitle": "Women post unveiled on White Wednesdays",
       "landFace": "trump"
     },
     {
       "chair": "us",
       "from": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
       "cardId": "white-wednesdays-2017",
-      "title": "White Wednesdays",
+      "title": "Women post unveiled on White Wednesdays",
       "yearLabel": "2017",
       "face": "trump",
       "choiceLabels": [
@@ -3216,29 +3348,29 @@
         "Do nothing"
       ],
       "landCardId": "archive-2018",
-      "landTitle": "The warehouse",
+      "landTitle": "Mossad steals Iran's nuclear archive",
       "landFace": "trump"
     },
     {
       "chair": "us",
       "from": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
       "cardId": "archive-2018",
-      "title": "The warehouse",
+      "title": "Mossad steals Iran's nuclear archive",
       "yearLabel": "2018",
       "face": "trump",
       "choiceLabels": [
-        "Leave the deal",
-        "Stay in the deal"
+        "Leave the JCPOA",
+        "Stay in the JCPOA"
       ],
       "landCardId": "bounce-2019",
-      "landTitle": "Europe bounced the check",
+      "landTitle": "Europe does not pay. Iran starts leaving the JCPOA limits",
       "landFace": "trump"
     },
     {
       "chair": "us",
       "from": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
       "cardId": "bounce-2019",
-      "title": "Europe bounced the check",
+      "title": "Europe does not pay. Iran starts leaving the JCPOA limits",
       "yearLabel": "2019",
       "face": "trump",
       "choiceLabels": [
@@ -3246,14 +3378,14 @@
         "Offer a ladder"
       ],
       "landCardId": "hormuz-2019",
-      "landTitle": "A drone, a tanker, the Strait",
+      "landTitle": "Iran shoots down a US drone over Hormuz",
       "landFace": "trump"
     },
     {
       "chair": "us",
       "from": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
       "cardId": "hormuz-2019",
-      "title": "A drone, a tanker, the Strait",
+      "title": "Iran shoots down a US drone over Hormuz",
       "yearLabel": "2019",
       "face": "trump",
       "choiceLabels": [
@@ -3261,29 +3393,44 @@
         "Take the shot"
       ],
       "landCardId": "soleimani-2020",
-      "landTitle": "The airport",
+      "landTitle": "A drone kills Qasem Soleimani",
       "landFace": "trump"
     },
     {
       "chair": "us",
       "from": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
       "cardId": "soleimani-2020",
-      "title": "The airport",
+      "title": "A drone kills Qasem Soleimani",
       "yearLabel": "2020",
       "face": "trump",
       "choiceLabels": [
         "Kill him",
         "Hold the shot"
       ],
+      "landCardId": "abraham-2020",
+      "landTitle": "Abraham Accords: Arab states recognize Israel",
+      "landFace": "trump"
+    },
+    {
+      "chair": "us",
+      "from": "us:abraham-2020:us:playing:live:us-broker-accords,us-skip-accords",
+      "cardId": "abraham-2020",
+      "title": "Abraham Accords: Arab states recognize Israel",
+      "yearLabel": "2020",
+      "face": "trump",
+      "choiceLabels": [
+        "Broker the Accords",
+        "Leave the boycott in place"
+      ],
       "landCardId": "unleave-2021",
-      "landTitle": "The un-leave",
+      "landTitle": "Biden tries to restore the JCPOA",
       "landFace": "biden"
     },
     {
       "chair": "us",
       "from": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
       "cardId": "unleave-2021",
-      "title": "The un-leave",
+      "title": "Biden tries to restore the JCPOA",
       "yearLabel": "2021",
       "face": "biden",
       "choiceLabels": [
@@ -3291,29 +3438,29 @@
         "Snap back in"
       ],
       "landCardId": "mahsa-2022",
-      "landTitle": "Mahsa",
+      "landTitle": "Mahsa Amini. Woman, Life, Freedom",
       "landFace": "biden"
     },
     {
       "chair": "us",
       "from": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
       "cardId": "mahsa-2022",
-      "title": "Mahsa",
+      "title": "Mahsa Amini. Woman, Life, Freedom",
       "yearLabel": "2022",
       "face": "biden",
       "choiceLabels": [
         "Issue a statement",
         "Own the street"
       ],
-      "landCardId": "oct7-2023",
-      "landTitle": "7 October",
+      "landCardId": "saudi-accord-2023",
+      "landTitle": "Saudi Arabia talks to Israel",
       "landFace": "biden"
     },
     {
       "chair": "us",
       "from": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
       "cardId": "oct7-2023",
-      "title": "7 October",
+      "title": "Hamas attacks Israel",
       "yearLabel": "2023",
       "face": "biden",
       "choiceLabels": [
@@ -3321,14 +3468,14 @@
         "Go first"
       ],
       "landCardId": "direct-fire-2024",
-      "landTitle": "Direct fire",
+      "landTitle": "Iran fires missiles from Iranian soil",
       "landFace": "biden"
     },
     {
       "chair": "us",
       "from": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
       "cardId": "direct-fire-2024",
-      "title": "Direct fire",
+      "title": "Iran fires missiles from Iranian soil",
       "yearLabel": "2024",
       "face": "biden",
       "choiceLabels": [
@@ -3336,14 +3483,14 @@
         "Stay out"
       ],
       "landCardId": "sit-pezeshkian-2024",
-      "landTitle": "Sit Pezeshkian",
+      "landTitle": "Raisi dies. Pezeshkian takes office",
       "landFace": "biden"
     },
     {
       "chair": "us",
       "from": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
       "cardId": "twelve-days-2025",
-      "title": "Twelve days",
+      "title": "Twelve-Day War: the US bombs Fordow",
       "yearLabel": "2025",
       "face": "trump",
       "choiceLabels": [
@@ -3351,7 +3498,7 @@
         "Stay out of Israel's war"
       ],
       "landCardId": "the-leader-2026",
-      "landTitle": "The Leader",
+      "landTitle": "The campaign kills Ali Khamenei",
       "landFace": "trump"
     },
     {
@@ -3381,14 +3528,14 @@
         "Keep the landlords and the clergy quiet"
       ],
       "landCardId": "sofa-1964",
-      "landTitle": "The SOFA",
+      "landTitle": "Status of Forces: US troops out of Iranian courts",
       "landFace": "shah"
     },
     {
       "chair": "iran",
       "from": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
       "cardId": "sofa-1964",
-      "title": "The SOFA",
+      "title": "Status of Forces: US troops out of Iranian courts",
       "yearLabel": "1964",
       "face": "shah",
       "choiceLabels": [
@@ -3396,7 +3543,7 @@
         "Refuse Washington"
       ],
       "landCardId": "sit-nixon-1969",
-      "landTitle": "Sit Nixon",
+      "landTitle": "Nixon takes office",
       "landFace": "shah"
     },
     {
@@ -3411,7 +3558,7 @@
         "Spend the oil on the villages"
       ],
       "landCardId": "pipeline-1975",
-      "landTitle": "The pipeline",
+      "landTitle": "Ford keeps selling American weapons",
       "landFace": "shah"
     },
     {
@@ -3426,14 +3573,14 @@
         "Leave"
       ],
       "landCardId": "veil-1979",
-      "landTitle": "They marched with him",
+      "landTitle": "The Imam repeals Family Protection",
       "landFace": "bazargan"
     },
     {
       "chair": "iran",
       "from": "iran:veil-1979:bazargan:playing:live:ir-keep-fpl,ir-repeal-fpl",
       "cardId": "veil-1979",
-      "title": "They marched with him",
+      "title": "The Imam repeals Family Protection",
       "yearLabel": "March 1979",
       "face": "bazargan",
       "choiceLabels": [
@@ -3441,14 +3588,14 @@
         "Let the Imam repeal it"
       ],
       "landCardId": "hostages-1979",
-      "landTitle": "The embassy is occupied",
+      "landTitle": "Students occupy the US embassy",
       "landFace": "bazargan"
     },
     {
       "chair": "iran",
       "from": "iran:hostages-1979:bazargan:playing:live:ir-demand-leave,ir-let-students",
       "cardId": "hostages-1979",
-      "title": "The embassy is occupied",
+      "title": "Students occupy the US embassy",
       "yearLabel": "November 1979",
       "face": "bazargan",
       "choiceLabels": [
@@ -3456,14 +3603,14 @@
         "Let the students hold it"
       ],
       "landCardId": "resigned-1979",
-      "landTitle": "The smiling face resigns",
+      "landTitle": "Bazargan resigns",
       "landFace": "banisadr"
     },
     {
       "chair": "iran",
       "from": "iran:resigned-1979:banisadr:playing:live:ir-refuse-letterhead,ir-sit-presidency",
       "cardId": "resigned-1979",
-      "title": "The smiling face resigns",
+      "title": "Bazargan resigns",
       "yearLabel": "November 1979",
       "face": "banisadr",
       "choiceLabels": [
@@ -3471,14 +3618,14 @@
         "Refuse the letterhead"
       ],
       "landCardId": "iran-iraq-1980",
-      "landTitle": "Saddam is moving",
+      "landTitle": "Iraq invades Iran",
       "landFace": "banisadr"
     },
     {
       "chair": "iran",
       "from": "iran:iran-iraq-1980:banisadr:playing:live:ir-artesh-war,ir-guards-war",
       "cardId": "iran-iraq-1980",
-      "title": "Saddam is moving",
+      "title": "Iraq invades Iran",
       "yearLabel": "September 1980",
       "face": "banisadr",
       "choiceLabels": [
@@ -3486,14 +3633,14 @@
         "Keep the regular army in command"
       ],
       "landCardId": "impeached-1981",
-      "landTitle": "The Majlis has a vote",
+      "landTitle": "The Majlis impeaches Banisadr",
       "landFace": "banisadr"
     },
     {
       "chair": "iran",
       "from": "iran:impeached-1981:banisadr:playing:live:ir-defy-majles,ir-leave-majles",
       "cardId": "impeached-1981",
-      "title": "The Majlis has a vote",
+      "title": "The Majlis impeaches Banisadr",
       "yearLabel": "June 1981",
       "face": "banisadr",
       "choiceLabels": [
@@ -3501,14 +3648,14 @@
         "Defy the Majlis"
       ],
       "landCardId": "seated-1981",
-      "landTitle": "A new name on the stamp",
+      "landTitle": "Khamenei takes the presidency",
       "landFace": "khamenei"
     },
     {
       "chair": "iran",
       "from": "iran:seated-1981:khamenei:playing:live:ir-refuse-khamenei,ir-sit-khamenei",
       "cardId": "seated-1981",
-      "title": "A new name on the stamp",
+      "title": "Khamenei takes the presidency",
       "yearLabel": "October 1981",
       "face": "khamenei",
       "choiceLabels": [
@@ -3516,14 +3663,14 @@
         "Refuse the letterhead"
       ],
       "landCardId": "lebanon-1983",
-      "landTitle": "A cousin in the Bekaa",
+      "landTitle": "Hezbollah bombs the Marines in Beirut",
       "landFace": "khamenei"
     },
     {
       "chair": "iran",
       "from": "iran:iran-contra-1985:khamenei:playing:live:ir-refuse-crates,ir-take-parts",
       "cardId": "iran-contra-1985",
-      "title": "A channel in the dark",
+      "title": "Iran-Contra: missiles for hostages",
       "yearLabel": "1985–1987",
       "face": "khamenei",
       "choiceLabels": [
@@ -3531,14 +3678,14 @@
         "Refuse the crates"
       ],
       "landCardId": "cup-1988",
-      "landTitle": "The cup",
+      "landTitle": "Khomeini drinks the poison chalice",
       "landFace": "khamenei"
     },
     {
       "chair": "iran",
       "from": "iran:robe-1989:khamenei:playing:live:ir-remain-letterhead,ir-take-robe",
       "cardId": "robe-1989",
-      "title": "The robe",
+      "title": "Khomeini dies. Khamenei becomes Supreme Leader",
       "yearLabel": "1989",
       "face": "khamenei",
       "choiceLabels": [
@@ -3546,14 +3693,14 @@
         "Remain president"
       ],
       "landCardId": "kuwait-1990",
-      "landTitle": "Kuwait",
+      "landTitle": "Iraq invades Kuwait",
       "landFace": "rafsanjani"
     },
     {
       "chair": "iran",
       "from": "iran:dual-containment-1993:rafsanjani:playing:live:ir-rebuild,ir-stay-loud",
       "cardId": "dual-containment-1993",
-      "title": "Dual containment",
+      "title": "Clinton contains Iraq and Iran together",
       "yearLabel": "1993",
       "face": "rafsanjani",
       "choiceLabels": [
@@ -3561,14 +3708,14 @@
         "Keep the revolution loud"
       ],
       "landCardId": "khobar-1996",
-      "landTitle": "Khobar",
+      "landTitle": "Khobar Towers: nineteen airmen dead",
       "landFace": "rafsanjani"
     },
     {
       "chair": "iran",
       "from": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
       "cardId": "khobar-1996",
-      "title": "Khobar",
+      "title": "Khobar Towers: nineteen airmen dead",
       "yearLabel": "1996",
       "face": "rafsanjani",
       "choiceLabels": [
@@ -3576,14 +3723,14 @@
         "Own it"
       ],
       "landCardId": "wall-1997",
-      "landTitle": "The wall",
+      "landTitle": "Khatami offers a dialogue of civilizations",
       "landFace": "rafsanjani"
     },
     {
       "chair": "iran",
       "from": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
       "cardId": "wall-1997",
-      "title": "The wall",
+      "title": "Khatami offers a dialogue of civilizations",
       "yearLabel": "1997",
       "face": "rafsanjani",
       "choiceLabels": [
@@ -3591,14 +3738,14 @@
         "Meet the Secretary"
       ],
       "landCardId": "natanz-2002",
-      "landTitle": "Natanz",
+      "landTitle": "The Natanz enrichment plant is revealed",
       "landFace": "khatami"
     },
     {
       "chair": "iran",
       "from": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
       "cardId": "natanz-2002",
-      "title": "Natanz",
+      "title": "The Natanz enrichment plant is revealed",
       "yearLabel": "2002",
       "face": "khatami",
       "choiceLabels": [
@@ -3606,14 +3753,14 @@
         "Pause"
       ],
       "landCardId": "baghdad-2003",
-      "landTitle": "Baghdad",
+      "landTitle": "The United States takes Baghdad",
       "landFace": "khatami"
     },
     {
       "chair": "iran",
       "from": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
       "cardId": "baghdad-2003",
-      "title": "Baghdad",
+      "title": "The United States takes Baghdad",
       "yearLabel": "2003",
       "face": "khatami",
       "choiceLabels": [
@@ -3621,14 +3768,14 @@
         "Send the militias now"
       ],
       "landCardId": "myth-2005",
-      "landTitle": "The myth",
+      "landTitle": "Ahmadinejad calls the Holocaust a myth",
       "landFace": "khatami"
     },
     {
       "chair": "iran",
       "from": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
       "cardId": "myth-2005",
-      "title": "The myth",
+      "title": "Ahmadinejad calls the Holocaust a myth",
       "yearLabel": "2005",
       "face": "khatami",
       "choiceLabels": [
@@ -3636,14 +3783,14 @@
         "Do not say it"
       ],
       "landCardId": "green-2009",
-      "landTitle": "Green",
+      "landTitle": "Iran's Green Movement",
       "landFace": "ahmadinejad"
     },
     {
       "chair": "iran",
       "from": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
       "cardId": "green-2009",
-      "title": "Green",
+      "title": "Iran's Green Movement",
       "yearLabel": "2009",
       "face": "ahmadinejad",
       "choiceLabels": [
@@ -3651,14 +3798,14 @@
         "Count the votes"
       ],
       "landCardId": "stuxnet-2010",
-      "landTitle": "Stuxnet",
+      "landTitle": "Stuxnet: a worm in the centrifuges",
       "landFace": "ahmadinejad"
     },
     {
       "chair": "iran",
       "from": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
       "cardId": "stuxnet-2010",
-      "title": "Stuxnet",
+      "title": "Stuxnet: a worm in the centrifuges",
       "yearLabel": "2010",
       "face": "ahmadinejad",
       "choiceLabels": [
@@ -3666,29 +3813,29 @@
         "Pause"
       ],
       "landCardId": "jcpoa-2015",
-      "landTitle": "The deal",
+      "landTitle": "JCPOA: Joint Comprehensive Plan of Action",
       "landFace": "ahmadinejad"
     },
     {
       "chair": "iran",
       "from": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
       "cardId": "jcpoa-2015",
-      "title": "The deal",
+      "title": "JCPOA: Joint Comprehensive Plan of Action",
       "yearLabel": "2015",
       "face": "ahmadinejad",
       "choiceLabels": [
-        "Accept the limits",
-        "Keep spinning"
+        "Accept the JCPOA",
+        "Keep enriching"
       ],
       "landCardId": "white-wednesdays-2017",
-      "landTitle": "White Wednesdays",
+      "landTitle": "Women post unveiled on White Wednesdays",
       "landFace": "rouhani"
     },
     {
       "chair": "iran",
       "from": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
       "cardId": "white-wednesdays-2017",
-      "title": "White Wednesdays",
+      "title": "Women post unveiled on White Wednesdays",
       "yearLabel": "2017",
       "face": "rouhani",
       "choiceLabels": [
@@ -3696,29 +3843,29 @@
         "Let them post"
       ],
       "landCardId": "archive-2018",
-      "landTitle": "The warehouse",
+      "landTitle": "Mossad steals Iran's nuclear archive",
       "landFace": "rouhani"
     },
     {
       "chair": "iran",
       "from": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
       "cardId": "archive-2018",
-      "title": "The warehouse",
+      "title": "Mossad steals Iran's nuclear archive",
       "yearLabel": "2018",
       "face": "rouhani",
       "choiceLabels": [
-        "Stay in the deal",
+        "Stay in the JCPOA",
         "Sprint tonight"
       ],
       "landCardId": "bounce-2019",
-      "landTitle": "Europe bounced the check",
+      "landTitle": "Europe does not pay. Iran starts leaving the JCPOA limits",
       "landFace": "rouhani"
     },
     {
       "chair": "iran",
       "from": "iran:hormuz-2019:rouhani:playing:live:ir-hold-fire,ir-squeeze",
       "cardId": "hormuz-2019",
-      "title": "A drone, a tanker, the Strait",
+      "title": "Iran shoots down a US drone over Hormuz",
       "yearLabel": "2019",
       "face": "rouhani",
       "choiceLabels": [
@@ -3726,29 +3873,44 @@
         "Squeeze the Strait"
       ],
       "landCardId": "soleimani-2020",
-      "landTitle": "The airport",
+      "landTitle": "A drone kills Qasem Soleimani",
       "landFace": "rouhani"
     },
     {
       "chair": "iran",
       "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
       "cardId": "soleimani-2020",
-      "title": "The airport",
+      "title": "A drone kills Qasem Soleimani",
       "yearLabel": "2020",
       "face": "rouhani",
       "choiceLabels": [
         "Missiles, then the airliner",
         "Eat it"
       ],
+      "landCardId": "abraham-2020",
+      "landTitle": "Abraham Accords: Arab states recognize Israel",
+      "landFace": "rouhani"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
+      "cardId": "abraham-2020",
+      "title": "Abraham Accords: Arab states recognize Israel",
+      "yearLabel": "2020",
+      "face": "rouhani",
+      "choiceLabels": [
+        "Keep Death to Israel",
+        "Drop Death to Israel"
+      ],
       "landCardId": "unleave-2021",
-      "landTitle": "The un-leave",
+      "landTitle": "Biden tries to restore the JCPOA",
       "landFace": "rouhani"
     },
     {
       "chair": "iran",
       "from": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
       "cardId": "unleave-2021",
-      "title": "The un-leave",
+      "title": "Biden tries to restore the JCPOA",
       "yearLabel": "2021",
       "face": "rouhani",
       "choiceLabels": [
@@ -3756,29 +3918,29 @@
         "Talk"
       ],
       "landCardId": "mahsa-2022",
-      "landTitle": "Mahsa",
+      "landTitle": "Mahsa Amini. Woman, Life, Freedom",
       "landFace": "raisi"
     },
     {
       "chair": "iran",
       "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
       "cardId": "mahsa-2022",
-      "title": "Mahsa",
+      "title": "Mahsa Amini. Woman, Life, Freedom",
       "yearLabel": "2022",
       "face": "raisi",
       "choiceLabels": [
         "Crush it",
         "Fire the morality police"
       ],
-      "landCardId": "oct7-2023",
-      "landTitle": "7 October",
+      "landCardId": "saudi-accord-2023",
+      "landTitle": "Saudi Arabia talks to Israel",
       "landFace": "raisi"
     },
     {
       "chair": "iran",
       "from": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
       "cardId": "oct7-2023",
-      "title": "7 October",
+      "title": "Hamas attacks Israel",
       "yearLabel": "2023",
       "face": "raisi",
       "choiceLabels": [
@@ -3786,14 +3948,14 @@
         "Shoot from Iran now"
       ],
       "landCardId": "direct-fire-2024",
-      "landTitle": "Direct fire",
+      "landTitle": "Iran fires missiles from Iranian soil",
       "landFace": "raisi"
     },
     {
       "chair": "iran",
       "from": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
       "cardId": "direct-fire-2024",
-      "title": "Direct fire",
+      "title": "Iran fires missiles from Iranian soil",
       "yearLabel": "2024",
       "face": "raisi",
       "choiceLabels": [
@@ -3801,14 +3963,14 @@
         "Stay with the proxies"
       ],
       "landCardId": "sit-pezeshkian-2024",
-      "landTitle": "Sit Pezeshkian",
+      "landTitle": "Raisi dies. Pezeshkian takes office",
       "landFace": "raisi"
     },
     {
       "chair": "iran",
       "from": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
       "cardId": "twelve-days-2025",
-      "title": "Twelve days",
+      "title": "Twelve-Day War: the US bombs Fordow",
       "yearLabel": "2025",
       "face": "pezeshkian",
       "choiceLabels": [
@@ -3816,7 +3978,7 @@
         "Deal now"
       ],
       "landCardId": "the-leader-2026",
-      "landTitle": "The Leader",
+      "landTitle": "The campaign kills Ali Khamenei",
       "landFace": "pezeshkian"
     }
   ],

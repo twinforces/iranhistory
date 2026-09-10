@@ -1,6 +1,13 @@
 # RECENTGOALS
 
+## Headlines, JCPOA, Abraham Accords, 2026-09-10
+
+What: Titles name the event. JCPOA is the Joint Comprehensive Plan of Action, with missiles, reactors, enrichment, Congress, and pallets. Abraham Accords. Biden's public/private Saudi talks gate 7 October.
+
+Why: Sideways headlines. The deal was a wink. Hamas shopping needed a card.
+
 ## The rail to 2026, 2026-09-10
+
 
 What: Fill every hole. Johnson SOFA is why Khomeini has a name. Sit Nixon. Ford pipeline. Then the robe, Kuwait, dual containment, Khobar, Khatami, Natanz, Baghdad, the myth, Green, Stuxnet, Kerry's JCPOA, White Wednesdays, the warehouse, Europe bouncing, Hormuz, Soleimani, Biden un-leave, Mahsa, Oct 7, direct fire, Sit Pezeshkian, Twelve Days, the Leader. Keep the limits is shah_holds-family. 2026 is history arriving. Dual plate after 1989: Khamenei is the Imam, the player is the president.
 

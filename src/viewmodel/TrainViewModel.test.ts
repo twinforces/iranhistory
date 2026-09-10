@@ -500,4 +500,22 @@ describe("TrainViewModel", () => {
     assert.equal(ui.leader.id, "rouhani");
     assert.match(ui.endingBody ?? "", /successful path/);
   });
+
+  it("dropping Death to Israel takes it off the slogan", () => {
+    const vm = new TrainViewModel("iran", "D", "abraham-2020");
+    assert.match(vm.getState().slogan ?? "", /Death to Israel/);
+    vm.choose("ir-drop-quds");
+    const ui = vm.getState();
+    assert.equal(/Death to Israel/.test(ui.slogan ?? ""), false);
+    assert.match(ui.slogan ?? "", /Death to America/);
+  });
+
+  it("private Saudi talks skip 7 October", () => {
+    const vm = new TrainViewModel("us", "R", "saudi-accord-2023");
+    assert.match(vm.getState().card.title, /Saudi Arabia talks to Israel/);
+    vm.choose("us-private-saudi");
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "sit-pezeshkian-2024");
+    assert.match(ui.lastResult?.body ?? "", /7 October does not happen/);
+  });
 });

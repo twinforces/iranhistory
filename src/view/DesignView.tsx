@@ -17,7 +17,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "What actually forks?",
     freeze:
-      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold.",
+      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold.",
   },
   {
     q: "Mossadegh dead end?",
@@ -52,7 +52,12 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "Keep the JCPOA limits?",
     freeze:
-      "After Trump voids, Iran waits a year for Europe. That is history. May 2019 they step off, or they keep the limits. Keeping them is a successful olive hold. The nuclear war cards go away. Soleimani, Mahsa, and Oct 7 are not centrifuges. They live on the historical sprint. The Guards do not veto the hold. Biden's Vienna card only exists if they stepped off. Kerry signed, not Clinton. She left State 1 February 2013.",
+      "After Trump voids, Iran waits a year for Europe. That is history. May 2019 they step off, or they keep the limits. Keeping them is a successful olive hold. The nuclear war cards go away. Soleimani, Mahsa, and Oct 7 are not centrifuges. They live on the historical sprint. The Guards do not veto the hold. Biden's Vienna card only exists if they stepped off. Kerry signed, not Clinton. She left State 1 February 2013. The card is named Joint Comprehensive Plan of Action: missiles allowed, civilian reactor allowed, enrichment supposed to stay low under cameras, Congress will not ratify, cash on pallets.",
+  },
+  {
+    q: "Abraham Accords / Saudi-Israel?",
+    freeze:
+      "2020: UAE and Bahrain recognize Israel. The US co-opts the neighborhood one capital at a time. Iran keeps Death to Israel and becomes more of a pariah, or drops the slogan (AL). 2023: Biden's Saudi talks. Public is history: Hamas shops, finds Iran, 7 October happens. Private is AL: Saudis announce a signed Accord, Hamas is cut off, 7 October does not happen. Raisi still dies. The nuclear file continues.",
   },
   {
     q: "2025-26 chapters",

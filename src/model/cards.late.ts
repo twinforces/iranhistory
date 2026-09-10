@@ -109,10 +109,10 @@ const sofa1964 = play({
   id: "sofa-1964",
   year: 1964,
   yearLabel: "1964",
-  title: "The SOFA",
+  title: "Status of Forces: US troops out of Iranian courts",
   era: "shah",
   situationUs:
-    "You are busy with Vietnam. State wants a SOFA so the advisors cannot be tried in an Iranian court. Two hundred million in military aid is tied to it.\n\nA cleric in Qom is not a name on your desk yet.",
+    "You are busy with Vietnam. State wants a Status of Forces agreement so American advisors cannot be tried in an Iranian court. Two hundred million in military aid is tied to it.\n\nA cleric in Qom is not a name on your desk yet.",
   situationIran:
     "Washington wants immunity for its people. The Majlis is being asked to vote a document the bazaar will call slavery. A cleric in Qom is already writing the sermon.\n\nVietnam is their war. This bill is yours.",
   referee: [
@@ -184,7 +184,7 @@ const sitNixon1969 = play({
   id: "sit-nixon-1969",
   year: 1969,
   yearLabel: "1969",
-  title: "Sit Nixon",
+  title: "Nixon takes office",
   era: "shah",
   situationUs:
     "You inherited Vietnam. Iran is the pillar you will need when you leave Asia. The blank check is a later card.\n\nThe cleric is in Najaf. The king is still buying.",
@@ -231,7 +231,7 @@ const pipeline1975 = play({
   id: "pipeline-1975",
   year: 1975,
   yearLabel: "1975",
-  title: "The pipeline",
+  title: "Ford keeps selling American weapons",
   era: "shah",
   situationUs:
     "Nixon's check is still cashing. Congress wants a veto window. Kissinger says keep selling. Vietnam is over. You are busy not being Nixon.\n\nThe king is the largest buyer in the developing world.",
@@ -303,7 +303,7 @@ const robe1989 = play({
   id: "robe-1989",
   year: 1989,
   yearLabel: "1989",
-  title: "The robe",
+  title: "Khomeini dies. Khamenei becomes Supreme Leader",
   era: "war",
   situationUs:
     "The jurist is dead. 3 June. You are Bush. A note is optional. The war ended last year. Saddam is still next door.\n\nThe letterhead in Tehran is about to put on the Imam's robe, or not.",
@@ -374,7 +374,7 @@ const kuwait1990 = play({
   id: "kuwait-1990",
   year: 1990,
   yearLabel: "1990",
-  title: "Kuwait",
+  title: "Iraq invades Kuwait",
   era: "war",
   branchPoint: true,
   situationUs:
@@ -450,7 +450,7 @@ const dual1993 = play({
   id: "dual-containment-1993",
   year: 1993,
   yearLabel: "1993",
-  title: "Dual containment",
+  title: "Clinton contains Iraq and Iran together",
   era: "war",
   situationUs:
     "You are busy with the Balkans. The Gulf policy is contain Iraq and Iran. Same animal, two cages. ILSA is a later bill.\n\nTehran is rebuilding. Baghdad is in a box. You can name both, or pick one.",
@@ -513,7 +513,7 @@ const khobar1996 = play({
   id: "khobar-1996",
   year: 1996,
   yearLabel: "1996",
-  title: "Khobar",
+  title: "Khobar Towers: nineteen airmen dead",
   era: "war",
   situationUs:
     "25 June. Dhahran. Nineteen airmen. The building is a hole. The file points at the IRGC and Saudi Hezbollah.\n\nYou said no stone unturned. A strike is a different sentence. The Saudis will not like either.",
@@ -585,7 +585,7 @@ const wall1997 = play({
   id: "wall-1997",
   year: 1997,
   yearLabel: "1997",
-  title: "The wall",
+  title: "Khatami offers a dialogue of civilizations",
   era: "street",
   situationUs:
     "Khatami sits. CNN. Dialogue of civilizations. Albright can wait at the UN. His minister may not come.\n\nYou can offer the handshake, or stay behind the wall. The Imam still has the guns.",
@@ -658,7 +658,7 @@ const natanz2002 = play({
   id: "natanz-2002",
   year: 2002,
   yearLabel: "2002",
-  title: "Natanz",
+  title: "The Natanz enrichment plant is revealed",
   era: "nuclear",
   situationUs:
     "The MEK dumps Natanz. You have Afghanistan. You are about to have Iraq. The axis of evil already includes Iran.\n\nA Swiss fax is coming. A grand bargain: nukes, proxies, recognition. You can take it, or you can bin it.",
@@ -731,7 +731,7 @@ const baghdad2003 = play({
   id: "baghdad-2003",
   year: 2003,
   yearLabel: "2003",
-  title: "Baghdad",
+  title: "The United States takes Baghdad",
   era: "nuclear",
   situationUs:
     "You are going to Baghdad. Or you already went in 1991 and this is a rerun. Saddam is the statue. Iran is watching.\n\nThe Guards will inherit the pieces. You can take the capital, or stop at the border again.",
@@ -794,7 +794,7 @@ const myth2005 = play({
   id: "myth-2005",
   year: 2005,
   yearLabel: "2005",
-  title: "The myth",
+  title: "Ahmadinejad calls the Holocaust a myth",
   era: "nuclear",
   situationUs:
     "He sits. October: wipe Israel off the map. December: the Holocaust is a myth, put Israel in Alaska. Enrichment is the file.\n\nYou can condemn, or you can ignore. Both next. The tutorial is the sentence.",
@@ -859,7 +859,7 @@ const green2009 = play({
   id: "green-2009",
   year: 2009,
   yearLabel: "2009",
-  title: "Green",
+  title: "Iran's Green Movement",
   era: "street",
   situationUs:
     "A stolen election. The street fills. The Basij empty it. Unclench your fist was the line.\n\nYou can not own the street, or you can. The liberals clock was already spent in 1979.",
@@ -934,7 +934,7 @@ const stuxnet2010 = play({
   id: "stuxnet-2010",
   year: 2010,
   yearLabel: "2010",
-  title: "Stuxnet",
+  title: "Stuxnet: a worm in the centrifuges",
   era: "nuclear",
   wileyJoos: true,
   situationUs:
@@ -1006,47 +1006,55 @@ const jcpoa2015 = play({
   id: "jcpoa-2015",
   year: 2015,
   yearLabel: "2015",
-  title: "The deal",
+  title: "JCPOA: Joint Comprehensive Plan of Action",
   era: "nuclear",
   situationUs:
-    "Kerry, Zarif, Moniz, Salehi. Clinton set the table and left. Limits for frozen cash. A breakout clock that is a number in a brief.\n\nYou can sign, or you can walk. Walking still nexts. The clock is just worse.",
+    "Joint Comprehensive Plan of Action. Kerry and Zarif. Energy secretaries Moniz and Salehi. Clinton set the table and left State on 1 February 2013.\n\nWhat is in writing: Iran may keep a civilian reactor. Ballistic missiles are not in the deal. Enrichment is supposed to stay low, watched, and capped. They promise not to sprint. Inspectors. Frozen cash comes back.\n\nCongress will not ratify this. You do not have sixty-seven votes. You will do it as an executive agreement so the next man can tear it up with a speech. When the cash has to move they cannot use dollars, so you fly euros and francs on pallets. The other party will call it ransom. You will call it a 1979 claims settlement.\n\nSign it, or walk. Walking still goes on. The clock is just worse.",
   situationIran:
-    "The Imam allowed this and will brake everything else. The Guards hate it and will obey. Limits for frozen cash.\n\nYou can accept, or you can keep spinning. Keep spinning is a worse clock, not a grave.",
+    "The Imam allowed a nuclear bargain and will brake everything else. Missiles stay yours. The civilian reactor stays. Enrichment is supposed to pause at a watched number. The Guards hate the cameras and will obey.\n\nAccept the limits. Or keep enriching. Keep enriching is a worse clock, not a grave.",
   referee: [
-    "LT: 14 July 2015 JCPOA. Kerry, not Clinton. She left State 1 February 2013. Rouhani sits. Khamenei allows the deal and then brakes the rest. IRGC hates it and obeys.",
-    "IT: Walk still nexts. The 2018 leave is cheaper to write if you already walked. History signs.",
+    "LT: 14 July 2015 JCPOA. Not a treaty. Corker-Cardin review. Kerry, not Clinton. Caps: 3.67 percent enrichment, 300 kg stockpile, Fordow as a research hall, fewer IR-1 centrifuges, Additional Protocol inspections. Ballistic missiles sit outside the JCPOA. Bushehr stays. January 2016: $1.7 billion in a 1979 claims settlement, paid in foreign cash, timed with a prisoner release. The pallets photographed. Whether that is ransom is the fight.",
+    "IT: The sales pitch is no bomb. The fine print is limited enrichment under cameras, missiles untouched, proxies untouched. Congress hated it, which is why a later president can leave with a speech.",
+  ],
+  al: [
+    {
+      id: "al-walk-jcpoa",
+      title: "Walk away from the JCPOA",
+      body: "Historically Obama signs. Walking leaves enrichment, missiles, and the cash fight where they were. The 2018 leave is cheaper to write if you already walked. AL.",
+    },
   ],
   briefings: [
-    b("cia", "us", "Sign. Inspections. Months. It is not a surrender of the proxies. It is a number on a centrifuge."),
-    b("my_party", "us", "A deal photographs as a handshake with Death to America. Sell the inspections, not the smile."),
-    b("opposing_party", "us", "Worst deal ever is already written. If he walks we will say he had no plan."),
+    b("cia", "us", "Sign. Inspections. Months. It is not a surrender of the missiles or the proxies. It is a number on a centrifuge and a camera in a hall."),
+    b("my_party", "us", "Congress will not ratify this. Sell the inspections. Do not sell a handshake with Death to America. The pallets will be a clip."),
+    b("opposing_party", "us", "Worst deal ever is already written. Missiles not in it. Cash on pallets. If he walks we will say he had no plan."),
     b("europeans", "us", "Sign. Trade. The oil should move. We have been waiting since 2003."),
-    b("irgc", "iran", "Hate it. Obey. The Imam said so. The battlefield is still ours. The cash is theirs for now.", "ahmadinejad"),
-    b("leader", "iran", "I allowed this. Import nothing from the Americans. The guns stay here. You stamp.", "ahmadinejad"),
-    b("street", "iran", "Frozen cash. Groceries. A deal that feeds us is a deal. Do not be a slogan.", "ahmadinejad"),
+    b("irgc", "iran", "Hate it. Obey. The Imam said so. Missiles stay ours. The battlefield stays ours. The cash is theirs for now.", "ahmadinejad"),
+    b("leader", "iran", "I allowed this. Import nothing from the Americans. Missiles are not on the table. You stamp. I have the guns.", "ahmadinejad"),
+    b("street", "iran", "Frozen cash. Groceries. A bargain that feeds us is a bargain. Do not be a slogan.", "ahmadinejad"),
   ],
   us: [
     {
       id: "us-sign-jcpoa",
-      label: "Sign",
-      summary: "Limits for frozen cash. Inspections. Kerry's banquet.",
+      label: "Sign the JCPOA",
+      summary: "Limited enrichment under cameras. Missiles not in the deal. Congress will not ratify it.",
       kind: "deal",
       historical: true,
       deltas: { europeans: 12, my_party: -8, opposing_party: 10, cia: 6, nuke_breakout_months: 12 },
     },
     {
       id: "us-walk-jcpoa",
-      label: "Walk",
-      summary: "No handshake. Sanctions stay. The clock stays short.",
+      label: "Walk away",
+      summary: "No executive agreement. Sanctions stay. Missiles and centrifuges stay theirs.",
       kind: "walk",
+      artisticLicense: "al-walk-jcpoa",
       deltas: { my_party: 8, europeans: -12, nuke_breakout_months: -4 },
     },
   ],
   iran: [
     {
       id: "ir-accept-jcpoa",
-      label: "Accept the limits",
-      summary: "The Imam allowed this. The Guards will obey. You stamp.",
+      label: "Accept the JCPOA",
+      summary: "The Imam allowed this. Missiles stay. Enrichment pauses at a watched number. You stamp.",
       kind: "deal",
       historical: true,
       face: "ahmadinejad",
@@ -1055,7 +1063,7 @@ const jcpoa2015 = play({
     },
     {
       id: "ir-keep-spin-jcpoa",
-      label: "Keep spinning",
+      label: "Keep enriching",
       summary: "Limits are a fair fight. The cup said never.",
       kind: "hard",
       face: "ahmadinejad",
@@ -1066,14 +1074,14 @@ const jcpoa2015 = play({
   next: "white-wednesdays-2017",
   clocksOn: true,
   factions: ALL,
-  sources: ["cfr-timeline", "ap-nuke-timeline"],
+  sources: ["cfr-timeline", "ap-nuke-timeline", "jcpoa-state"],
 });
 
 const whiteWed2017 = play({
   id: "white-wednesdays-2017",
   year: 2017,
   yearLabel: "2017",
-  title: "White Wednesdays",
+  title: "Women post unveiled on White Wednesdays",
   era: "street",
   situationUs:
     "Women, white headscarves, Instagram. Compulsory hijab is still the law. You can tweet, or you can do nothing.\n\nA next card. Do not collapse this into 2022.",
@@ -1136,7 +1144,7 @@ const archive2018 = play({
   id: "archive-2018",
   year: 2018,
   yearLabel: "2018",
-  title: "The warehouse",
+  title: "Mossad steals Iran's nuclear archive",
   era: "nuclear",
   wileyJoos: true,
   branchPoint: true,
@@ -1151,7 +1159,7 @@ const archive2018 = play({
   al: [
     {
       id: "al-stay-deal",
-      title: "Stay in the deal",
+      title: "Stay in the JCPOA",
       body: "Historically you leave. Staying does not un-write the Quds Force. The airport is a later card either way. AL.",
     },
     {
@@ -1172,7 +1180,7 @@ const archive2018 = play({
   us: [
     {
       id: "us-leave-jcpoa",
-      label: "Leave the deal",
+      label: "Leave the JCPOA",
       summary: "Believe the files. Maximum pressure.",
       kind: "sanction",
       historical: true,
@@ -1181,7 +1189,7 @@ const archive2018 = play({
     },
     {
       id: "us-stay-jcpoa",
-      label: "Stay in the deal",
+      label: "Stay in the JCPOA",
       summary: "The IAEA still inspects. A slide show is not a snapback.",
       kind: "deal",
       artisticLicense: "al-stay-deal",
@@ -1191,7 +1199,7 @@ const archive2018 = play({
   iran: [
     {
       id: "ir-wait-europe",
-      label: "Stay in the deal",
+      label: "Stay in the JCPOA",
       summary: "Wait for Europe. The cash was the point.",
       kind: "deal",
       historical: true,
@@ -1219,7 +1227,7 @@ const bounce2019 = play({
   id: "bounce-2019",
   year: 2019,
   yearLabel: "2019",
-  title: "Europe bounced the check",
+  title: "Europe does not pay. Iran starts leaving the JCPOA limits",
   era: "nuclear",
   branchPoint: true,
   situationUs:
@@ -1295,7 +1303,7 @@ const soleimani2020 = play({
   id: "soleimani-2020",
   year: 2020,
   yearLabel: "2020",
-  title: "The airport",
+  title: "A drone kills Qasem Soleimani",
   era: "late",
   situationUs:
     "Baghdad airport. Quds Force. A drone is in the drawer.\n\nYou can kill him, or you can hold. Holding is a number tweak. Quds still has a face. Do not skip this because of a warehouse.",
@@ -1357,22 +1365,104 @@ const soleimani2020 = play({
       deltas: { irgc: -10, street: 6, europeans: 6 },
     },
   ],
-  next: "unleave-2021",
+  next: "abraham-2020",
   clocksOn: true,
   factions: ALL,
   sources: ["alj-2025", "cfr-timeline"],
 });
 
+const abraham2020 = play({
+  id: "abraham-2020",
+  year: 2020,
+  yearLabel: "2020",
+  title: "Abraham Accords: Arab states recognize Israel",
+  era: "late",
+  branchPoint: true,
+  situationUs:
+    "The United Arab Emirates and Bahrain are ready to recognize Israel in public. Sudan and Morocco will follow. You are taking the Arab-Israeli file away from a Palestinian veto, one capital at a time.\n\nIran then has to drop Death to Israel or sit outside the new map as a pariah.\n\nBroker the Accords. Or let the old boycott stand.",
+  situationIran:
+    "The Americans are peeling the neighborhood off, one flag at a time. UAE. Bahrain. Death to Israel is a founding slogan of the revolution.\n\nKeep it, and you are the country the new map is drawn against. Drop it, and the Imam has to swallow a pillar of 1979.",
+  referee: [
+    "LT: 15 September 2020 UAE and Bahrain sign the Abraham Accords with Israel at the White House. Sudan and Morocco follow. No Palestinian state is required.",
+    "IT: The US is co-opting the Middle East one country at a time. Iran's answer is the slogan or the pariah seat. Historically they keep the slogan.",
+  ],
+  al: [
+    {
+      id: "al-no-accords",
+      title: "Do not broker the Accords",
+      body: "Historically Trump brokers them. Leaving the boycott in place does not un-write Soleimani. AL.",
+    },
+    {
+      id: "al-drop-quds",
+      title: "Drop Death to Israel",
+      body: "Historically the Imam keeps the slogan. Dropping it is the jurist giving up a founding pillar. Iran is less of a pariah. The Accords still exist. Hamas still exists. AL.",
+    },
+  ],
+  briefings: [
+    b("cia", "us", "Take UAE and Bahrain. The Palestinian veto has been the brake for fifty years. Peel them off one at a time. Iran will have to choose the slogan or the map."),
+    b("my_party", "us", "A signing on the lawn photographs. Do not wait for a Palestinian signature that will not come."),
+    b("saudis", "us", "The Emirates can go first. We will watch. A Saudi signature is a later, heavier card."),
+    b("europeans", "us", "Recognition is civilization. Do not forget a state for the Palestinians in the press release."),
+    b("irgc", "iran", "Keep the slogan. A letterhead who drops Death to Israel is a smiling face. The Accords are a siege. Answer a siege.", "rouhani"),
+    b("leader", "iran", "Death to Israel is not a press line you trade. The guns stay here. You may stamp a condemnation. You may not retire the slogan.", "rouhani"),
+    b("street", "iran", "A handshake in Washington does not feed us. A forever war with a new map does not either.", "rouhani"),
+  ],
+  us: [
+    {
+      id: "us-broker-accords",
+      label: "Broker the Accords",
+      summary: "UAE and Bahrain recognize Israel. One capital at a time.",
+      kind: "deal",
+      historical: true,
+      deltas: { my_party: 10, saudis: 8, europeans: 6, media: 10, irgc: 4 },
+    },
+    {
+      id: "us-skip-accords",
+      label: "Leave the boycott in place",
+      summary: "No lawn ceremony. The old map stays.",
+      kind: "walk",
+      artisticLicense: "al-no-accords",
+      deltas: { my_party: -8, europeans: 4, saudis: -4 },
+    },
+  ],
+  iran: [
+    {
+      id: "ir-keep-quds",
+      label: "Keep Death to Israel",
+      summary: "The slogan is the revolution. Sit outside the new map.",
+      kind: "hard",
+      historical: true,
+      face: "rouhani",
+      deltas: { irgc: 10, leader: 8, europeans: -8, saudis: -10, street: -4 },
+    },
+    {
+      id: "ir-drop-quds",
+      label: "Drop Death to Israel",
+      summary: "The neighborhood is leaving. The slogan is the price of staying in it.",
+      kind: "deal",
+      face: "rouhani",
+      artisticLicense: "al-drop-quds",
+      flags: { dropped_death_to_israel: true },
+      deltas: { europeans: 10, saudis: 8, irgc: -12, leader: -8, street: 6 },
+    },
+  ],
+  next: "unleave-2021",
+  clocksOn: true,
+  factions: ALL,
+  sources: ["abraham-accords-state", "cfr-timeline"],
+});
+
+
 const unleave2021 = play({
   id: "unleave-2021",
   year: 2021,
   yearLabel: "2021",
-  title: "The un-leave",
+  title: "Biden tries to restore the JCPOA",
   era: "late",
   situationUs:
-    "You ran on taping the deal back together. Vienna. Proximity talks. Raisi sits in June and raises the price.\n\nYou can talk forever, or you can snap back in. Historical is the impasse. They are already at 60 percent.",
+    "You ran on putting the Joint Comprehensive Plan of Action back together. Vienna. Proximity talks. Raisi sits in June and raises the price.\n\nTalk forever, or snap back in. Historical is the impasse. They are already at 60 percent.",
   situationIran:
-    "You sit. The Americans want the deal they walked out of. 60 percent is already a photograph.\n\nYou can sprint, or you can talk. Talking is how you get paid for a clock you already lit.",
+    "You sit. The Americans want the JCPOA they walked out of. 60 percent is already a photograph.\n\nSprint, or talk. Talking is how you get paid for a clock you already lit.",
   referee: [
     "LT: Biden runs on rejoining. Vienna 2021-2022. Close in March 2022. Dies over who goes first, the IRGC listing, a guarantee the next Trump cannot walk, then Ukraine, then Mahsa. Raisi sits June 2021.",
     "IT: Historical Biden is talk forever. Rejoin is AL. Iran still sprints. This card only exists because they stepped off in 2019.",
@@ -1440,7 +1530,7 @@ const mahsa2022 = play({
   id: "mahsa-2022",
   year: 2022,
   yearLabel: "2022",
-  title: "Mahsa",
+  title: "Mahsa Amini. Woman, Life, Freedom",
   era: "street",
   situationUs:
     "Mahsa Amini dies in morality-police custody. The street fills. Woman, Life, Freedom. Schoolgirls are poisoned in clusters later that year.\n\nYou can issue a statement, or you can own the street. The street is not a government. It was not in 1979 either.",
@@ -1510,25 +1600,120 @@ const mahsa2022 = play({
       deltas: { street: 12, irgc: -12, europeans: 8 },
     },
   ],
-  next: "oct7-2023",
+  next: "saudi-accord-2023",
   clocksOn: true,
   factions: ALL,
   sources: ["cfr-timeline", "ohchr-poison", "stanford-poison"],
 });
 
+const saudiAccord2023 = play({
+  id: "saudi-accord-2023",
+  year: 2023,
+  yearLabel: "2023",
+  title: "Saudi Arabia talks to Israel",
+  era: "late",
+  branchPoint: true,
+  situationUs:
+    "Riyadh is ready to talk to Israel. An Abraham Accord with Saudi Arabia would be the prize the Emirates started. A US security promise and civil nuclear help are on the table.\n\nDo the talks in public, the way a White House likes a photograph. Hamas will see the train leaving, shop for a new sponsor, and find Iran. 7 October follows.\n\nDo them in private. Then the Saudis announce a signed Accord. Hamas is cut off before it shops.",
+  situationIran:
+    "The Saudis are talking to Israel. If the Americans do it in public, Hamas will come shopping for a sponsor. The Quds Force can write a check.\n\nFund them. Or leave them to Qatar. Funding them is how 7 October gets an Iranian fingerprint.",
+  referee: [
+    "LT: Through 2023 the Biden administration talks Saudi-Israel normalization in the open: a defense pact, civil nuclear help, a Palestinian gesture. Hamas attacks on 7 October 2023. The Saudi track dies that morning.",
+    "IT: A public courtship is a countdown Hamas can see. A quiet signature leaves them no time to shop. Historically the talks are public and 7 October happens. Private is the fork that cuts Hamas off.",
+  ],
+  al: [
+    {
+      id: "al-private-accord",
+      title: "Do the Saudi talks in private",
+      body: "Historically the courtship is public. Hamas sees the train leave, shops, and finds Iran. A quiet signature, then an announcement, cuts them off before 7 October. Raisi still dies in a helicopter. The nuclear file is still the nuclear file. AL.",
+    },
+    {
+      id: "al-no-fund-hamas",
+      title: "Do not fund Hamas",
+      body: "Historically the Quds Force keeps the proxy layer. Not writing the check this year skips 7 October. It does not un-write the rest of the file. AL.",
+    },
+  ],
+  briefings: [
+    b("cia", "us", "A lawn ceremony is a countdown. Hamas will shop. Iran will take the meeting. If you want the Saudi signature without a massacre, do not advertise the talks."),
+    b("my_party", "us", "A Saudi-Israel signing is the photograph of the term. Private gets you the same paper and no clip of a funeral."),
+    b("saudis", "us", "We will talk. We will not go first into a photograph that lights the street. A quiet signature we can own. A public courtship we may have to bury."),
+    b("europeans", "us", "Recognition is civilization. Do it. We would like a Palestinian sentence in the press release."),
+    b("irgc", "iran", "If they do it in public, Hamas will knock. Write the check. A letterhead who leaves Hamas to Qatar is a smiling face.", "raisi"),
+    b("leader", "iran", "The guns are the proxies. A Saudi handshake with Israel is a siege. You may fund an answer. You may not retire Death to Israel.", "raisi"),
+    b("street", "iran", "A war with Israel is a queue. A check to Gaza is not groceries. Do not volunteer us from Tehran.", "raisi"),
+  ],
+  us: [
+    {
+      id: "us-public-saudi",
+      label: "Do the talks in public",
+      summary: "A photograph. Hamas shops for a sponsor. Iran takes the meeting.",
+      kind: "deal",
+      historical: true,
+      nextCard: "oct7-2023",
+      deltas: { my_party: 6, media: 10, saudis: 4, europeans: 4 },
+    },
+    {
+      id: "us-private-saudi",
+      label: "Do the talks in private",
+      summary: "Then announce a signed Accord. Hamas is cut off before it shops.",
+      kind: "covert",
+      artisticLicense: "al-private-accord",
+      flags: { accords_private: true, hamas_cut_off: true },
+      nextCard: "sit-pezeshkian-2024",
+      epilogue: true,
+      resultTitle: "Hamas is cut off",
+      result:
+        "The Saudis signed with Israel before Hamas could shop. Qatar still has a channel. The war room in Gaza does not have an Iranian green light this week. 7 October does not happen. Raisi still dies in a helicopter. The nuclear file is still the nuclear file.",
+      deltas: { saudis: 12, my_party: 4, media: -6, irgc: -8, europeans: 6 },
+    },
+  ],
+  iran: [
+    {
+      id: "ir-fund-hamas",
+      label: "Fund Hamas",
+      summary: "They came shopping. Write the check.",
+      kind: "hard",
+      historical: true,
+      face: "raisi",
+      nextCard: "oct7-2023",
+      deltas: { irgc: 10, leader: 6, europeans: -8, saudis: -8, media: 8 },
+    },
+    {
+      id: "ir-leave-hamas",
+      label: "Do not fund Hamas",
+      summary: "Leave them to Qatar. No Iranian fingerprint on the next massacre.",
+      kind: "walk",
+      face: "raisi",
+      artisticLicense: "al-no-fund-hamas",
+      flags: { hamas_cut_off: true },
+      nextCard: "sit-pezeshkian-2024",
+      epilogue: true,
+      resultTitle: "Hamas is cut off",
+      result:
+        "You did not write the check. Hamas still has Qatar and the tunnel. It does not have an Iranian green light this week. 7 October does not happen. Raisi still dies in a helicopter. The nuclear file is still the nuclear file.",
+      deltas: { irgc: -10, europeans: 8, street: 6, saudis: 4 },
+    },
+  ],
+  next: "oct7-2023",
+  clocksOn: true,
+  factions: ALL,
+  sources: ["abraham-accords-state", "cfr-timeline"],
+});
+
+
 const oct72023 = play({
   id: "oct7-2023",
   year: 2023,
   yearLabel: "2023",
-  title: "7 October",
+  title: "Hamas attacks Israel",
   era: "late",
   situationUs:
-    "Hamas. The deniability was the product. Iran's proxy file is no longer a rumor.\n\nYou can arm Israel and not make it your war, or you can go first.",
+    "Hamas just massacred Israelis. The public Saudi-Israel talks made Hamas shop for a sponsor. They found Iran.\n\nArm Israel. Do not make it a US war. Or go first.",
   situationIran:
-    "The proxy layer just photographed. The deniability was the product.\n\nYou can keep the proxy layer, or you can shoot from Iran now. Historical is keep the layer. Direct fire is next year's card either way.",
+    "The proxy layer just photographed. Hamas came shopping. The deniability is gone.\n\nKeep the proxy layer, or shoot from Iran now. Historical is keep the layer. Direct fire from Iranian soil is next year's card either way.",
   referee: [
-    "LT: 7 October 2023 Hamas attacks Israel. Iran's proxy file is no longer a rumor.",
-    "IT: Direct fire is the next card. The deniability was the product.",
+    "LT: 7 October 2023 Hamas attacks Israel. The Saudi-Israel track dies that morning. Iran's proxy file is no longer a rumor.",
+    "IT: A public courtship was a countdown. Direct fire is the next card. The deniability was the product.",
   ],
   briefings: [
     b("cia", "us", "Arm Israel. Do not make it our war. The proxy layer is the point. Going first is a different century."),
@@ -1582,7 +1767,7 @@ const directFire2024 = play({
   id: "direct-fire-2024",
   year: 2024,
   yearLabel: "2024",
-  title: "Direct fire",
+  title: "Iran fires missiles from Iranian soil",
   era: "late",
   situationUs:
     "April. Iran fires from Iran. The proxy layer thins. You can help Israel shoot them down, or you can stay out.\n\nRaisi is still sitting. A helicopter is a later month.",
@@ -1644,7 +1829,7 @@ const sitPezeshkian2024 = play({
   id: "sit-pezeshkian-2024",
   year: 2024,
   yearLabel: "2024",
-  title: "Sit Pezeshkian",
+  title: "Raisi dies. Pezeshkian takes office",
   era: "late",
   situationUs:
     "A helicopter. Raisi is dead. A new letterhead sits. You are still Biden. The year still has a second wave of fire in it.\n\nSit the fact. The next war is next year's card.",
@@ -1692,7 +1877,7 @@ const twelveDays2025 = play({
   id: "twelve-days-2025",
   year: 2025,
   yearLabel: "2025",
-  title: "Twelve days",
+  title: "Twelve-Day War: the US bombs Fordow",
   era: "late",
   branchPoint: true,
   situationUs:
@@ -1766,7 +1951,7 @@ const theLeader2026 = play({
   id: "the-leader-2026",
   year: 2026,
   yearLabel: "2026",
-  title: "The Leader",
+  title: "The campaign kills Ali Khamenei",
   era: "late",
   branchPoint: true,
   situationUs:
@@ -1871,11 +2056,14 @@ export const LATE_CARDS: readonly Card[] = [
 
 export const LATE_AFTER_HORMUZ: readonly Card[] = [
   soleimani2020,
+  abraham2020,
   unleave2021,
   mahsa2022,
+  saudiAccord2023,
   oct72023,
   directFire2024,
   sitPezeshkian2024,
   twelveDays2025,
   theLeader2026,
 ];
+
