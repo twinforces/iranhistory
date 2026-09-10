@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { TrainViewModel } from "./TrainViewModel.ts";
+import { TrainViewModel, truthTagCaption } from "./TrainViewModel.ts";
 
 describe("TrainViewModel", () => {
   it("does not label the historical choice on the button", () => {
@@ -10,6 +10,16 @@ describe("TrainViewModel", () => {
       assert.equal(/historical|what happened/i.test(c.label), false);
       assert.equal(/historical|what happened/i.test(c.summary), false);
     }
+  });
+
+  it("truth tags explain the terminology, not just the letters", () => {
+    assert.equal(truthTagCaption("LT").name, "Lawyer true");
+    assert.match(truthTagCaption("LT").blurb, /date|document|court/i);
+    assert.equal(truthTagCaption("IT").name, "Irish true");
+    assert.match(truthTagCaption("IT").blurb, /incentive/i);
+    assert.match(truthTagCaption("DK").blurb, /file/i);
+    assert.match(truthTagCaption("AL").blurb, /popup|labelled/i);
+    assert.match(truthTagCaption("GR").blurb, /engine|number/i);
   });
 
   it("hides IRGC / China / Venezuela on the 1953 board", () => {

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-10 - Hover the truth tags
+
+What: LT, IT, DK, AL, and GR chips explain themselves on hover. So do the prefixes in the referee notes, and the truth mark on receipts.
+
+Why: Lawyer true and Irish true are house terms. The letters were a closed file.
+
 ## 2026-09-10 - Iraq comes off the terrorism list
 
 What: Reagan's February 1982 original sin is its own card. Iraq comes off the State Sponsors of Terrorism list so dual-use licenses open and Europe can sell the plants and the precursors. Keep them on is AL and still reaches the intel tilt. Iran never sees the cable.

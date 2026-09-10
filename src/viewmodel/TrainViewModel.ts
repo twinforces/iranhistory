@@ -25,6 +25,8 @@ import {
   otherParty,
   playableCards,
   RECEIPTS,
+  TRUTH_TAG_BLURB,
+  TRUTH_TAG_NAME,
   timeTravelBackOne,
   timeTravelFurtherBack,
   timeTravelToBranch,
@@ -115,6 +117,10 @@ export interface TrainViewState {
   leader: Leader;
   imam: Leader | null;
   grave: Leader | null;
+}
+
+export function truthTagCaption(tag: TruthTag): { name: string; blurb: string } {
+  return { name: TRUTH_TAG_NAME[tag], blurb: TRUTH_TAG_BLURB[tag] };
 }
 
 function sloganFor(state: GameState, card: Card): string | null {

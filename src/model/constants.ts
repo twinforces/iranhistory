@@ -1,4 +1,4 @@
-import type { Bars, Chair, Clocks, FactionId, Party } from "./types.ts";
+import type { Bars, Chair, Clocks, FactionId, Party, TruthTag } from "./types.ts";
 
 export const BAR_MIN = 0;
 export const BAR_MAX = 100;
@@ -124,3 +124,19 @@ export const SEED_1979: { bars: Partial<Bars>; clocks: Partial<Clocks> } = {
 
 export const X_PROFILE = "https://x.com/GrumpyTechBro";
 export const GITHUB_REPO = "https://github.com/twinforces/iranhistory";
+
+export const TRUTH_TAG_NAME: Record<TruthTag, string> = {
+  LT: "Lawyer true",
+  IT: "Irish true",
+  DK: "Don't know",
+  AL: "Artistic license",
+  GR: "Game rule",
+};
+
+export const TRUTH_TAG_BLURB: Record<TruthTag, string> = {
+  LT: "A date, a document, a death toll. You can take this to court.",
+  IT: "The incentive reading. What the players wanted, even if the memo is quieter. Not a proof.",
+  DK: "Nobody has a clean file. We say so.",
+  AL: "History did not do this. The button is labelled. The popup is required.",
+  GR: "Not a counterfactual claim. The engine needs a number.",
+};

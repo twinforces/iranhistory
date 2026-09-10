@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { CARDS } from "../model/cards.ts";
-import { TagChip } from "./TagChip.tsx";
+import { TagChip, RefereeText } from "./TagChip.tsx";
 import { Button } from "@/components/ui/button";
 
 export function RailView() {
@@ -58,7 +58,9 @@ export function RailView() {
                   </div>
                   <div className="flex flex-col gap-2 text-sm leading-relaxed text-muted">
                     {card.referee.paragraphs.map((p) => (
-                      <p key={p.slice(0, 24)}>{p}</p>
+                      <p key={p.slice(0, 24)}>
+                        <RefereeText text={p} />
+                      </p>
                     ))}
                   </div>
                   {card.status === "playable" ? (

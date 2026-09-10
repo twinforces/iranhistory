@@ -1,5 +1,11 @@
 # RECENTGOALS
 
+## Hover the truth tags, 2026-09-10
+
+What: LT / IT / DK / AL / GR hover to the sentence, not just the acronym.
+
+Why: People do not know the house terms.
+
 ## Iraq comes off the terrorism list, 2026-09-10
 
 What: Reagan takes Iraq off the list in February 1982. Dual-use unlocks. Europe sells the chemistry because Baghdad is losing. Then the intel tilt. Iran skips both.

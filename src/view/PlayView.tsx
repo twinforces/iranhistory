@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { TagChip } from "./TagChip.tsx";
+import { TagChip, RefereeText } from "./TagChip.tsx";
 import { FactionBars } from "./FactionBars.tsx";
 import { ChairSelect } from "./ChairSelect.tsx";
 import { AdvisorList } from "./AdvisorList.tsx";
@@ -130,7 +130,7 @@ export function PlayView({
                   <div className="mt-2 flex flex-col gap-2 text-sm leading-relaxed text-ink/70">
                     {ui.card.referee.map((p) => (
                       <p key={p.slice(0, 32)}>
-                        <GlossText text={p} />
+                        <RefereeText text={p} />
                       </p>
                     ))}
                   </div>
