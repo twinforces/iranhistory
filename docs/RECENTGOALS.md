@@ -1,5 +1,11 @@
 # RECENTGOALS
 
+## The rail to 2026, 2026-09-10
+
+What: Fill every hole. Johnson SOFA is why Khomeini has a name. Sit Nixon. Ford pipeline. Then the robe, Kuwait, dual containment, Khobar, Khatami, Natanz, Baghdad, the myth, Green, Stuxnet, Kerry's JCPOA, White Wednesdays, the warehouse, Europe bouncing, Hormuz, Soleimani, Biden un-leave, Mahsa, Oct 7, direct fire, Sit Pezeshkian, Twelve Days, the Leader. Keep the limits is shah_holds-family. 2026 is history arriving. Dual plate after 1989: Khamenei is the Imam, the player is the president.
+
+Why: Do not skip years. This is a history tutorial. Cards that say Next still say a sentence.
+
 ## Hinterland win, real letterheads, Reagan's tilt, 2026-09-10
 
 What: Villages-then-stay is a win panel. Real portraits on the golden path. Stick figure only after a moral diverge. Carter stays out in 1980. Reagan tilts in 1982. Nixon's 1972 copy names east of Suez, the Nixon Doctrine, oil, and twin pillars. A loading rail covers first paint.

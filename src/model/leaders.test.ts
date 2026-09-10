@@ -97,6 +97,71 @@ describe("leaderFor", () => {
     );
   });
 
+  it("seats Johnson in 1964 as a Democrat, Ford in 1975 as a Republican", () => {
+    const johnson = leaderFor({ chair: "us", year: 1964, iranFace: "shah" });
+    assert.equal(johnson.id, "johnson");
+    assert.equal(johnson.youAre, "You are Johnson");
+    assert.equal(johnson.party, "D");
+    const kennedy = leaderFor({ chair: "us", year: 1963, iranFace: "shah" });
+    assert.equal(kennedy.id, "kennedy");
+    const ford = leaderFor({ chair: "us", year: 1975, iranFace: "shah" });
+    assert.equal(ford.id, "ford");
+    assert.equal(ford.party, "R");
+    const nixon = leaderFor({ chair: "us", year: 1972, iranFace: "shah" });
+    assert.equal(nixon.id, "nixon");
+  });
+
+  it("seats Bush, Clinton, Obama, Biden, and Trump on their years", () => {
+    assert.equal(leaderFor({ chair: "us", year: 1989, iranFace: "rafsanjani" }).id, "bush41");
+    assert.equal(leaderFor({ chair: "us", year: 1993, iranFace: "rafsanjani" }).id, "clinton");
+    assert.equal(leaderFor({ chair: "us", year: 1993, iranFace: "rafsanjani" }).party, "D");
+    assert.equal(leaderFor({ chair: "us", year: 2003, iranFace: "khatami" }).id, "bush43");
+    assert.equal(leaderFor({ chair: "us", year: 2009, iranFace: "ahmadinejad" }).id, "obama");
+    assert.equal(leaderFor({ chair: "us", year: 2015, iranFace: "rouhani" }).id, "obama");
+    assert.equal(leaderFor({ chair: "us", year: 2018, iranFace: "rouhani" }).id, "trump");
+    assert.equal(leaderFor({ chair: "us", year: 2021, iranFace: "raisi" }).id, "biden");
+    assert.equal(leaderFor({ chair: "us", year: 2021, iranFace: "raisi" }).party, "D");
+    assert.equal(leaderFor({ chair: "us", year: 2025, iranFace: "pezeshkian" }).id, "trump");
+    assert.equal(leaderFor({ chair: "us", year: 2026, iranFace: "pezeshkian" }).id, "trump");
+  });
+
+  it("after the robe the Imam plate is Khamenei, the player is the letterhead", () => {
+    const r = leaderFor({ chair: "iran", year: 1990, iranFace: "rafsanjani" });
+    assert.equal(r.id, "rafsanjani");
+    assert.equal(r.youAre, "You are Rafsanjani");
+    const beside = imamFor({ chair: "iran", iranFace: "rafsanjani" });
+    assert.equal(beside?.id, "khamenei_imam");
+    assert.equal(beside?.playing, "The Imam");
+    assert.equal(beside?.youAre, "He has the guns");
+    assert.equal(/You are Khamenei/i.test(beside?.youAre ?? ""), false);
+    assert.equal(imamFor({ chair: "iran", iranFace: "khatami" })?.id, "khamenei_imam");
+    assert.equal(imamFor({ chair: "iran", iranFace: "ahmadinejad" })?.id, "khamenei_imam");
+    assert.equal(imamFor({ chair: "iran", iranFace: "rouhani" })?.id, "khamenei_imam");
+    assert.equal(imamFor({ chair: "iran", iranFace: "raisi" })?.id, "khamenei_imam");
+    assert.equal(imamFor({ chair: "iran", iranFace: "pezeshkian" })?.id, "khamenei_imam");
+    assert.equal(imamFor({ chair: "iran", iranFace: "khamenei" })?.id, "khomeini");
+    assert.equal(
+      leaderFor({ chair: "iran", year: 1997, iranFace: "khatami" }).youAre,
+      "You are Khatami",
+    );
+    assert.equal(
+      leaderFor({ chair: "iran", year: 2005, iranFace: "ahmadinejad" }).youAre,
+      "You are Ahmadinejad",
+    );
+    assert.equal(
+      leaderFor({ chair: "iran", year: 2015, iranFace: "rouhani" }).youAre,
+      "You are Rouhani",
+    );
+    assert.equal(
+      leaderFor({ chair: "iran", year: 2021, iranFace: "raisi" }).youAre,
+      "You are Raisi",
+    );
+    assert.equal(
+      leaderFor({ chair: "iran", year: 2024, iranFace: "pezeshkian" }).youAre,
+      "You are Pezeshkian",
+    );
+  });
+
   it("the Imam is a second plate, never the seated player", () => {
     const beside = imamFor({ chair: "iran", iranFace: "bazargan" });
     assert.equal(beside?.id, "khomeini");
@@ -139,6 +204,14 @@ describe("partyForUsYear", () => {
     assert.equal(partyForUsYear(1972), "R");
     assert.equal(partyForUsYear(1979), "D");
     assert.equal(partyForUsYear(1981), "R");
-    assert.equal(partyForUsYear(2019), "R");
+    assert.equal(partyForUsYear(1964), "D");
+    assert.equal(partyForUsYear(1975), "R");
+    assert.equal(partyForUsYear(1989), "R");
+    assert.equal(partyForUsYear(1993), "D");
+    assert.equal(partyForUsYear(2003), "R");
+    assert.equal(partyForUsYear(2009), "D");
+    assert.equal(partyForUsYear(2018), "R");
+    assert.equal(partyForUsYear(2021), "D");
+    assert.equal(partyForUsYear(2025), "R");
   });
 });

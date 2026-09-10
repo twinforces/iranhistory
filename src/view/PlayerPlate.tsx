@@ -21,6 +21,12 @@ export function PlayerPlate({
     leader.id === "bazargan" ||
     leader.id === "banisadr" ||
     leader.id === "khamenei" ||
+    leader.id === "rafsanjani" ||
+    leader.id === "khatami" ||
+    leader.id === "ahmadinejad" ||
+    leader.id === "rouhani" ||
+    leader.id === "raisi" ||
+    leader.id === "pezeshkian" ||
     leader.id === "replacement";
   const className = [
     "player-plate",

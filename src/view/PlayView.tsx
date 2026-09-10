@@ -37,19 +37,19 @@ export function PlayView({
   const license = ui.lastResult ? null : alId ? vm.licenseById(alId) : null;
   const flank = ui.imam ?? ui.grave;
   const dual = Boolean(flank);
-  const endingKicker =
-    ui.endingId === "none"
+  const holdEnding = ui.endingId === "shah_holds" || ui.endingId === "jcpoa_holds";
+  const historyEnding = ui.endingId === "none" || ui.endingId === "the_leader";
+  const endingKicker = holdEnding
+    ? "Successful path"
+    : historyEnding
       ? "Rail hold"
-      : ui.endingId === "shah_holds"
-        ? "Successful path"
-        : "End of this chair";
-  const endingClass =
-    ui.endingId === "none"
+      : "End of this chair";
+  const endingClass = holdEnding
+    ? "hold-panel"
+    : historyEnding
       ? "rounded-[var(--radius-xl)] bg-surface p-5 shadow-border"
-      : ui.endingId === "shah_holds"
-        ? "hold-panel"
-        : "ending-panel";
-  const endingKickerClass = ui.endingId === "shah_holds" ? "kicker text-ok" : "kicker text-accent";
+      : "ending-panel";
+  const endingKickerClass = holdEnding ? "kicker text-ok" : "kicker text-accent";
 
   return (
     <div className="flex flex-col gap-6">

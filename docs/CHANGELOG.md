@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-10 - The rail to 2026
+
+What: Every quiet year is a card. Johnson's SOFA, Sit Nixon, Ford's pipeline, the 1989 robe, Kuwait, dual containment, Khobar, Khatami's wall, Natanz, Baghdad, Ahmadinejad's Holocaust denial, Green, Stuxnet, Kerry's JCPOA, White Wednesdays, the warehouse, Europe bouncing, Hormuz, Soleimani, Biden's un-leave, Mahsa (poisonings in the after-copy), Oct 7, direct fire, Sit Pezeshkian, Twelve Days, the 2026 campaign. Keep the limits is an olive hold. Side with Saddam is a grave. 2026 is history arriving. Dual plate: after the robe the Imam is Khamenei and the player is the letterhead.
+
+Why: The user had played every option to 1988. Skipping years was a jump cut. Quiet Next cards are tutorial stops. HRC left State before the deal. Iran waited a year after Trump left, then stepped off.
+
 ## 2026-09-10 - Hinterland win, real letterheads, Reagan's tilt
 
 What: Spending the oil on the villages and staying in 1979 is a successful path, not a red grave. History keeps the real Bazargan, Banisadr, and Khamenei portraits. A moral diverge (Family Protection, flee, keep Artesh, defy the Majlis) sits a stick-figure replacement. Carter 1980 stays out of the war. Reagan 1982 shares intel with Baghdad. Nixon's blank check now says why: Britain left east of Suez, no more Vietnams, oil pays, twin pillars. First paint is a loading rail, not a dead page.

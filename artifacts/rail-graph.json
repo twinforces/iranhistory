@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T06:27:55.049Z",
+  "generated": "2026-09-10T19:58:56.131Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -56,6 +56,32 @@
           "endingTitle": null
         },
         {
+          "id": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
+          "chair": "us",
+          "cardId": "sofa-1964",
+          "year": 1964,
+          "yearLabel": "1964",
+          "title": "The SOFA",
+          "era": "shah",
+          "face": "johnson",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:sit-nixon-1969:us:playing:live:us-sit-nixon",
+          "chair": "us",
+          "cardId": "sit-nixon-1969",
+          "year": 1969,
+          "yearLabel": "1969",
+          "title": "Sit Nixon",
+          "era": "shah",
+          "face": "nixon",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
           "id": "us:weapons-1972:us:playing:live:us-blank-check,us-hinterland-first",
           "chair": "us",
           "cardId": "weapons-1972",
@@ -64,6 +90,19 @@
           "title": "Twin pillars, blank check",
           "era": "shah",
           "face": "nixon",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
+          "chair": "us",
+          "cardId": "pipeline-1975",
+          "year": 1975,
+          "yearLabel": "1975",
+          "title": "The pipeline",
+          "era": "shah",
+          "face": "ford",
           "phase": "playing",
           "endingId": null,
           "endingTitle": null
@@ -147,6 +186,19 @@
           "endingTitle": null
         },
         {
+          "id": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+          "chair": "us",
+          "cardId": "tilt-1982",
+          "year": 1982,
+          "yearLabel": "1982",
+          "title": "Iran is winning",
+          "era": "war",
+          "face": "reagan",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
           "id": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
           "chair": "us",
           "cardId": "lebanon-1983",
@@ -186,17 +238,329 @@
           "endingTitle": null
         },
         {
-          "id": "us:cup-1988:us:ended:none:",
+          "id": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
           "chair": "us",
-          "cardId": "cup-1988",
-          "year": 1988,
-          "yearLabel": "1988",
-          "title": "The cup",
+          "cardId": "robe-1989",
+          "year": 1989,
+          "yearLabel": "1989",
+          "title": "The robe",
           "era": "war",
-          "face": "reagan",
+          "face": "bush41",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
+          "chair": "us",
+          "cardId": "kuwait-1990",
+          "year": 1990,
+          "yearLabel": "1990",
+          "title": "Kuwait",
+          "era": "war",
+          "face": "bush41",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
+          "chair": "us",
+          "cardId": "dual-containment-1993",
+          "year": 1993,
+          "yearLabel": "1993",
+          "title": "Dual containment",
+          "era": "war",
+          "face": "clinton",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
+          "chair": "us",
+          "cardId": "khobar-1996",
+          "year": 1996,
+          "yearLabel": "1996",
+          "title": "Khobar",
+          "era": "war",
+          "face": "clinton",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
+          "chair": "us",
+          "cardId": "wall-1997",
+          "year": 1997,
+          "yearLabel": "1997",
+          "title": "The wall",
+          "era": "street",
+          "face": "clinton",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "chair": "us",
+          "cardId": "natanz-2002",
+          "year": 2002,
+          "yearLabel": "2002",
+          "title": "Natanz",
+          "era": "nuclear",
+          "face": "bush43",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
+          "chair": "us",
+          "cardId": "baghdad-2003",
+          "year": 2003,
+          "yearLabel": "2003",
+          "title": "Baghdad",
+          "era": "nuclear",
+          "face": "bush43",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
+          "chair": "us",
+          "cardId": "myth-2005",
+          "year": 2005,
+          "yearLabel": "2005",
+          "title": "The myth",
+          "era": "nuclear",
+          "face": "bush43",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
+          "chair": "us",
+          "cardId": "green-2009",
+          "year": 2009,
+          "yearLabel": "2009",
+          "title": "Green",
+          "era": "street",
+          "face": "obama",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
+          "chair": "us",
+          "cardId": "stuxnet-2010",
+          "year": 2010,
+          "yearLabel": "2010",
+          "title": "Stuxnet",
+          "era": "nuclear",
+          "face": "obama",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
+          "chair": "us",
+          "cardId": "jcpoa-2015",
+          "year": 2015,
+          "yearLabel": "2015",
+          "title": "The deal",
+          "era": "nuclear",
+          "face": "obama",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
+          "chair": "us",
+          "cardId": "white-wednesdays-2017",
+          "year": 2017,
+          "yearLabel": "2017",
+          "title": "White Wednesdays",
+          "era": "street",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
+          "chair": "us",
+          "cardId": "archive-2018",
+          "year": 2018,
+          "yearLabel": "2018",
+          "title": "The warehouse",
+          "era": "nuclear",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
+          "chair": "us",
+          "cardId": "bounce-2019",
+          "year": 2019,
+          "yearLabel": "2019",
+          "title": "Europe bounced the check",
+          "era": "nuclear",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
+          "chair": "us",
+          "cardId": "hormuz-2019",
+          "year": 2019,
+          "yearLabel": "2019",
+          "title": "A drone, a tanker, the Strait",
+          "era": "late",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
+          "chair": "us",
+          "cardId": "soleimani-2020",
+          "year": 2020,
+          "yearLabel": "2020",
+          "title": "The airport",
+          "era": "late",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "chair": "us",
+          "cardId": "unleave-2021",
+          "year": 2021,
+          "yearLabel": "2021",
+          "title": "The un-leave",
+          "era": "late",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
+          "chair": "us",
+          "cardId": "mahsa-2022",
+          "year": 2022,
+          "yearLabel": "2022",
+          "title": "Mahsa",
+          "era": "street",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "chair": "us",
+          "cardId": "oct7-2023",
+          "year": 2023,
+          "yearLabel": "2023",
+          "title": "7 October",
+          "era": "late",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+          "chair": "us",
+          "cardId": "direct-fire-2024",
+          "year": 2024,
+          "yearLabel": "2024",
+          "title": "Direct fire",
+          "era": "late",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
+          "chair": "us",
+          "cardId": "sit-pezeshkian-2024",
+          "year": 2024,
+          "yearLabel": "2024",
+          "title": "Sit Pezeshkian",
+          "era": "late",
+          "face": "biden",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
+          "chair": "us",
+          "cardId": "twelve-days-2025",
+          "year": 2025,
+          "yearLabel": "2025",
+          "title": "Twelve days",
+          "era": "late",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:the-leader-2026:us:playing:live:us-kill-imam,us-stop-fordow",
+          "chair": "us",
+          "cardId": "the-leader-2026",
+          "year": 2026,
+          "yearLabel": "2026",
+          "title": "The Leader",
+          "era": "late",
+          "face": "trump",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:the-leader-2026:us:ended:the_leader:",
+          "chair": "us",
+          "cardId": "the-leader-2026",
+          "year": 2026,
+          "yearLabel": "2026",
+          "title": "The Leader",
+          "era": "late",
+          "face": "trump",
+          "phase": "ended",
+          "endingId": "the_leader",
+          "endingTitle": "The Leader is dead"
+        },
+        {
+          "id": "us:the-leader-2026:us:ended:none:",
+          "chair": "us",
+          "cardId": "the-leader-2026",
+          "year": 2026,
+          "yearLabel": "2026",
+          "title": "The Leader",
+          "era": "late",
+          "face": "trump",
           "phase": "ended",
           "endingId": "none",
-          "endingTitle": "The cup, and two hundred ninety"
+          "endingTitle": "The plants are a crater. The Imam is not."
         }
       ],
       "edges": [
@@ -242,7 +606,7 @@
         },
         {
           "from": "us:white-revolution-1963:us:playing:live:us-press-reform,us-send-tanks",
-          "to": "us:weapons-1972:us:playing:live:us-blank-check,us-hinterland-first",
+          "to": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
           "choiceId": "us-press-reform",
           "label": "Press him to reform",
           "historical": true,
@@ -252,7 +616,7 @@
         },
         {
           "from": "us:white-revolution-1963:us:playing:live:us-press-reform,us-send-tanks",
-          "to": "us:weapons-1972:us:playing:live:us-blank-check,us-hinterland-first",
+          "to": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
           "choiceId": "us-send-tanks",
           "label": "Send him tanks instead",
           "historical": false,
@@ -261,8 +625,38 @@
           "faceChange": null
         },
         {
+          "from": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
+          "to": "us:sit-nixon-1969:us:playing:live:us-sit-nixon",
+          "choiceId": "us-take-sofa",
+          "label": "Take the immunity",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
+          "to": "us:sit-nixon-1969:us:playing:live:us-sit-nixon",
+          "choiceId": "us-skip-sofa",
+          "label": "Do not ask for the bill",
+          "historical": false,
+          "artisticLicense": "al-no-sofa",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:sit-nixon-1969:us:playing:live:us-sit-nixon",
+          "to": "us:weapons-1972:us:playing:live:us-blank-check,us-hinterland-first",
+          "choiceId": "us-sit-nixon",
+          "label": "Sit the presidency",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
           "from": "us:weapons-1972:us:playing:live:us-blank-check,us-hinterland-first",
-          "to": "us:revolution-1979:us:playing:live:us-admit-shah,us-keep-shah-out",
+          "to": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
           "choiceId": "us-blank-check",
           "label": "Sign the blank check",
           "historical": true,
@@ -272,11 +666,31 @@
         },
         {
           "from": "us:weapons-1972:us:playing:live:us-blank-check,us-hinterland-first",
-          "to": "us:revolution-1979:us:playing:live:us-admit-shah,us-keep-shah-out",
+          "to": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
           "choiceId": "us-hinterland-first",
           "label": "Make him spend on the hinterland first",
           "historical": false,
           "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
+          "to": "us:revolution-1979:us:playing:live:us-admit-shah,us-keep-shah-out",
+          "choiceId": "us-keep-selling",
+          "label": "Keep selling",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
+          "to": "us:revolution-1979:us:playing:live:us-admit-shah,us-keep-shah-out",
+          "choiceId": "us-slow-pipeline",
+          "label": "Slow the pipeline",
+          "historical": false,
+          "artisticLicense": "al-slow-pipeline",
           "ending": null,
           "faceChange": null
         },
@@ -345,8 +759,8 @@
           "to": "us:election-1980:us:playing:live:us-hail-mary,us-run-again",
           "choiceId": "us-tilt-iraq",
           "label": "Tilt to Iraq",
-          "historical": true,
-          "artisticLicense": null,
+          "historical": false,
+          "artisticLicense": "al-tilt-early",
           "ending": null,
           "faceChange": null
         },
@@ -355,8 +769,8 @@
           "to": "us:election-1980:us:playing:live:us-hail-mary,us-run-again",
           "choiceId": "us-no-tilt",
           "label": "Stay out of the war",
-          "historical": false,
-          "artisticLicense": "al-no-tilt",
+          "historical": true,
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -382,11 +796,31 @@
         },
         {
           "from": "us:inaugurated-1981:us:playing:live:us-sit-reagan",
-          "to": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
+          "to": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
           "choiceId": "us-sit-reagan",
           "label": "Sit the presidency",
           "historical": true,
           "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+          "to": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
+          "choiceId": "us-cia-baghdad",
+          "label": "Share the intel with Baghdad",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+          "to": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
+          "choiceId": "us-stay-neutral",
+          "label": "Stay out of the war",
+          "historical": false,
+          "artisticLicense": "al-no-tilt-1982",
           "ending": null,
           "faceChange": null
         },
@@ -432,26 +866,476 @@
         },
         {
           "from": "us:cup-1988:us:playing:live:us-call-mistake,us-own-shot",
-          "to": "us:cup-1988:us:ended:none:",
+          "to": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
           "choiceId": "us-call-mistake",
           "label": "Call it a mistake",
           "historical": true,
           "artisticLicense": null,
-          "ending": "none",
+          "ending": null,
           "faceChange": null
         },
         {
           "from": "us:cup-1988:us:playing:live:us-call-mistake,us-own-shot",
-          "to": "us:cup-1988:us:ended:none:",
+          "to": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
           "choiceId": "us-own-shot",
           "label": "Own the shot",
           "historical": false,
           "artisticLicense": "al-own-shot",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
+          "to": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
+          "choiceId": "us-note-robe",
+          "label": "Send a note",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
+          "to": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
+          "choiceId": "us-no-note",
+          "label": "Do not send a note",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
+          "to": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
+          "choiceId": "us-stop-border",
+          "label": "Stop at the border",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
+          "to": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
+          "choiceId": "us-go-baghdad",
+          "label": "Go to Baghdad",
+          "historical": false,
+          "artisticLicense": "al-baghdad-1991",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
+          "to": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
+          "choiceId": "us-name-both",
+          "label": "Name both as the problem",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
+          "to": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
+          "choiceId": "us-pick-one",
+          "label": "Pick one",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
+          "to": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
+          "choiceId": "us-no-strike-khobar",
+          "label": "Do not strike",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
+          "to": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
+          "choiceId": "us-strike-khobar",
+          "label": "Strike",
+          "historical": false,
+          "artisticLicense": "al-strike-khobar",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
+          "to": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "choiceId": "us-offer-handshake",
+          "label": "Offer the handshake",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
+          "to": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "choiceId": "us-stay-wall",
+          "label": "Stay behind the wall",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "to": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
+          "choiceId": "us-bin-fax",
+          "label": "Bin the fax",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "to": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
+          "choiceId": "us-take-fax",
+          "label": "Take the fax",
+          "historical": false,
+          "artisticLicense": "al-take-fax",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
+          "to": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
+          "choiceId": "us-take-baghdad",
+          "label": "Take Baghdad",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
+          "to": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
+          "choiceId": "us-stop-again",
+          "label": "Stop at the border again",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
+          "to": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
+          "choiceId": "us-condemn-myth",
+          "label": "Condemn",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
+          "to": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
+          "choiceId": "us-ignore-myth",
+          "label": "Ignore",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
+          "to": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
+          "choiceId": "us-not-own-green",
+          "label": "Do not own the street",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
+          "to": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
+          "choiceId": "us-own-green",
+          "label": "Own the street",
+          "historical": false,
+          "artisticLicense": "al-own-green",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
+          "to": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
+          "choiceId": "us-worm-run",
+          "label": "Let the worm run",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
+          "to": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
+          "choiceId": "us-bomb-natanz",
+          "label": "Bomb instead",
+          "historical": false,
+          "artisticLicense": "al-bomb-stuxnet",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
+          "to": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
+          "choiceId": "us-sign-jcpoa",
+          "label": "Sign",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
+          "to": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
+          "choiceId": "us-walk-jcpoa",
+          "label": "Walk",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
+          "to": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
+          "choiceId": "us-tweet-white",
+          "label": "Tweet",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
+          "to": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
+          "choiceId": "us-nothing-white",
+          "label": "Do nothing",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
+          "to": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
+          "choiceId": "us-leave-jcpoa",
+          "label": "Leave the deal",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
+          "to": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
+          "choiceId": "us-stay-jcpoa",
+          "label": "Stay in the deal",
+          "historical": false,
+          "artisticLicense": "al-stay-deal",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
+          "to": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
+          "choiceId": "us-watch-bounce",
+          "label": "Watch",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
+          "to": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
+          "choiceId": "us-offer-back",
+          "label": "Offer a ladder",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
+          "to": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
+          "choiceId": "us-abort",
+          "label": "Call it off",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
+          "to": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
+          "choiceId": "us-bomb",
+          "label": "Take the shot",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
+          "to": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "choiceId": "us-kill-soleimani",
+          "label": "Kill him",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
+          "to": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "choiceId": "us-hold-soleimani",
+          "label": "Hold the shot",
+          "historical": false,
+          "artisticLicense": "al-hold-soleimani",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "to": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
+          "choiceId": "us-talk-forever",
+          "label": "Talk forever",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+          "to": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
+          "choiceId": "us-snap-in",
+          "label": "Snap back in",
+          "historical": false,
+          "artisticLicense": "al-snap-in",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
+          "to": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "choiceId": "us-statement-mahsa",
+          "label": "Issue a statement",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
+          "to": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "choiceId": "us-own-mahsa",
+          "label": "Own the street",
+          "historical": false,
+          "artisticLicense": "al-own-mahsa",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "to": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+          "choiceId": "us-arm-israel",
+          "label": "Arm Israel",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+          "to": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+          "choiceId": "us-go-first",
+          "label": "Go first",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+          "to": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
+          "choiceId": "us-help-shoot",
+          "label": "Help shoot them down",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+          "to": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
+          "choiceId": "us-stay-out-fire",
+          "label": "Stay out",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
+          "to": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
+          "choiceId": "us-sit-2024",
+          "label": "Note the crash",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
+          "to": "us:the-leader-2026:us:playing:live:us-kill-imam,us-stop-fordow",
+          "choiceId": "us-hit-fordow",
+          "label": "Hit Fordow",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
+          "to": "us:the-leader-2026:us:playing:live:us-kill-imam,us-stop-fordow",
+          "choiceId": "us-stay-twelve",
+          "label": "Stay out of Israel's war",
+          "historical": false,
+          "artisticLicense": "al-stay-twelve",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:the-leader-2026:us:playing:live:us-kill-imam,us-stop-fordow",
+          "to": "us:the-leader-2026:us:ended:the_leader:",
+          "choiceId": "us-kill-imam",
+          "label": "Run the campaign",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": "the_leader",
+          "faceChange": null
+        },
+        {
+          "from": "us:the-leader-2026:us:playing:live:us-kill-imam,us-stop-fordow",
+          "to": "us:the-leader-2026:us:ended:none:",
+          "choiceId": "us-stop-fordow",
+          "label": "Stop after Fordow",
+          "historical": false,
+          "artisticLicense": "al-stop-fordow",
           "ending": "none",
           "faceChange": null
         }
       ],
-      "terminals": 2049
+      "terminals": 68719476737
     },
     "iran": {
       "nodes": [
@@ -534,12 +1418,51 @@
           "endingTitle": null
         },
         {
+          "id": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
+          "chair": "iran",
+          "cardId": "sofa-1964",
+          "year": 1964,
+          "yearLabel": "1964",
+          "title": "The SOFA",
+          "era": "shah",
+          "face": "shah",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:sit-nixon-1969:shah:playing:live:ir-nixon-next",
+          "chair": "iran",
+          "cardId": "sit-nixon-1969",
+          "year": 1969,
+          "yearLabel": "1969",
+          "title": "Sit Nixon",
+          "era": "shah",
+          "face": "shah",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
           "id": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
           "chair": "iran",
           "cardId": "weapons-1972",
           "year": 1972,
           "yearLabel": "1972",
           "title": "Twin pillars, blank check",
+          "era": "shah",
+          "face": "shah",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:pipeline-1975:shah:playing:live:ir-keep-catalog,ir-villages-again",
+          "chair": "iran",
+          "cardId": "pipeline-1975",
+          "year": 1975,
+          "yearLabel": "1975",
+          "title": "The pipeline",
           "era": "shah",
           "face": "shah",
           "phase": "playing",
@@ -596,7 +1519,7 @@
           "face": "shah",
           "phase": "ended",
           "endingId": "shah_holds",
-          "endingTitle": "The square never filled"
+          "endingTitle": "The king still sits"
         },
         {
           "id": "iran:hostages-1979:bazargan:playing:live:ir-demand-leave,ir-let-students",
@@ -716,17 +1639,17 @@
           "endingTitle": null
         },
         {
-          "id": "iran:cup-1988:khamenei:ended:none:",
+          "id": "iran:robe-1989:khamenei:playing:live:ir-remain-letterhead,ir-take-robe",
           "chair": "iran",
-          "cardId": "cup-1988",
-          "year": 1988,
-          "yearLabel": "1988",
-          "title": "The cup",
+          "cardId": "robe-1989",
+          "year": 1989,
+          "yearLabel": "1989",
+          "title": "The robe",
           "era": "war",
           "face": "khamenei",
-          "phase": "ended",
-          "endingId": "none",
-          "endingTitle": "The Imam drinks the cup"
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
         },
         {
           "id": "iran:cup-1988:khamenei:ended:face_no_guns:",
@@ -740,6 +1663,344 @@
           "phase": "ended",
           "endingId": "face_no_guns",
           "endingTitle": "The face does not have the guns"
+        },
+        {
+          "id": "iran:kuwait-1990:rafsanjani:playing:live:ir-side-saddam,ir-stay-out-kuwait",
+          "chair": "iran",
+          "cardId": "kuwait-1990",
+          "year": 1990,
+          "yearLabel": "1990",
+          "title": "Kuwait",
+          "era": "war",
+          "face": "rafsanjani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:dual-containment-1993:rafsanjani:playing:live:ir-rebuild,ir-stay-loud",
+          "chair": "iran",
+          "cardId": "dual-containment-1993",
+          "year": 1993,
+          "yearLabel": "1993",
+          "title": "Dual containment",
+          "era": "war",
+          "face": "rafsanjani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:kuwait-1990:rafsanjani:ended:kuwait_grave:",
+          "chair": "iran",
+          "cardId": "kuwait-1990",
+          "year": 1990,
+          "yearLabel": "1990",
+          "title": "Kuwait",
+          "era": "war",
+          "face": "rafsanjani",
+          "phase": "ended",
+          "endingId": "kuwait_grave",
+          "endingTitle": "Suicide for a man who gassed you"
+        },
+        {
+          "id": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
+          "chair": "iran",
+          "cardId": "khobar-1996",
+          "year": 1996,
+          "yearLabel": "1996",
+          "title": "Khobar",
+          "era": "war",
+          "face": "rafsanjani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
+          "chair": "iran",
+          "cardId": "wall-1997",
+          "year": 1997,
+          "yearLabel": "1997",
+          "title": "The wall",
+          "era": "street",
+          "face": "rafsanjani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "chair": "iran",
+          "cardId": "natanz-2002",
+          "year": 2002,
+          "yearLabel": "2002",
+          "title": "Natanz",
+          "era": "nuclear",
+          "face": "khatami",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
+          "chair": "iran",
+          "cardId": "baghdad-2003",
+          "year": 2003,
+          "yearLabel": "2003",
+          "title": "Baghdad",
+          "era": "nuclear",
+          "face": "khatami",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
+          "chair": "iran",
+          "cardId": "myth-2005",
+          "year": 2005,
+          "yearLabel": "2005",
+          "title": "The myth",
+          "era": "nuclear",
+          "face": "khatami",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
+          "chair": "iran",
+          "cardId": "green-2009",
+          "year": 2009,
+          "yearLabel": "2009",
+          "title": "Green",
+          "era": "street",
+          "face": "ahmadinejad",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
+          "chair": "iran",
+          "cardId": "stuxnet-2010",
+          "year": 2010,
+          "yearLabel": "2010",
+          "title": "Stuxnet",
+          "era": "nuclear",
+          "face": "ahmadinejad",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
+          "chair": "iran",
+          "cardId": "jcpoa-2015",
+          "year": 2015,
+          "yearLabel": "2015",
+          "title": "The deal",
+          "era": "nuclear",
+          "face": "ahmadinejad",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
+          "chair": "iran",
+          "cardId": "white-wednesdays-2017",
+          "year": 2017,
+          "yearLabel": "2017",
+          "title": "White Wednesdays",
+          "era": "street",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
+          "chair": "iran",
+          "cardId": "archive-2018",
+          "year": 2018,
+          "yearLabel": "2018",
+          "title": "The warehouse",
+          "era": "nuclear",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:bounce-2019:rouhani:playing:live:ir-keep-limits,ir-step-off",
+          "chair": "iran",
+          "cardId": "bounce-2019",
+          "year": 2019,
+          "yearLabel": "2019",
+          "title": "Europe bounced the check",
+          "era": "nuclear",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:hormuz-2019:rouhani:playing:live:ir-hold-fire,ir-squeeze",
+          "chair": "iran",
+          "cardId": "hormuz-2019",
+          "year": 2019,
+          "yearLabel": "2019",
+          "title": "A drone, a tanker, the Strait",
+          "era": "late",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:bounce-2019:rouhani:ended:jcpoa_holds:",
+          "chair": "iran",
+          "cardId": "bounce-2019",
+          "year": 2019,
+          "yearLabel": "2019",
+          "title": "Europe bounced the check",
+          "era": "nuclear",
+          "face": "rouhani",
+          "phase": "ended",
+          "endingId": "jcpoa_holds",
+          "endingTitle": "You kept the limits"
+        },
+        {
+          "id": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
+          "chair": "iran",
+          "cardId": "soleimani-2020",
+          "year": 2020,
+          "yearLabel": "2020",
+          "title": "The airport",
+          "era": "late",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "chair": "iran",
+          "cardId": "unleave-2021",
+          "year": 2021,
+          "yearLabel": "2021",
+          "title": "The un-leave",
+          "era": "late",
+          "face": "rouhani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
+          "chair": "iran",
+          "cardId": "mahsa-2022",
+          "year": 2022,
+          "yearLabel": "2022",
+          "title": "Mahsa",
+          "era": "street",
+          "face": "raisi",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "chair": "iran",
+          "cardId": "oct7-2023",
+          "year": 2023,
+          "yearLabel": "2023",
+          "title": "7 October",
+          "era": "late",
+          "face": "raisi",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+          "chair": "iran",
+          "cardId": "direct-fire-2024",
+          "year": 2024,
+          "yearLabel": "2024",
+          "title": "Direct fire",
+          "era": "late",
+          "face": "raisi",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
+          "chair": "iran",
+          "cardId": "sit-pezeshkian-2024",
+          "year": 2024,
+          "yearLabel": "2024",
+          "title": "Sit Pezeshkian",
+          "era": "late",
+          "face": "raisi",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
+          "chair": "iran",
+          "cardId": "twelve-days-2025",
+          "year": 2025,
+          "yearLabel": "2025",
+          "title": "Twelve days",
+          "era": "late",
+          "face": "pezeshkian",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:the-leader-2026:pezeshkian:playing:live:ir-hormuz-memo,ir-keep-war",
+          "chair": "iran",
+          "cardId": "the-leader-2026",
+          "year": 2026,
+          "yearLabel": "2026",
+          "title": "The Leader",
+          "era": "late",
+          "face": "pezeshkian",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:the-leader-2026:pezeshkian:ended:the_leader:",
+          "chair": "iran",
+          "cardId": "the-leader-2026",
+          "year": 2026,
+          "yearLabel": "2026",
+          "title": "The Leader",
+          "era": "late",
+          "face": "pezeshkian",
+          "phase": "ended",
+          "endingId": "the_leader",
+          "endingTitle": "The Leader is dead"
+        },
+        {
+          "id": "iran:the-leader-2026:pezeshkian:ended:keep_the_war:",
+          "chair": "iran",
+          "cardId": "the-leader-2026",
+          "year": 2026,
+          "yearLabel": "2026",
+          "title": "The Leader",
+          "era": "late",
+          "face": "pezeshkian",
+          "phase": "ended",
+          "endingId": "keep_the_war",
+          "endingTitle": "The Strait does not feed you"
         }
       ],
       "edges": [
@@ -805,7 +2066,7 @@
         },
         {
           "from": "iran:white-revolution-1963:shah:playing:live:ir-keep-quiet,ir-white-rev",
-          "to": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
+          "to": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
           "choiceId": "ir-white-rev",
           "label": "Launch the White Revolution",
           "historical": true,
@@ -815,7 +2076,7 @@
         },
         {
           "from": "iran:white-revolution-1963:shah:playing:live:ir-keep-quiet,ir-white-rev",
-          "to": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
+          "to": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
           "choiceId": "ir-keep-quiet",
           "label": "Keep the landlords and the clergy quiet",
           "historical": false,
@@ -824,8 +2085,38 @@
           "faceChange": null
         },
         {
+          "from": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
+          "to": "iran:sit-nixon-1969:shah:playing:live:ir-nixon-next",
+          "choiceId": "ir-pass-sofa",
+          "label": "Pass the bill",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
+          "to": "iran:sit-nixon-1969:shah:playing:live:ir-nixon-next",
+          "choiceId": "ir-refuse-sofa",
+          "label": "Refuse Washington",
+          "historical": false,
+          "artisticLicense": "al-no-sofa",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:sit-nixon-1969:shah:playing:live:ir-nixon-next",
+          "to": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
+          "choiceId": "ir-nixon-next",
+          "label": "Keep buying",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
           "from": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
-          "to": "iran:revolution-1979:shah:playing:live:ir-fire-crowd,ir-shah-leave",
+          "to": "iran:pipeline-1975:shah:playing:live:ir-keep-catalog,ir-villages-again",
           "choiceId": "ir-buy-catalog",
           "label": "Buy the American catalog",
           "historical": true,
@@ -835,11 +2126,31 @@
         },
         {
           "from": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
-          "to": "iran:revolution-1979:shah:playing:live:ir-shah-hold,ir-shah-leave",
+          "to": "iran:pipeline-1975:shah:playing:live:ir-keep-catalog,ir-villages-again",
           "choiceId": "ir-spend-villages",
           "label": "Spend the oil on the villages",
           "historical": false,
           "artisticLicense": "al-hinterland",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:pipeline-1975:shah:playing:live:ir-keep-catalog,ir-villages-again",
+          "to": "iran:revolution-1979:shah:playing:live:ir-fire-crowd,ir-shah-leave",
+          "choiceId": "ir-keep-catalog",
+          "label": "Keep buying",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:pipeline-1975:shah:playing:live:ir-keep-catalog,ir-villages-again",
+          "to": "iran:revolution-1979:shah:playing:live:ir-shah-hold,ir-shah-leave",
+          "choiceId": "ir-villages-again",
+          "label": "Spend on the villages",
+          "historical": false,
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -1045,12 +2356,12 @@
         },
         {
           "from": "iran:cup-1988:khamenei:playing:live:ir-refuse-cup,ir-stamp-cup",
-          "to": "iran:cup-1988:khamenei:ended:none:",
+          "to": "iran:robe-1989:khamenei:playing:live:ir-remain-letterhead,ir-take-robe",
           "choiceId": "ir-stamp-cup",
           "label": "Stamp the cup",
           "historical": true,
           "artisticLicense": null,
-          "ending": "none",
+          "ending": null,
           "faceChange": null
         },
         {
@@ -1062,9 +2373,459 @@
           "artisticLicense": "al-refuse-cup",
           "ending": "face_no_guns",
           "faceChange": null
+        },
+        {
+          "from": "iran:robe-1989:khamenei:playing:live:ir-remain-letterhead,ir-take-robe",
+          "to": "iran:kuwait-1990:rafsanjani:playing:live:ir-side-saddam,ir-stay-out-kuwait",
+          "choiceId": "ir-take-robe",
+          "label": "Take the robe",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "khamenei -> rafsanjani"
+        },
+        {
+          "from": "iran:robe-1989:khamenei:playing:live:ir-remain-letterhead,ir-take-robe",
+          "to": "iran:kuwait-1990:rafsanjani:playing:live:ir-side-saddam,ir-stay-out-kuwait",
+          "choiceId": "ir-remain-letterhead",
+          "label": "Remain president",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "khamenei -> rafsanjani"
+        },
+        {
+          "from": "iran:kuwait-1990:rafsanjani:playing:live:ir-side-saddam,ir-stay-out-kuwait",
+          "to": "iran:dual-containment-1993:rafsanjani:playing:live:ir-rebuild,ir-stay-loud",
+          "choiceId": "ir-stay-out-kuwait",
+          "label": "Stay out",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:kuwait-1990:rafsanjani:playing:live:ir-side-saddam,ir-stay-out-kuwait",
+          "to": "iran:kuwait-1990:rafsanjani:ended:kuwait_grave:",
+          "choiceId": "ir-side-saddam",
+          "label": "Side with Saddam",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": "kuwait_grave",
+          "faceChange": null
+        },
+        {
+          "from": "iran:dual-containment-1993:rafsanjani:playing:live:ir-rebuild,ir-stay-loud",
+          "to": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
+          "choiceId": "ir-rebuild",
+          "label": "Rebuild",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:dual-containment-1993:rafsanjani:playing:live:ir-rebuild,ir-stay-loud",
+          "to": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
+          "choiceId": "ir-stay-loud",
+          "label": "Keep the revolution loud",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
+          "to": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
+          "choiceId": "ir-deny-khobar",
+          "label": "Deny",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
+          "to": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
+          "choiceId": "ir-own-khobar",
+          "label": "Own it",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
+          "to": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "choiceId": "ir-cnn",
+          "label": "Talk to the people",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "rafsanjani -> khatami"
+        },
+        {
+          "from": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
+          "to": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "choiceId": "ir-meet-secretary",
+          "label": "Meet the Secretary",
+          "historical": false,
+          "artisticLicense": "al-handshake",
+          "ending": null,
+          "faceChange": "rafsanjani -> khatami"
+        },
+        {
+          "from": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "to": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
+          "choiceId": "ir-keep-spinning",
+          "label": "Keep spinning",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "to": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
+          "choiceId": "ir-pause-natanz",
+          "label": "Pause",
+          "historical": false,
+          "artisticLicense": "al-take-fax",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
+          "to": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
+          "choiceId": "ir-watch-baghdad",
+          "label": "Watch",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
+          "to": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
+          "choiceId": "ir-send-militias",
+          "label": "Send the militias now",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
+          "to": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
+          "choiceId": "ir-say-myth",
+          "label": "Say it",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "khatami -> ahmadinejad"
+        },
+        {
+          "from": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
+          "to": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
+          "choiceId": "ir-dont-say-myth",
+          "label": "Do not say it",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "khatami -> ahmadinejad"
+        },
+        {
+          "from": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
+          "to": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
+          "choiceId": "ir-crush-green",
+          "label": "Steal it and crush it",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
+          "to": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
+          "choiceId": "ir-count-green",
+          "label": "Count the votes",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
+          "to": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
+          "choiceId": "ir-keep-spin-stux",
+          "label": "Keep spinning",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
+          "to": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
+          "choiceId": "ir-pause-stux",
+          "label": "Pause",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
+          "to": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
+          "choiceId": "ir-accept-jcpoa",
+          "label": "Accept the limits",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "ahmadinejad -> rouhani"
+        },
+        {
+          "from": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
+          "to": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
+          "choiceId": "ir-keep-spin-jcpoa",
+          "label": "Keep spinning",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "ahmadinejad -> rouhani"
+        },
+        {
+          "from": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
+          "to": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
+          "choiceId": "ir-arrest-white",
+          "label": "Arrest",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
+          "to": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
+          "choiceId": "ir-let-post",
+          "label": "Let them post",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
+          "to": "iran:bounce-2019:rouhani:playing:live:ir-keep-limits,ir-step-off",
+          "choiceId": "ir-wait-europe",
+          "label": "Stay in the deal",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
+          "to": "iran:bounce-2019:rouhani:playing:live:ir-keep-limits,ir-step-off",
+          "choiceId": "ir-sprint-tonight",
+          "label": "Sprint tonight",
+          "historical": false,
+          "artisticLicense": "al-sprint-tonight",
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:bounce-2019:rouhani:playing:live:ir-keep-limits,ir-step-off",
+          "to": "iran:hormuz-2019:rouhani:playing:live:ir-hold-fire,ir-squeeze",
+          "choiceId": "ir-step-off",
+          "label": "Start stepping off",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:bounce-2019:rouhani:playing:live:ir-keep-limits,ir-step-off",
+          "to": "iran:bounce-2019:rouhani:ended:jcpoa_holds:",
+          "choiceId": "ir-keep-limits",
+          "label": "Keep the limits anyway",
+          "historical": false,
+          "artisticLicense": "al-keep-limits",
+          "ending": "jcpoa_holds",
+          "faceChange": null
+        },
+        {
+          "from": "iran:hormuz-2019:rouhani:playing:live:ir-hold-fire,ir-squeeze",
+          "to": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
+          "choiceId": "ir-hold-fire",
+          "label": "Hold fire",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:hormuz-2019:rouhani:playing:live:ir-hold-fire,ir-squeeze",
+          "to": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
+          "choiceId": "ir-squeeze",
+          "label": "Squeeze the Strait",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
+          "to": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "choiceId": "ir-missiles-752",
+          "label": "Missiles, then the airliner",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
+          "to": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "choiceId": "ir-eat-airport",
+          "label": "Eat it",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "to": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
+          "choiceId": "ir-sprint-unleave",
+          "label": "Sprint",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "rouhani -> raisi"
+        },
+        {
+          "from": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+          "to": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
+          "choiceId": "ir-talk-unleave",
+          "label": "Talk",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "rouhani -> raisi"
+        },
+        {
+          "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
+          "to": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "choiceId": "ir-crush-mahsa",
+          "label": "Crush it",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
+          "to": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "choiceId": "ir-fire-morality",
+          "label": "Fire the morality police",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "to": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+          "choiceId": "ir-keep-layer",
+          "label": "Keep the proxy layer",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+          "to": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+          "choiceId": "ir-shoot-now",
+          "label": "Shoot from Iran now",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+          "to": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
+          "choiceId": "ir-fire-iran",
+          "label": "Fire from Iran",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+          "to": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
+          "choiceId": "ir-stay-proxies",
+          "label": "Stay with the proxies",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:sit-pezeshkian-2024:raisi:playing:live:ir-sit-pezeshkian",
+          "to": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
+          "choiceId": "ir-sit-pezeshkian",
+          "label": "Sit the presidency",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": "raisi -> pezeshkian"
+        },
+        {
+          "from": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
+          "to": "iran:the-leader-2026:pezeshkian:playing:live:ir-hormuz-memo,ir-keep-war",
+          "choiceId": "ir-absorb-strike",
+          "label": "Absorb and strike back",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
+          "to": "iran:the-leader-2026:pezeshkian:playing:live:ir-hormuz-memo,ir-keep-war",
+          "choiceId": "ir-deal-now",
+          "label": "Deal now",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:the-leader-2026:pezeshkian:playing:live:ir-hormuz-memo,ir-keep-war",
+          "to": "iran:the-leader-2026:pezeshkian:ended:the_leader:",
+          "choiceId": "ir-hormuz-memo",
+          "label": "Squeeze Hormuz, then the memorandum",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": "the_leader",
+          "faceChange": null
+        },
+        {
+          "from": "iran:the-leader-2026:pezeshkian:playing:live:ir-hormuz-memo,ir-keep-war",
+          "to": "iran:the-leader-2026:pezeshkian:ended:keep_the_war:",
+          "choiceId": "ir-keep-war",
+          "label": "Keep the war",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": "keep_the_war",
+          "faceChange": null
         }
       ],
-      "terminals": 3846
+      "terminals": 6467638290
     }
   },
   "collapses": [
@@ -1094,8 +2855,23 @@
         "Press him to reform",
         "Send him tanks instead"
       ],
-      "landCardId": "weapons-1972",
-      "landTitle": "Twin pillars, blank check",
+      "landCardId": "sofa-1964",
+      "landTitle": "The SOFA",
+      "landFace": "johnson"
+    },
+    {
+      "chair": "us",
+      "from": "us:sofa-1964:us:playing:live:us-skip-sofa,us-take-sofa",
+      "cardId": "sofa-1964",
+      "title": "The SOFA",
+      "yearLabel": "1964",
+      "face": "johnson",
+      "choiceLabels": [
+        "Take the immunity",
+        "Do not ask for the bill"
+      ],
+      "landCardId": "sit-nixon-1969",
+      "landTitle": "Sit Nixon",
       "landFace": "nixon"
     },
     {
@@ -1108,6 +2884,21 @@
       "choiceLabels": [
         "Sign the blank check",
         "Make him spend on the hinterland first"
+      ],
+      "landCardId": "pipeline-1975",
+      "landTitle": "The pipeline",
+      "landFace": "ford"
+    },
+    {
+      "chair": "us",
+      "from": "us:pipeline-1975:us:playing:live:us-keep-selling,us-slow-pipeline",
+      "cardId": "pipeline-1975",
+      "title": "The pipeline",
+      "yearLabel": "1975",
+      "face": "ford",
+      "choiceLabels": [
+        "Keep selling",
+        "Slow the pipeline"
       ],
       "landCardId": "revolution-1979",
       "landTitle": "The Shah's cancer, the square",
@@ -1190,6 +2981,21 @@
     },
     {
       "chair": "us",
+      "from": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+      "cardId": "tilt-1982",
+      "title": "Iran is winning",
+      "yearLabel": "1982",
+      "face": "reagan",
+      "choiceLabels": [
+        "Share the intel with Baghdad",
+        "Stay out of the war"
+      ],
+      "landCardId": "lebanon-1983",
+      "landTitle": "A cousin in the Bekaa",
+      "landFace": "reagan"
+    },
+    {
+      "chair": "us",
       "from": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
       "cardId": "lebanon-1983",
       "title": "A cousin in the Bekaa",
@@ -1219,6 +3025,336 @@
       "landFace": "reagan"
     },
     {
+      "chair": "us",
+      "from": "us:cup-1988:us:playing:live:us-call-mistake,us-own-shot",
+      "cardId": "cup-1988",
+      "title": "The cup",
+      "yearLabel": "1988",
+      "face": "reagan",
+      "choiceLabels": [
+        "Call it a mistake",
+        "Own the shot"
+      ],
+      "landCardId": "robe-1989",
+      "landTitle": "The robe",
+      "landFace": "bush41"
+    },
+    {
+      "chair": "us",
+      "from": "us:robe-1989:us:playing:live:us-no-note,us-note-robe",
+      "cardId": "robe-1989",
+      "title": "The robe",
+      "yearLabel": "1989",
+      "face": "bush41",
+      "choiceLabels": [
+        "Send a note",
+        "Do not send a note"
+      ],
+      "landCardId": "kuwait-1990",
+      "landTitle": "Kuwait",
+      "landFace": "bush41"
+    },
+    {
+      "chair": "us",
+      "from": "us:kuwait-1990:us:playing:live:us-go-baghdad,us-stop-border",
+      "cardId": "kuwait-1990",
+      "title": "Kuwait",
+      "yearLabel": "1990",
+      "face": "bush41",
+      "choiceLabels": [
+        "Stop at the border",
+        "Go to Baghdad"
+      ],
+      "landCardId": "dual-containment-1993",
+      "landTitle": "Dual containment",
+      "landFace": "clinton"
+    },
+    {
+      "chair": "us",
+      "from": "us:dual-containment-1993:us:playing:live:us-name-both,us-pick-one",
+      "cardId": "dual-containment-1993",
+      "title": "Dual containment",
+      "yearLabel": "1993",
+      "face": "clinton",
+      "choiceLabels": [
+        "Name both as the problem",
+        "Pick one"
+      ],
+      "landCardId": "khobar-1996",
+      "landTitle": "Khobar",
+      "landFace": "clinton"
+    },
+    {
+      "chair": "us",
+      "from": "us:khobar-1996:us:playing:live:us-no-strike-khobar,us-strike-khobar",
+      "cardId": "khobar-1996",
+      "title": "Khobar",
+      "yearLabel": "1996",
+      "face": "clinton",
+      "choiceLabels": [
+        "Do not strike",
+        "Strike"
+      ],
+      "landCardId": "wall-1997",
+      "landTitle": "The wall",
+      "landFace": "clinton"
+    },
+    {
+      "chair": "us",
+      "from": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
+      "cardId": "wall-1997",
+      "title": "The wall",
+      "yearLabel": "1997",
+      "face": "clinton",
+      "choiceLabels": [
+        "Offer the handshake",
+        "Stay behind the wall"
+      ],
+      "landCardId": "natanz-2002",
+      "landTitle": "Natanz",
+      "landFace": "bush43"
+    },
+    {
+      "chair": "us",
+      "from": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+      "cardId": "natanz-2002",
+      "title": "Natanz",
+      "yearLabel": "2002",
+      "face": "bush43",
+      "choiceLabels": [
+        "Bin the fax",
+        "Take the fax"
+      ],
+      "landCardId": "baghdad-2003",
+      "landTitle": "Baghdad",
+      "landFace": "bush43"
+    },
+    {
+      "chair": "us",
+      "from": "us:baghdad-2003:us:playing:live:us-stop-again,us-take-baghdad",
+      "cardId": "baghdad-2003",
+      "title": "Baghdad",
+      "yearLabel": "2003",
+      "face": "bush43",
+      "choiceLabels": [
+        "Take Baghdad",
+        "Stop at the border again"
+      ],
+      "landCardId": "myth-2005",
+      "landTitle": "The myth",
+      "landFace": "bush43"
+    },
+    {
+      "chair": "us",
+      "from": "us:myth-2005:us:playing:live:us-condemn-myth,us-ignore-myth",
+      "cardId": "myth-2005",
+      "title": "The myth",
+      "yearLabel": "2005",
+      "face": "bush43",
+      "choiceLabels": [
+        "Condemn",
+        "Ignore"
+      ],
+      "landCardId": "green-2009",
+      "landTitle": "Green",
+      "landFace": "obama"
+    },
+    {
+      "chair": "us",
+      "from": "us:green-2009:us:playing:live:us-not-own-green,us-own-green",
+      "cardId": "green-2009",
+      "title": "Green",
+      "yearLabel": "2009",
+      "face": "obama",
+      "choiceLabels": [
+        "Do not own the street",
+        "Own the street"
+      ],
+      "landCardId": "stuxnet-2010",
+      "landTitle": "Stuxnet",
+      "landFace": "obama"
+    },
+    {
+      "chair": "us",
+      "from": "us:stuxnet-2010:us:playing:live:us-bomb-natanz,us-worm-run",
+      "cardId": "stuxnet-2010",
+      "title": "Stuxnet",
+      "yearLabel": "2010",
+      "face": "obama",
+      "choiceLabels": [
+        "Let the worm run",
+        "Bomb instead"
+      ],
+      "landCardId": "jcpoa-2015",
+      "landTitle": "The deal",
+      "landFace": "obama"
+    },
+    {
+      "chair": "us",
+      "from": "us:jcpoa-2015:us:playing:live:us-sign-jcpoa,us-walk-jcpoa",
+      "cardId": "jcpoa-2015",
+      "title": "The deal",
+      "yearLabel": "2015",
+      "face": "obama",
+      "choiceLabels": [
+        "Sign",
+        "Walk"
+      ],
+      "landCardId": "white-wednesdays-2017",
+      "landTitle": "White Wednesdays",
+      "landFace": "trump"
+    },
+    {
+      "chair": "us",
+      "from": "us:white-wednesdays-2017:us:playing:live:us-nothing-white,us-tweet-white",
+      "cardId": "white-wednesdays-2017",
+      "title": "White Wednesdays",
+      "yearLabel": "2017",
+      "face": "trump",
+      "choiceLabels": [
+        "Tweet",
+        "Do nothing"
+      ],
+      "landCardId": "archive-2018",
+      "landTitle": "The warehouse",
+      "landFace": "trump"
+    },
+    {
+      "chair": "us",
+      "from": "us:archive-2018:us:playing:live:us-leave-jcpoa,us-stay-jcpoa",
+      "cardId": "archive-2018",
+      "title": "The warehouse",
+      "yearLabel": "2018",
+      "face": "trump",
+      "choiceLabels": [
+        "Leave the deal",
+        "Stay in the deal"
+      ],
+      "landCardId": "bounce-2019",
+      "landTitle": "Europe bounced the check",
+      "landFace": "trump"
+    },
+    {
+      "chair": "us",
+      "from": "us:bounce-2019:us:playing:live:us-offer-back,us-watch-bounce",
+      "cardId": "bounce-2019",
+      "title": "Europe bounced the check",
+      "yearLabel": "2019",
+      "face": "trump",
+      "choiceLabels": [
+        "Watch",
+        "Offer a ladder"
+      ],
+      "landCardId": "hormuz-2019",
+      "landTitle": "A drone, a tanker, the Strait",
+      "landFace": "trump"
+    },
+    {
+      "chair": "us",
+      "from": "us:hormuz-2019:us:playing:live:us-abort,us-bomb",
+      "cardId": "hormuz-2019",
+      "title": "A drone, a tanker, the Strait",
+      "yearLabel": "2019",
+      "face": "trump",
+      "choiceLabels": [
+        "Call it off",
+        "Take the shot"
+      ],
+      "landCardId": "soleimani-2020",
+      "landTitle": "The airport",
+      "landFace": "trump"
+    },
+    {
+      "chair": "us",
+      "from": "us:soleimani-2020:us:playing:live:us-hold-soleimani,us-kill-soleimani",
+      "cardId": "soleimani-2020",
+      "title": "The airport",
+      "yearLabel": "2020",
+      "face": "trump",
+      "choiceLabels": [
+        "Kill him",
+        "Hold the shot"
+      ],
+      "landCardId": "unleave-2021",
+      "landTitle": "The un-leave",
+      "landFace": "biden"
+    },
+    {
+      "chair": "us",
+      "from": "us:unleave-2021:us:playing:live:us-snap-in,us-talk-forever",
+      "cardId": "unleave-2021",
+      "title": "The un-leave",
+      "yearLabel": "2021",
+      "face": "biden",
+      "choiceLabels": [
+        "Talk forever",
+        "Snap back in"
+      ],
+      "landCardId": "mahsa-2022",
+      "landTitle": "Mahsa",
+      "landFace": "biden"
+    },
+    {
+      "chair": "us",
+      "from": "us:mahsa-2022:us:playing:live:us-own-mahsa,us-statement-mahsa",
+      "cardId": "mahsa-2022",
+      "title": "Mahsa",
+      "yearLabel": "2022",
+      "face": "biden",
+      "choiceLabels": [
+        "Issue a statement",
+        "Own the street"
+      ],
+      "landCardId": "oct7-2023",
+      "landTitle": "7 October",
+      "landFace": "biden"
+    },
+    {
+      "chair": "us",
+      "from": "us:oct7-2023:us:playing:live:us-arm-israel,us-go-first",
+      "cardId": "oct7-2023",
+      "title": "7 October",
+      "yearLabel": "2023",
+      "face": "biden",
+      "choiceLabels": [
+        "Arm Israel",
+        "Go first"
+      ],
+      "landCardId": "direct-fire-2024",
+      "landTitle": "Direct fire",
+      "landFace": "biden"
+    },
+    {
+      "chair": "us",
+      "from": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
+      "cardId": "direct-fire-2024",
+      "title": "Direct fire",
+      "yearLabel": "2024",
+      "face": "biden",
+      "choiceLabels": [
+        "Help shoot them down",
+        "Stay out"
+      ],
+      "landCardId": "sit-pezeshkian-2024",
+      "landTitle": "Sit Pezeshkian",
+      "landFace": "biden"
+    },
+    {
+      "chair": "us",
+      "from": "us:twelve-days-2025:us:playing:live:us-hit-fordow,us-stay-twelve",
+      "cardId": "twelve-days-2025",
+      "title": "Twelve days",
+      "yearLabel": "2025",
+      "face": "trump",
+      "choiceLabels": [
+        "Hit Fordow",
+        "Stay out of Israel's war"
+      ],
+      "landCardId": "the-leader-2026",
+      "landTitle": "The Leader",
+      "landFace": "trump"
+    },
+    {
       "chair": "iran",
       "from": "iran:atoms-1957:shah:playing:live:ir-shah-fuel,ir-shah-plant",
       "cardId": "atoms-1957",
@@ -1244,8 +3380,38 @@
         "Launch the White Revolution",
         "Keep the landlords and the clergy quiet"
       ],
-      "landCardId": "weapons-1972",
-      "landTitle": "Twin pillars, blank check",
+      "landCardId": "sofa-1964",
+      "landTitle": "The SOFA",
+      "landFace": "shah"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:sofa-1964:shah:playing:live:ir-pass-sofa,ir-refuse-sofa",
+      "cardId": "sofa-1964",
+      "title": "The SOFA",
+      "yearLabel": "1964",
+      "face": "shah",
+      "choiceLabels": [
+        "Pass the bill",
+        "Refuse Washington"
+      ],
+      "landCardId": "sit-nixon-1969",
+      "landTitle": "Sit Nixon",
+      "landFace": "shah"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:weapons-1972:shah:playing:live:ir-buy-catalog,ir-spend-villages",
+      "cardId": "weapons-1972",
+      "title": "Twin pillars, blank check",
+      "yearLabel": "1972",
+      "face": "shah",
+      "choiceLabels": [
+        "Buy the American catalog",
+        "Spend the oil on the villages"
+      ],
+      "landCardId": "pipeline-1975",
+      "landTitle": "The pipeline",
       "landFace": "shah"
     },
     {
@@ -1367,71 +3533,298 @@
       "landCardId": "cup-1988",
       "landTitle": "The cup",
       "landFace": "khamenei"
-    }
-  ],
-  "spine": [
-    {
-      "id": "natanz-2002",
-      "yearLabel": "2002–2003",
-      "title": "Natanz, axis of evil, the grand bargain that died"
     },
     {
-      "id": "green-2009",
+      "chair": "iran",
+      "from": "iran:robe-1989:khamenei:playing:live:ir-remain-letterhead,ir-take-robe",
+      "cardId": "robe-1989",
+      "title": "The robe",
+      "yearLabel": "1989",
+      "face": "khamenei",
+      "choiceLabels": [
+        "Take the robe",
+        "Remain president"
+      ],
+      "landCardId": "kuwait-1990",
+      "landTitle": "Kuwait",
+      "landFace": "rafsanjani"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:dual-containment-1993:rafsanjani:playing:live:ir-rebuild,ir-stay-loud",
+      "cardId": "dual-containment-1993",
+      "title": "Dual containment",
+      "yearLabel": "1993",
+      "face": "rafsanjani",
+      "choiceLabels": [
+        "Rebuild",
+        "Keep the revolution loud"
+      ],
+      "landCardId": "khobar-1996",
+      "landTitle": "Khobar",
+      "landFace": "rafsanjani"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
+      "cardId": "khobar-1996",
+      "title": "Khobar",
+      "yearLabel": "1996",
+      "face": "rafsanjani",
+      "choiceLabels": [
+        "Deny",
+        "Own it"
+      ],
+      "landCardId": "wall-1997",
+      "landTitle": "The wall",
+      "landFace": "rafsanjani"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
+      "cardId": "wall-1997",
+      "title": "The wall",
+      "yearLabel": "1997",
+      "face": "rafsanjani",
+      "choiceLabels": [
+        "Talk to the people",
+        "Meet the Secretary"
+      ],
+      "landCardId": "natanz-2002",
+      "landTitle": "Natanz",
+      "landFace": "khatami"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+      "cardId": "natanz-2002",
+      "title": "Natanz",
+      "yearLabel": "2002",
+      "face": "khatami",
+      "choiceLabels": [
+        "Keep spinning",
+        "Pause"
+      ],
+      "landCardId": "baghdad-2003",
+      "landTitle": "Baghdad",
+      "landFace": "khatami"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:baghdad-2003:khatami:playing:live:ir-send-militias,ir-watch-baghdad",
+      "cardId": "baghdad-2003",
+      "title": "Baghdad",
+      "yearLabel": "2003",
+      "face": "khatami",
+      "choiceLabels": [
+        "Watch",
+        "Send the militias now"
+      ],
+      "landCardId": "myth-2005",
+      "landTitle": "The myth",
+      "landFace": "khatami"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:myth-2005:khatami:playing:live:ir-dont-say-myth,ir-say-myth",
+      "cardId": "myth-2005",
+      "title": "The myth",
+      "yearLabel": "2005",
+      "face": "khatami",
+      "choiceLabels": [
+        "Say it",
+        "Do not say it"
+      ],
+      "landCardId": "green-2009",
+      "landTitle": "Green",
+      "landFace": "ahmadinejad"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
+      "cardId": "green-2009",
+      "title": "Green",
       "yearLabel": "2009",
-      "title": "Green Movement"
+      "face": "ahmadinejad",
+      "choiceLabels": [
+        "Steal it and crush it",
+        "Count the votes"
+      ],
+      "landCardId": "stuxnet-2010",
+      "landTitle": "Stuxnet",
+      "landFace": "ahmadinejad"
     },
     {
-      "id": "stuxnet-2010",
-      "yearLabel": "2007–2010",
-      "title": "Stuxnet / Olympic Games"
+      "chair": "iran",
+      "from": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
+      "cardId": "stuxnet-2010",
+      "title": "Stuxnet",
+      "yearLabel": "2010",
+      "face": "ahmadinejad",
+      "choiceLabels": [
+        "Keep spinning",
+        "Pause"
+      ],
+      "landCardId": "jcpoa-2015",
+      "landTitle": "The deal",
+      "landFace": "ahmadinejad"
     },
     {
-      "id": "jcpoa-2015",
-      "yearLabel": "2013–2015",
-      "title": "Obama, Kerry, JCPOA"
+      "chair": "iran",
+      "from": "iran:jcpoa-2015:ahmadinejad:playing:live:ir-accept-jcpoa,ir-keep-spin-jcpoa",
+      "cardId": "jcpoa-2015",
+      "title": "The deal",
+      "yearLabel": "2015",
+      "face": "ahmadinejad",
+      "choiceLabels": [
+        "Accept the limits",
+        "Keep spinning"
+      ],
+      "landCardId": "white-wednesdays-2017",
+      "landTitle": "White Wednesdays",
+      "landFace": "rouhani"
     },
     {
-      "id": "white-wednesdays-2017",
+      "chair": "iran",
+      "from": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
+      "cardId": "white-wednesdays-2017",
+      "title": "White Wednesdays",
       "yearLabel": "2017",
-      "title": "White Wednesdays"
+      "face": "rouhani",
+      "choiceLabels": [
+        "Arrest",
+        "Let them post"
+      ],
+      "landCardId": "archive-2018",
+      "landTitle": "The warehouse",
+      "landFace": "rouhani"
     },
     {
-      "id": "archive-2018",
+      "chair": "iran",
+      "from": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
+      "cardId": "archive-2018",
+      "title": "The warehouse",
       "yearLabel": "2018",
-      "title": "The archive raid, then the exit"
+      "face": "rouhani",
+      "choiceLabels": [
+        "Stay in the deal",
+        "Sprint tonight"
+      ],
+      "landCardId": "bounce-2019",
+      "landTitle": "Europe bounced the check",
+      "landFace": "rouhani"
     },
     {
-      "id": "soleimani-2020",
+      "chair": "iran",
+      "from": "iran:hormuz-2019:rouhani:playing:live:ir-hold-fire,ir-squeeze",
+      "cardId": "hormuz-2019",
+      "title": "A drone, a tanker, the Strait",
+      "yearLabel": "2019",
+      "face": "rouhani",
+      "choiceLabels": [
+        "Hold fire",
+        "Squeeze the Strait"
+      ],
+      "landCardId": "soleimani-2020",
+      "landTitle": "The airport",
+      "landFace": "rouhani"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
+      "cardId": "soleimani-2020",
+      "title": "The airport",
       "yearLabel": "2020",
-      "title": "Soleimani, then Flight 752, then Fakhrizadeh"
+      "face": "rouhani",
+      "choiceLabels": [
+        "Missiles, then the airliner",
+        "Eat it"
+      ],
+      "landCardId": "unleave-2021",
+      "landTitle": "The un-leave",
+      "landFace": "rouhani"
     },
     {
-      "id": "mahsa-2022",
+      "chair": "iran",
+      "from": "iran:unleave-2021:rouhani:playing:live:ir-sprint-unleave,ir-talk-unleave",
+      "cardId": "unleave-2021",
+      "title": "The un-leave",
+      "yearLabel": "2021",
+      "face": "rouhani",
+      "choiceLabels": [
+        "Sprint",
+        "Talk"
+      ],
+      "landCardId": "mahsa-2022",
+      "landTitle": "Mahsa",
+      "landFace": "raisi"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
+      "cardId": "mahsa-2022",
+      "title": "Mahsa",
       "yearLabel": "2022",
-      "title": "Mahsa Amini / Woman, Life, Freedom"
+      "face": "raisi",
+      "choiceLabels": [
+        "Crush it",
+        "Fire the morality police"
+      ],
+      "landCardId": "oct7-2023",
+      "landTitle": "7 October",
+      "landFace": "raisi"
     },
     {
-      "id": "poisonings-2022",
-      "yearLabel": "2022–2023",
-      "title": "School poisonings"
-    },
-    {
-      "id": "oct7-2023",
+      "chair": "iran",
+      "from": "iran:oct7-2023:raisi:playing:live:ir-keep-layer,ir-shoot-now",
+      "cardId": "oct7-2023",
+      "title": "7 October",
       "yearLabel": "2023",
-      "title": "7 October and the proxy war that stopped being deniable"
+      "face": "raisi",
+      "choiceLabels": [
+        "Keep the proxy layer",
+        "Shoot from Iran now"
+      ],
+      "landCardId": "direct-fire-2024",
+      "landTitle": "Direct fire",
+      "landFace": "raisi"
     },
     {
-      "id": "direct-fire-2024",
+      "chair": "iran",
+      "from": "iran:direct-fire-2024:raisi:playing:live:ir-fire-iran,ir-stay-proxies",
+      "cardId": "direct-fire-2024",
+      "title": "Direct fire",
       "yearLabel": "2024",
-      "title": "Iran shoots at Israel directly"
+      "face": "raisi",
+      "choiceLabels": [
+        "Fire from Iran",
+        "Stay with the proxies"
+      ],
+      "landCardId": "sit-pezeshkian-2024",
+      "landTitle": "Sit Pezeshkian",
+      "landFace": "raisi"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:twelve-days-2025:pezeshkian:playing:live:ir-absorb-strike,ir-deal-now",
+      "cardId": "twelve-days-2025",
+      "title": "Twelve days",
+      "yearLabel": "2025",
+      "face": "pezeshkian",
+      "choiceLabels": [
+        "Absorb and strike back",
+        "Deal now"
+      ],
+      "landCardId": "the-leader-2026",
+      "landTitle": "The Leader",
+      "landFace": "pezeshkian"
     }
   ],
-  "unwiredPlayable": [
-    "hormuz-2019"
-  ],
+  "spine": [],
+  "unwiredPlayable": [],
   "notes": {
     "identity": "Nodes are chair + card + face + ending + live choice ids. Flags that change buttons (hinterland_spent) fork. Bars and clocks do not. A White Revolution that only moves liberals collapses.",
     "secret": "1938 is a year-click egg, not a 1953 button. Not in this walk.",
-    "isolation": "Hormuz 2019 is an isolation start. Not reachable from 1953."
+    "isolation": "Hormuz 2019 sits on the 1953 walk after Europe bounces. 1938 is a year-click egg."
   }
 }

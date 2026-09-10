@@ -12,6 +12,7 @@ import {
 } from "./engine.ts";
 import { cardById, CARDS } from "./cards.ts";
 import { SEED_2019, SOFT_PURGE_IRGC } from "./constants.ts";
+import { RECEIPTS } from "./receipts.ts";
 
 describe("newGame", () => {
   it("starts the US chair on 1953 with clocks off", () => {
@@ -204,9 +205,17 @@ describe("Ike to Carter", () => {
     assert.equal(g.phase, "playing");
     const beforeReform = g.clocks.liberals;
     g = applyChoice(g, "us-press-reform");
-    assert.equal(g.cardId, "weapons-1972");
+    assert.equal(g.cardId, "sofa-1964");
     assert.equal(g.clocks.liberals > beforeReform, true);
+    assert.equal(g.party, "D");
+    g = applyChoice(g, "us-take-sofa");
+    assert.equal(g.cardId, "sit-nixon-1969");
+    g = applyChoice(g, "us-sit-nixon");
+    assert.equal(g.cardId, "weapons-1972");
+    assert.equal(g.party, "R");
     g = applyChoice(g, "us-blank-check");
+    assert.equal(g.cardId, "pipeline-1975");
+    g = applyChoice(g, "us-keep-selling");
     assert.equal(g.cardId, "revolution-1979");
     const grown = g.clocks.liberals;
     assert.equal(grown >= 50, true);
@@ -244,9 +253,9 @@ describe("Ike to Carter", () => {
     assert.equal(g.phase, "playing");
     assert.equal(g.cardId, "cup-1988");
     g = applyChoice(g, "us-call-mistake");
-    assert.equal(g.phase, "ended");
-    assert.equal(g.ending?.id, "none");
-    assert.match(g.ending?.referee ?? "", /290|cup|ceasefire/i);
+    assert.equal(g.phase, "playing");
+    assert.equal(g.cardId, "robe-1989");
+    assert.equal(g.party, "R");
   });
 
   it("Iran golden path seats the Shah, then Bazargan, then the Imam repeals Family Protection", () => {
@@ -257,7 +266,14 @@ describe("Ike to Carter", () => {
     g = applyChoice(g, "ir-shah-fuel");
     assert.equal(g.cardId, "white-revolution-1963");
     g = applyChoice(g, "ir-white-rev");
+    assert.equal(g.cardId, "sofa-1964");
+    g = applyChoice(g, "ir-pass-sofa");
+    assert.equal(g.cardId, "sit-nixon-1969");
+    g = applyChoice(g, "ir-nixon-next");
+    assert.equal(g.cardId, "weapons-1972");
     g = applyChoice(g, "ir-buy-catalog");
+    assert.equal(g.cardId, "pipeline-1975");
+    g = applyChoice(g, "ir-keep-catalog");
     assert.equal(g.cardId, "revolution-1979");
     const grown = g.clocks.liberals;
     g = applyChoice(g, "ir-shah-leave");
@@ -297,9 +313,13 @@ describe("Ike to Carter", () => {
     assert.equal(parts.cardId, "cup-1988");
     assert.equal(parts.flags.iran_face, "khamenei");
     const cup = applyChoice(parts, "ir-stamp-cup");
-    assert.equal(cup.phase, "ended");
-    assert.equal(cup.ending?.id, "none");
-    assert.match(cup.ending?.title ?? "", /cup/i);
+    assert.equal(cup.phase, "playing");
+    assert.equal(cup.cardId, "robe-1989");
+    assert.equal(cup.flags.iran_face, "khamenei");
+    const robe = applyChoice(cup, "ir-take-robe");
+    assert.equal(robe.phase, "playing");
+    assert.equal(robe.cardId, "kuwait-1990");
+    assert.equal(robe.flags.iran_face, "rafsanjani");
   });
 
   it("letting the students hold the embassy still seats the next letterhead", () => {
@@ -378,9 +398,15 @@ describe("Ike to Carter", () => {
     assert.equal(g.bars.my_party, afterAjax.opp + 6);
     assert.equal(g.bars.opposing_party, afterAjax.my);
     g = applyChoice(g, "us-press-reform");
+    assert.equal(g.cardId, "sofa-1964");
+    assert.equal(g.party, "D");
+    g = applyChoice(g, "us-take-sofa");
+    g = applyChoice(g, "us-sit-nixon");
     assert.equal(g.cardId, "weapons-1972");
     assert.equal(g.party, "R");
     g = applyChoice(g, "us-blank-check");
+    assert.equal(g.cardId, "pipeline-1975");
+    g = applyChoice(g, "us-keep-selling");
     assert.equal(g.cardId, "revolution-1979");
     assert.equal(g.party, "D");
   });
@@ -418,7 +444,13 @@ describe("golden path", () => {
     for (const card of CARDS) {
       for (const c of [...card.usChoices, ...card.iranChoices]) {
         if (c.historical) {
-          assert.equal(c.ending, undefined, `${card.id}:${c.id} is history and must not grave`);
+          if (c.ending) {
+            assert.equal(
+              c.ending === "the_leader",
+              true,
+              `${card.id}:${c.id} is history and must not grave`,
+            );
+          }
         }
       }
     }
@@ -444,8 +476,8 @@ describe("golden path", () => {
     const tanks = applyChoice(start, "us-send-tanks");
     assert.equal(press.phase, "playing");
     assert.equal(tanks.phase, "playing");
-    assert.equal(press.cardId, "weapons-1972");
-    assert.equal(tanks.cardId, "weapons-1972");
+    assert.equal(press.cardId, "sofa-1964");
+    assert.equal(tanks.cardId, "sofa-1964");
     assert.equal(press.ending, null);
     assert.equal(tanks.ending, null);
     assert.equal(press.clocks.liberals > tanks.clocks.liberals, true);
@@ -462,10 +494,14 @@ describe("golden path", () => {
     skip = applyChoice(skip, "us-keep-fuel");
     skip = applyChoice(skip, "us-send-tanks");
     assert.equal(skip.phase, "playing");
-    assert.equal(skip.cardId, "weapons-1972");
+    assert.equal(skip.cardId, "sofa-1964");
     assert.equal(skip.clocks.liberals < histLibs, true);
+    skip = applyChoice(skip, "us-take-sofa");
+    skip = applyChoice(skip, "us-sit-nixon");
     skip = applyChoice(skip, "us-hinterland-first");
     assert.equal(skip.phase, "playing");
+    assert.equal(skip.cardId, "pipeline-1975");
+    skip = applyChoice(skip, "us-keep-selling");
     assert.equal(skip.cardId, "revolution-1979");
     assert.equal(skip.ending, null);
   });
@@ -474,10 +510,12 @@ describe("golden path", () => {
     let g = newGame({ chair: "iran", party: "D", cardId: "white-revolution-1963" });
     const quiet = applyChoice(g, "ir-keep-quiet");
     assert.equal(quiet.phase, "playing");
-    assert.equal(quiet.cardId, "weapons-1972");
-    const next = applyChoice(quiet, "ir-spend-villages");
+    assert.equal(quiet.cardId, "sofa-1964");
+    const afterSofa = applyChoice(quiet, "ir-pass-sofa");
+    const afterNixon = applyChoice(afterSofa, "ir-nixon-next");
+    const next = applyChoice(afterNixon, "ir-spend-villages");
     assert.equal(next.phase, "playing");
-    assert.equal(next.cardId, "revolution-1979");
+    assert.equal(next.cardId, "pipeline-1975");
     assert.equal(next.ending, null);
   });
 
@@ -501,8 +539,8 @@ describe("golden path", () => {
     assert.equal(refuse.cardId, "cup-1988");
     const drink = applyChoice(take, "ir-stamp-cup");
     const keep = applyChoice(take, "ir-refuse-cup");
-    assert.equal(drink.phase, "ended");
-    assert.equal(drink.ending?.id, "none");
+    assert.equal(drink.phase, "playing");
+    assert.equal(drink.cardId, "robe-1989");
     assert.equal(keep.phase, "ended");
     assert.equal(keep.ending?.id, "face_no_guns");
   });
@@ -542,6 +580,8 @@ describe("golden path", () => {
     let g = newGame({ chair: "iran", party: "D", cardId: "weapons-1972" });
     g = applyChoice(g, "ir-spend-villages");
     assert.equal(g.flags.hinterland_spent, true);
+    assert.equal(g.cardId, "pipeline-1975");
+    g = applyChoice(g, "ir-keep-catalog");
     assert.equal(g.cardId, "revolution-1979");
     const ids = choicesFor(g).map((c) => c.id);
     assert.equal(ids.includes("ir-shah-hold"), true);
@@ -555,5 +595,143 @@ describe("golden path", () => {
     assert.equal(leave.phase, "playing");
     assert.equal(leave.cardId, "veil-1979");
     assert.equal(leave.flags.iran_face, "bazargan");
+  });
+});
+
+function walkHistorical(chair: "us" | "iran", from?: string) {
+  let g = newGame({ chair, party: chair === "us" ? "R" : "D", cardId: from });
+  const path: string[] = [g.cardId];
+  for (let i = 0; i < 80; i++) {
+    if (g.phase !== "playing") return { g, path };
+    const hist = choicesFor(g).find((c) => c.historical);
+    assert.ok(hist, `no historical choice on ${g.cardId} face=${g.flags.iran_face}`);
+    g = applyChoice(g, hist.id);
+    path.push(g.cardId);
+  }
+  throw new Error(`historical walk ran away from ${from ?? "1953"}`);
+}
+
+describe("late rail", () => {
+  it("US history rides 1953 through Johnson to the 2026 campaign", () => {
+    const { g, path } = walkHistorical("us");
+    assert.equal(g.phase, "ended");
+    assert.equal(g.ending?.id, "the_leader");
+    assert.match(g.ending?.referee ?? "", /History arrived/);
+    for (const id of [
+      "sofa-1964",
+      "sit-nixon-1969",
+      "pipeline-1975",
+      "robe-1989",
+      "bounce-2019",
+      "hormuz-2019",
+      "unleave-2021",
+      "twelve-days-2025",
+      "the-leader-2026",
+    ]) {
+      assert.equal(path.includes(id), true, `US walk missed ${id}`);
+    }
+  });
+
+  it("Iran history takes the robe, steps off in 2019, and arrives at 2026", () => {
+    const { g, path } = walkHistorical("iran");
+    assert.equal(g.phase, "ended");
+    assert.equal(g.ending?.id, "the_leader");
+    assert.equal(g.flags.iran_face, "pezeshkian");
+    for (const id of [
+      "sofa-1964",
+      "robe-1989",
+      "kuwait-1990",
+      "wall-1997",
+      "myth-2005",
+      "jcpoa-2015",
+      "bounce-2019",
+      "hormuz-2019",
+      "unleave-2021",
+      "mahsa-2022",
+      "sit-pezeshkian-2024",
+      "the-leader-2026",
+    ]) {
+      assert.equal(path.includes(id), true, `Iran walk missed ${id}`);
+    }
+  });
+
+  it("keeping the limits is an olive hold; the nuclear war cards go away", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "bounce-2019" });
+    assert.equal(g.flags.iran_face, "rouhani");
+    const ids = choicesFor(g).map((c) => c.id);
+    assert.equal(ids.includes("ir-keep-limits"), true);
+    assert.equal(ids.includes("ir-step-off"), true);
+    const hold = applyChoice(g, "ir-keep-limits");
+    assert.equal(hold.phase, "ended");
+    assert.equal(hold.ending?.id, "jcpoa_holds");
+    assert.match(hold.ending?.referee ?? "", /successful path/);
+    const sprint = applyChoice(g, "ir-step-off");
+    assert.equal(sprint.phase, "playing");
+    assert.equal(sprint.cardId, "hormuz-2019");
+    assert.equal(sprint.ending, null);
+  });
+
+  it("side with Saddam is a grave; stay out continues", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "kuwait-1990" });
+    assert.equal(g.flags.iran_face, "rafsanjani");
+    const suicide = applyChoice(g, "ir-side-saddam");
+    assert.equal(suicide.phase, "ended");
+    assert.equal(suicide.ending?.id, "kuwait_grave");
+    const stay = applyChoice(g, "ir-stay-out-kuwait");
+    assert.equal(stay.phase, "playing");
+    assert.equal(stay.cardId, "dual-containment-1993");
+  });
+
+  it("sit cards still have buttons when isolation-started on the outgoing face", () => {
+    const robe = newGame({ chair: "iran", party: "D", cardId: "robe-1989" });
+    assert.equal(robe.flags.iran_face, "khamenei");
+    assert.equal(choicesFor(robe).some((c) => c.id === "ir-take-robe"), true);
+    const wall = newGame({ chair: "iran", party: "D", cardId: "wall-1997" });
+    assert.equal(wall.flags.iran_face, "rafsanjani");
+    assert.equal(choicesFor(wall).some((c) => c.id === "ir-cnn"), true);
+    const myth = newGame({ chair: "iran", party: "D", cardId: "myth-2005" });
+    assert.equal(myth.flags.iran_face, "khatami");
+    assert.equal(choicesFor(myth).some((c) => c.id === "ir-say-myth"), true);
+    const deal = newGame({ chair: "iran", party: "D", cardId: "jcpoa-2015" });
+    assert.equal(deal.flags.iran_face, "ahmadinejad");
+    assert.equal(choicesFor(deal).some((c) => c.id === "ir-accept-jcpoa"), true);
+    const unleave = newGame({ chair: "iran", party: "D", cardId: "unleave-2021" });
+    assert.equal(unleave.flags.iran_face, "rouhani");
+    assert.equal(choicesFor(unleave).some((c) => c.id === "ir-sprint-unleave"), true);
+    const sit = newGame({ chair: "iran", party: "D", cardId: "sit-pezeshkian-2024" });
+    assert.equal(sit.flags.iran_face, "raisi");
+    assert.equal(choicesFor(sit).some((c) => c.id === "ir-sit-pezeshkian"), true);
+  });
+
+  it("the White House party follows Johnson, Ford, Clinton, Obama, Biden, Trump", () => {
+    assert.equal(newGame({ chair: "us", party: "R", cardId: "sofa-1964" }).party, "D");
+    assert.equal(newGame({ chair: "us", party: "D", cardId: "pipeline-1975" }).party, "R");
+    assert.equal(newGame({ chair: "us", party: "R", cardId: "robe-1989" }).party, "R");
+    assert.equal(newGame({ chair: "us", party: "R", cardId: "dual-containment-1993" }).party, "D");
+    assert.equal(newGame({ chair: "us", party: "D", cardId: "natanz-2002" }).party, "R");
+    assert.equal(newGame({ chair: "us", party: "R", cardId: "green-2009" }).party, "D");
+    assert.equal(newGame({ chair: "us", party: "D", cardId: "archive-2018" }).party, "R");
+    assert.equal(newGame({ chair: "us", party: "R", cardId: "unleave-2021" }).party, "D");
+    assert.equal(newGame({ chair: "us", party: "D", cardId: "twelve-days-2025" }).party, "R");
+  });
+
+  it("keep the war is a grave; the 2026 campaign is history arriving", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "the-leader-2026" });
+    assert.equal(g.flags.iran_face, "pezeshkian");
+    const keep = applyChoice(g, "ir-keep-war");
+    assert.equal(keep.phase, "ended");
+    assert.equal(keep.ending?.id, "keep_the_war");
+    const memo = applyChoice(g, "ir-hormuz-memo");
+    assert.equal(memo.phase, "ended");
+    assert.equal(memo.ending?.id, "the_leader");
+  });
+
+  it("every card source id has a receipt", () => {
+    const ids = new Set(RECEIPTS.map((r) => r.id));
+    for (const card of CARDS) {
+      for (const src of card.sources) {
+        assert.equal(ids.has(src), true, `${card.id} cites missing receipt ${src}`);
+      }
+    }
   });
 });

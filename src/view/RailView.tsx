@@ -13,7 +13,7 @@ export function RailView() {
         <h1 className="mt-1 font-serif text-3xl font-semibold text-fg">The rail, not eighty stations</h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
           Playable means the eight-voice card is written and the engine will take a button.
-          Spine means referee copy is frozen enough to argue about. Choices still to write.
+          Quiet years still get a sentence. This is a history tutorial, not a jump cut.
         </p>
       </header>
       <ol className="flex flex-col gap-2">

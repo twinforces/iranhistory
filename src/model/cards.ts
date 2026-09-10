@@ -1,8 +1,11 @@
 /**
- * What: the rail. Playable cards have voices and buttons. Spine cards have referee copy.
- * Why: copy is data. The engine does not care who is ranting.
+ * What: the rail. Playable cards have voices and buttons.
+ * Why: copy is data. The engine does not care who is ranting. Quiet years
+ * still get a sentence. Late years live in cards.late.ts so this file cannot
+ * be emptied by a late-file rewrite.
  */
 import type { Card, Choice, FactionId, IranFace } from "./types.ts";
+import { LATE_AFTER_HORMUZ, LATE_CARDS } from "./cards.late.ts";
 
 const ALL: FactionId[] = [
   "irgc",
@@ -488,7 +491,7 @@ const whiteRevolution1963: Card = {
   visibleFactions: COLD_WAR,
   clocksOn: false,
   sloganVolume: 0,
-  next: "weapons-1972",
+  next: "sofa-1964",
 };
 const weapons1972: Card = {
   id: "weapons-1972",
@@ -610,7 +613,7 @@ const weapons1972: Card = {
   visibleFactions: COLD_WAR,
   clocksOn: false,
   sloganVolume: 0,
-  next: "revolution-1979",
+  next: "pipeline-1975",
 };
 
 const revolution1979: Card = {
@@ -1986,7 +1989,7 @@ const cup1988: Card = {
       summary: "An airliner. A warship. Close the file.",
       kind: "soft",
       historical: true,
-      nextCard: "natanz-2002",
+      nextCard: "robe-1989",
       resultTitle: "The cup, and two hundred ninety",
       result:
         "3 July 1988. USS Vincennes shoots down Iran Air 655. Two hundred ninety dead. Washington calls it a mistake. Eighteen days later the Imam drinks the cup. Resolution 598. Eight years. The Guards learn never to fight fair again. Natanz is a later file.",
@@ -1998,7 +2001,7 @@ const cup1988: Card = {
       summary: "Say what the radar did. Take the hearing.",
       kind: "hard",
       artisticLicense: "al-own-shot",
-      nextCard: "natanz-2002",
+      nextCard: "robe-1989",
       resultTitle: "The cup, and two hundred ninety",
       result:
         "You owned the shot. The hearing lasts. The Imam still drinks. Two hundred ninety is still the number. The ceasefire still arrives. Natanz is a later file.",
@@ -2013,7 +2016,7 @@ const cup1988: Card = {
       kind: "walk",
       historical: true,
       face: "khamenei",
-      nextCard: "natanz-2002",
+      nextCard: "robe-1989",
       resultTitle: "The Imam drinks the cup",
       result:
         "Eight years. Chemical weapons. A generation of boys. The Guards learn never to fight fair again. Khomeini drinks the poison chalice and accepts the ceasefire. You were the letterhead. You were not the war.",
@@ -2034,7 +2037,7 @@ const cup1988: Card = {
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
-  next: "natanz-2002",
+  next: "robe-1989",
 };
 
 const hitler1938: Card = {
@@ -2124,185 +2127,6 @@ const hitler1938: Card = {
   sloganVolume: 0,
   next: "coup-1953",
 };
-
-function spine(opts: {
-  id: string;
-  year: number;
-  yearLabel: string;
-  title: string;
-  era: Card["era"];
-  paragraphs: readonly string[];
-  sources: readonly string[];
-  next: string | null;
-  wileyJoos?: boolean;
-}): Card {
-  return {
-    id: opts.id,
-    year: opts.year,
-    yearLabel: opts.yearLabel,
-    title: opts.title,
-    era: opts.era,
-    status: "spine",
-    referee: { tags: ["LT", "IT"], paragraphs: opts.paragraphs },
-    briefings: [],
-    iranChoices: [],
-    usChoices: [],
-    sources: opts.sources,
-    visibleFactions: ALL,
-    clocksOn: true,
-    wileyJoos: opts.wileyJoos,
-    sloganVolume: 3,
-    next: opts.next,
-  };
-}
-
-const spineCards: readonly Card[] = [
-  spine({
-    id: "natanz-2002",
-    year: 2002,
-    yearLabel: "2002–2003",
-    title: "Natanz, axis of evil, the grand bargain that died",
-    era: "nuclear",
-    paragraphs: [
-      "LT: Natanz is revealed. Bush's axis of evil includes Iran. A Swiss fax in 2003 offers a grand bargain. It dies.",
-      "IT: The cup taught the Guards never to fight fair. Enrichment is how they keep the lesson.",
-    ],
-    sources: ["nasr-roads", "cfr-timeline"],
-    next: "green-2009",
-  }),
-  spine({
-    id: "green-2009",
-    year: 2009,
-    yearLabel: "2009",
-    title: "Green Movement",
-    era: "street",
-    paragraphs: [
-      "LT: Ahmadinejad is declared the winner. The street fills. The Basij empty it.",
-      "IT: A stolen election is not a barracks. The liberals clock was already spent in 1979.",
-    ],
-    sources: ["cfr-timeline"],
-    next: "stuxnet-2010",
-  }),
-  spine({
-    id: "stuxnet-2010",
-    year: 2010,
-    yearLabel: "2007–2010",
-    title: "Stuxnet / Olympic Games",
-    era: "nuclear",
-    paragraphs: [
-      "LT: A worm hits Natanz. Centrifuges die. Olympic Games is the file name.",
-      "IT: Sabotage buys months. It does not buy a government.",
-    ],
-    sources: ["stuxnet-wiki"],
-    next: "jcpoa-2015",
-    wileyJoos: true,
-  }),
-  spine({
-    id: "jcpoa-2015",
-    year: 2015,
-    yearLabel: "2013–2015",
-    title: "Obama, Kerry, JCPOA",
-    era: "nuclear",
-    paragraphs: [
-      "LT: A deal. Sanctions relief. A breakout clock that is a number in a brief.",
-      "IT: Whether it blocked a bomb or paved a delay is the fight. Not this slice.",
-    ],
-    sources: ["ap-nuke-timeline"],
-    next: "white-wednesdays-2017",
-  }),
-  spine({
-    id: "white-wednesdays-2017",
-    year: 2017,
-    yearLabel: "2017",
-    title: "White Wednesdays",
-    era: "street",
-    paragraphs: [
-      "LT: Women post unveiled. Arrests follow. Compulsory hijab is still the law.",
-      "IT: Do not collapse this into 2022. It is its own year.",
-    ],
-    sources: ["bbc-white-wed"],
-    next: "archive-2018",
-  }),
-  spine({
-    id: "archive-2018",
-    year: 2018,
-    yearLabel: "2018",
-    title: "The archive raid, then the exit",
-    era: "nuclear",
-    paragraphs: [
-      "LT: Mossad lifts the nuclear archive from southern Tehran. Trump exits the JCPOA.",
-      "IT: The files show structured AMAD-era work. How much stayed live after 2003 is DK.",
-    ],
-    sources: ["nyt-archive-raid"],
-    next: "soleimani-2020",
-    wileyJoos: true,
-  }),
-  spine({
-    id: "soleimani-2020",
-    year: 2020,
-    yearLabel: "2020",
-    title: "Soleimani, then Flight 752, then Fakhrizadeh",
-    era: "late",
-    paragraphs: [
-      "LT: A drone kills Soleimani. Iran shoots down Flight 752. Fakhrizadeh is killed later that year.",
-      "IT: Direct fire is no longer deniable. The proxy file is still the main one.",
-    ],
-    sources: ["alj-2025", "cfr-timeline"],
-    next: "mahsa-2022",
-  }),
-  spine({
-    id: "mahsa-2022",
-    year: 2022,
-    yearLabel: "2022",
-    title: "Mahsa Amini / Woman, Life, Freedom",
-    era: "street",
-    paragraphs: [
-      "LT: Mahsa Amini dies in morality-police custody. The street fills. Woman, Life, Freedom.",
-      "IT: The street is not a government-in-waiting. It was not in 1979 either.",
-    ],
-    sources: ["cfr-timeline"],
-    next: "poisonings-2022",
-  }),
-  spine({
-    id: "poisonings-2022",
-    year: 2022,
-    yearLabel: "2022–2023",
-    title: "School poisonings",
-    era: "street",
-    paragraphs: [
-      "LT: Schoolgirls are poisoned in clusters. The state fails to investigate and arrests people for talking.",
-      "IT: Who did it is DK. That the state treated speech as the crime is not.",
-    ],
-    sources: ["ohchr-poison", "stanford-poison"],
-    next: "oct7-2023",
-  }),
-  spine({
-    id: "oct7-2023",
-    year: 2023,
-    yearLabel: "2023",
-    title: "7 October and the proxy war that stopped being deniable",
-    era: "late",
-    paragraphs: [
-      "LT: Hamas attacks Israel. Iran's proxy file is no longer a rumor.",
-      "IT: Direct fire is the next card. The deniability was the product.",
-    ],
-    sources: ["cfr-timeline"],
-    next: "direct-fire-2024",
-  }),
-  spine({
-    id: "direct-fire-2024",
-    year: 2024,
-    yearLabel: "2024",
-    title: "Iran shoots at Israel directly",
-    era: "late",
-    paragraphs: [
-      "LT: Iran fires at Israel from Iran. The proxy layer thins.",
-      "IT: Direct fire is a different game. Not this train.",
-    ],
-    sources: ["cfr-timeline"],
-    next: null,
-  }),
-];
 
 const hormuz2019: Card = {
   id: "hormuz-2019",
@@ -2431,8 +2255,9 @@ const RAIL: readonly Card[] = [
   lebanon1983,
   iranContra1985,
   cup1988,
-  ...spineCards,
+  ...LATE_CARDS,
   hormuz2019,
+  ...LATE_AFTER_HORMUZ,
   hitler1938,
 ];
 

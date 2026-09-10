@@ -19,7 +19,7 @@ describe("rail graph from the live engine", () => {
     assert.equal(hits.some((c) => c.chair === "us"), true);
     assert.equal(hits.some((c) => c.chair === "iran" && c.face === "shah"), true);
     for (const hit of hits) {
-      assert.equal(hit.landCardId, "weapons-1972");
+      assert.equal(hit.landCardId, "sofa-1964");
       assert.equal(hit.choiceLabels.length, 2);
     }
   });
@@ -28,12 +28,8 @@ describe("rail graph from the live engine", () => {
     const weapons = graph.collapses.filter((c) => c.cardId === "weapons-1972");
     assert.equal(weapons.some((c) => c.chair === "us"), true);
     for (const hit of weapons.filter((c) => c.chair === "us")) {
-      assert.equal(hit.landCardId, "revolution-1979");
+      assert.equal(hit.landCardId, "pipeline-1975");
     }
-    assert.equal(
-      weapons.some((c) => c.chair === "iran" && c.face === "shah"),
-      false,
-    );
     const contraUs = graph.chairs.us.nodes.some(
       (n) => n.cardId === "iran-contra-1985" && n.phase === "playing",
     );
@@ -79,11 +75,13 @@ describe("rail graph from the live engine", () => {
     assert.equal(contra, true);
   });
 
-  it("keeps Hormuz and 1938 off the 1953 walk", () => {
-    assert.deepEqual(graph.unwiredPlayable, ["hormuz-2019"]);
+  it("keeps 1938 off the 1953 walk; Hormuz sits after the bounce", () => {
+    assert.deepEqual(graph.unwiredPlayable, []);
     const ids = [...graph.chairs.us.nodes, ...graph.chairs.iran.nodes].map((n) => n.cardId);
     assert.equal(ids.includes("hitler-1938"), false);
-    assert.equal(ids.includes("hormuz-2019"), false);
+    assert.equal(ids.includes("hormuz-2019"), true);
+    assert.equal(ids.includes("sofa-1964"), true);
+    assert.equal(ids.includes("the-leader-2026"), true);
   });
 
   it("Reagan's 1982 tilt sits between the oath and Beirut; Iran skips it", () => {

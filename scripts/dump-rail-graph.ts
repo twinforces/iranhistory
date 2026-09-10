@@ -12,6 +12,7 @@ import {
   choicesFor,
   currentCard,
   iranFaceOf,
+  leaderFor,
   newGame,
   type Chair,
   type GameState,
@@ -95,12 +96,7 @@ function nodeOf(state: GameState): GraphNode {
 }
 
 function leaderYear(year: number): string {
-  if (year >= 2017) return "trump";
-  if (year >= 1981) return "reagan";
-  if (year >= 1977) return "carter";
-  if (year >= 1969) return "nixon";
-  if (year >= 1961) return "kennedy";
-  return "ike";
+  return leaderFor({ chair: "us", year, iranFace: "mossadegh" }).id;
 }
 
 function walk(chair: Chair): { nodes: GraphNode[]; edges: GraphEdge[] } {
@@ -252,7 +248,7 @@ export function buildGraph(): RailGraph {
       identity:
         "Nodes are chair + card + face + ending + live choice ids. Flags that change buttons (hinterland_spent) fork. Bars and clocks do not. A White Revolution that only moves liberals collapses.",
       secret: "1938 is a year-click egg, not a 1953 button. Not in this walk.",
-      isolation: "Hormuz 2019 is an isolation start. Not reachable from 1953.",
+      isolation: "Hormuz 2019 sits on the 1953 walk after Europe bounces. 1938 is a year-click egg.",
     },
   };
 }

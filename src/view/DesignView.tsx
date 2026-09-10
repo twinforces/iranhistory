@@ -12,12 +12,12 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "When does a chair die?",
     freeze:
-      "When the player picks a grave. Walk away, hire the British engineers, cut a deal with Moscow, keep the war at home, refuse the cup. A rescue is not a grave. History is the golden path: it always rides to the end of the wired rail. Carter losing seats Reagan. Banisadr losing seats Khamenei. Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis, keep Family Protection) retire you to a 7-Eleven. Iran continues with a stick-figure replacement. History keeps the real portraits. Beirut rides through a channel in the dark to the cup. Rail hold is the 80s ending, after Reagan sat and the Imam drank. Some forks only tweak numbers. White Revolution is that kind. So is keeping the embargo. The Shah can hold 1979 if he spent the oil on the villages: that is a successful path, not a grave. Mossadegh's dead end is the street, or Stalin in a turban. The Saudis enter the Soviet sphere.",
+      "When the player picks a grave. Walk away, hire the British engineers, cut a deal with Moscow, keep the war at home, refuse the cup, side with Saddam, keep the 2026 war. A rescue is not a grave. History is the golden path: it always rides to the end of the wired rail. Carter losing seats Reagan. Banisadr losing seats Khamenei. Khamenei taking the robe seats Rafsanjani and moves the Imam plate. Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis, keep Family Protection, remain president, count the Green votes, fire the morality police) retire you to a 7-Eleven. Iran continues with a stick-figure replacement. History keeps the real portraits. Beirut rides through a channel in the dark to the cup. The 2026 campaign that kills the Imam is history arriving, a rail hold, not a letterhead gag. Some forks only tweak numbers. White Revolution is that kind. So is keeping the embargo. The Shah can hold 1979 if he spent the oil on the villages: that is a successful path, not a grave. Keeping the JCPOA limits after Europe bounces is the same kind of olive hold. Mossadegh's dead end is the street, or Stalin in a turban. The Saudis enter the Soviet sphere.",
   },
   {
     q: "What actually forks?",
     freeze:
-      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), and refusing the cup. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card.",
+      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold.",
   },
   {
     q: "Mossadegh dead end?",
@@ -27,7 +27,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "How much 1953-78?",
     freeze:
-      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), Carter (stay out of the war, hostages are the exam), Reagan (1982 tilt, then Beirut). Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Johnson SOFA / Khomeini exile folded into the years between 1963 and 1972.",
+      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), the SOFA (Johnson: Vietnam is why you barely looked, and why Khomeini has a name), Sit Nixon, Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), the pipeline (Ford), Carter (stay out of the war, hostages are the exam), Reagan (1982 tilt, then Beirut). Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Quiet Next cards are tutorial stops. Do not skip years.",
   },
   {
     q: "Cartoons per rant",
@@ -47,12 +47,17 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "Party at start",
     freeze:
-      "The seated president's party is a fact. Ike, Nixon, Reagan, and Trump are Republicans. Kennedy and Carter are Democrats. my_party follows the face. The 1953 chair screen does not pick a letter.",
+      "The seated president's party is a fact. Ike, Nixon, Ford, Reagan, Bush 41, Bush 43, and Trump are Republicans. Kennedy, Johnson, Carter, Clinton, Obama, and Biden are Democrats. my_party follows the face. The 1953 chair screen does not pick a letter.",
+  },
+  {
+    q: "Keep the JCPOA limits?",
+    freeze:
+      "After Trump voids, Iran waits a year for Europe. That is history. May 2019 they step off, or they keep the limits. Keeping them is a successful olive hold. The nuclear war cards go away. Soleimani, Mahsa, and Oct 7 are not centrifuges. They live on the historical sprint. The Guards do not veto the hold. Biden's Vienna card only exists if they stepped off. Kerry signed, not Clinton. She left State 1 February 2013.",
   },
   {
     q: "2025-26 chapters",
     freeze:
-      "Out of the spine until they stop being one newspaper's war diary. Mark DK. Optional late chapters later.",
+      "On the rail. Twelve Days 2025 and the 2026 campaign that kills the Imam, then a June memorandum. Historical is the campaign then a ceasefire. Keep-the-war is a grave. Stop-after-Fordow is AL rail hold. This is an ending, not a letterhead gag.",
   },
   {
     q: "Hitler easter egg",
@@ -61,7 +66,8 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   },
   {
     q: "Hormuz",
-    freeze: "Different play style. Not this train. Leave it off the Play landing.",
+    freeze:
+      "The 2019 drone and tanker card sits on the train after Europe bounces. Hormuz as a map is still a different play style. Leave that off the Play landing.",
   },
 ];
 

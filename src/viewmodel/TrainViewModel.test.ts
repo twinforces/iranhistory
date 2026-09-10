@@ -196,6 +196,42 @@ describe("TrainViewModel", () => {
       new TrainViewModel("us", "R", "hormuz-2019").getState().leader.youAre,
       "You are Trump",
     );
+    assert.equal(
+      new TrainViewModel("us", "R", "sofa-1964").getState().leader.youAre,
+      "You are Johnson",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "pipeline-1975").getState().leader.youAre,
+      "You are Ford",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "robe-1989").getState().leader.id,
+      "bush41",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "robe-1989").getState().leader.youAre,
+      "You are Bush",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "dual-containment-1993").getState().leader.youAre,
+      "You are Clinton",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "natanz-2002").getState().leader.id,
+      "bush43",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "green-2009").getState().leader.youAre,
+      "You are Obama",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "unleave-2021").getState().leader.youAre,
+      "You are Biden",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "twelve-days-2025").getState().leader.youAre,
+      "You are Trump",
+    );
   });
 
   it("Kennedy's caucus is Democrat, not leftover Ike", () => {
@@ -342,9 +378,9 @@ describe("TrainViewModel", () => {
     vm.choose("us-send-tanks");
     const ui = vm.getState();
     assert.equal(ui.phase, "playing");
-    assert.equal(ui.card.id, "weapons-1972");
+    assert.equal(ui.card.id, "sofa-1964");
     assert.equal(ui.endingTitle, null);
-    assert.equal(ui.leader.youAre, "You are Nixon");
+    assert.equal(ui.leader.youAre, "You are Johnson");
   });
 
   it("the Imam sits beside Bazargan and is not the player", () => {
@@ -437,5 +473,31 @@ describe("TrainViewModel", () => {
     assert.equal(ui.leader.youAre, "You are the replacement");
     assert.equal(ui.imam?.id, "khomeini");
     assert.match(ui.lastResult?.body ?? "", /convenience store/);
+  });
+
+  it("after the robe the player is Rafsanjani and the Imam plate is Khamenei", () => {
+    const vm = new TrainViewModel("iran", "D", "robe-1989");
+    const before = vm.getState();
+    assert.equal(before.leader.id, "khamenei");
+    assert.equal(before.imam?.id, "khomeini");
+    vm.choose("ir-take-robe");
+    const after = vm.getState();
+    assert.equal(after.phase, "playing");
+    assert.equal(after.card.id, "kuwait-1990");
+    assert.equal(after.leader.id, "rafsanjani");
+    assert.equal(after.leader.youAre, "You are Rafsanjani");
+    assert.equal(after.imam?.id, "khamenei_imam");
+    assert.equal(after.imam?.youAre, "He has the guns");
+    assert.equal(/You are Khamenei/i.test(after.leader.youAre), false);
+  });
+
+  it("keeping the JCPOA limits is a successful path, not a grave", () => {
+    const vm = new TrainViewModel("iran", "D", "bounce-2019");
+    vm.choose("ir-keep-limits");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "ended");
+    assert.equal(ui.endingId, "jcpoa_holds");
+    assert.equal(ui.leader.id, "rouhani");
+    assert.match(ui.endingBody ?? "", /successful path/);
   });
 });

@@ -6,7 +6,18 @@
 
 export type Chair = "us" | "iran";
 export type Party = "R" | "D";
-export type IranFace = "mossadegh" | "shah" | "bazargan" | "banisadr" | "khamenei";
+export type IranFace =
+  | "mossadegh"
+  | "shah"
+  | "bazargan"
+  | "banisadr"
+  | "khamenei"
+  | "rafsanjani"
+  | "khatami"
+  | "ahmadinejad"
+  | "rouhani"
+  | "raisi"
+  | "pezeshkian";
 
 /** Lawyer-true, Irish-true, don't-know, artistic-license, game-rule. */
 export type TruthTag = "LT" | "IT" | "DK" | "AL" | "GR";
@@ -42,6 +53,10 @@ export type EndingId =
   | "mossadegh_street"
   | "shah_flees"
   | "shah_holds"
+  | "jcpoa_holds"
+  | "kuwait_grave"
+  | "keep_the_war"
+  | "the_leader"
   | "bazargan_resigns"
   | "face_no_guns"
   | "poison_chalice"

@@ -30,7 +30,7 @@ PLOT_NEXT = [
         "id": "catalog-gates-contra",
         "card": "weapons-1972",
         "later": "iran-contra-1985",
-        "now": "Both catalog buttons land on the 1979 square. Contra still appears. The crates are a later collapse too.",
+        "now": "Both catalog buttons land on Ford's 1975 pipeline. Contra still appears. The crates are a later collapse too.",
         "plot": "If they never bought the American catalog, Reagan is not selling spare parts for a fleet that is not there. Skip the channel, or change what is in the crate.",
     },
     {
@@ -99,6 +99,13 @@ def refresh_dump(path: Path) -> None:
         raise SystemExit("dump did not write JSON")
 
 
+HOLD_ENDINGS = {"none", "the_leader", "shah_holds", "jcpoa_holds"}
+
+
+def is_hold(node: dict[str, Any]) -> bool:
+    return node.get("phase") == "ended" and node.get("endingId") in HOLD_ENDINGS
+
+
 def mermaid_id(node_id: str) -> str:
     out = []
     for ch in node_id:
@@ -132,8 +139,9 @@ def node_label(node: dict[str, Any]) -> str:
     face = node["face"]
     title = node["title"]
     if node["phase"] == "ended":
-        if node["endingId"] == "none":
-            return esc(f"{year} Rail hold")
+        if is_hold(node):
+            title = node["endingTitle"] or "Rail hold"
+            return esc(f"{year} {title}")
         ending = node["endingTitle"] or node["endingId"]
         return esc(f"{year} GRAVE {ending}")
     return esc(f"{year} {title} / {face}")
@@ -143,8 +151,8 @@ def glance_label(node: dict[str, Any]) -> str:
     year = node["yearLabel"]
     face = node["face"]
     if node["phase"] == "ended":
-        if node["endingId"] == "none":
-            return esc(f"{year} Rail hold")
+        if is_hold(node):
+            return esc(f"{year} {node['endingId'] or 'hold'}")
         return esc(f"{year} {node['endingId']}")
     return esc(f"{year} {face}")
 
@@ -201,7 +209,7 @@ def classify(nodes: list[dict[str, Any]], edges: list[dict[str, Any]]) -> dict[s
             )
         for e in ended:
             dest = by_id[e["to"]]
-            if dest["endingId"] == "none":
+            if is_hold(dest):
                 continue
             graves.append({"from": src, "edge": e, "to": dest})
 
@@ -238,7 +246,7 @@ def flowchart(
     for node in nodes:
         nid = mermaid_id(node["id"])
         label = glance_label(node) if short else node_label(node)
-        if node["phase"] == "ended" and node["endingId"] == "none":
+        if node["phase"] == "ended" and is_hold(node):
             lines.append(f'  {nid}(["{label}"]):::hold')
         elif node["phase"] == "ended":
             lines.append(f'  {nid}{{{{"{label}"}}}}:::grave')
@@ -294,7 +302,7 @@ def skeleton(chair: str, nodes: list[dict[str, Any]], edges: list[dict[str, Any]
             continue
         seen_nodes.add(nid)
         label = node_label(node)
-        if node["phase"] == "ended" and node["endingId"] == "none":
+        if node["phase"] == "ended" and is_hold(node):
             lines.append(f'  {nid}(["{label}"]):::hold')
         elif node["phase"] == "ended":
             lines.append(f'  {nid}{{{{"{label}"}}}}:::grave')
@@ -424,13 +432,13 @@ over and over. The unique graph is small.
 | Iran | {len(iran["nodes"])} | {len(iran["edges"])} | {iran["terminals"]} |
 
 Collapses: {len(graph["collapses"])} live (playing to the same next card).
-US also has a terminal collapse on the cup: both buttons are Rail hold.
+Cup continues to the robe. 2026 is history arriving.
 
 Unwired playable from 1953: {unwired}
 
-Spine still waiting (not a collapse, just not written): {spine}
+Spine still waiting (not a collapse, just not written): {spine or "(none. The late rail is playable.)"}
 
-1938 is a year-click egg. Hormuz 2019 is an isolation start. Neither is in this walk.
+1938 is a year-click egg, not a 1953 button. Hormuz 2019 sits on the walk after Europe bounces.
 
 Purple boxes collapse. Teal boxes actually fork. Red hexes are graves. Green
 stadiums are Rail hold.
@@ -520,18 +528,20 @@ def self_test(graph: dict[str, Any]) -> None:
     assert any(n["cardId"] == "coup-1953" and n["phase"] == "playing" for n in iran["nodes"])
     wr = [c for c in graph["collapses"] if c["cardId"] == "white-revolution-1963"]
     assert wr, "White Revolution should collapse"
-    assert any(c["chair"] == "us" for c in wr)
+    assert all(c["landCardId"] == "sofa-1964" for c in wr)
     weapons = [c for c in graph["collapses"] if c["cardId"] == "weapons-1972"]
     assert weapons, "Nixon catalog should collapse"
-    assert all(c["landCardId"] == "revolution-1979" for c in weapons)
+    assert all(c["landCardId"] == "pipeline-1975" for c in weapons)
     contra = [n for n in us["nodes"] + iran["nodes"] if n["cardId"] == "iran-contra-1985"]
     assert contra, "Contra still appears, catalog does not gate it"
-    assert "hormuz-2019" in graph["unwiredPlayable"]
+    assert "hormuz-2019" not in graph["unwiredPlayable"]
+    assert any(n["cardId"] == "hormuz-2019" for n in us["nodes"])
+    assert any(n["cardId"] == "the-leader-2026" for n in us["nodes"])
     us_c = classify(us["nodes"], us["edges"])
-    terms = us_c["terminal_collapses"]
-    assert any(c["from"]["cardId"] == "cup-1988" for c in terms), "US cup should terminal-collapse"
+    robe = [c for c in us_c["collapses"] if c["from"]["cardId"] == "cup-1988"]
+    assert robe, "US cup should continue to the robe"
     graves = us_c["graves"] + classify(iran["nodes"], iran["edges"])["graves"]
-    assert all(g["to"]["endingId"] != "none" for g in graves), "Rail hold is not a grave"
+    assert all(g["to"]["endingId"] not in HOLD_ENDINGS for g in graves), "Holds are not graves"
     print("self-test ok")
 
 

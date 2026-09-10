@@ -13,15 +13,29 @@ export type LeaderId =
   | "bazargan"
   | "banisadr"
   | "khamenei"
+  | "khamenei_imam"
   | "khomeini"
+  | "rafsanjani"
+  | "khatami"
+  | "ahmadinejad"
+  | "rouhani"
+  | "raisi"
+  | "pezeshkian"
   | "replacement"
   | "stalin_turban"
   | "ike"
   | "kennedy"
+  | "johnson"
   | "nixon"
+  | "ford"
   | "carter"
   | "reagan"
-  | "trump";
+  | "bush41"
+  | "clinton"
+  | "bush43"
+  | "obama"
+  | "trump"
+  | "biden";
 
 export interface Leader {
   readonly id: LeaderId;
@@ -95,6 +109,76 @@ const LEADERS: Record<LeaderId, Leader> = {
     party: null,
     partyLabel: null,
   },
+  khamenei_imam: {
+    id: "khamenei_imam",
+    youAre: "He has the guns",
+    playing: "The Imam",
+    name: "Ali Khamenei",
+    role: "The jurist. The veto. You are the letterhead.",
+    portrait: "/leaders/khamenei.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  rafsanjani: {
+    id: "rafsanjani",
+    youAre: "You are Rafsanjani",
+    playing: "Playing Rafsanjani",
+    name: "Akbar Hashemi Rafsanjani",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/rafsanjani.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  khatami: {
+    id: "khatami",
+    youAre: "You are Khatami",
+    playing: "Playing Khatami",
+    name: "Mohammad Khatami",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/khatami.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  ahmadinejad: {
+    id: "ahmadinejad",
+    youAre: "You are Ahmadinejad",
+    playing: "Playing Ahmadinejad",
+    name: "Mahmoud Ahmadinejad",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/ahmadinejad.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  rouhani: {
+    id: "rouhani",
+    youAre: "You are Rouhani",
+    playing: "Playing Rouhani",
+    name: "Hassan Rouhani",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/rouhani.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  raisi: {
+    id: "raisi",
+    youAre: "You are Raisi",
+    playing: "Playing Raisi",
+    name: "Ebrahim Raisi",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/raisi.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  pezeshkian: {
+    id: "pezeshkian",
+    youAre: "You are Pezeshkian",
+    playing: "Playing Pezeshkian",
+    name: "Masoud Pezeshkian",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/pezeshkian.jpg",
+    party: null,
+    partyLabel: null,
+  },
   replacement: {
     id: "replacement",
     youAre: "You are the replacement",
@@ -135,6 +219,16 @@ const LEADERS: Record<LeaderId, Leader> = {
     party: "D",
     partyLabel: "Democrat",
   },
+  johnson: {
+    id: "johnson",
+    youAre: "You are Johnson",
+    playing: "Playing Johnson",
+    name: "Lyndon B. Johnson",
+    role: "President of the United States",
+    portrait: "/leaders/johnson.jpg",
+    party: "D",
+    partyLabel: "Democrat",
+  },
   nixon: {
     id: "nixon",
     youAre: "You are Nixon",
@@ -142,6 +236,16 @@ const LEADERS: Record<LeaderId, Leader> = {
     name: "Richard Nixon",
     role: "President of the United States",
     portrait: "/leaders/nixon.jpg",
+    party: "R",
+    partyLabel: "Republican",
+  },
+  ford: {
+    id: "ford",
+    youAre: "You are Ford",
+    playing: "Playing Ford",
+    name: "Gerald Ford",
+    role: "President of the United States",
+    portrait: "/leaders/ford.jpg",
     party: "R",
     partyLabel: "Republican",
   },
@@ -165,6 +269,46 @@ const LEADERS: Record<LeaderId, Leader> = {
     party: "R",
     partyLabel: "Republican",
   },
+  bush41: {
+    id: "bush41",
+    youAre: "You are Bush",
+    playing: "Playing Bush",
+    name: "George H. W. Bush",
+    role: "President of the United States",
+    portrait: "/leaders/bush41.jpg",
+    party: "R",
+    partyLabel: "Republican",
+  },
+  clinton: {
+    id: "clinton",
+    youAre: "You are Clinton",
+    playing: "Playing Clinton",
+    name: "Bill Clinton",
+    role: "President of the United States",
+    portrait: "/leaders/clinton.jpg",
+    party: "D",
+    partyLabel: "Democrat",
+  },
+  bush43: {
+    id: "bush43",
+    youAre: "You are Bush",
+    playing: "Playing Bush",
+    name: "George W. Bush",
+    role: "President of the United States",
+    portrait: "/leaders/bush43.jpg",
+    party: "R",
+    partyLabel: "Republican",
+  },
+  obama: {
+    id: "obama",
+    youAre: "You are Obama",
+    playing: "Playing Obama",
+    name: "Barack Obama",
+    role: "President of the United States",
+    portrait: "/leaders/obama.jpg",
+    party: "D",
+    partyLabel: "Democrat",
+  },
   trump: {
     id: "trump",
     youAre: "You are Trump",
@@ -175,13 +319,31 @@ const LEADERS: Record<LeaderId, Leader> = {
     party: "R",
     partyLabel: "Republican",
   },
+  biden: {
+    id: "biden",
+    youAre: "You are Biden",
+    playing: "Playing Biden",
+    name: "Joe Biden",
+    role: "President of the United States",
+    portrait: "/leaders/biden.jpg",
+    party: "D",
+    partyLabel: "Democrat",
+  },
 };
 
 function usLeaderId(year: number): LeaderId {
+  if (year >= 2025) return "trump";
+  if (year >= 2021) return "biden";
   if (year >= 2017) return "trump";
+  if (year >= 2009) return "obama";
+  if (year >= 2001) return "bush43";
+  if (year >= 1993) return "clinton";
+  if (year >= 1989) return "bush41";
   if (year >= 1981) return "reagan";
   if (year >= 1977) return "carter";
+  if (year >= 1974) return "ford";
   if (year >= 1969) return "nixon";
+  if (year >= 1964) return "johnson";
   if (year >= 1961) return "kennedy";
   return "ike";
 }
@@ -204,7 +366,29 @@ export function partyName(party: Party): string {
   return party === "D" ? "Democrat" : "Republican";
 }
 
-const LETTERHEAD_FACES: ReadonlySet<IranFace> = new Set(["bazargan", "banisadr", "khamenei"]);
+const LETTERHEAD_FACES: ReadonlySet<IranFace> = new Set([
+  "bazargan",
+  "banisadr",
+  "khamenei",
+  "rafsanjani",
+  "khatami",
+  "ahmadinejad",
+  "rouhani",
+  "raisi",
+  "pezeshkian",
+]);
+
+const IRAN_LEADERS: Record<Exclude<IranFace, "mossadegh" | "shah">, LeaderId> = {
+  bazargan: "bazargan",
+  banisadr: "banisadr",
+  khamenei: "khamenei",
+  rafsanjani: "rafsanjani",
+  khatami: "khatami",
+  ahmadinejad: "ahmadinejad",
+  rouhani: "rouhani",
+  raisi: "raisi",
+  pezeshkian: "pezeshkian",
+};
 
 export function leaderFor(opts: {
   chair: Chair;
@@ -215,20 +399,23 @@ export function leaderFor(opts: {
   if (opts.chair === "us") return LEADERS[usLeaderId(opts.year)];
   if (opts.iranFace === "shah") return LEADERS.shah;
   if (opts.generic && LETTERHEAD_FACES.has(opts.iranFace)) return LEADERS.replacement;
-  if (opts.iranFace === "bazargan") return LEADERS.bazargan;
-  if (opts.iranFace === "banisadr") return LEADERS.banisadr;
-  if (opts.iranFace === "khamenei") return LEADERS.khamenei;
+  const id = IRAN_LEADERS[opts.iranFace as keyof typeof IRAN_LEADERS];
+  if (id) return LEADERS[id];
   return LEADERS.mossadegh;
 }
 
 /**
  * After the Shah falls the letterhead is not the government.
  * The Imam sits on the other side of the briefing. Never the player.
+ * Khomeini until 1989. Khamenei after he takes the robe.
  */
 export function imamFor(opts: { chair: Chair; iranFace: IranFace }): Leader | null {
   if (opts.chair !== "iran") return null;
   if (opts.iranFace === "bazargan" || opts.iranFace === "banisadr" || opts.iranFace === "khamenei") {
     return LEADERS.khomeini;
+  }
+  if (LETTERHEAD_FACES.has(opts.iranFace)) {
+    return LEADERS.khamenei_imam;
   }
   return null;
 }

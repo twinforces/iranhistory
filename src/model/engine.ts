@@ -142,6 +142,30 @@ const ENDINGS: Record<Exclude<EndingId, "none">, Omit<Ending, "id">> = {
       "You spent the oil on the villages. The hinterland did not come to the square. Khomeini stays in Paris. The army is cooler, but it still answers. You kept the throne. History did not take this fork, so there is no later rail. This is the successful path. AL.",
     canContinue: false,
   },
+  jcpoa_holds: {
+    title: "You kept the limits",
+    referee:
+      "The Americans walked. Europe bounced the check. You kept the limits anyway. No 60 percent. No Fordow as a crisis. No Twelve Days. The Imam is still alive because you did not give them a nuclear photograph. History did not take this fork. This is the successful path. AL.",
+    canContinue: false,
+  },
+  kuwait_grave: {
+    title: "Suicide for a man who gassed you",
+    referee:
+      "Rafsanjani said it in Friday prayer. Joining Saddam after eight years of him is suicide. The coalition still takes Kuwait. You get to die in the same war twice. This chair is dead.",
+    canContinue: false,
+  },
+  keep_the_war: {
+    title: "The Strait does not feed you",
+    referee:
+      "You kept the war after the Imam was already a crater. The memorandum was the off-ramp. You did not take it. This chair is dead.",
+    canContinue: false,
+  },
+  the_leader: {
+    title: "The Leader is dead",
+    referee:
+      "February 2026. The campaign kills Khamenei. Iran squeezes Hormuz. A June memorandum reopens the Strait. Dual plate dies with the Imam. History arrived. This is the end of the wired rail.",
+    canContinue: false,
+  },
   bazargan_resigns: {
     title: "The smiling face resigns",
     referee:
@@ -262,11 +286,21 @@ export function currentCard(state: GameState): Card {
 
 export function iranFaceOf(state: GameState): IranFace {
   const face = state.flags.iran_face;
-  if (face === "shah") return "shah";
-  if (face === "bazargan") return "bazargan";
-  if (face === "banisadr") return "banisadr";
-  if (face === "khamenei") return "khamenei";
-  return "mossadegh";
+  switch (face) {
+    case "shah":
+    case "bazargan":
+    case "banisadr":
+    case "khamenei":
+    case "rafsanjani":
+    case "khatami":
+    case "ahmadinejad":
+    case "rouhani":
+    case "raisi":
+    case "pezeshkian":
+      return face;
+    default:
+      return "mossadegh";
+  }
 }
 
 function faceMatches(filter: IranFace | readonly IranFace[] | undefined, face: IranFace): boolean {
@@ -300,7 +334,10 @@ const SHAH_ISOLATION = new Set([
   "deposed-1953",
   "atoms-1957",
   "white-revolution-1963",
+  "sofa-1964",
+  "sit-nixon-1969",
   "weapons-1972",
+  "pipeline-1975",
   "revolution-1979",
 ]);
 
@@ -319,7 +356,32 @@ const KHAMENEI_ISOLATION = new Set([
   "lebanon-1983",
   "iran-contra-1985",
   "cup-1988",
+  "robe-1989",
 ]);
+
+const RAFSANJANI_ISOLATION = new Set([
+  "kuwait-1990",
+  "dual-containment-1993",
+  "khobar-1996",
+  "wall-1997",
+]);
+
+const KHATAMI_ISOLATION = new Set(["natanz-2002", "baghdad-2003", "myth-2005"]);
+
+const AHMADINEJAD_ISOLATION = new Set(["green-2009", "stuxnet-2010", "jcpoa-2015"]);
+
+const ROUHANI_ISOLATION = new Set([
+  "white-wednesdays-2017",
+  "archive-2018",
+  "bounce-2019",
+  "hormuz-2019",
+  "soleimani-2020",
+  "unleave-2021",
+]);
+
+const RAISI_ISOLATION = new Set(["mahsa-2022", "oct7-2023", "direct-fire-2024", "sit-pezeshkian-2024"]);
+
+const PEZESHIKIAN_ISOLATION = new Set(["twelve-days-2025", "the-leader-2026"]);
 
 const SEED_1979_CARDS = new Set([
   "revolution-1979",
@@ -335,6 +397,32 @@ const SEED_1979_CARDS = new Set([
   "lebanon-1983",
   "iran-contra-1985",
   "cup-1988",
+  "robe-1989",
+  "kuwait-1990",
+  "dual-containment-1993",
+  "khobar-1996",
+  "wall-1997",
+  "natanz-2002",
+  "baghdad-2003",
+  "myth-2005",
+  "green-2009",
+  "stuxnet-2010",
+  "jcpoa-2015",
+]);
+
+const SEED_2019_CARDS = new Set([
+  "white-wednesdays-2017",
+  "archive-2018",
+  "bounce-2019",
+  "hormuz-2019",
+  "soleimani-2020",
+  "unleave-2021",
+  "mahsa-2022",
+  "oct7-2023",
+  "direct-fire-2024",
+  "sit-pezeshkian-2024",
+  "twelve-days-2025",
+  "the-leader-2026",
 ]);
 
 const SHAH_ADMITTED = new Set([
@@ -355,6 +443,12 @@ function isolationIranFace(cardId: string): IranFace {
   if (BAZARGAN_ISOLATION.has(cardId)) return "bazargan";
   if (KHAMENEI_ISOLATION.has(cardId)) return "khamenei";
   if (BANISADR_ISOLATION.has(cardId)) return "banisadr";
+  if (RAFSANJANI_ISOLATION.has(cardId)) return "rafsanjani";
+  if (KHATAMI_ISOLATION.has(cardId)) return "khatami";
+  if (AHMADINEJAD_ISOLATION.has(cardId)) return "ahmadinejad";
+  if (ROUHANI_ISOLATION.has(cardId)) return "rouhani";
+  if (RAISI_ISOLATION.has(cardId)) return "raisi";
+  if (PEZESHIKIAN_ISOLATION.has(cardId)) return "pezeshkian";
   if (SHAH_ISOLATION.has(cardId)) return "shah";
   return "mossadegh";
 }
@@ -377,17 +471,22 @@ export function newGame(opts: NewGameOpts): GameState {
   const party = opts.chair === "us" ? partyForUsYear(card.year) : opts.party;
   const bars = defaultBars(opts.chair, party);
   const clocks = defaultClocks();
-  if (cardId === "hormuz-2019") {
+  if (cardId === "hormuz-2019" || SEED_2019_CARDS.has(cardId)) {
     Object.assign(bars, SEED_2019.bars);
     Object.assign(clocks, SEED_2019.clocks);
   }
   if (
     SEED_1979_CARDS.has(cardId) ||
     cardId === "weapons-1972" ||
-    cardId === "white-revolution-1963"
+    cardId === "white-revolution-1963" ||
+    cardId === "sofa-1964" ||
+    cardId === "sit-nixon-1969" ||
+    cardId === "pipeline-1975"
   ) {
     if (cardId === "white-revolution-1963") clocks.liberals = 18;
+    if (cardId === "sofa-1964" || cardId === "sit-nixon-1969") clocks.liberals = 40;
     if (cardId === "weapons-1972") clocks.liberals = 42;
+    if (cardId === "pipeline-1975") clocks.liberals = 50;
     if (SEED_1979_CARDS.has(cardId)) {
       Object.assign(bars, SEED_1979.bars);
       Object.assign(clocks, SEED_1979.clocks);
@@ -447,7 +546,7 @@ export function applyChoice(state: GameState, choiceId: string): GameState {
   next.lastBleed = bleedSentence(next, choice, card);
   next.log = [...next.log, `${card.yearLabel}: ${choice.label}`];
 
-  const forced = choice.historical ? null : choice.ending ? endingOf(choice.ending) : null;
+  const forced = choice.ending && choice.ending !== "none" ? endingOf(choice.ending) : null;
   const purged = choice.historical ? null : iranLoseCheck(next, choice, card);
   const elected = choice.historical ? null : usElectionCheck(next, card);
   const splat = choice.historical ? null : clocksSplat(next);
@@ -503,8 +602,8 @@ export function applyChoice(state: GameState, choiceId: string): GameState {
     next.phase = "ended";
     next.ending = {
       id: "none",
-      title: "End of the wired rail",
-      referee: "No next card. Hormuz as a map is on hold.",
+      title: choice.resultTitle ?? "End of the wired rail",
+      referee: choice.result ?? "No next card. History arrived, or this slice is done. Time travel, or sit the other chair.",
       canContinue: false,
     };
   }
