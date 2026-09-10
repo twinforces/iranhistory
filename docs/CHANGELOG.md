@@ -1,0 +1,125 @@
+# CHANGELOG
+
+## 2026-09-09 - 7-Eleven morals, hinterland hold, pruned walk-aways
+
+What: Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis) continue. Overlay: we congratulate you on your moral choice, you retire, write a book, emigrate, open a convenience store. However, Iran continues on. Carter cannot step aside; Hail Mary still seats Reagan. The Shah cannot pack the suitcase once seated. Mossadegh cannot keep the chair: British engineers are the street grave, Moscow is Stalin in a turban. Hinterland oil in 1972 can hold 1979. Letterhead portraits are a stick figure. Dual Imam plate stays.
+
+Why: Unrealistic walk-aways were graves dressed as choices. History is the golden path. The letterhead is TV furniture.
+
+## 2026-09-09 - The rail as a graph
+
+What: Walked every live choice from 1953. Nodes are chair plus card plus face plus ending, not bars. White Revolution, the Nixon catalog, admit-the-Shah, Eagle Claw, and Contra crates collapse onto the next stop. The unique graph is small. The huge path counts are the same destinations counted twice. Catalog does not yet gate Contra. Liberals do not yet save the Shah.
+
+Why: The game is deterministic. Before we plot the rest we needed the picture of what actually forks.
+
+## 2026-09-09 - Banisadr losing seats Khamenei
+
+What: Historical 1981 is a face change. Banisadr leaves. Khamenei sits the letterhead. He is president, not the Imam. The cup still waits. Rail hold comes after he has sat the chair, not instead of him. Defy the Majlis is the grave.
+
+Why: History arrived. Banisadr was impeached. A sentence about 1988 on his plate is not sitting the next face.
+
+## 2026-09-09 - Stalin in a turban
+
+What: Mossadegh's dead end is a portrait. Walk away, or keep the chair and reach for the atoms, and you get Stalin in a turban. Half commie theocracy. The Saudis enter the Soviet sphere. AL. You never sit him.
+
+Why: The satrap ending was a paragraph. The vacuum needed a face. A liberal oil republic is the one picture this grave exists to kill.
+
+## 2026-09-09 - Dual plate, Contra, the cup
+
+What: After the Shah falls, Iran has two portraits: the letterhead on the left, the Imam on the right. You never sit the turban. Beirut is not a wall. A channel in the dark is playable. The cup is the honest 80s ending. Stamp it and the rail holds at Natanz. Refuse it and the chair dies.
+
+Why: History arrived. The figurehead is not the government. A spine titled Iran-Contra is not sitting the 1980s.
+
+## 2026-09-09 - Carter losing seats Reagan
+
+What: Run again is not a wall. The oath card seats Reagan. Beirut is a playable stop. Bring them home rides to Rail hold after Reagan has sat the chair. Step aside and leave the oath are the graves.
+
+Why: History arrived. Reagan took the chair. A sentence about 444 days on a death screen is not sitting him.
+
+## 2026-09-09 - Golden path is history
+
+What: Historical buttons never grave the chair. They ride to the end of the wired rail. White Revolution was already that: both buttons continue, the liberals clock is the tweak. Resign seats Banisadr. Run again is Rail hold, not End of this chair. Step aside and keep Artesh are the off-ramps.
+
+Why: History, by definition, arrived. A raid, a tilt, a White Revolution, a resignation are not deaths. Packing the suitcase is.
+
+## 2026-09-09 - Dead ends are choices
+
+
+What: A rescue is not a grave. Demanding the students leave is. Carter plays Saddam, then an election card. Bazargan can resign now or hand the Guards the war. Rail hold is no longer how those chairs die.
+
+Why: Both hostage buttons were dumping into an unwired spine. That is an accident. Walk-away in 1953 is a choice. Resigning is a choice. Losing the term is a choice.
+
+## 2026-09-09 - Kennedy is a Democrat, hostages are a card
+
+
+What: The White House party follows the seated president. Kennedy and Carter are D. Ike, Nixon, Trump are R. The plate says so. Carter gets a playable embassy card: rescue or talk. Bazargan gets demand they leave or let them hold it.
+
+Why: Leftover Ike made Kennedy a Republican. Hostages lived in after-copy. 4 November 1979 is the exam, not a footnote on the scarf.
+
+## 2026-09-09 - Ike to Carter
+
+What: White Revolution (Kennedy), Twin Pillars (Nixon), 1979 square (Carter / Shah), then the veil card (Bazargan). Urban liberals are a clock. Faces change: Kennedy, Nixon, Bazargan.
+
+Why: 1957 to 1979 was a jump cut. The muddle is the point: Tehran gets rich, rural Iran does not, feminists get the vote and the Family Protection Law, then Khomeini uses them and kills them.
+
+How: Playable cards `white-revolution-1963`, `weapons-1972`, `revolution-1979`, `veil-1979`. `liberals` clock. Isolation seeds. MVVM tests on the golden path.
+
+Did not: give every president a card. Johnson SOFA and Khomeini's exile live in the years between 1963 and 1972.
+
+## 2026-09-09 - Leader plate, clickable choices
+
+What: Large named portraits (Playing Mossadegh / You are Ike / You are Carter). Glossary hover no longer eats the two action buttons.
+
+Why: The face has to change when the chair does. Nested glossary controls were stealing the click.
+
+## 2026-09-09 - Deposed into the Shah, bars match the room
+
+What: Iran nationalize deposes Mossadegh and seats you as the Shah. Bars only render for people in this chair's room.
+
+Why: Riding the crowd was reading as a grave, not a change of face. Washington does not need a Street bar. Mossadegh does not need My party.
+
+## 2026-09-09 - Glossary, Iran off-ramp, hidden calendar
+
+What: Proper names hover. Hitler is behind the year. Mossadegh can keep the chair by giving the oil back. Atoms for Peace is a playable result briefing, written as history.
+
+Why: Players should not need to already know Ajax, the court, or the suitcase. The Iranian chair needed a years-long cost, not a second grave on the same card.
+
+## 2026-09-09 - No spoilers, chair-specific advisors
+
+What: Pre-choice copy stopped announcing endings. Advisors are the people in that chair's room.
+
+Why: Players do not know yet. CIA is not Mossadegh's cabinet. A deal that gives the oil back is a pulse without a building, revealed after the click.
+
+## 2026-09-09 - Play flow, advisors, 1953 tense
+
+What: Chair pick, two-column action, cartoon advisor list, present-tense 1953, 1938 easter egg.
+
+Why: The old play page stacked identical surface cards and wrote 1953 as if Ajax had already landed. This is a time travel simulation. Ike has not decided.
+
+How:
+
+- Play as Iran or Play as US first.
+- Situation lede, then "What do you want to do?", then two choice columns.
+- Advisors are a scrolling list with editorial cartoon busts.
+- 1953 copy is the cable on the desk, not the aftermath.
+- Time travel from a fresh 1953: "The calendar goes further."
+
+Did not: turn Hormuz into a board game. Different play style.
+
+## 2026-09-09 - Architect slice
+
+What: Repo, engine, two playable cards, briefing UI, receipts.
+
+Why: Need a system that can be retuned toward history without touching React.
+
+How:
+
+- GitHub `twinforces/iranhistory` created.
+- Ringmaster Architect values loaded.
+- Card schema, bars, clocks, purge, election, time travel in `src/model/engine.ts`.
+- 1953 (gate) and 2019 (clone-this) fully voiced.
+- Sixteen more spine cards with referee copy.
+- Receipts page seeded from the brief's sources.
+- Open questions listed on Design.
+
+Did not: write the other sixteen choice tables, build Hormuz as a map.

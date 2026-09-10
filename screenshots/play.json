@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/play?chair=us",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Train Ride to War",
+      "hasCanvas": false,
+      "bodyTextLen": 1804,
+      "bodyTextHash": "ef23cc05dfd5bc1c7200fb3a6db91acb318fcd446e5137ef1bacdd421b4d061a",
+      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint Frame Systems Rail Play ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Train Ride to War",
+      "hasCanvas": false,
+      "bodyTextLen": 1804,
+      "bodyTextHash": "ef23cc05dfd5bc1c7200fb3a6db91acb318fcd446e5137ef1bacdd421b4d061a",
+      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint Frame Systems Rail Play ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/play.json"
+}

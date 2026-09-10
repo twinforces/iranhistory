@@ -1,0 +1,61 @@
+flowchart TB
+  classDef play fill:#1c2333,stroke:#c4a35a,color:#f3ead8
+  classDef grave fill:#3a1a1a,stroke:#c45c5c,color:#f3ead8
+  classDef hold fill:#1a2e22,stroke:#5d9b6a,color:#f3ead8
+  classDef collapse fill:#2a2433,stroke:#8a7bb8,color:#f3ead8
+  classDef fork fill:#23333a,stroke:#6ab,color:#f3ead8
+  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize["1953 Ajax is still a cable / mossadegh"]:::fork
+  iran_deposed_1953_shah_playing_live_ir_sit_throne["1953 You have been deposed / shah"]:::play
+  iran_coup_1953_mossadegh_ended_mossadegh_street_{{"1953 GRAVE The street heard the lesson"}}:::grave
+  iran_coup_1953_mossadegh_ended_mossadegh_falls_{{"1953 GRAVE It was not that simple"}}:::grave
+  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant["1957 Atoms for Peace / shah"]:::collapse
+  iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev["1963 White Revolution / shah"]:::collapse
+  iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages["1972 Twin pillars, blank check / shah"]:::fork
+  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave["1978–1979 The Shah's cancer, the square / shah"]:::collapse
+  iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave["1978–1979 The Shah's cancer, the square / shah"]:::fork
+  iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl["March 1979 They marched with him / bazargan"]:::collapse
+  iran_revolution_1979_shah_ended_shah_holds_{{"1978–1979 GRAVE The square never filled"}}:::grave
+  iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students["November 1979 The embassy is occupied / bazargan"]:::collapse
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency["November 1979 The smiling face resigns / banisadr"]:::collapse
+  iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war["September 1980 Saddam is moving / banisadr"]:::collapse
+  iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles["June 1981 The Majlis has a vote / banisadr"]:::collapse
+  iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei["October 1981 A new name on the stamp / khamenei"]:::collapse
+  iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export["1982–1983 A cousin in the Bekaa / khamenei"]:::fork
+  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts["1985–1987 A channel in the dark / khamenei"]:::collapse
+  iran_lebanon_1983_khamenei_ended_face_no_guns_{{"1982–1983 GRAVE The face does not have the guns"}}:::grave
+  iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup["1988 The cup / khamenei"]:::fork
+  iran_cup_1988_khamenei_ended_none_(["1988 Rail hold"]):::hold
+  iran_cup_1988_khamenei_ended_face_no_guns_{{"1988 GRAVE The face does not have the guns"}}:::grave
+  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize -->|"H Nationalize and ride the crowd =  shah"| iran_deposed_1953_shah_playing_live_ir_sit_throne
+  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize -.->|"AL Hire the British engineers"| iran_coup_1953_mossadegh_ended_mossadegh_street_
+  iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize -.->|"AL Cut a deal with Moscow"| iran_coup_1953_mossadegh_ended_mossadegh_falls_
+  iran_deposed_1953_shah_playing_live_ir_sit_throne -->|"H Sit the throne"| iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant
+  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -->|"H Take the American fuel"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
+  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -->|"Talk about a national plant"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
+  iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev -->|"H Launch the White Revolution"| iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages
+  iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev -->|"Keep the landlords and the clergy quiet"| iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages
+  iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages -->|"H Buy the American catalog"| iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave
+  iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages -.->|"AL Spend the oil on the villages"| iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave
+  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -->|"Fire on the crowd =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
+  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -->|"H Leave =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
+  iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave -->|"H Leave =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
+  iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave -.->|"AL Stay. The villages are quiet."| iran_revolution_1979_shah_ended_shah_holds_
+  iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl -.->|"AL Keep the Family Protection Law"| iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students
+  iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl -->|"H Let the Imam repeal it"| iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students
+  iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -->|"H Demand they leave =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
+  iran_hostages_1979_bazargan_playing_live_ir_demand_leave_ir_let_students -.->|"AL Let the students hold it =  banisadr"| iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -->|"H Sit the presidency"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
+  iran_resigned_1979_banisadr_playing_live_ir_refuse_letterhead_ir_sit_presidency -.->|"AL Refuse the letterhead"| iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war
+  iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -->|"H Let the Guards have the war"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
+  iran_iran_iraq_1980_banisadr_playing_live_ir_artesh_war_ir_guards_war -.->|"AL Keep the regular army in command"| iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles
+  iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles -->|"H Leave the chair =  khamenei"| iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei
+  iran_impeached_1981_banisadr_playing_live_ir_defy_majles_ir_leave_majles -.->|"AL Defy the Majlis =  khamenei"| iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei
+  iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei -->|"H Sit the presidency"| iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export
+  iran_seated_1981_khamenei_playing_live_ir_refuse_khamenei_ir_sit_khamenei -.->|"AL Refuse the letterhead"| iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export
+  iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export -->|"H Send the Guards to the Bekaa"| iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts
+  iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export -.->|"AL Keep the war at home"| iran_lebanon_1983_khamenei_ended_face_no_guns_
+  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -->|"H Take the American parts"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
+  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -.->|"AL Refuse the crates"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
+  iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup -->|"H Stamp the cup"| iran_cup_1988_khamenei_ended_none_
+  iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup -.->|"AL Refuse the ceasefire"| iran_cup_1988_khamenei_ended_face_no_guns_
+  %% start iran:coup-1953:mossadegh:playing:live:ir-deal-london,ir-deal-moscow,ir-nationalize

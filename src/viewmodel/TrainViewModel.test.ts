@@ -1,0 +1,417 @@
+import assert from "node:assert/strict";
+import { describe, it } from "node:test";
+import { TrainViewModel } from "./TrainViewModel.ts";
+
+describe("TrainViewModel", () => {
+  it("does not label the historical choice on the button", () => {
+    const vm = new TrainViewModel("us", "R");
+    const ui = vm.getState();
+    for (const c of ui.choices) {
+      assert.equal(/historical|what happened/i.test(c.label), false);
+      assert.equal(/historical|what happened/i.test(c.summary), false);
+    }
+  });
+
+  it("hides IRGC / China / Venezuela on the 1953 board", () => {
+    const vm = new TrainViewModel("us", "R");
+    const ids = vm.getState().bars.map((b) => b.id);
+    assert.equal(ids.includes("irgc"), false);
+    assert.equal(ids.includes("china"), false);
+    assert.equal(ids.includes("cia"), true);
+    assert.equal(ids.includes("street"), false);
+    assert.equal(ids.includes("leader"), false);
+  });
+
+  it("shows only Tehran's room on the 1953 Iran board", () => {
+    const ids = new TrainViewModel("iran", "D").getState().bars.map((b) => b.id);
+    assert.deepEqual(ids.sort(), ["leader", "street"]);
+  });
+
+  it("shows Washington's late-game room on 2019, not Tehran's", () => {
+    const vm = new TrainViewModel("us", "R", "hormuz-2019");
+    const ids = vm.getState().bars.map((b) => b.id);
+    assert.equal(ids.includes("cia"), true);
+    assert.equal(ids.includes("irgc"), false);
+    assert.equal(ids.includes("china"), false);
+    assert.equal(ids.includes("venezuela"), false);
+  });
+
+  it("walk-away presents the satrap ending, then time travel restores choices", () => {
+    const vm = new TrainViewModel("us", "D");
+    vm.choose("us-walk");
+    const dead = vm.getState();
+    assert.equal(dead.phase, "ended");
+    assert.equal(dead.endingTitle !== null, true);
+    assert.equal(dead.endingId, "satrap_1953");
+    assert.equal(dead.leader.id, "ike");
+    assert.equal(dead.grave?.id, "stalin_turban");
+    assert.equal(dead.grave?.youAre, "You get Stalin in a turban");
+    assert.equal(/You are Stalin/i.test(dead.grave?.youAre ?? ""), false);
+    assert.equal(dead.imam, null);
+    assert.match(dead.endingBody ?? "", /Saudis enter the Soviet sphere/);
+    assert.match(dead.endingBody ?? "", /half-commie theocracy/);
+    assert.equal(
+      dead.bars.some((b) => b.id === "saudis" && b.red),
+      true,
+    );
+    assert.equal(dead.choices.length >= 1, true);
+    vm.backOne();
+    const live = vm.getState();
+    assert.equal(live.phase, "playing");
+    assert.equal(live.endingTitle, null);
+    assert.equal(live.grave, null);
+    assert.equal(live.leader.id, "ike");
+  });
+
+  it("my_party letter follows the seated president", () => {
+    const ike = new TrainViewModel("us", "D").getState();
+    assert.equal(ike.party, "R");
+    assert.equal(
+      ike.bars.some((b) => b.label === "My party (R)"),
+      true,
+    );
+    const kennedy = new TrainViewModel("us", "R", "white-revolution-1963").getState();
+    assert.equal(kennedy.party, "D");
+    assert.equal(
+      kennedy.bars.some((b) => b.label === "My party (D)"),
+      true,
+    );
+  });
+
+  it("1953 clocks display does not claim a breakout number", () => {
+    const ui = new TrainViewModel("us", "R").getState();
+    assert.equal(
+      ui.clocks.some((c) => c.id === "nuke" && c.display !== "off"),
+      false,
+    );
+  });
+
+  it("1953 US advisors are Washington's room, not Tehran's", () => {
+    const ui = new TrainViewModel("us", "R").getState();
+    const ids = ui.card.briefings.map((b) => b.faction);
+    assert.equal(ids.includes("cia"), true);
+    assert.equal(ids.includes("my_party"), true);
+    assert.equal(ids.includes("street"), false);
+    assert.equal(ids.includes("leader"), false);
+    assert.equal(ids.includes("irgc"), false);
+    assert.equal(ui.card.actionPrompt, "What do you want to do?");
+    assert.equal(ui.canFurtherBack, true);
+    assert.equal(ui.choices.length, 2);
+    for (const c of ui.choices) {
+      assert.equal(/1979|satrap|game over|stalin|turban|theocracy/i.test(c.summary), false);
+    }
+  });
+
+  it("1953 Iran advisors are the court and the street", () => {
+    const ui = new TrainViewModel("iran", "D").getState();
+    const ids = ui.card.briefings.map((b) => b.faction);
+    assert.deepEqual(ids.sort(), ["leader", "street"]);
+    assert.equal(
+      ui.card.briefings.some((b) => b.faction === "leader" && b.label === "The court"),
+      true,
+    );
+    assert.equal(ids.includes("cia"), false);
+    assert.equal(ids.includes("media"), false);
+    assert.equal(ids.includes("my_party"), false);
+    assert.equal(ids.includes("opposing_party"), false);
+    assert.equal(ids.includes("saudis"), false);
+    assert.equal(ids.includes("europeans"), false);
+  });
+
+  it("further back presents the 1938 card without labelling history", () => {
+    const vm = new TrainViewModel("us", "R");
+    vm.furtherBack();
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "hitler-1938");
+    assert.equal(ui.card.secret, true);
+    for (const c of ui.choices) {
+      assert.equal(/historical|what happened/i.test(c.label), false);
+    }
+  });
+
+  it("labels the 1953 leader bar as the court", () => {
+    const ui = new TrainViewModel("iran", "D").getState();
+    assert.equal(
+      ui.bars.some((b) => b.id === "leader" && b.label === "The court"),
+      true,
+    );
+  });
+
+  it("Iran hiring the British engineers is the street grave", () => {
+    const vm = new TrainViewModel("iran", "D");
+    vm.choose("ir-deal-london");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "ended");
+    assert.equal(ui.endingId, "mossadegh_street");
+    assert.equal(ui.leader.id, "mossadegh");
+    assert.match(ui.endingBody ?? "", /Lawrence|Venezuela|bazaar/i);
+  });
+
+  it("Iran nationalize seats the Shah and says so", () => {
+    const vm = new TrainViewModel("iran", "D");
+    assert.equal(vm.getState().leader.id, "mossadegh");
+    vm.choose("ir-nationalize");
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "deposed-1953");
+    assert.equal(ui.face, "shah");
+    assert.equal(ui.leader.id, "shah");
+    assert.equal(ui.leader.youAre, "You are the Shah");
+    assert.match(ui.card.title, /deposed/i);
+    assert.match(ui.card.situation, /Mohammad Reza Pahlavi/);
+    const ids = ui.bars.map((b) => b.id);
+    assert.equal(ids.includes("cia"), true);
+    assert.equal(ids.includes("street"), true);
+    assert.equal(ids.includes("my_party"), false);
+  });
+
+  it("names the US face as the years move", () => {
+    assert.equal(new TrainViewModel("us", "R").getState().leader.youAre, "You are Ike");
+    assert.equal(new TrainViewModel("us", "R").getState().leader.playing, "Playing Ike");
+    assert.equal(new TrainViewModel("us", "R").getState().leader.partyLabel, "Republican");
+    assert.equal(
+      new TrainViewModel("us", "R", "white-revolution-1963").getState().leader.youAre,
+      "You are Kennedy",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "white-revolution-1963").getState().leader.partyLabel,
+      "Democrat",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "weapons-1972").getState().leader.youAre,
+      "You are Nixon",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "revolution-1979").getState().leader.youAre,
+      "You are Carter",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "inaugurated-1981").getState().leader.youAre,
+      "You are Reagan",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "inaugurated-1981").getState().leader.partyLabel,
+      "Republican",
+    );
+    assert.equal(
+      new TrainViewModel("us", "R", "hormuz-2019").getState().leader.youAre,
+      "You are Trump",
+    );
+  });
+
+  it("Kennedy's caucus is Democrat, not leftover Ike", () => {
+    const ui = new TrainViewModel("us", "R", "white-revolution-1963").getState();
+    assert.equal(ui.party, "D");
+    assert.equal(ui.bars.find((b) => b.id === "my_party")?.label, "My party (D)");
+    assert.equal(ui.bars.find((b) => b.id === "opposing_party")?.label, "Opposing (R)");
+    assert.equal(ui.card.briefings.find((b) => b.faction === "my_party")?.label, "My party (D)");
+    assert.equal(
+      ui.card.briefings.find((b) => b.faction === "opposing_party")?.label,
+      "Opposing (R)",
+    );
+  });
+
+  it("Carter's hostage card is a decision, not a footnote", () => {
+    const ui = new TrainViewModel("us", "R", "hostages-1979").getState();
+    assert.equal(ui.leader.id, "carter");
+    assert.equal(ui.party, "D");
+    assert.equal(ui.leader.partyLabel, "Democrat");
+    assert.match(ui.card.situation, /occupied/);
+    assert.equal(ui.choices.length, 2);
+    assert.equal(
+      ui.choices.some((c) => /444|reagan|election/i.test(`${c.label} ${c.summary}`)),
+      false,
+    );
+    const ids = ui.card.briefings.map((b) => b.faction);
+    assert.equal(ids.includes("cia"), true);
+    assert.equal(ids.includes("irgc"), false);
+    assert.equal(ids.includes("street"), false);
+  });
+
+  it("a rescue does not kill the chair; running again is history, not a grave", () => {
+    const vm = new TrainViewModel("us", "R", "hostages-1979");
+    vm.choose("us-eagle-claw");
+    const war = vm.getState();
+    assert.equal(war.phase, "playing");
+    assert.equal(war.card.id, "iran-iraq-1980");
+    assert.equal(war.leader.id, "carter");
+    assert.equal(war.endingTitle, null);
+    vm.choose("us-tilt-iraq");
+    const exam = vm.getState();
+    assert.equal(exam.phase, "playing");
+    assert.equal(exam.card.id, "election-1980");
+    assert.match(exam.card.situation, /nightly open/i);
+    vm.choose("us-run-again");
+    const oath = vm.getState();
+    assert.equal(oath.phase, "playing");
+    assert.equal(oath.card.id, "inaugurated-1981");
+    assert.equal(oath.leader.id, "reagan");
+    assert.equal(oath.leader.youAre, "You are Reagan");
+    assert.equal(oath.party, "R");
+    assert.equal(oath.leader.partyLabel, "Republican");
+    assert.equal(oath.endingTitle, null);
+    vm.choose("us-sit-reagan");
+    const bekah = vm.getState();
+    assert.equal(bekah.phase, "playing");
+    assert.equal(bekah.card.id, "lebanon-1983");
+    assert.equal(bekah.leader.id, "reagan");
+    vm.choose("us-bring-home");
+    const channel = vm.getState();
+    assert.equal(channel.phase, "playing");
+    assert.equal(channel.card.id, "iran-contra-1985");
+    assert.equal(channel.leader.id, "reagan");
+    assert.equal(channel.endingTitle, null);
+    vm.choose("us-sell-missiles");
+    const cup = vm.getState();
+    assert.equal(cup.phase, "playing");
+    assert.equal(cup.card.id, "cup-1988");
+    assert.equal(cup.leader.id, "reagan");
+  });
+
+  it("Bazargan resigning seats Banisadr; holding the embassy still seats the next letterhead", () => {
+    const stay = new TrainViewModel("iran", "D", "hostages-1979");
+    stay.choose("ir-let-students");
+    const seatedStay = stay.getState();
+    assert.equal(seatedStay.phase, "playing");
+    assert.equal(seatedStay.card.id, "resigned-1979");
+    assert.equal(seatedStay.leader.id, "banisadr");
+    assert.equal(seatedStay.leader.youAre, "You are the letterhead");
+    const quit = new TrainViewModel("iran", "D", "hostages-1979");
+    quit.choose("ir-demand-leave");
+    const seated = quit.getState();
+    assert.equal(seated.phase, "playing");
+    assert.equal(seated.card.id, "resigned-1979");
+    assert.equal(seated.leader.id, "banisadr");
+    assert.equal(seated.leader.youAre, "You are the letterhead");
+  });
+
+  it("Bazargan faces the embassy, not CIA", () => {
+    const ui = new TrainViewModel("iran", "D", "hostages-1979").getState();
+    assert.equal(ui.leader.id, "bazargan");
+    assert.equal(ui.face, "bazargan");
+    const ids = ui.card.briefings.map((b) => b.faction);
+    assert.deepEqual([...ids].sort(), ["irgc", "leader", "street"]);
+    assert.equal(ui.choices.length, 2);
+  });
+
+  it("Iran starts as Playing Mossadegh", () => {
+    const ui = new TrainViewModel("iran", "D").getState();
+    assert.equal(ui.leader.playing, "Playing Mossadegh");
+    assert.equal(ui.leader.youAre, "You are Mossadegh");
+    assert.equal(ui.grave, null);
+  });
+
+  it("Mossadegh's Moscow grave swaps the portrait to Stalin in a turban", () => {
+    const vm = new TrainViewModel("iran", "D");
+    vm.choose("ir-deal-moscow");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "ended");
+    assert.equal(ui.endingId, "mossadegh_falls");
+    assert.equal(ui.leader.id, "stalin_turban");
+    assert.equal(ui.leader.youAre, "You get Stalin in a turban");
+    assert.equal(ui.faceLabel, "Stalin in a turban");
+    assert.equal(ui.grave, null);
+    assert.equal(ui.imam, null);
+    assert.match(ui.endingBody ?? "", /Saudis enter the Soviet sphere/);
+  });
+
+  it("1963 shows urban liberals and does not claim a breakout number", () => {
+    const ui = new TrainViewModel("us", "R", "white-revolution-1963").getState();
+    assert.equal(ui.clocks.some((c) => c.id === "liberals"), true);
+    assert.equal(ui.clocks.some((c) => c.id === "nuke"), false);
+    assert.match(ui.card.situation, /pressing the Shah to modernize/);
+    assert.equal(ui.choices.length, 2);
+    assert.equal(ui.card.actionPrompt, "What do you want to do?");
+  });
+
+  it("1972 situation names the muddle", () => {
+    const ui = new TrainViewModel("us", "R", "weapons-1972").getState();
+    assert.match(ui.card.situation, /Iran muddles along/);
+    assert.match(ui.card.situation, /Rural Iran does not/);
+    assert.equal(ui.leader.id, "nixon");
+  });
+
+  it("White Revolution tanks is still Kennedy, still playing", () => {
+    const vm = new TrainViewModel("us", "R", "white-revolution-1963");
+    assert.equal(vm.getState().leader.youAre, "You are Kennedy");
+    vm.choose("us-send-tanks");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "playing");
+    assert.equal(ui.card.id, "weapons-1972");
+    assert.equal(ui.endingTitle, null);
+    assert.equal(ui.leader.youAre, "You are Nixon");
+  });
+
+  it("the Imam sits beside Bazargan and is not the player", () => {
+    const veil = new TrainViewModel("iran", "D", "veil-1979").getState();
+    assert.equal(veil.leader.id, "bazargan");
+    assert.equal(veil.leader.youAre, "You are the letterhead");
+    assert.ok(veil.imam);
+    assert.equal(veil.imam?.id, "khomeini");
+    assert.equal(veil.imam?.playing, "The Imam");
+    assert.equal(veil.imam?.youAre, "He has the guns");
+    assert.equal(/You are Khomeini/i.test(veil.imam?.youAre ?? ""), false);
+    const war = new TrainViewModel("iran", "D", "cup-1988").getState();
+    assert.equal(war.leader.id, "khamenei");
+    assert.equal(war.leader.youAre, "You are the letterhead");
+    assert.equal(/You are Khomeini/i.test(war.leader.youAre), false);
+    assert.equal(war.imam?.id, "khomeini");
+    assert.equal(war.imam?.youAre, "He has the guns");
+    const moss = new TrainViewModel("iran", "D").getState();
+    assert.equal(moss.imam, null);
+    const shah = new TrainViewModel("iran", "D", "deposed-1953").getState();
+    assert.equal(shah.imam, null);
+    const us = new TrainViewModel("us", "R", "veil-1979").getState();
+    assert.equal(us.imam, null);
+  });
+
+  it("Banisadr leaving seats Khamenei, still playing, Imam still the other plate", () => {
+    const vm = new TrainViewModel("iran", "D", "impeached-1981");
+    const before = vm.getState();
+    assert.equal(before.leader.id, "banisadr");
+    assert.equal(before.imam?.id, "khomeini");
+    for (const c of before.choices) {
+      assert.equal(/khamenei|impeach|paris|leader/i.test(`${c.label} ${c.summary}`), false);
+    }
+    vm.choose("ir-leave-majles");
+    const seated = vm.getState();
+    assert.equal(seated.phase, "playing");
+    assert.equal(seated.card.id, "seated-1981");
+    assert.equal(seated.leader.id, "khamenei");
+    assert.equal(seated.leader.youAre, "You are the letterhead");
+    assert.equal(/You are Khomeini/i.test(seated.leader.youAre), false);
+    assert.equal(seated.imam?.id, "khomeini");
+    assert.equal(seated.imam?.youAre, "He has the guns");
+    assert.match(seated.card.situation, /not the Imam/);
+    vm.choose("ir-sit-khamenei");
+    const bekah = vm.getState();
+    assert.equal(bekah.phase, "playing");
+    assert.equal(bekah.card.id, "lebanon-1983");
+    assert.equal(bekah.leader.id, "khamenei");
+    assert.equal(bekah.endingTitle, null);
+  });
+
+  it("a moral letterhead choice presents the 7-Eleven overlay, then Iran continues", () => {
+    const vm = new TrainViewModel("iran", "D", "resigned-1979");
+    vm.choose("ir-refuse-letterhead");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "playing");
+    assert.equal(ui.card.id, "iran-iraq-1980");
+    assert.equal(ui.lastResult?.title, "We congratulate you on your moral choice.");
+    assert.match(ui.lastResult?.body ?? "", /convenience store/);
+    assert.match(ui.lastResult?.body ?? "", /However, Iran continues on/);
+    vm.dismissResult();
+    assert.equal(vm.getState().lastResult, null);
+    assert.equal(vm.getState().card.id, "iran-iraq-1980");
+  });
+
+  it("Hail Mary AL is still findable after the card advances to Reagan", () => {
+    const vm = new TrainViewModel("us", "R", "election-1980");
+    vm.choose("us-hail-mary");
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "inaugurated-1981");
+    assert.equal(ui.leader.id, "reagan");
+    const license = vm.licenseById("al-hail-mary");
+    assert.ok(license);
+    assert.match(license.body, /Reagan still sits/);
+  });
+});

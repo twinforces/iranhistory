@@ -1,0 +1,47 @@
+flowchart TB
+  classDef play fill:#1c2333,stroke:#c4a35a,color:#f3ead8
+  classDef grave fill:#3a1a1a,stroke:#c45c5c,color:#f3ead8
+  classDef hold fill:#1a2e22,stroke:#5d9b6a,color:#f3ead8
+  classDef collapse fill:#2a2433,stroke:#8a7bb8,color:#f3ead8
+  classDef fork fill:#23333a,stroke:#6ab,color:#f3ead8
+  us_coup_1953_us_playing_live_us_back_shah_us_walk["1953 Ajax is still a cable / ike"]:::fork
+  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich["1957 Atoms for Peace / ike"]:::collapse
+  us_coup_1953_us_ended_satrap_1953_{{"1953 GRAVE It was not that simple"}}:::grave
+  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks["1963 White Revolution / kennedy"]:::collapse
+  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first["1972 Twin pillars, blank check / nixon"]:::collapse
+  us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out["1978–1979 The Shah's cancer, the square / carter"]:::collapse
+  us_veil_1979_us_playing_live_us_statement_women_us_stay_out["March 1979 They marched with him / carter"]:::collapse
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking["November 1979 The embassy is occupied / carter"]:::collapse
+  us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq["September 1980 Saddam is moving / carter"]:::collapse
+  us_election_1980_us_playing_live_us_hail_mary_us_run_again["November 1980 The clip is the campaign / carter"]:::collapse
+  us_inaugurated_1981_us_playing_live_us_sit_reagan["January 1981 The oath, and the walk / reagan"]:::play
+  us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa["1982–1983 A cousin in the Bekaa / reagan"]:::collapse
+  us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles["1985–1987 A channel in the dark / reagan"]:::collapse
+  us_cup_1988_us_playing_live_us_call_mistake_us_own_shot["1988 The cup / reagan"]:::play
+  us_cup_1988_us_ended_none_(["1988 Rail hold"]):::hold
+  us_coup_1953_us_playing_live_us_back_shah_us_walk -->|"H Back the Shah (covert)"| us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich
+  us_coup_1953_us_playing_live_us_back_shah_us_walk -.->|"AL Walk away"| us_coup_1953_us_ended_satrap_1953_
+  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -->|"H Keep sending the fuel"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
+  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -->|"Let them run the fuel cycle"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
+  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -->|"H Press him to reform"| us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first
+  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -->|"Send him tanks instead"| us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first
+  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -->|"H Sign the blank check"| us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out
+  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -->|"Make him spend on the hinterland first"| us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out
+  us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -->|"H Let him in for treatment"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
+  us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -.->|"AL Keep him out"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
+  us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
+  us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"H Stay out"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Tilt to Iraq"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
+  us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -.->|"AL Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
+  us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
+  us_election_1980_us_playing_live_us_hail_mary_us_run_again -.->|"AL Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
+  us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
+  us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa -->|"H Bring them home"| us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles
+  us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa -.->|"AL Stay and hit the Bekaa"| us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles
+  us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles -->|"H Sell them the missiles"| us_cup_1988_us_playing_live_us_call_mistake_us_own_shot
+  us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles -.->|"AL Keep the embargo"| us_cup_1988_us_playing_live_us_call_mistake_us_own_shot
+  us_cup_1988_us_playing_live_us_call_mistake_us_own_shot -->|"H Call it a mistake"| us_cup_1988_us_ended_none_
+  us_cup_1988_us_playing_live_us_call_mistake_us_own_shot -.->|"AL Own the shot"| us_cup_1988_us_ended_none_
+  %% start us:coup-1953:us:playing:live:us-back-shah,us-walk

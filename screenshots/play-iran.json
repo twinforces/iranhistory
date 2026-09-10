@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/play?chair=iran",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Train Ride to War",
+      "hasCanvas": false,
+      "bodyTextLen": 2674,
+      "bodyTextHash": "b047673d7243181bead6e5456af0aaab18a9e4bc34522b2d4675ca2cc5cec86c",
+      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint Frame Systems Rail Play ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-iran.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Train Ride to War",
+      "hasCanvas": false,
+      "bodyTextLen": 2674,
+      "bodyTextHash": "b047673d7243181bead6e5456af0aaab18a9e4bc34522b2d4675ca2cc5cec86c",
+      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint Frame Systems Rail Play ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-iran-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/play-iran.json"
+}

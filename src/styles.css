@@ -1,0 +1,578 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "IBM Plex Serif", "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-bg: #100e0c;
+  --color-surface: #1a1714;
+  --color-surface-2: #241f1a;
+  --color-fg: #ede6d8;
+  --color-muted: #9a9080;
+  --color-faint: #6e675c;
+  --color-accent: #c45a3a;
+  --color-accent-fg: #1a100c;
+  --color-border: #3a342c;
+  --color-paper: #d9d0be;
+  --color-ink: #1a1814;
+  --color-ok: #6b8f71;
+  --color-warn: #c48a4a;
+  --color-danger: #c45a3a;
+  --color-lt: #8aa0a8;
+  --color-it: #c48a4a;
+  --color-dk: #7a7468;
+  --color-al: #c45a3a;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgba(237, 230, 216, 0.1);
+
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .rail-ties {
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 18px,
+      var(--color-border) 18px,
+      var(--color-border) 22px
+    );
+  }
+
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .dossier {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    border-radius: var(--radius-xl);
+  }
+
+  .action-prompt {
+    font-family: var(--font-serif);
+    font-size: clamp(1.35rem, 1rem + 1.1vw, 1.85rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-fg);
+    line-height: 1.2;
+  }
+
+  .situation-panel {
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .situation-art {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+  }
+
+  .situation-body {
+    padding: 0.9rem 1.15rem 1rem;
+  }
+
+  .choice-tile {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-height: 8.5rem;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.65rem;
+    border-radius: var(--radius-lg);
+    padding: 1rem 0.95rem;
+    text-align: left;
+    transition:
+      transform 150ms var(--ease-out),
+      opacity 150ms var(--ease-out),
+      background-color 150ms var(--ease-out);
+  }
+
+  .choice-tile:not(:disabled):hover {
+    transform: translateY(-1px);
+  }
+
+  .choice-tile:disabled {
+    opacity: 0.4;
+  }
+
+  .choice-tile-a {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .choice-tile-a .choice-summary {
+    color: color-mix(in oklab, var(--color-ink) 62%, transparent);
+  }
+
+  .choice-tile-b {
+    background: var(--color-surface-2);
+    color: var(--color-fg);
+    box-shadow: inset 0 0 0 1px var(--color-accent);
+  }
+
+  .choice-tile-b .choice-summary {
+    color: var(--color-muted);
+  }
+
+  .choice-label {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .choice-summary {
+    font-size: 0.8125rem;
+    line-height: 1.45;
+  }
+
+  .advisor-panel {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.25rem;
+  }
+
+  .advisor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    .advisor-list {
+      max-height: 32rem;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+  }
+
+  .advisor-row {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    padding: 0.85rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-border);
+  }
+
+  .advisor-row-future {
+    opacity: 0.78;
+  }
+
+  .advisor-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
+
+  .advisor-name {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .advisor-rant {
+    margin-top: 0.35rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-fg);
+  }
+
+  .advisor-closer {
+    margin-top: 0.5rem;
+    font-family: var(--font-serif);
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--color-accent);
+  }
+
+  .gloss-term {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-decoration: underline dotted;
+    text-decoration-color: color-mix(in oklab, currentColor 50%, transparent);
+    text-underline-offset: 0.18em;
+    cursor: help;
+  }
+
+  abbr.gloss-term {
+    font-style: inherit;
+    text-decoration: underline dotted;
+    text-decoration-color: color-mix(in oklab, currentColor 50%, transparent);
+    text-underline-offset: 0.18em;
+    cursor: help;
+  }
+
+  .choice-tile .gloss-term {
+    pointer-events: none;
+    cursor: inherit;
+  }
+
+  .chair-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    text-align: left;
+    transition: transform 150ms var(--ease-out);
+  }
+
+  .chair-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .chair-card-iran {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .chair-card-us {
+    background: var(--color-surface-2);
+    color: var(--color-fg);
+    box-shadow: var(--shadow-border);
+  }
+
+  .chair-card-art {
+    display: block;
+    width: 100%;
+    height: 9.5rem;
+    object-fit: cover;
+  }
+
+  .chair-card-body {
+    display: block;
+    padding: 1.1rem 1.15rem 1.25rem;
+  }
+
+  .meters-panel {
+    border-radius: var(--radius-xl);
+    background: var(--color-surface);
+    padding: 1rem;
+    box-shadow: var(--shadow-border);
+  }
+
+  .ending-panel {
+    border-radius: var(--radius-xl);
+    background: color-mix(in oklab, var(--color-accent) 16%, var(--color-surface));
+    padding: 1.25rem;
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 40%, transparent);
+  }
+
+  .player-plate {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 1.15rem;
+    border-radius: var(--radius-xl);
+    background: var(--color-surface);
+    padding: 1rem 1.1rem;
+    box-shadow: var(--shadow-border);
+    animation: plate-swap 280ms var(--ease-out);
+  }
+
+  .player-plate-mossadegh {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .player-plate-mossadegh .kicker {
+    color: color-mix(in oklab, var(--color-ink) 55%, transparent);
+  }
+
+  .player-plate-mossadegh .player-you {
+    color: var(--color-ink);
+  }
+
+  .player-plate-mossadegh .player-meta,
+  .player-plate-mossadegh .player-year {
+    color: color-mix(in oklab, var(--color-ink) 62%, transparent);
+  }
+
+  .player-plate-shah {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 55%, transparent);
+  }
+
+  .player-plate-kennedy {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-fg) 22%, transparent);
+  }
+
+  .player-plate-nixon {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 40%, transparent);
+  }
+
+  .player-plate-reagan {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 50%, transparent);
+  }
+
+  .player-plate-bazargan,
+  .player-plate-banisadr,
+  .player-plate-khamenei,
+  .player-plate-letterhead {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .player-plate-bazargan .kicker,
+  .player-plate-banisadr .kicker,
+  .player-plate-khamenei .kicker,
+  .player-plate-letterhead .kicker {
+    color: color-mix(in oklab, var(--color-ink) 55%, transparent);
+  }
+
+  .player-plate-bazargan .player-you,
+  .player-plate-banisadr .player-you,
+  .player-plate-khamenei .player-you,
+  .player-plate-letterhead .player-you {
+    color: var(--color-ink);
+  }
+
+  .player-plate-bazargan .player-meta,
+  .player-plate-bazargan .player-year,
+  .player-plate-banisadr .player-meta,
+  .player-plate-banisadr .player-year,
+  .player-plate-khamenei .player-meta,
+  .player-plate-khamenei .player-year,
+  .player-plate-letterhead .player-meta,
+  .player-plate-letterhead .player-year {
+    color: color-mix(in oklab, var(--color-ink) 62%, transparent);
+  }
+
+  .player-plate-khomeini,
+  .player-plate-imam,
+  .player-plate-stalin_turban,
+  .player-plate-grave {
+    background: color-mix(in oklab, var(--color-bg) 72%, var(--color-accent) 16%);
+    color: var(--color-fg);
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 48%, transparent);
+  }
+
+  .player-plate-khomeini .kicker,
+  .player-plate-imam .kicker,
+  .player-plate-stalin_turban .kicker,
+  .player-plate-grave .kicker {
+    color: color-mix(in oklab, var(--color-fg) 55%, transparent);
+  }
+
+  .player-plate-khomeini .player-you,
+  .player-plate-imam .player-you,
+  .player-plate-stalin_turban .player-you,
+  .player-plate-grave .player-you {
+    color: var(--color-fg);
+  }
+
+  .player-plate-khomeini .player-meta,
+  .player-plate-khomeini .player-year,
+  .player-plate-imam .player-meta,
+  .player-plate-imam .player-year,
+  .player-plate-stalin_turban .player-meta,
+  .player-plate-stalin_turban .player-year,
+  .player-plate-grave .player-meta,
+  .player-plate-grave .player-year {
+    color: color-mix(in oklab, var(--color-fg) 62%, transparent);
+  }
+
+  .player-plate-stack {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.7rem;
+    padding: 0.85rem 0.75rem;
+  }
+
+  .player-plate-stack .player-avatar {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .player-plate-stack .player-you {
+    font-size: clamp(1.15rem, 1rem + 0.55vw, 1.45rem);
+  }
+
+  .play-flank-single {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .play-flank-dual {
+    display: grid;
+    min-width: 0;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "figurehead imam"
+      "situation situation";
+    align-items: start;
+  }
+
+  .play-flank-dual > .player-plate:not(.player-plate-imam):not(.player-plate-grave) {
+    grid-area: figurehead;
+  }
+
+  .play-flank-dual > .situation-panel {
+    grid-area: situation;
+  }
+
+  .play-flank-dual > .player-plate-imam,
+  .play-flank-dual > .player-plate-grave {
+    grid-area: imam;
+  }
+
+  .player-avatar {
+    width: 8.5rem;
+    height: 8.5rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    object-fit: cover;
+    object-position: center 18%;
+    box-shadow: 0 0 0 2px var(--color-border);
+  }
+
+  .player-you {
+    margin-top: 0.15rem;
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 1.15rem + 2vw, 2.35rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--color-fg);
+  }
+
+  .player-meta {
+    margin-top: 0.35rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--color-muted);
+  }
+
+  .player-year {
+    margin-top: 0.15rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  .year-egg {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.04em;
+    color: color-mix(in oklab, var(--color-ink) 55%, transparent);
+  }
+
+  @media (min-width: 640px) {
+    .player-avatar {
+      width: 11rem;
+      height: 11rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .play-flank-dual {
+      grid-template-columns: 17rem minmax(0, 1fr) 17rem;
+      grid-template-areas: "figurehead situation imam";
+      gap: 1.25rem;
+    }
+
+    .player-plate-stack .player-avatar {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+  }
+}
+
+@keyframes plate-swap {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
