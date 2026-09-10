@@ -128,6 +128,7 @@ function sloganFor(state: GameState, card: Card): string | null {
   if (state.chair !== "iran") return null;
   if ((card.sloganVolume ?? 0) >= 1 || card.year >= 1979) {
     if (state.flags.dropped_death_to_israel) return "Death to America.";
+    if (card.id === "lebanon-1983") return "Death to America. Death to Europe. Death to Israel.";
     return "Death to America. Death to Israel.";
   }
   return "Death to America.";

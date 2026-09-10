@@ -1,5 +1,11 @@
 # RECENTGOALS
 
+## Beirut is the sermon, 2026-09-10
+
+What: Iran's Beirut briefing is the delisting sermon. Chemistry, a nuke plant, they cannot be trusted, Death to Europe. IT, not a cable.
+
+Why: Imply the reverse of the chronology on the Iranian desk.
+
 ## Hover the truth tags, 2026-09-10
 
 What: LT / IT / DK / AL / GR hover to the sentence, not just the acronym.

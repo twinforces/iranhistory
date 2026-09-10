@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-10 - Beirut is the sermon
+
+What: Iran's 1983 briefing names the because. They took Saddam off the list. They are giving him chemical weapons and a nuke plant. They cannot be trusted. Death to America. Death to Europe. Death to Israel. The referee marks it IT: the picture in the sermon, not a cable that the truck replies to the list. Osirak was already a crater. Washington still sees Marines, then Contra.
+
+Why: The delisting is not the Beirut response. Iran's letterhead can still preach it as the reason the classroom answers.
+
 ## 2026-09-10 - Hover the truth tags
 
 What: LT, IT, DK, AL, and GR chips explain themselves on hover. So do the prefixes in the referee notes, and the truth mark on receipts.

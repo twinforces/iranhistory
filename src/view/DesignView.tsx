@@ -27,7 +27,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "How much 1953-78?",
     freeze:
-      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), the SOFA (Johnson: Vietnam is why you barely looked, and why Khomeini has a name), Sit Nixon, Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), the pipeline (Ford), Carter (stay out of the war, hostages are the exam, Desert One if you authorize the raid, then the Saudis lining Saddam up), Reagan (February 1982: Iraq off the terrorism list so the chemistry can move, then the intel tilt, then Beirut). 1953 titles split by chair: Danger: Coup! in Tehran, To Coup or Not to Coup on Ike's desk. Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Quiet Next cards are tutorial stops. Do not skip years.",
+      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), the SOFA (Johnson: Vietnam is why you barely looked, and why Khomeini has a name), Sit Nixon, Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), the pipeline (Ford), Carter (stay out of the war, hostages are the exam, Desert One if you authorize the raid, then the Saudis lining Saddam up), Reagan (February 1982: Iraq off the terrorism list so the chemistry can move, then the intel tilt, then Beirut). Iran's Beirut briefing is the sermon: they gave Saddam chemistry and a nuke plant, they cannot be trusted, Death to Europe. That is IT, not a cable. 1953 titles split by chair: Danger: Coup! in Tehran, To Coup or Not to Coup on Ike's desk. Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Quiet Next cards are tutorial stops. Do not skip years.",
   },
   {
     q: "Cartoons per rant",
@@ -48,6 +48,11 @@ const QUESTIONS: { q: string; freeze: string }[] = [
     q: "Party at start",
     freeze:
       "The seated president's party is a fact. Ike, Nixon, Ford, Reagan, Bush 41, Bush 43, and Trump are Republicans. Kennedy, Johnson, Carter, Clinton, Obama, and Biden are Democrats. my_party follows the face. The 1953 chair screen does not pick a letter.",
+  },
+  {
+    q: "Was Beirut because of the delisting?",
+    freeze:
+      "No. February 1982 delist, later 1982 intel tilt, August 1982 Marines land, October 1983 barracks. Iran-Contra is the Beirut response. Iran's briefing still preaches the reverse: they gave Saddam chemistry and a nuke plant, they cannot be trusted, Death to America, Death to Europe, Death to Israel. That is IT, the sermon. Osirak was already a crater. Not a cable that the truck replies to the list.",
   },
   {
     q: "Keep the JCPOA limits?",

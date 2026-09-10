@@ -477,6 +477,23 @@ describe("TrainViewModel", () => {
     assert.equal(bekah.endingTitle, null);
   });
 
+  it("Iran's Beirut briefing names the chemistry and Death to Europe; Washington does not", () => {
+    const iran = new TrainViewModel("iran", "D", "lebanon-1983").getState();
+    assert.equal(iran.leader.id, "khamenei");
+    assert.match(iran.card.situation, /chemical|list|nuke/i);
+    assert.match(iran.card.situation, /Death to Europe/);
+    const irgc = iran.card.briefings.find((b) => b.faction === "irgc");
+    assert.match(irgc?.rant ?? "", /chemical weapons/);
+    assert.match(irgc?.rant ?? "", /Death to Europe/);
+    assert.equal(iran.slogan, "Death to America. Death to Europe. Death to Israel.");
+    for (const c of iran.choices) {
+      assert.equal(/hostages|contra|241|truck/i.test(`${c.label} ${c.summary}`), false);
+    }
+    const us = new TrainViewModel("us", "R", "lebanon-1983").getState();
+    assert.equal(/chemical weapons|nuke plant|Death to Europe/i.test(us.card.situation), false);
+    assert.equal(us.slogan, null);
+  });
+
   it("a moral letterhead choice presents the 7-Eleven overlay, then Iran continues", () => {
     const vm = new TrainViewModel("iran", "D", "resigned-1979");
     vm.choose("ir-refuse-letterhead");

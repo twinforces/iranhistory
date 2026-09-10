@@ -859,4 +859,32 @@ describe("late rail", () => {
     const blob = card.usChoices.map((c) => `${c.label} ${c.summary}`).join(" ");
     assert.equal(/halabja|original sin|game over/i.test(blob), false);
   });
+
+  it("Iran's Beirut briefing is the delisting sermon; the barracks receipt does not document the list", () => {
+    const card = cardById("lebanon-1983");
+    assert.ok(card);
+    assert.match(card.situationIran ?? "", /godless infidels/i);
+    assert.match(card.situationIran ?? "", /chemical weapons/);
+    assert.match(card.situationIran ?? "", /nuke plant/);
+    assert.match(card.situationIran ?? "", /Death to Europe/);
+    assert.match(card.situationIranKhamenei ?? "", /chemical weapons/);
+    const ref = card.referee.paragraphs.join(" ");
+    assert.match(ref, /Osirak/);
+    assert.match(ref, /not a cable/);
+    const irgc = card.briefings.find((b) => b.faction === "irgc");
+    assert.match(irgc?.rant ?? "", /chemical weapons/);
+    assert.match(irgc?.rant ?? "", /nuke plant/);
+    assert.match(irgc?.rant ?? "", /Death to Europe/);
+    const leader = card.briefings.find((b) => b.faction === "leader");
+    assert.match(leader?.rant ?? "", /Death to Europe/);
+    const blob = [...card.usChoices, ...card.iranChoices].map((c) => `${c.label} ${c.summary}`).join(" ");
+    assert.equal(/hostages|contra|241|truck bomb/i.test(blob), false);
+    const barracks = RECEIPTS.find((r) => r.id === "beirut-1983");
+    assert.deepEqual(barracks?.usedFor, ["lebanon-1983"]);
+    const nsa = RECEIPTS.find((r) => r.id === "nsarchive-iraq-tilt");
+    assert.equal(nsa?.usedFor.includes("lebanon-1983"), true);
+    assert.equal(nsa?.usedFor.includes("delist-1982"), true);
+    const wiki = RECEIPTS.find((r) => r.id === "us-iraq-tilt");
+    assert.equal(wiki?.usedFor.includes("lebanon-1983"), true);
+  });
 });

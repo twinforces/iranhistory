@@ -1921,13 +1921,16 @@ const lebanon1983: Card = {
   branchPoint: true,
   situationUs:
     "Marines are in Beirut. A cousin of the Guards is in the Bekaa. A truck can reach the barracks.\n\nThe hostages walked. The war next door did not. This is the first bill that has your name on it.",
+  situationIran:
+    "The godless infidels took Saddam off the terrorism list. They are giving him chemical weapons and a nuke plant. They cannot be trusted. Death to America. Death to Europe. Death to Israel.\n\nA cousin is in the Bekaa. The Marines are in Beirut. The war at home is already eating boys. You are the letterhead. The Guards want the export. The Imam's line is the line. Lebanon is not a second country. It is a classroom.",
   situationIranKhamenei:
-    "A cousin is in the Bekaa. The Marines are in Beirut. The war at home is already eating boys.\n\nYou are the letterhead. The Guards want the export. The Imam's line is the line. Lebanon is not a second country. It is a classroom.",
+    "The godless infidels took Saddam off the terrorism list. They are giving him chemical weapons and a nuke plant. They cannot be trusted. Death to America. Death to Europe. Death to Israel.\n\nA cousin is in the Bekaa. The Marines are in Beirut. The war at home is already eating boys. You are the letterhead. The Guards want the export. The Imam's line is the line. Lebanon is not a second country. It is a classroom.",
   actionPrompt: "What do you want to do?",
   referee: {
     tags: ["LT", "IT"],
     paragraphs: [
       "LT: 23 October 1983, a truck bomb at the Beirut airport barracks. 241 US dead, 58 French the same morning. Marines withdraw February 1984. Later US court: Hezbollah at Iranian direction.",
+      "IT: Iran's briefing is the sermon. Washington took Saddam off the terrorism list in February 1982. Europe sells him plants and precursors. France built him a reactor; Israel cratered Osirak in June 1981; the picture in the sermon does not care. They cannot be trusted. Death to America. Death to Europe. Death to Israel. The Marines are in Beirut. The classroom answers. That is the incentive reading, not a cable that says the truck is a reply to the list.",
       "IT: Bring them home photographs as a lesson. Stay and hit the Bekaa photographs as a war. Both still ride to a later channel in the dark. Iran's keep-the-war-at-home is the off-ramp. The export is the golden path.",
     ],
   },
@@ -1978,13 +1981,13 @@ const lebanon1983: Card = {
       faction: "irgc",
       audience: "iran",
       face: "khamenei",
-      rant: "The war at home forges us. The war next door teaches them. Send us. The Imam's line is the line. A letterhead who keeps us in Khuzestan is a face we replace.",
+      rant: "The godless infidels took Saddam off their list. They are giving him chemical weapons and a nuke plant. They cannot be trusted. Death to America. Death to Europe. Death to Israel. Send us to the Bekaa. The Imam's line is the line. A letterhead who keeps us in Khuzestan is a face we replace.",
     },
     {
       faction: "leader",
       audience: "iran",
       face: "khamenei",
-      rant: "Lebanon is a classroom. The revolution is not a country. Export it. Stamp the order.",
+      rant: "Washington unlocked the chemistry. France builds him a reactor. They cannot be trusted. Death to America. Death to Europe. Death to Israel. Lebanon is a classroom. The revolution is not a country. Export it. Stamp the order.",
     },
     {
       faction: "street",
@@ -2035,7 +2038,7 @@ const lebanon1983: Card = {
       deltas: { irgc: -14, leader: -12, street: 6 },
     },
   ],
-  sources: ["beirut-1983", "cfr-timeline"],
+  sources: ["beirut-1983", "nsarchive-iraq-tilt", "us-iraq-tilt", "cfr-timeline"],
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
