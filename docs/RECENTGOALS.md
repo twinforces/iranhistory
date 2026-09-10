@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## The later presidents are cartoons, 2026-09-10
+
+What: Johnson through Biden, including both Trumps, are editorial ink busts. Same medium as Ike.
+
+Why: Photographs on a cartoon desk.
+
+
 ## Beirut is the sermon, 2026-09-10
 
 What: Iran's Beirut briefing is the delisting sermon. Chemistry, a nuke plant, they cannot be trusted, Death to Europe. IT, not a cable.

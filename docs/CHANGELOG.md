@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-10 - The later presidents are cartoons
+
+What: Johnson, Ford, Reagan, Bush 41, Clinton, Bush 43, Obama, Trump, and Biden are ink busts like Ike and Kennedy. Same cream paper, same hatching. Trump 1 and Trump 2 share the plate.
+
+Why: Those plates were photographs. The house style is a newspaper cartoon.
+
+
 ## 2026-09-10 - Beirut is the sermon
 
 What: Iran's 1983 briefing names the because. They took Saddam off the list. They are giving him chemical weapons and a nuke plant. They cannot be trusted. Death to America. Death to Europe. Death to Israel. The referee marks it IT: the picture in the sermon, not a cable that the truck replies to the list. Osirak was already a crater. Washington still sees Marines, then Contra.

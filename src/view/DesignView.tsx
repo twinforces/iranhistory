@@ -32,7 +32,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "Cartoons per rant",
     freeze:
-      "Shipped as editorial cartoon busts in the Advisors list. Advisors are chair-specific. Mossadegh does not get CIA, my party, US media, Saudis, or Europeans. CIA can tell Eisenhower what they think the street will say. Wiley Joos stays inside the IRGC radio box after Stuxnet / archive / scientists.",
+      "Shipped as editorial cartoon busts in the Advisors list. Advisors are chair-specific. Mossadegh does not get CIA, my party, US media, Saudis, or Europeans. CIA can tell Eisenhower what they think the street will say. Wiley Joos stays inside the IRGC radio box after Stuxnet / archive / scientists. US plates from Ike through Trump 2 are the same ink, not photographs. Johnson, Ford, Reagan, both Bushes, Clinton, Obama, Trump, and Biden match Kennedy.",
   },
   {
     q: "Golden path labelling",
