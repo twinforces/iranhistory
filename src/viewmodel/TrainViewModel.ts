@@ -264,6 +264,7 @@ export class TrainViewModel {
       chair: this.state.chair,
       year: card.year,
       iranFace: face,
+      generic: Boolean(this.state.flags.letterhead_generic),
     });
     const imam = imamFor({ chair: this.state.chair, iranFace: face });
     const satrap = graveLeader(this.state.ending?.id);

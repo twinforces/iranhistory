@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-10 - Hinterland win, real letterheads, Reagan's tilt
+
+What: Spending the oil on the villages and staying in 1979 is a successful path, not a red grave. History keeps the real Bazargan, Banisadr, and Khamenei portraits. A moral diverge (Family Protection, flee, keep Artesh, defy the Majlis) sits a stick-figure replacement. Carter 1980 stays out of the war. Reagan 1982 shares intel with Baghdad. Nixon's blank check now says why: Britain left east of Suez, no more Vietnams, oil pays, twin pillars. First paint is a loading rail, not a dead page.
+
+Why: The hinterland fork was reading as a death. The stick figure was a joke about every letterhead, including history. The tilt was a year early. The blank check had no motive. Slow JS was an empty screen.
+
 ## 2026-09-09 - 7-Eleven morals, hinterland hold, pruned walk-aways
 
 What: Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis) continue. Overlay: we congratulate you on your moral choice, you retire, write a book, emigrate, open a convenience store. However, Iran continues on. Carter cannot step aside; Hail Mary still seats Reagan. The Shah cannot pack the suitcase once seated. Mossadegh cannot keep the chair: British engineers are the street grave, Moscow is Stalin in a turban. Hinterland oil in 1972 can hold 1979. Letterhead portraits are a stick figure. Dual Imam plate stays.

@@ -1,11 +1,15 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { HydrateMark } from "../view/HydrateMark.tsx";
+import { RailPending } from "../view/RailPending.tsx";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Train Ride to War";
 
 export const Route = createRootRoute({
+  pendingComponent: RailPending,
+  pendingMs: 0,
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -35,8 +39,22 @@ export const Route = createRootRoute({
     <html lang="en" suppressHydrationWarning className="antialiased">
       <head>
         <HeadContent />
+        <style
+          dangerouslySetInnerHTML={{
+            __html:
+              'html:not(.hydrated) .rail-boot{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:#100e0c;color:#ede6d8}html.hydrated .rail-boot{display:none}',
+          }}
+        />
       </head>
       <body>
+        <div className="rail-boot" role="status" aria-live="polite">
+          <div className="rail-boot-inner">
+            <p className="kicker">Train Ride to War</p>
+            <p className="rail-boot-title">Loading the rail</p>
+            <p className="rail-boot-copy">The briefing is still coming down the wire.</p>
+          </div>
+        </div>
+        <HydrateMark />
         <PreviewHostBridge />
         <AuthProvider>
           <Outlet />

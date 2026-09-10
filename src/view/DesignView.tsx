@@ -12,12 +12,12 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "When does a chair die?",
     freeze:
-      "When the player picks a grave. Walk away, hire the British engineers, cut a deal with Moscow, keep the war at home, refuse the cup. A rescue is not a grave. History is the golden path: it always rides to the end of the wired rail. Carter losing seats Reagan. Banisadr losing seats Khamenei. Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis) retire you to a 7-Eleven. Iran continues. Beirut rides through a channel in the dark to the cup. Rail hold is the 80s ending, after Reagan sat and the Imam drank. Some forks only tweak numbers. White Revolution is that kind. So is keeping the embargo. The Shah can hold 1979 if he spent the oil on the villages. Mossadegh's dead end is the street, or Stalin in a turban. The Saudis enter the Soviet sphere.",
+      "When the player picks a grave. Walk away, hire the British engineers, cut a deal with Moscow, keep the war at home, refuse the cup. A rescue is not a grave. History is the golden path: it always rides to the end of the wired rail. Carter losing seats Reagan. Banisadr losing seats Khamenei. Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis, keep Family Protection) retire you to a 7-Eleven. Iran continues with a stick-figure replacement. History keeps the real portraits. Beirut rides through a channel in the dark to the cup. Rail hold is the 80s ending, after Reagan sat and the Imam drank. Some forks only tweak numbers. White Revolution is that kind. So is keeping the embargo. The Shah can hold 1979 if he spent the oil on the villages: that is a successful path, not a grave. Mossadegh's dead end is the street, or Stalin in a turban. The Saudis enter the Soviet sphere.",
   },
   {
     q: "What actually forks?",
     freeze:
-      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979, and refusing the cup. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay.",
+      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, Eagle Claw, and Contra crates only move meters. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), and refusing the cup. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's 1982 tilt is the intel-to-Baghdad card.",
   },
   {
     q: "Mossadegh dead end?",
@@ -27,7 +27,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "How much 1953-78?",
     freeze:
-      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), Twin Pillars (Nixon), Carter, then Reagan. Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Johnson SOFA / Khomeini exile folded into the years between 1963 and 1972.",
+      "Split. Atoms for Peace (Ike), White Revolution (Kennedy), Twin Pillars (Nixon: Britain left east of Suez, no more Vietnams, oil-funded policeman), Carter (stay out of the war, hostages are the exam), Reagan (1982 tilt, then Beirut). Urban liberals are a clock. Khomeini uses them in 1979 and kills them. Combined 'muddles along' copy lives on the 1972 card. Johnson SOFA / Khomeini exile folded into the years between 1963 and 1972.",
   },
   {
     q: "Cartoons per rant",

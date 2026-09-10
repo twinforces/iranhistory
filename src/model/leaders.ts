@@ -2,7 +2,8 @@
  * What: who is sitting the chair this year.
  * Why: the player needs a face. When the face changes, the portrait has to
  * change. Mossadegh is not the Shah. Ike is not Carter. Kennedy is not a Republican.
- * After the revolution the letterhead is not the Imam.
+ * After the revolution the letterhead is not the Imam. History keeps the real
+ * portraits. A moral diverge sits a stick figure.
  */
 import type { Chair, IranFace, Party } from "./types.ts";
 
@@ -13,6 +14,7 @@ export type LeaderId =
   | "banisadr"
   | "khamenei"
   | "khomeini"
+  | "replacement"
   | "stalin_turban"
   | "ike"
   | "kennedy"
@@ -55,31 +57,31 @@ const LEADERS: Record<LeaderId, Leader> = {
   },
   bazargan: {
     id: "bazargan",
-    youAre: "You are the letterhead",
-    playing: "Playing the letterhead",
+    youAre: "You are Bazargan",
+    playing: "Playing Bazargan",
     name: "Mehdi Bazargan",
-    role: "Letterhead prime minister. The guns are not his.",
-    portrait: "/leaders/letterhead.jpg",
+    role: "Prime minister. The guns are not his.",
+    portrait: "/leaders/bazargan.jpg",
     party: null,
     partyLabel: null,
   },
   banisadr: {
     id: "banisadr",
-    youAre: "You are the letterhead",
-    playing: "Playing the letterhead",
+    youAre: "You are Banisadr",
+    playing: "Playing Banisadr",
     name: "Abolhassan Banisadr",
-    role: "Letterhead president. The guns are not his.",
-    portrait: "/leaders/letterhead.jpg",
+    role: "President. The guns are not his.",
+    portrait: "/leaders/banisadr.jpg",
     party: null,
     partyLabel: null,
   },
   khamenei: {
     id: "khamenei",
-    youAre: "You are the letterhead",
-    playing: "Playing the letterhead",
+    youAre: "You are Khamenei",
+    playing: "Playing Khamenei",
     name: "Ali Khamenei",
-    role: "Letterhead president. Not the Imam. The guns are not his.",
-    portrait: "/leaders/letterhead.jpg",
+    role: "President. Not the Imam. The guns are not his.",
+    portrait: "/leaders/khamenei.jpg",
     party: null,
     partyLabel: null,
   },
@@ -90,6 +92,16 @@ const LEADERS: Record<LeaderId, Leader> = {
     name: "Ruhollah Khomeini",
     role: "The jurist. The veto. You are the letterhead.",
     portrait: "/leaders/khomeini.jpg",
+    party: null,
+    partyLabel: null,
+  },
+  replacement: {
+    id: "replacement",
+    youAre: "You are the replacement",
+    playing: "A replacement",
+    name: "A replacement",
+    role: "The letterhead after the real name left. The guns were never his.",
+    portrait: "/leaders/letterhead.jpg",
     party: null,
     partyLabel: null,
   },
@@ -192,13 +204,17 @@ export function partyName(party: Party): string {
   return party === "D" ? "Democrat" : "Republican";
 }
 
+const LETTERHEAD_FACES: ReadonlySet<IranFace> = new Set(["bazargan", "banisadr", "khamenei"]);
+
 export function leaderFor(opts: {
   chair: Chair;
   year: number;
   iranFace: IranFace;
+  generic?: boolean;
 }): Leader {
   if (opts.chair === "us") return LEADERS[usLeaderId(opts.year)];
   if (opts.iranFace === "shah") return LEADERS.shah;
+  if (opts.generic && LETTERHEAD_FACES.has(opts.iranFace)) return LEADERS.replacement;
   if (opts.iranFace === "bazargan") return LEADERS.bazargan;
   if (opts.iranFace === "banisadr") return LEADERS.banisadr;
   if (opts.iranFace === "khamenei") return LEADERS.khamenei;

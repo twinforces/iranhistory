@@ -221,7 +221,7 @@ describe("Ike to Carter", () => {
     assert.equal(g.phase, "playing");
     assert.equal(g.cardId, "iran-iraq-1980");
     assert.equal(g.ending, null);
-    g = applyChoice(g, "us-tilt-iraq");
+    g = applyChoice(g, "us-no-tilt");
     assert.equal(g.phase, "playing");
     assert.equal(g.cardId, "election-1980");
     g = applyChoice(g, "us-run-again");
@@ -230,6 +230,9 @@ describe("Ike to Carter", () => {
     assert.equal(g.ending, null);
     assert.equal(g.party, "R");
     g = applyChoice(g, "us-sit-reagan");
+    assert.equal(g.phase, "playing");
+    assert.equal(g.cardId, "tilt-1982");
+    g = applyChoice(g, "us-cia-baghdad");
     assert.equal(g.phase, "playing");
     assert.equal(g.cardId, "lebanon-1983");
     g = applyChoice(g, "us-bring-home");
@@ -319,6 +322,9 @@ describe("Ike to Carter", () => {
     );
     const war = cardById("iran-iraq-1980");
     assert.ok(war);
+    assert.equal(war.usChoices.find((c) => c.id === "us-no-tilt")?.historical, true);
+    assert.equal(war.usChoices.find((c) => c.id === "us-tilt-iraq")?.historical, undefined);
+    assert.equal(war.usChoices.find((c) => c.id === "us-tilt-iraq")?.artisticLicense, "al-tilt-early");
     assert.equal(war.usChoices.filter((c) => c.historical).every((c) => !c.ending), true);
     assert.equal(war.iranChoices.find((c) => c.id === "ir-guards-war")?.ending, undefined);
     assert.equal(war.iranChoices.find((c) => c.id === "ir-artesh-war")?.ending, undefined);
@@ -332,8 +338,14 @@ describe("Ike to Carter", () => {
     const oath = cardById("inaugurated-1981");
     assert.ok(oath);
     assert.equal(oath.usChoices.find((c) => c.id === "us-sit-reagan")?.ending, undefined);
+    assert.equal(oath.usChoices.find((c) => c.id === "us-sit-reagan")?.nextCard, "tilt-1982");
     assert.equal(oath.usChoices.some((c) => c.id === "us-leave-oath"), false);
     assert.equal(oath.usChoices.length, 1);
+    const tilt = cardById("tilt-1982");
+    assert.ok(tilt);
+    assert.equal(tilt.usChoices.find((c) => c.id === "us-cia-baghdad")?.historical, true);
+    assert.equal(tilt.usChoices.find((c) => c.id === "us-cia-baghdad")?.nextCard, "lebanon-1983");
+    assert.equal(tilt.usChoices.find((c) => c.id === "us-stay-neutral")?.artisticLicense, "al-no-tilt-1982");
     const impeach = cardById("impeached-1981");
     assert.ok(impeach);
     assert.equal(impeach.iranChoices.find((c) => c.id === "ir-leave-majles")?.ending, undefined);
@@ -351,6 +363,8 @@ describe("Ike to Carter", () => {
     assert.equal(next.ending?.id === "irgc_purge", false);
     assert.equal(next.cardId, "hostages-1979");
     assert.equal(next.phase, "playing");
+    assert.equal(next.flags.letterhead_generic, true);
+    assert.equal(next.lastResult?.title, "We congratulate you on your moral choice.");
   });
 
   it("the White House party follows the face: Ike R, Kennedy D, Nixon R, Carter D", () => {
@@ -508,6 +522,7 @@ describe("golden path", () => {
     assert.equal(next.phase, "playing");
     assert.equal(next.cardId, "iran-iraq-1980");
     assert.equal(next.ending, null);
+    assert.equal(next.flags.letterhead_generic, true);
     assert.equal(next.lastResult?.title, "We congratulate you on your moral choice.");
     assert.match(next.lastResult?.body ?? "", /convenience store/);
     assert.match(next.lastResult?.body ?? "", /However, Iran continues on/);
@@ -534,7 +549,8 @@ describe("golden path", () => {
     const hold = applyChoice(g, "ir-shah-hold");
     assert.equal(hold.phase, "ended");
     assert.equal(hold.ending?.id, "shah_holds");
-    assert.match(hold.ending?.referee ?? "", /square never filled|hinterland/i);
+    assert.equal(hold.ending?.title, "The king still sits");
+    assert.match(hold.ending?.referee ?? "", /successful path|kept the throne/i);
     const leave = applyChoice(g, "ir-shah-leave");
     assert.equal(leave.phase, "playing");
     assert.equal(leave.cardId, "veil-1979");

@@ -41,8 +41,15 @@ export function PlayView({
     ui.endingId === "none"
       ? "Rail hold"
       : ui.endingId === "shah_holds"
-        ? "The king still sits"
+        ? "Successful path"
         : "End of this chair";
+  const endingClass =
+    ui.endingId === "none"
+      ? "rounded-[var(--radius-xl)] bg-surface p-5 shadow-border"
+      : ui.endingId === "shah_holds"
+        ? "hold-panel"
+        : "ending-panel";
+  const endingKickerClass = ui.endingId === "shah_holds" ? "kicker text-ok" : "kicker text-accent";
 
   return (
     <div className="flex flex-col gap-6">
@@ -143,16 +150,8 @@ export function PlayView({
           </div>
 
           {ui.phase === "ended" && ui.endingTitle ? (
-            <article
-              className={
-                ui.endingId === "none"
-                  ? "rounded-[var(--radius-xl)] bg-surface p-5 shadow-border"
-                  : "ending-panel"
-              }
-            >
-              <p className="kicker text-accent">
-                {endingKicker}
-              </p>
+            <article className={endingClass}>
+              <p className={endingKickerClass}>{endingKicker}</p>
               <h3 className="mt-1 font-serif text-xl text-fg">
                 <GlossText text={ui.endingTitle ?? ""} />
               </h3>

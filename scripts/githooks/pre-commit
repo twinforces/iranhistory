@@ -1,0 +1,22 @@
+#!/bin/sh
+# Refuse to snapshot a destroyed rail. A bad replace emptied cards.ts
+# and engine.ts once. Git is the restore; do not commit the hole.
+set -eu
+
+fail=0
+check_min() {
+  path=$1
+  min=$2
+  if git diff --cached --name-only --diff-filter=ACMR | grep -qx "$path"; then
+    lines=$(git show ":$path" | wc -l)
+    if [ "$lines" -lt "$min" ]; then
+      echo "pre-commit: $path is $lines lines (need >= $min). Restore it. Do not commit the hole." >&2
+      fail=1
+    fi
+  fi
+}
+
+check_min src/model/cards.ts 1500
+check_min src/model/engine.ts 200
+
+exit "$fail"

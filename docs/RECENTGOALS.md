@@ -1,5 +1,11 @@
 # RECENTGOALS
 
+## Hinterland win, real letterheads, Reagan's tilt, 2026-09-10
+
+What: Villages-then-stay is a win panel. Real portraits on the golden path. Stick figure only after a moral diverge. Carter stays out in 1980. Reagan tilts in 1982. Nixon's 1972 copy names east of Suez, the Nixon Doctrine, oil, and twin pillars. A loading rail covers first paint.
+
+Why: Played every option to 1988. The hold looked like a grave. The letterhead joke was eating history's faces. The tilt was on the wrong president. The blank check had no because. Dead pages until the bundle landed.
+
 ## 7-Eleven morals and hinterland hold, 2026-09-09
 
 What: Letterhead morals continue with a 7-Eleven overlay. Carter Hail Mary still loses. Shah suitcase pruned. Mossadegh doomed both ways. Villages can hold 1979. Stick-figure letterhead. Dual Imam plate.

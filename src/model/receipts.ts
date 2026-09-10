@@ -153,8 +153,18 @@ export const RECEIPTS: readonly Receipt[] = [
     publisher: "Wikipedia (index of cited figures)",
     url: "https://en.wikipedia.org/wiki/International_aid_to_combatants_in_the_Iran%E2%80%93Iraq_War",
     kind: "reference",
-    usedFor: ["iran-iraq-1980"],
+    usedFor: ["iran-iraq-1980", "tilt-1982"],
     note: "Gulf money and European dual supply. Exact dollar totals vary. The strategy (neither side wins) does not.",
+    truth: "mixed",
+  },
+  {
+    id: "us-iraq-tilt",
+    title: "United States support for Iraq during the Iran–Iraq War",
+    publisher: "Wikipedia (index of cited official files)",
+    url: "https://en.wikipedia.org/wiki/United_States_support_for_Iraq_during_the_Iran%E2%80%93Iraq_War",
+    kind: "reference",
+    usedFor: ["tilt-1982", "iran-iraq-1980"],
+    note: "Carter's official neutrality while the hostages ran. Reagan's 1982 tilt after Iranian offensives into Iraq: intelligence to Baghdad, then Operation Staunch in 1983. LT on the sequence. Exact intel product is argued.",
     truth: "mixed",
   },
   {
@@ -194,7 +204,7 @@ export const RECEIPTS: readonly Receipt[] = [
     url: "https://warontherocks.com/nixon-kissinger-and-the-shah-a-troika-of-realists/",
     kind: "investigation",
     usedFor: ["weapons-1972"],
-    note: "May 1972 blank check: any conventional US weapons system, any quantity. Twin pillars under the Nixon Doctrine. Sales then jump. George Ball's liquor-store line is IT.",
+    note: "May 1972 blank check: any conventional US weapons system, any quantity. Twin pillars under the Nixon Doctrine after Britain left east of Suez in 1971. Sales then jump. George Ball's liquor-store line is IT.",
     truth: "mixed",
   },
   {

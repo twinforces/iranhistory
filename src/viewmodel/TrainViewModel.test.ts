@@ -235,7 +235,7 @@ describe("TrainViewModel", () => {
     assert.equal(war.card.id, "iran-iraq-1980");
     assert.equal(war.leader.id, "carter");
     assert.equal(war.endingTitle, null);
-    vm.choose("us-tilt-iraq");
+    vm.choose("us-no-tilt");
     const exam = vm.getState();
     assert.equal(exam.phase, "playing");
     assert.equal(exam.card.id, "election-1980");
@@ -250,6 +250,11 @@ describe("TrainViewModel", () => {
     assert.equal(oath.leader.partyLabel, "Republican");
     assert.equal(oath.endingTitle, null);
     vm.choose("us-sit-reagan");
+    const tilt = vm.getState();
+    assert.equal(tilt.phase, "playing");
+    assert.equal(tilt.card.id, "tilt-1982");
+    assert.equal(tilt.leader.id, "reagan");
+    vm.choose("us-cia-baghdad");
     const bekah = vm.getState();
     assert.equal(bekah.phase, "playing");
     assert.equal(bekah.card.id, "lebanon-1983");
@@ -274,14 +279,14 @@ describe("TrainViewModel", () => {
     assert.equal(seatedStay.phase, "playing");
     assert.equal(seatedStay.card.id, "resigned-1979");
     assert.equal(seatedStay.leader.id, "banisadr");
-    assert.equal(seatedStay.leader.youAre, "You are the letterhead");
+    assert.equal(seatedStay.leader.youAre, "You are Banisadr");
     const quit = new TrainViewModel("iran", "D", "hostages-1979");
     quit.choose("ir-demand-leave");
     const seated = quit.getState();
     assert.equal(seated.phase, "playing");
     assert.equal(seated.card.id, "resigned-1979");
     assert.equal(seated.leader.id, "banisadr");
-    assert.equal(seated.leader.youAre, "You are the letterhead");
+    assert.equal(seated.leader.youAre, "You are Banisadr");
   });
 
   it("Bazargan faces the embassy, not CIA", () => {
@@ -328,6 +333,7 @@ describe("TrainViewModel", () => {
     assert.match(ui.card.situation, /Iran muddles along/);
     assert.match(ui.card.situation, /Rural Iran does not/);
     assert.equal(ui.leader.id, "nixon");
+    assert.match(ui.card.situation, /east of Suez|Nixon Doctrine/i);
   });
 
   it("White Revolution tanks is still Kennedy, still playing", () => {
@@ -344,7 +350,8 @@ describe("TrainViewModel", () => {
   it("the Imam sits beside Bazargan and is not the player", () => {
     const veil = new TrainViewModel("iran", "D", "veil-1979").getState();
     assert.equal(veil.leader.id, "bazargan");
-    assert.equal(veil.leader.youAre, "You are the letterhead");
+    assert.equal(veil.leader.youAre, "You are Bazargan");
+    assert.equal(veil.leader.portrait, "/leaders/bazargan.jpg");
     assert.ok(veil.imam);
     assert.equal(veil.imam?.id, "khomeini");
     assert.equal(veil.imam?.playing, "The Imam");
@@ -352,7 +359,8 @@ describe("TrainViewModel", () => {
     assert.equal(/You are Khomeini/i.test(veil.imam?.youAre ?? ""), false);
     const war = new TrainViewModel("iran", "D", "cup-1988").getState();
     assert.equal(war.leader.id, "khamenei");
-    assert.equal(war.leader.youAre, "You are the letterhead");
+    assert.equal(war.leader.youAre, "You are Khamenei");
+    assert.equal(war.leader.portrait, "/leaders/khamenei.jpg");
     assert.equal(/You are Khomeini/i.test(war.leader.youAre), false);
     assert.equal(war.imam?.id, "khomeini");
     assert.equal(war.imam?.youAre, "He has the guns");
@@ -377,7 +385,7 @@ describe("TrainViewModel", () => {
     assert.equal(seated.phase, "playing");
     assert.equal(seated.card.id, "seated-1981");
     assert.equal(seated.leader.id, "khamenei");
-    assert.equal(seated.leader.youAre, "You are the letterhead");
+    assert.equal(seated.leader.youAre, "You are Khamenei");
     assert.equal(/You are Khomeini/i.test(seated.leader.youAre), false);
     assert.equal(seated.imam?.id, "khomeini");
     assert.equal(seated.imam?.youAre, "He has the guns");
@@ -396,6 +404,9 @@ describe("TrainViewModel", () => {
     const ui = vm.getState();
     assert.equal(ui.phase, "playing");
     assert.equal(ui.card.id, "iran-iraq-1980");
+    assert.equal(ui.leader.id, "replacement");
+    assert.equal(ui.leader.youAre, "You are the replacement");
+    assert.equal(ui.leader.portrait, "/leaders/letterhead.jpg");
     assert.equal(ui.lastResult?.title, "We congratulate you on your moral choice.");
     assert.match(ui.lastResult?.body ?? "", /convenience store/);
     assert.match(ui.lastResult?.body ?? "", /However, Iran continues on/);
@@ -413,5 +424,18 @@ describe("TrainViewModel", () => {
     const license = vm.licenseById("al-hail-mary");
     assert.ok(license);
     assert.match(license.body, /Reagan still sits/);
+  });
+
+  it("keeping Family Protection deposes Bazargan onto a stick figure, then the embassy", () => {
+    const vm = new TrainViewModel("iran", "D", "veil-1979");
+    assert.equal(vm.getState().leader.id, "bazargan");
+    vm.choose("ir-keep-fpl");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "playing");
+    assert.equal(ui.card.id, "hostages-1979");
+    assert.equal(ui.leader.id, "replacement");
+    assert.equal(ui.leader.youAre, "You are the replacement");
+    assert.equal(ui.imam?.id, "khomeini");
+    assert.match(ui.lastResult?.body ?? "", /convenience store/);
   });
 });

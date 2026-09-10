@@ -17,7 +17,11 @@ export function PlayerPlate({
     : `${leader.name} · ${leader.role}`;
   const imam = variant === "imam";
   const grave = variant === "grave";
-  const letterhead = leader.id === "bazargan" || leader.id === "banisadr" || leader.id === "khamenei";
+  const letterhead =
+    leader.id === "bazargan" ||
+    leader.id === "banisadr" ||
+    leader.id === "khamenei" ||
+    leader.id === "replacement";
   const className = [
     "player-plate",
     `player-plate-${leader.id}`,

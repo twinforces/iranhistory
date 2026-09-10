@@ -499,14 +499,14 @@ const weapons1972: Card = {
   status: "playable",
   branchPoint: true,
   situationUs:
-    "Iran muddles along. It easily shakes off Soviet influence. Iran buys weapons from us. Tehran grows prosperous and cosmopolitan. Rural Iran does not.\n\nYou are in Tehran. The Nixon Doctrine says Asian allies defend themselves. The Shah wants a blank check: any conventional American weapon, any quantity. The oil boom will pay the invoice. Khomeini is in Najaf, writing. The Family Protection Law has given urban women divorce rights and a higher marriage age. The hinterlands have not read it.",
+    "Iran muddles along. It easily shakes off Soviet influence. Iran buys weapons from us. Tehran grows prosperous and cosmopolitan. Rural Iran does not.\n\nYou are in Tehran. Britain left east of Suez in 1971. The Nixon Doctrine says no more Vietnams: Asian allies defend themselves. He has the oil. Twin pillars with the Saudis. He wants a blank check: any conventional American weapon, any quantity. The oil boom will pay the invoice. Khomeini is in Najaf, writing. The Family Protection Law has given urban women divorce rights and a higher marriage age. The hinterlands have not read it.",
   situationIranShah:
     "Iran muddles along. You shook off Soviet influence. You buy American weapons. Tehran is prosperous and cosmopolitan. Rural Iran is not.\n\nNixon is in town. He will sell you anything that is not a bomb. SAVAK is yours. The Family Protection Law is on the books. The cleric you exiled is still writing from Najaf.",
   actionPrompt: "What do you want to do?",
   referee: {
     tags: ["LT", "IT"],
     paragraphs: [
-      "LT: May 1972, Nixon and Kissinger in Tehran. The Shah may buy any US conventional weapons system, any quantity. Twin pillars: Iran and Saudi Arabia as Gulf policemen under the Nixon Doctrine. Arms sales jump from the low hundreds of millions toward the billions after the oil shock. Family Protection Law 1967, expanded 1975: divorce through courts, marriage age up, polygamy squeezed.",
+      "LT: Britain completed the east-of-Suez withdrawal in 1971. The Nixon Doctrine said no more American infantries for Asian wars. The Shah had oil money. Twin pillars: Iran and Saudi Arabia as Gulf policemen. May 1972, Nixon and Kissinger in Tehran. The Shah may buy any US conventional weapons system, any quantity. Arms sales jump from the low hundreds of millions toward the billions after the oil shock. Family Protection Law 1967, expanded 1975: divorce through courts, marriage age up, polygamy squeezed.",
       "IT: Tehran's cafes, cinemas, universities, and unveiled women are real. So is the hinterland that never saw the boom. Growing liberals looks like anti-communist hygiene. It is also a constituency with no barracks. Johnson's Status of Forces fight and Khomeini's exile already happened on the way here.",
       "The next stop is still 1979. You are choosing how fat the urban liberal bar is when the cleric comes back.",
     ],
@@ -515,19 +515,19 @@ const weapons1972: Card = {
     {
       id: "al-hinterland",
       title: "Spend the oil on the villages",
-      body: "Historically the catalog won. A king who buys clinics instead of F-14s might keep the hinterland off the square. Khomeini loses the village. The army likes him less. AL on whether that holds 1979.",
+      body: "Historically the catalog won. A king who buys clinics instead of F-14s might keep the hinterland off the square. If it works, that is the successful fork. Khomeini loses the village. The army likes him less. AL on whether that holds 1979.",
     },
   ],
   briefings: [
     {
       faction: "cia",
       audience: "us",
-      rant: "Give him the catalog. Twin pillars. Him and the Sauds. The hinterland is his problem until it is ours.",
+      rant: "Britain is gone east of Suez. We are not putting a division on a beach. Give him the catalog. Twin pillars. Him and the Sauds. He has the oil. The hinterland is his problem until it is ours.",
     },
     {
       faction: "my_party",
       audience: "us",
-      rant: "He has the oil. We have the factories. A policeman of the Gulf photographs as burden-sharing. Do not put a division on a beach.",
+      rant: "No more Vietnams. He has the oil. We have the factories. A policeman of the Gulf photographs as burden-sharing. Do not put a division on a beach.",
     },
     {
       faction: "opposing_party",
@@ -642,7 +642,7 @@ const revolution1979: Card = {
     {
       id: "al-hinterland-holds",
       title: "The hinterland holds",
-      body: "The villages ate the oil. They did not come to the square. Khomeini stays in Paris. The army is cooler than it was. A king who held 1979 has no later rail in this slice. AL.",
+      body: "The villages ate the oil. They did not come to the square. Khomeini stays in Paris. The army is cooler than it was. This is the successful fork. A king who held 1979 has no later rail in this slice because history did not take it. AL.",
     },
   ],
   briefings: [
@@ -782,7 +782,7 @@ const veil1979: Card = {
     {
       id: "al-keep-fpl",
       title: "Keeping Family Protection",
-      body: "Historically the Imam voids it. A smiling face who tries to keep the law still does not have the guns. The embassy is already the next exam. Stamp it.",
+      body: "Historically the Imam voids it. A smiling face who tries to keep the law is deposed. He can live. A replacement sits the stamp. The embassy is already the next exam. Stamp it.",
     },
   ],
   briefings: [
@@ -862,8 +862,12 @@ const veil1979: Card = {
       kind: "soft",
       face: "bazargan",
       artisticLicense: "al-keep-fpl",
+      flags: { letterhead_generic: true },
       deltas: { liberals: 8, irgc: -8, leader: -8, street: 4, europeans: 4 },
       nextCard: "hostages-1979",
+      ...moralEpilogue(
+        "You kept the statute. The Imam did not. They thank you for the principle. They do not thank you with a barracks. You retire. You write the book. You emigrate to Los Angeles. You open a convenience store with the proceeds. Someone else stamps the ministries. The embassy is still the next exam.",
+      ),
     },
     {
       id: "ir-repeal-fpl",
@@ -1079,7 +1083,7 @@ const resigned1979: Card = {
       face: "banisadr",
       artisticLicense: "al-refuse-letterhead",
       nextCard: "iran-iraq-1980",
-      flags: { iran_face: "banisadr" },
+      flags: { iran_face: "banisadr", letterhead_generic: true },
       deltas: { leader: -4, irgc: 6, street: 2 },
       ...moralEpilogue(
         "You retire. You write the book. You emigrate to Los Angeles. You open a convenience store with the proceeds. Night shift. Lottery tickets. The revolution is a chapter. The register is the job. Someone else sits the stamp.",
@@ -1113,14 +1117,14 @@ const iranIraq1980: Card = {
     paragraphs: [
       "LT: 22 September 1980, Iraq invades. The war lasts eight years. Chemical weapons against Iranians and Kurds. Gulf Arabs bankroll Iraq on the order of tens of billions. France sells Super Etendards and Exocets. The hostages are still held until 20 January 1981.",
       "IT: Washington's incentive is let's-you-and-him-fight. A 1992 British investigation put the quiet European objective in one line: sustain the war so neither side wins. The IRGC's lesson is never again a fair fight.",
-      "Carter is still in the chair. The 1980 election is the next exam, not this one.",
+      "Carter is still in the chair. Official neutrality is the file. The hostages are the exam. The tilt is a later president's later year.",
     ],
   },
   artisticLicense: [
     {
-      id: "al-no-tilt",
-      title: "No tilt",
-      body: "Historically the US tilts to Iraq while the hostages are still a nightly open. A Washington that stays out of the war is a fork. The war still happens. Stamp it.",
+      id: "al-tilt-early",
+      title: "Tilt in 1980",
+      body: "Carter stayed officially neutral. The hostages were the exam. The tilt is Reagan's 1982 file, after Iran started winning. A 1980 tilt is too early. Stamp it.",
     },
     {
       id: "al-artesh-war",
@@ -1132,12 +1136,12 @@ const iranIraq1980: Card = {
     {
       faction: "cia",
       audience: "us",
-      rant: "Let them bleed. A tilt to Baghdad is cheap. A rescue is not. The clip is the campaign. The war is someone else's furnace.",
+      rant: "The hostages are the exam. A tilt is a later file. Let them bleed without your fingerprints this week. A rescue is not this card.",
     },
     {
       faction: "my_party",
       audience: "us",
-      rant: "The hostages are the exam. Saddam is a later file. Tilt if it looks like strength. Do not put Americans on the front.",
+      rant: "The hostages are the exam. Saddam is a later file. Do not put Americans on the front.",
     },
     {
       faction: "opposing_party",
@@ -1184,7 +1188,7 @@ const iranIraq1980: Card = {
       label: "Tilt to Iraq",
       summary: "Let them bleed. Baghdad gets the quiet help.",
       kind: "covert",
-      historical: true,
+      artisticLicense: "al-tilt-early",
       deltas: { cia: 8, saudis: 10, europeans: 6, my_party: -4, opposing_party: 6, media: 4 },
       nextCard: "election-1980",
     },
@@ -1193,7 +1197,7 @@ const iranIraq1980: Card = {
       label: "Stay out of the war",
       summary: "The clip is the campaign. Saddam is not your furnace.",
       kind: "walk",
-      artisticLicense: "al-no-tilt",
+      historical: true,
       deltas: { cia: -6, saudis: -8, europeans: -4, my_party: 4 },
       nextCard: "election-1980",
     },
@@ -1217,13 +1221,14 @@ const iranIraq1980: Card = {
       face: LETTERHEAD,
       artisticLicense: "al-artesh-war",
       nextCard: "impeached-1981",
+      flags: { letterhead_generic: true },
       deltas: { irgc: -8, leader: -10, street: 4, europeans: 4 },
       ...moralEpilogue(
         "You tried to command the leftover army. They thank you for the principle. They do not thank you with a barracks. You retire. You write the book. You emigrate to Los Angeles. You open a convenience store with the proceeds. The Guards have the war anyway.",
       ),
     },
   ],
-  sources: ["wiki-iran-iraq-aid", "cfr-timeline", "nara-hostages"],
+  sources: ["wiki-iran-iraq-aid", "us-iraq-tilt", "cfr-timeline", "nara-hostages"],
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
@@ -1372,12 +1377,97 @@ const inaugurated1981: Card = {
       summary: "The oath is yours. So is the bill.",
       kind: "hard",
       historical: true,
-      nextCard: "lebanon-1983",
+      nextCard: "tilt-1982",
       deltas: { my_party: 6, opposing_party: -4, media: 8, cia: 4 },
     },
   ],
   iranChoices: [],
   sources: ["nara-hostages", "cfr-timeline"],
+  visibleFactions: REVOLUTION,
+  clocksOn: false,
+  sloganVolume: 2,
+  next: "tilt-1982",
+};
+
+const tilt1982: Card = {
+  id: "tilt-1982",
+  year: 1982,
+  yearLabel: "1982",
+  title: "Iran is winning",
+  era: "war",
+  status: "playable",
+  branchPoint: true,
+  situationUs:
+    "Iran has pushed into Iraq. The war is no longer a gift. Baghdad wants targeting intel. The hostages already walked.\n\nA cable is on the desk: share what we know, keep the furnace even, then dry up Iran's arms. Operation Staunch is being written. This is the week the tilt actually happens.",
+  actionPrompt: "What do you want to do?",
+  referee: {
+    tags: ["LT", "IT"],
+    paragraphs: [
+      "LT: 1982, Iranian offensives push into Iraqi territory. Reagan's CIA shares targeting intelligence with Baghdad. Operation Staunch, 1983, tries to cut Iran's arms. Carter's 1980 file was official neutrality while the hostages ran. The tilt is this year, this president.",
+      "IT: Washington's incentive is still let's-you-and-him-fight. A 1982 tilt is not a 1980 rescue. The hostages walked. The war did not.",
+    ],
+  },
+  artisticLicense: [
+    {
+      id: "al-no-tilt-1982",
+      title: "Stay out in 1982",
+      body: "Historically Reagan tilts. A Washington that stays neutral after Iran starts winning is a fork. The war still happens. The Bekaa is still the next exam. Stamp it.",
+    },
+  ],
+  briefings: [
+    {
+      faction: "cia",
+      audience: "us",
+      rant: "They are winning. Share the targeting. Keep the war even. Do not put Americans on the front. Staunch is the later cable. This week's product is the intel.",
+    },
+    {
+      faction: "my_party",
+      audience: "us",
+      rant: "The hostages walked. A cleric winning is the nightmare. Tilt. Do not look like you lost the neighborhood.",
+    },
+    {
+      faction: "opposing_party",
+      audience: "us",
+      rant: "If he helps Baghdad we will call it a gift to a butcher. If he stays out we will call it weakness. We have both sentences.",
+    },
+    {
+      faction: "media",
+      audience: "us",
+      rant: "A yellow ribbon already ran. Intel to Baghdad is a process story. Process dies.",
+    },
+    {
+      faction: "europeans",
+      audience: "us",
+      rant: "Sustain the war so neither side wins. We will sell to both if we can. Keep the oil moving.",
+    },
+    {
+      faction: "saudis",
+      audience: "us",
+      rant: "Write the check to Baghdad. Share the map. Do not put Americans on the front. A cleric winning is the nightmare. We will not go first.",
+    },
+  ],
+  usChoices: [
+    {
+      id: "us-cia-baghdad",
+      label: "Share the intel with Baghdad",
+      summary: "Keep the war even. Do not put Americans on the front.",
+      kind: "covert",
+      historical: true,
+      deltas: { cia: 10, saudis: 10, europeans: 6, my_party: 4, opposing_party: 4, media: 4 },
+      nextCard: "lebanon-1983",
+    },
+    {
+      id: "us-stay-neutral",
+      label: "Stay out of the war",
+      summary: "The hostages walked. The furnace is not yours.",
+      kind: "walk",
+      artisticLicense: "al-no-tilt-1982",
+      deltas: { cia: -8, saudis: -10, europeans: -4, my_party: -4 },
+      nextCard: "lebanon-1983",
+    },
+  ],
+  iranChoices: [],
+  sources: ["wiki-iran-iraq-aid", "us-iraq-tilt", "cfr-timeline"],
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
@@ -1450,7 +1540,7 @@ const impeached1981: Card = {
       kind: "hard",
       face: LETTERHEAD,
       artisticLicense: "al-defy-majles",
-      flags: { iran_face: "khamenei" },
+      flags: { iran_face: "khamenei", letterhead_generic: true },
       nextCard: "seated-1981",
       deltas: { irgc: -6, leader: -8, street: 4 },
       ...moralEpilogue(
@@ -1531,6 +1621,7 @@ const seated1981: Card = {
       face: "khamenei",
       artisticLicense: "al-refuse-khamenei",
       nextCard: "lebanon-1983",
+      flags: { letterhead_generic: true },
       deltas: { irgc: 4, leader: -4, street: 2 },
       ...moralEpilogue(
         "You will not sit a chair the Guards already own. They thank you for the principle. You retire. You write the book. You emigrate to Los Angeles. You open a convenience store with the proceeds. Night shift. Lottery tickets. Someone else sits the stamp. The Bekaa is still the next exam.",
@@ -2334,6 +2425,7 @@ const RAIL: readonly Card[] = [
   iranIraq1980,
   election1980,
   inaugurated1981,
+  tilt1982,
   impeached1981,
   seated1981,
   lebanon1983,

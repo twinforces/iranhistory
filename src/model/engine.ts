@@ -137,9 +137,9 @@ const ENDINGS: Record<Exclude<EndingId, "none">, Omit<Ending, "id">> = {
     canContinue: false,
   },
   shah_holds: {
-    title: "The square never filled",
+    title: "The king still sits",
     referee:
-      "The hinterland ate the oil. The villages did not come to the square. Khomeini stays in Paris. The army is cooler than it was. You still have a throne. You do not have a later rail for a king who held. AL.",
+      "You spent the oil on the villages. The hinterland did not come to the square. Khomeini stays in Paris. The army is cooler, but it still answers. You kept the throne. History did not take this fork, so there is no later rail. This is the successful path. AL.",
     canContinue: false,
   },
   bazargan_resigns: {
@@ -329,6 +329,7 @@ const SEED_1979_CARDS = new Set([
   "iran-iraq-1980",
   "election-1980",
   "inaugurated-1981",
+  "tilt-1982",
   "impeached-1981",
   "seated-1981",
   "lebanon-1983",
@@ -342,6 +343,7 @@ const SHAH_ADMITTED = new Set([
   "iran-iraq-1980",
   "election-1980",
   "inaugurated-1981",
+  "tilt-1982",
   "impeached-1981",
   "seated-1981",
   "lebanon-1983",
@@ -408,6 +410,7 @@ export function newGame(opts: NewGameOpts): GameState {
       iran_face: opts.chair === "iran" ? isolationIranFace(cardId) : "",
       shah_admitted: SHAH_ADMITTED.has(cardId),
       hinterland_spent: false,
+      letterhead_generic: false,
     },
     delayed: {},
     sloganVolume: card.sloganVolume ?? 0,

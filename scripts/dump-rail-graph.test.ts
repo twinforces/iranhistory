@@ -85,4 +85,21 @@ describe("rail graph from the live engine", () => {
     assert.equal(ids.includes("hitler-1938"), false);
     assert.equal(ids.includes("hormuz-2019"), false);
   });
+
+  it("Reagan's 1982 tilt sits between the oath and Beirut; Iran skips it", () => {
+    const tilt = graph.chairs.us.nodes.find((n) => n.cardId === "tilt-1982" && n.phase === "playing");
+    assert.ok(tilt, "1982 tilt never sat");
+    assert.equal(
+      graph.chairs.iran.nodes.some((n) => n.cardId === "tilt-1982"),
+      false,
+    );
+    const fromOath = graph.chairs.us.edges.some(
+      (e) => e.choiceId === "us-sit-reagan" && e.to.includes("tilt-1982"),
+    );
+    assert.equal(fromOath, true);
+    const toBeirut = graph.chairs.us.edges.some(
+      (e) => e.choiceId === "us-cia-baghdad" && e.to.includes("lebanon-1983"),
+    );
+    assert.equal(toBeirut, true);
+  });
 });

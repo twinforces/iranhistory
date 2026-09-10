@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "../view/AppShell.tsx";
 import { PlayView } from "../view/PlayView.tsx";
+import { RailPending } from "../view/RailPending.tsx";
 import type { Chair } from "../model/types.ts";
 
 export const Route = createFileRoute("/play")({
+  pendingComponent: RailPending,
+  pendingMs: 0,
   validateSearch: (s: Record<string, unknown>) => {
     const out: { card?: string; chair?: Chair } = {};
     if (typeof s.card === "string" && s.card.length > 0) out.card = s.card;

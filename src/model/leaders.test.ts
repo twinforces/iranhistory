@@ -52,20 +52,49 @@ describe("leaderFor", () => {
   it("seats Bazargan after the Shah falls, Banisadr after Bazargan resigns", () => {
     const l = leaderFor({ chair: "iran", year: 1979, iranFace: "bazargan" });
     assert.equal(l.id, "bazargan");
-    assert.equal(l.youAre, "You are the letterhead");
+    assert.equal(l.youAre, "You are Bazargan");
+    assert.equal(l.portrait, "/leaders/bazargan.jpg");
     assert.notEqual(l.portrait, leaderFor({ chair: "iran", year: 1979, iranFace: "shah" }).portrait);
     const b = leaderFor({ chair: "iran", year: 1980, iranFace: "banisadr" });
     assert.equal(b.id, "banisadr");
-    assert.equal(b.youAre, "You are the letterhead");
+    assert.equal(b.youAre, "You are Banisadr");
+    assert.equal(b.portrait, "/leaders/banisadr.jpg");
     const k = leaderFor({ chair: "iran", year: 1981, iranFace: "khamenei" });
     assert.equal(k.id, "khamenei");
-    assert.equal(k.youAre, "You are the letterhead");
+    assert.equal(k.youAre, "You are Khamenei");
     assert.equal(/You are Khomeini/i.test(k.youAre), false);
-    assert.equal(k.role.includes("Letterhead"), true);
-    assert.equal(k.portrait, b.portrait);
-    assert.equal(k.portrait, "/leaders/letterhead.jpg");
+    assert.equal(k.portrait, "/leaders/khamenei.jpg");
+    assert.notEqual(k.portrait, b.portrait);
     assert.equal(k.name, "Ali Khamenei");
     assert.equal(b.name, "Abolhassan Banisadr");
+  });
+
+  it("a moral diverge sits a stick-figure replacement, not the real letterhead", () => {
+    const real = leaderFor({ chair: "iran", year: 1979, iranFace: "bazargan" });
+    const generic = leaderFor({
+      chair: "iran",
+      year: 1979,
+      iranFace: "bazargan",
+      generic: true,
+    });
+    assert.equal(real.id, "bazargan");
+    assert.equal(generic.id, "replacement");
+    assert.equal(generic.youAre, "You are the replacement");
+    assert.equal(generic.playing, "A replacement");
+    assert.equal(generic.portrait, "/leaders/letterhead.jpg");
+    assert.notEqual(generic.portrait, real.portrait);
+    assert.equal(
+      leaderFor({ chair: "iran", year: 1980, iranFace: "banisadr", generic: true }).id,
+      "replacement",
+    );
+    assert.equal(
+      leaderFor({ chair: "iran", year: 1981, iranFace: "khamenei", generic: true }).id,
+      "replacement",
+    );
+    assert.equal(
+      leaderFor({ chair: "iran", year: 1979, iranFace: "shah", generic: true }).id,
+      "shah",
+    );
   });
 
   it("the Imam is a second plate, never the seated player", () => {
