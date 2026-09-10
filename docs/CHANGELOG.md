@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-10 - The later letterheads are cartoons
+
+What: Rafsanjani, Khatami, Ahmadinejad, Rouhani, Raisi, and Pezeshkian are ink busts like Mossadegh and Khamenei. Clerics keep the turban. Ahmadinejad and Pezeshkian do not. The stick-figure replacement stays a stick figure.
+
+Why: Photographs on a cartoon desk. Same job as the later US presidents.
+
+
 ## 2026-09-10 - The later presidents are cartoons
 
 What: Johnson, Ford, Reagan, Bush 41, Clinton, Bush 43, Obama, Trump, and Biden are ink busts like Ike and Kennedy. Same cream paper, same hatching. Trump 1 and Trump 2 share the plate.

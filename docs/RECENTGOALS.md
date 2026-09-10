@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## The later letterheads are cartoons, 2026-09-10
+
+What: Rafsanjani through Pezeshkian are editorial ink busts. Clerics keep the turban. The jacket and the suit do not get one.
+
+Why: Iran's later plates were photographs. Mossadegh already was not.
+
+
 ## The later presidents are cartoons, 2026-09-10
 
 What: Johnson through Biden, including both Trumps, are editorial ink busts. Same medium as Ike.
