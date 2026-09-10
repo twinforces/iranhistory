@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T23:09:03.095Z",
+  "generated": "2026-09-10T23:25:38.434Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -205,6 +205,19 @@
           "year": 1981,
           "yearLabel": "January 1981",
           "title": "Reagan takes the oath",
+          "era": "war",
+          "face": "reagan",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:delist-1982:us:playing:live:us-delist-iraq,us-keep-iraq-listed",
+          "chair": "us",
+          "cardId": "delist-1982",
+          "year": 1982,
+          "yearLabel": "February 1982",
+          "title": "Iraq comes off the terrorism list",
           "era": "war",
           "face": "reagan",
           "phase": "playing",
@@ -878,11 +891,31 @@
         },
         {
           "from": "us:inaugurated-1981:us:playing:live:us-sit-reagan",
-          "to": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+          "to": "us:delist-1982:us:playing:live:us-delist-iraq,us-keep-iraq-listed",
           "choiceId": "us-sit-reagan",
           "label": "Sit the presidency",
           "historical": true,
           "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:delist-1982:us:playing:live:us-delist-iraq,us-keep-iraq-listed",
+          "to": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+          "choiceId": "us-delist-iraq",
+          "label": "Take Iraq off the list",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:delist-1982:us:playing:live:us-delist-iraq,us-keep-iraq-listed",
+          "to": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
+          "choiceId": "us-keep-iraq-listed",
+          "label": "Keep them on the list",
+          "historical": false,
+          "artisticLicense": "al-keep-iraq-listed",
           "ending": null,
           "faceChange": null
         },
@@ -1457,7 +1490,7 @@
           "faceChange": null
         }
       ],
-      "terminals": 343597383681
+      "terminals": 687194767361
     },
     "iran": {
       "nodes": [
@@ -3188,6 +3221,21 @@
       ],
       "landCardId": "inaugurated-1981",
       "landTitle": "Reagan takes the oath",
+      "landFace": "reagan"
+    },
+    {
+      "chair": "us",
+      "from": "us:delist-1982:us:playing:live:us-delist-iraq,us-keep-iraq-listed",
+      "cardId": "delist-1982",
+      "title": "Iraq comes off the terrorism list",
+      "yearLabel": "February 1982",
+      "face": "reagan",
+      "choiceLabels": [
+        "Take Iraq off the list",
+        "Keep them on the list"
+      ],
+      "landCardId": "tilt-1982",
+      "landTitle": "Iran is winning. Reagan tilts to Iraq",
       "landFace": "reagan"
     },
     {

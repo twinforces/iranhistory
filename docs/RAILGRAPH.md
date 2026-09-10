@@ -9,10 +9,10 @@ over and over. The unique graph is small.
 
 | Chair | Unique nodes | Edges | Terminal path counts |
 | --- | --- | --- | --- |
-| US | 47 | 84 | 343597383681 |
+| US | 48 | 86 | 687194767361 |
 | Iran | 54 | 87 | 16131314706 |
 
-Collapses: 68 live (playing to the same next card).
+Collapses: 69 live (playing to the same next card).
 Cup continues to the robe. 2026 is history arriving.
 
 Unwired playable from 1953: (none)
@@ -53,6 +53,7 @@ flowchart TB
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq["September 1980 carter"]:::collapse
   us_election_1980_us_playing_live_us_hail_mary_us_run_again["November 1980 carter"]:::collapse
   us_inaugurated_1981_us_playing_live_us_sit_reagan["January 1981 reagan"]:::play
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed["February 1982 reagan"]:::collapse
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral["1982 reagan"]:::collapse
   us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa["1982–1983 reagan"]:::collapse
   us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles["1985–1987 reagan"]:::collapse
@@ -110,7 +111,9 @@ flowchart TB
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -.->|"AL Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
-  us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
+  us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -->|"H Take Iraq off the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -.->|"AL Keep them on the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -->|"H Share the intel with Baghdad"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -.->|"AL Stay out of the war"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa -->|"H Bring them home"| us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles
@@ -350,6 +353,7 @@ flowchart TB
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq["September 1980 Iraq invades Iran / carter"]:::collapse
   us_election_1980_us_playing_live_us_hail_mary_us_run_again["November 1980 Carter runs for re-election / carter"]:::collapse
   us_inaugurated_1981_us_playing_live_us_sit_reagan["January 1981 Reagan takes the oath / reagan"]:::play
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed["February 1982 Iraq comes off the terrorism list / reagan"]:::collapse
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral["1982 Iran is winning. Reagan tilts to Iraq / reagan"]:::collapse
   us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa["1982–1983 Hezbollah bombs the Marines in Beirut / reagan"]:::collapse
   us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles["1985–1987 Iran-Contra: missiles for hostages / reagan"]:::collapse
@@ -407,7 +411,9 @@ flowchart TB
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -.->|"AL Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
-  us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
+  us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -->|"H Take Iraq off the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -.->|"AL Keep them on the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -->|"H Share the intel with Baghdad"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -.->|"AL Stay out of the war"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa -->|"H Bring them home"| us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles
@@ -638,6 +644,7 @@ flowchart TB
 | us | Summer 1980 | carter | Let's you and him fight | Stay out of the way / Tell Saddam no | Iraq invades Iran (carter) |
 | us | September 1980 | carter | Iraq invades Iran | Tilt to Iraq / Stay out of the war | Carter runs for re-election (carter) |
 | us | November 1980 | carter | Carter runs for re-election | Run again / Throw a Hail Mary | Reagan takes the oath (reagan) |
+| us | February 1982 | reagan | Iraq comes off the terrorism list | Take Iraq off the list / Keep them on the list | Iran is winning. Reagan tilts to Iraq (reagan) |
 | us | 1982 | reagan | Iran is winning. Reagan tilts to Iraq | Share the intel with Baghdad / Stay out of the war | Hezbollah bombs the Marines in Beirut (reagan) |
 | us | 1982–1983 | reagan | Hezbollah bombs the Marines in Beirut | Bring them home / Stay and hit the Bekaa | Iran-Contra: missiles for hostages (reagan) |
 | us | 1985–1987 | reagan | Iran-Contra: missiles for hostages | Sell them the missiles / Keep the embargo | Khomeini drinks the poison chalice (reagan) |

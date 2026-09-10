@@ -247,6 +247,8 @@ describe("Ike to Carter", () => {
     assert.equal(g.party, "R");
     g = applyChoice(g, "us-sit-reagan");
     assert.equal(g.phase, "playing");
+    assert.equal(g.cardId, "delist-1982");
+    g = applyChoice(g, "us-delist-iraq");
     assert.equal(g.cardId, "tilt-1982");
     g = applyChoice(g, "us-cia-baghdad");
     assert.equal(g.phase, "playing");
@@ -369,9 +371,15 @@ describe("Ike to Carter", () => {
     const oath = cardById("inaugurated-1981");
     assert.ok(oath);
     assert.equal(oath.usChoices.find((c) => c.id === "us-sit-reagan")?.ending, undefined);
-    assert.equal(oath.usChoices.find((c) => c.id === "us-sit-reagan")?.nextCard, "tilt-1982");
+    assert.equal(oath.usChoices.find((c) => c.id === "us-sit-reagan")?.nextCard, "delist-1982");
     assert.equal(oath.usChoices.some((c) => c.id === "us-leave-oath"), false);
     assert.equal(oath.usChoices.length, 1);
+    const delist = cardById("delist-1982");
+    assert.ok(delist);
+    assert.equal(delist.usChoices.find((c) => c.id === "us-delist-iraq")?.historical, true);
+    assert.equal(delist.usChoices.find((c) => c.id === "us-delist-iraq")?.nextCard, "tilt-1982");
+    assert.equal(delist.usChoices.find((c) => c.id === "us-keep-iraq-listed")?.artisticLicense, "al-keep-iraq-listed");
+    assert.equal(delist.iranChoices.length, 0);
     const tilt = cardById("tilt-1982");
     assert.ok(tilt);
     assert.equal(tilt.usChoices.find((c) => c.id === "us-cia-baghdad")?.historical, true);
@@ -441,6 +449,8 @@ describe("Ike to Carter", () => {
     assert.equal(lineup.flags.iran_face, "banisadr");
     const claw = newGame({ chair: "us", party: "R", cardId: "eagle-claw-1980" });
     assert.equal(claw.party, "D");
+    const listed = newGame({ chair: "us", party: "D", cardId: "delist-1982" });
+    assert.equal(listed.party, "R");
     const seated = newGame({ chair: "iran", party: "D", cardId: "seated-1981" });
     assert.equal(seated.flags.iran_face, "khamenei");
   });
@@ -830,5 +840,23 @@ describe("late rail", () => {
     assert.match(lineup.situationIran ?? "", /Saudis/);
     assert.equal(lineup.usChoices.find((c) => c.id === "us-let-saddam")?.historical, true);
     assert.equal(lineup.usChoices.find((c) => c.id === "us-warn-saddam")?.artisticLicense, "al-warn-saddam");
+  });
+
+  it("taking Iraq off the terrorism list is how the chemistry moves; keeping them on still reaches the intel tilt", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "delist-1982" });
+    const off = applyChoice(g, "us-delist-iraq");
+    assert.equal(off.phase, "playing");
+    assert.equal(off.cardId, "tilt-1982");
+    const keep = applyChoice(g, "us-keep-iraq-listed");
+    assert.equal(keep.cardId, "tilt-1982");
+    const card = cardById("delist-1982");
+    assert.ok(card);
+    assert.match(card.title, /terrorism list/i);
+    assert.match(card.situationUs ?? "", /precursor|pesticide/i);
+    assert.match(card.referee.paragraphs.join(" "), /mustard|nerve/i);
+    assert.match(card.referee.paragraphs.join(" "), /Europe/);
+    assert.equal(card.iranChoices.length, 0);
+    const blob = card.usChoices.map((c) => `${c.label} ${c.summary}`).join(" ");
+    assert.equal(/halabja|original sin|game over/i.test(blob), false);
   });
 });

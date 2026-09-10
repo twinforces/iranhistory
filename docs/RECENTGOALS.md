@@ -1,5 +1,11 @@
 # RECENTGOALS
 
+## Iraq comes off the terrorism list, 2026-09-10
+
+What: Reagan takes Iraq off the list in February 1982. Dual-use unlocks. Europe sells the chemistry because Baghdad is losing. Then the intel tilt. Iran skips both.
+
+Why: One of the original sins. The tilt card was sharing maps. This is the lock on the licenses.
+
 ## Danger: Coup, Desert One, Let's you and him fight, 2026-09-10
 
 What: Chair-specific 1953 titles. Eagle Claw result card after the rescue. Saudi you-and-him-fight before Saddam invades.

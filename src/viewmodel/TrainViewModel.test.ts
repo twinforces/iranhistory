@@ -312,6 +312,13 @@ describe("TrainViewModel", () => {
     assert.equal(oath.leader.partyLabel, "Republican");
     assert.equal(oath.endingTitle, null);
     vm.choose("us-sit-reagan");
+    const listed = vm.getState();
+    assert.equal(listed.phase, "playing");
+    assert.equal(listed.card.id, "delist-1982");
+    assert.equal(listed.leader.id, "reagan");
+    assert.match(listed.card.title, /terrorism list/i);
+    assert.match(listed.card.situation, /precursor|pesticide/i);
+    vm.choose("us-delist-iraq");
     const tilt = vm.getState();
     assert.equal(tilt.phase, "playing");
     assert.equal(tilt.card.id, "tilt-1982");

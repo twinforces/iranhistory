@@ -84,17 +84,27 @@ describe("rail graph from the live engine", () => {
     assert.equal(ids.includes("the-leader-2026"), true);
   });
 
-  it("Reagan's 1982 tilt sits between the oath and Beirut; Iran skips it", () => {
+  it("Reagan takes Iraq off the terrorism list, then tilts intel; Iran skips both", () => {
+    const listed = graph.chairs.us.nodes.find((n) => n.cardId === "delist-1982" && n.phase === "playing");
+    assert.ok(listed, "1982 delist never sat");
     const tilt = graph.chairs.us.nodes.find((n) => n.cardId === "tilt-1982" && n.phase === "playing");
     assert.ok(tilt, "1982 tilt never sat");
+    assert.equal(
+      graph.chairs.iran.nodes.some((n) => n.cardId === "delist-1982"),
+      false,
+    );
     assert.equal(
       graph.chairs.iran.nodes.some((n) => n.cardId === "tilt-1982"),
       false,
     );
     const fromOath = graph.chairs.us.edges.some(
-      (e) => e.choiceId === "us-sit-reagan" && e.to.includes("tilt-1982"),
+      (e) => e.choiceId === "us-sit-reagan" && e.to.includes("delist-1982"),
     );
     assert.equal(fromOath, true);
+    const toTilt = graph.chairs.us.edges.some(
+      (e) => e.choiceId === "us-delist-iraq" && e.to.includes("tilt-1982"),
+    );
+    assert.equal(toTilt, true);
     const toBeirut = graph.chairs.us.edges.some(
       (e) => e.choiceId === "us-cia-baghdad" && e.to.includes("lebanon-1983"),
     );

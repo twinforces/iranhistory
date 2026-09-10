@@ -1568,12 +1568,97 @@ const inaugurated1981: Card = {
       summary: "The oath is yours. So is the bill.",
       kind: "hard",
       historical: true,
-      nextCard: "tilt-1982",
+      nextCard: "delist-1982",
       deltas: { my_party: 6, opposing_party: -4, media: 8, cia: 4 },
     },
   ],
   iranChoices: [],
   sources: ["nara-hostages", "cfr-timeline"],
+  visibleFactions: REVOLUTION,
+  clocksOn: false,
+  sloganVolume: 2,
+  next: "delist-1982",
+};
+
+const delist1982: Card = {
+  id: "delist-1982",
+  year: 1982,
+  yearLabel: "February 1982",
+  title: "Iraq comes off the terrorism list",
+  era: "war",
+  status: "playable",
+  branchPoint: true,
+  situationUs:
+    "Iraq is on the State Sponsors of Terrorism list. That list is why dual-use licenses are blocked, and why a European pesticide plant for Baghdad is still a diplomatic problem. Iran is turning the war. Baghdad is not doing well.\n\nTake them off and the licenses open. Europe can sell the plants and the precursors. Keep them on and you keep the lock. The Saudis want the furnace even. The cable is on the desk.",
+  actionPrompt: "What do you want to do?",
+  referee: {
+    tags: ["LT", "IT", "AL"],
+    paragraphs: [
+      "LT: 26 February 1982, the Reagan administration removes Iraq from the State Department list of state sponsors of terrorism. Iraq had been on it since 1979 with Syria, Libya, and South Yemen. The list is an Export Administration Act lock: dual-use licenses, credits, a signal to allies. Congress objects. The House later votes to put them back. State does not. Haig says he was not consulted. The press guidance says the decision has no implications for the war.",
+      "IT: The public line is that Iraq reduced support for terrorism. A Pentagon counterterrorism man later said the real reason was to help them succeed against Iran. An NSC man said they were terrified Iraq would lose. Taking them off unlocks US dual-use and tells Europe the chemistry can move. German firms build pesticide plants that are not pesticide plants. From 1983 Iraq uses mustard and nerve agent on Iranian troops. Washington knows. The tilt continues. This is one of the original sins of the 1980s.",
+    ],
+  },
+  artisticLicense: [
+    {
+      id: "al-keep-iraq-listed",
+      title: "Keep them on the list",
+      body: "Historically they come off. Keeping them on does not un-write the war, the intel tilt, or the Bekaa. Europe still wants the oil to move. Stamp it.",
+    },
+  ],
+  briefings: [
+    {
+      faction: "cia",
+      audience: "us",
+      rant: "They're losing. The list is a lock on dual-use. Take it off. We will share maps later. This week's product is the license.",
+    },
+    {
+      faction: "my_party",
+      audience: "us",
+      rant: "A cleric winning is the nightmare. The list is a clerk's bill. Take them off. Do not look like you lost the neighborhood.",
+    },
+    {
+      faction: "opposing_party",
+      audience: "us",
+      rant: "If he delists a terrorist we will run that clip. If he keeps them on we will call it losing the Gulf. We have both sentences.",
+    },
+    {
+      faction: "media",
+      audience: "us",
+      rant: "A terrorism list is a briefs column. A pesticide plant is a process story. Process dies. Gas is a later photograph.",
+    },
+    {
+      faction: "europeans",
+      audience: "us",
+      rant: "If Washington takes them off, we can sell. Pesticide plants. Precursors. Sustain the war so neither side wins. We would like the oil to move.",
+    },
+    {
+      faction: "saudis",
+      audience: "us",
+      rant: "Baghdad does not lose. Take them off. Write the check. Do not put Americans on the front. We will not go first.",
+    },
+  ],
+  usChoices: [
+    {
+      id: "us-delist-iraq",
+      label: "Take Iraq off the list",
+      summary: "Unlock the licenses. Europe can sell the plants and the precursors.",
+      kind: "deal",
+      historical: true,
+      deltas: { europeans: 12, saudis: 8, cia: 6, my_party: 4, opposing_party: 6, media: 4 },
+      nextCard: "tilt-1982",
+    },
+    {
+      id: "us-keep-iraq-listed",
+      label: "Keep them on the list",
+      summary: "A terrorist is a terrorist. The chemistry stays locked.",
+      kind: "walk",
+      artisticLicense: "al-keep-iraq-listed",
+      deltas: { europeans: -10, saudis: -8, cia: -6, opposing_party: -4, media: 6 },
+      nextCard: "tilt-1982",
+    },
+  ],
+  iranChoices: [],
+  sources: ["nsarchive-iraq-tilt", "us-iraq-tilt", "cfr-timeline"],
   visibleFactions: REVOLUTION,
   clocksOn: false,
   sloganVolume: 2,
@@ -1589,7 +1674,7 @@ const tilt1982: Card = {
   status: "playable",
   branchPoint: true,
   situationUs:
-    "Iran has pushed into Iraq. The war is no longer a gift. Baghdad wants targeting intel. The hostages already walked.\n\nA cable is on the desk: share what we know, keep the furnace even, then dry up Iran's arms. Operation Staunch is being written. This is the week the tilt actually happens.",
+    "Iran has pushed into Iraq. The war is no longer a gift. Baghdad wants targeting intel. The hostages already walked.\n\nIraq may already be off the terrorism list. Dual-use may already be moving. A cable is on the desk: share what we know, keep the furnace even, then dry up Iran's arms. Operation Staunch is being written. This is the week the intel tilt actually happens.",
   actionPrompt: "What do you want to do?",
   referee: {
     tags: ["LT", "IT"],
@@ -2439,6 +2524,7 @@ const RAIL: readonly Card[] = [
   iranIraq1980,
   election1980,
   inaugurated1981,
+  delist1982,
   tilt1982,
   impeached1981,
   seated1981,

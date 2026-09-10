@@ -306,6 +306,18 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
       "The April 1980 rescue. Helicopters off the USS Nimitz toward a desert strip called Desert One. A sandstorm, a collision, eight Americans dead. The wreckage is left behind. The hostages are scattered. They are not freed.",
   },
   {
+    id: "terrorism-list",
+    term: "State Sponsors of Terrorism",
+    aliases: [
+      "State Sponsors of Terrorism",
+      "terrorism list",
+      "terrorist nation list",
+      "state sponsors of terrorism",
+    ],
+    definition:
+      "A State Department list from 1979. Being on it locks dual-use export licenses and US credits. Iraq is put on in 1979. Reagan takes Iraq off in February 1982 so the licenses, and Europe's chemistry, can move.",
+  },
+  {
     id: "followers-imam",
     term: "Followers of the Imam",
     aliases: [

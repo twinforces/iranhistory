@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-10 - Iraq comes off the terrorism list
+
+What: Reagan's February 1982 original sin is its own card. Iraq comes off the State Sponsors of Terrorism list so dual-use licenses open and Europe can sell the plants and the precursors. Keep them on is AL and still reaches the intel tilt. Iran never sees the cable.
+
+Why: The tilt card was intel-to-Baghdad. The delisting is how the chemistry moves. Baghdad was not doing well. That is the because.
+
 ## 2026-09-10 - Danger: Coup, Desert One, Let's you and him fight
 
 What: 1953 titles split by chair. Iran sees Danger: Coup! Ike sees To Coup or Not to Coup. Authorizing the rescue now has a Desert One result card: eight dead, Tabas, Vance resigns, hostages still inside. Keep talking skips the wreck. Both chairs then get Let's you and him fight: the Saudis want Saddam to take care of the Shia problem, Washington and Europe stay out of the way, then Iraq invades Iran.
