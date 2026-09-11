@@ -367,7 +367,7 @@ const RAFSANJANI_ISOLATION = new Set([
   "wall-1997",
 ]);
 
-const KHATAMI_ISOLATION = new Set(["natanz-2002", "baghdad-2003", "myth-2005"]);
+const KHATAMI_ISOLATION = new Set(["nine-eleven-2001", "natanz-2002", "baghdad-2003", "myth-2005"]);
 
 const AHMADINEJAD_ISOLATION = new Set(["green-2009", "stuxnet-2010", "jcpoa-2015"]);
 
@@ -413,6 +413,7 @@ const SEED_1979_CARDS = new Set([
   "dual-containment-1993",
   "khobar-1996",
   "wall-1997",
+  "nine-eleven-2001",
   "natanz-2002",
   "baghdad-2003",
   "myth-2005",

@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## September 11 is on the rail, 2026-09-10
+
+What: 9/11 is a tutorial stop. Khamenei is not the top US enemy that week. Baghdad names the soldiers if the militias go. No body-count chrome.
+
+Why: The jump from 1997 to Natanz skipped the week the map changed.
+
+
 ## Farsi edition, 2026-09-10
 
 What: Full playable Farsi. Language switch EN | فا. RTL. Overlay JSON, not a second engine.

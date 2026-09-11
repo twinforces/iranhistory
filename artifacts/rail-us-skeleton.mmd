@@ -30,6 +30,7 @@ flowchart TB
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one["1993 Clinton contains Iraq and Iran together / clinton"]:::collapse
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar["1996 Khobar Towers: nineteen airmen dead / clinton"]:::collapse
   us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall["1997 Khatami offers a dialogue of civilizations / clinton"]:::collapse
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001["2001 September 11: Al-Qaeda hits New York and Washington / bush43"]:::collapse
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax["2002 The Natanz enrichment plant is revealed / bush43"]:::collapse
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad["2003 The United States takes Baghdad / bush43"]:::collapse
   us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth["2005 Ahmadinejad calls the Holocaust a myth / bush43"]:::collapse
@@ -97,8 +98,10 @@ flowchart TB
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -->|"H Do not strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -.->|"AL Strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"H Go to Afghanistan"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -.->|"AL Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -->|"H Bin the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -.->|"AL Take the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"H Take Baghdad"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth

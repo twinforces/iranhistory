@@ -649,6 +649,7 @@ describe("late rail", () => {
       "sit-nixon-1969",
       "pipeline-1975",
       "robe-1989",
+      "nine-eleven-2001",
       "bounce-2019",
       "hormuz-2019",
       "abraham-2020",
@@ -672,6 +673,7 @@ describe("late rail", () => {
       "robe-1989",
       "kuwait-1990",
       "wall-1997",
+      "nine-eleven-2001",
       "myth-2005",
       "jcpoa-2015",
       "bounce-2019",
@@ -722,6 +724,9 @@ describe("late rail", () => {
     const wall = newGame({ chair: "iran", party: "D", cardId: "wall-1997" });
     assert.equal(wall.flags.iran_face, "rafsanjani");
     assert.equal(choicesFor(wall).some((c) => c.id === "ir-cnn"), true);
+    const nine = newGame({ chair: "iran", party: "D", cardId: "nine-eleven-2001" });
+    assert.equal(nine.flags.iran_face, "khatami");
+    assert.equal(choicesFor(nine).some((c) => c.id === "ir-help-taliban"), true);
     const myth = newGame({ chair: "iran", party: "D", cardId: "myth-2005" });
     assert.equal(myth.flags.iran_face, "khatami");
     assert.equal(choicesFor(myth).some((c) => c.id === "ir-say-myth"), true);
@@ -741,6 +746,7 @@ describe("late rail", () => {
     assert.equal(newGame({ chair: "us", party: "D", cardId: "pipeline-1975" }).party, "R");
     assert.equal(newGame({ chair: "us", party: "R", cardId: "robe-1989" }).party, "R");
     assert.equal(newGame({ chair: "us", party: "R", cardId: "dual-containment-1993" }).party, "D");
+    assert.equal(newGame({ chair: "us", party: "D", cardId: "nine-eleven-2001" }).party, "R");
     assert.equal(newGame({ chair: "us", party: "D", cardId: "natanz-2002" }).party, "R");
     assert.equal(newGame({ chair: "us", party: "R", cardId: "green-2009" }).party, "D");
     assert.equal(newGame({ chair: "us", party: "D", cardId: "archive-2018" }).party, "R");

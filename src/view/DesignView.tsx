@@ -17,7 +17,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "What actually forks?",
     freeze:
-      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, and Contra crates only move meters. Eagle Claw now has a Desert One result card; keep talking skips it; both still meet the Saudis lining Saddam up before the invasion. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's February 1982 original sin is taking Iraq off the terrorism list so Europe can sell the chemistry. The later 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold.",
+      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, and Contra crates only move meters. Eagle Claw now has a Desert One result card; keep talking skips it; both still meet the Saudis lining Saddam up before the invasion. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's February 1982 original sin is taking Iraq off the terrorism list so Europe can sell the chemistry. The later 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold. 9/11 is a tutorial stop: Khamenei is not the top enemy that week; both buttons next.",
   },
   {
     q: "Mossadegh dead end?",
@@ -78,6 +78,16 @@ const QUESTIONS: { q: string; freeze: string }[] = [
     q: "Farsi edition?",
     freeze:
       "Locale is view-layer, not GameState. EN | فا in the header. Engine stays English. Overlay JSON keyed by card id. historical: true never graves except the_leader. Headlines still name the event. Receipts source titles stay English. Design freeze stays English. Vazirmatn for Persian. html.dir=rtl. LT/IT/DK/AL/GR prefixes stay Latin then Persian.",
+  },
+  {
+    q: "9/11 and Khamenei as top enemy?",
+    freeze:
+      "After 11 September Khamenei is not the top US enemy. Al-Qaeda is. Iran is not the perpetrator. Historical Iran helps against the Taliban and still gets axis of evil in January 2002. Making it Iran's war is AL: the cave is not in Tehran. Both buttons next. Baghdad: if Iran sends the militias they start killing US soldiers. Watch still sends later. The soldiers still die. The difference is the calendar. That lives in the briefing, not on the button.",
+  },
+  {
+    q: "Body-count chrome?",
+    freeze:
+      "No. A running US Dead / Iranian Dead / Captured scoreboard is the morality play the home copy exists to kill. Iran-Iraq is hundreds of thousands. Beirut is 241. Khobar is 19. 9/11 is 2,977. Iraq EFPs are hundreds. Protester slaughters and school poisonings are different kinds of killing. Mixing them into one ticker lets the war dead wash out the rest, and makes Iran look like the victim of a war it also chose. LT numbers live on the card. Do not add captured/dead counters to the meters.",
   },
   {
     q: "Hormuz",

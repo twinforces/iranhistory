@@ -229,6 +229,10 @@ describe("TrainViewModel", () => {
       "You are Clinton",
     );
     assert.equal(
+      new TrainViewModel("us", "R", "nine-eleven-2001").getState().leader.id,
+      "bush43",
+    );
+    assert.equal(
       new TrainViewModel("us", "R", "natanz-2002").getState().leader.id,
       "bush43",
     );
@@ -492,6 +496,37 @@ describe("TrainViewModel", () => {
     const us = new TrainViewModel("us", "R", "lebanon-1983").getState();
     assert.equal(/chemical weapons|nuke plant|Death to Europe/i.test(us.card.situation), false);
     assert.equal(us.slogan, null);
+  });
+
+  it("September 11 knocks Khamenei off the top of the US board", () => {
+    const us = new TrainViewModel("us", "R", "nine-eleven-2001").getState();
+    assert.equal(us.leader.id, "bush43");
+    assert.match(us.card.title, /September 11/);
+    assert.match(us.card.situation, /Khamenei is not the top of the board/);
+    assert.match(us.card.situation, /Al-Qaeda/);
+    const cia = us.card.briefings.find((b) => b.faction === "cia");
+    assert.match(cia?.rant ?? "", /Khamenei just fell off the top of the board/);
+    for (const c of us.choices) {
+      assert.equal(/historical|what happened/i.test(`${c.label} ${c.summary}`), false);
+    }
+    const iran = new TrainViewModel("iran", "D", "nine-eleven-2001").getState();
+    assert.equal(iran.leader.id, "khatami");
+    assert.match(iran.card.situation, /Not you/);
+    assert.equal(iran.imam?.id, "khamenei_imam");
+  });
+
+  it("Baghdad Iran briefings name killing US soldiers if the militias go", () => {
+    const iran = new TrainViewModel("iran", "D", "baghdad-2003").getState();
+    assert.match(iran.card.situation, /killing American soldiers/);
+    const irgc = iran.card.briefings.find((b) => b.faction === "irgc");
+    assert.match(irgc?.rant ?? "", /kill their soldiers/);
+    for (const c of iran.choices) {
+      assert.equal(/EFP|hundreds|4,500|body count/i.test(`${c.label} ${c.summary}`), false);
+    }
+    const us = new TrainViewModel("us", "R", "baghdad-2003").getState();
+    const cia = us.card.briefings.find((b) => b.faction === "cia");
+    assert.match(cia?.rant ?? "", /Explosively formed penetrators/);
+    assert.match(cia?.rant ?? "", /Your soldiers/);
   });
 
   it("a moral letterhead choice presents the 7-Eleven overlay, then Iran continues", () => {

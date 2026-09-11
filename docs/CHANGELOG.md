@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-10 - September 11 is on the rail
+
+What: Wall 1997 no longer jumps to Natanz. 11 September sits in between. Al-Qaeda, not Khamenei, is the top of the US board that week. Historical Iran helps against the Taliban and still gets axis of evil. Making it Iran's war is AL. Baghdad's Iran briefing now names the invoice: send the militias and they start killing American soldiers. Watch still sends later. No dead/captured scoreboard on the chrome. LT numbers live on the card.
+
+Why: We skipped the week the top enemy changed. A body-count ticker would be the morality play the home copy exists to kill.
+
+
 ## 2026-09-10 - Farsi edition
 
 What: EN | فا in the header. Locale is view-layer, not GameState. Every playable card overlays Persian: titles, situations, briefings, referee, buttons, licenses, endings, plates. html.dir=rtl. Vazirmatn. Receipts source titles stay English. Design freeze stays English. LT/IT/DK/AL/GR prefixes stay Latin.

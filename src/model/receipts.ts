@@ -23,7 +23,7 @@ export const RECEIPTS: readonly Receipt[] = [
     publisher: "Council on Foreign Relations",
     url: "https://www.cfr.org/timelines/us-relations-iran-1953-2025",
     kind: "timeline",
-    usedFor: ["rail", "atoms-1957", "sofa-1964", "iran-iraq-1980", "impeached-1981", "seated-1981", "iran-contra-1985", "cup-1988", "robe-1989", "bounce-2019", "natanz-2002", "mahsa-2022", "the-leader-2026", "late"],
+    usedFor: ["rail", "atoms-1957", "sofa-1964", "iran-iraq-1980", "impeached-1981", "seated-1981", "iran-contra-1985", "cup-1988", "robe-1989", "bounce-2019", "nine-eleven-2001", "natanz-2002", "mahsa-2022", "the-leader-2026", "late"],
     note: "Spine dates. Treat as a chronology, not a verdict on motives.",
     truth: "LT",
   },

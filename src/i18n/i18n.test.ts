@@ -89,4 +89,13 @@ describe("Farsi overlay", () => {
     assert.match(rants, /مرگ بر اسرائیل/);
     assert.match(iran.slogan ?? "", /مرگ بر اروپا/);
   });
+
+  it("September 11 Farsi still names Al-Qaeda, not Tehran", () => {
+    const us = new TrainViewModel("us", "R", "nine-eleven-2001").getState("fa");
+    assert.match(us.card.title, /۱۱ سپتامبر/);
+    assert.match(us.card.situation, /القاعده/);
+    assert.match(us.card.situation, /خامنه‌ای این هفته بالای صفحه نیست/);
+    const iran = new TrainViewModel("iran", "D", "baghdad-2003").getState("fa");
+    assert.match(iran.card.situation, /سرباز آمریکایی/);
+  });
 });

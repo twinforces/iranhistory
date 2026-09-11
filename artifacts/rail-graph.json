@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T23:25:38.434Z",
+  "generated": "2026-09-11T00:29:34.557Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -337,6 +337,19 @@
           "title": "Khatami offers a dialogue of civilizations",
           "era": "street",
           "face": "clinton",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "us:nine-eleven-2001:us:playing:live:us-afghanistan,us-iran-war-2001",
+          "chair": "us",
+          "cardId": "nine-eleven-2001",
+          "year": 2001,
+          "yearLabel": "2001",
+          "title": "September 11: Al-Qaeda hits New York and Washington",
+          "era": "war",
+          "face": "bush43",
           "phase": "playing",
           "endingId": null,
           "endingTitle": null
@@ -1081,7 +1094,7 @@
         },
         {
           "from": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
-          "to": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "to": "us:nine-eleven-2001:us:playing:live:us-afghanistan,us-iran-war-2001",
           "choiceId": "us-offer-handshake",
           "label": "Offer the handshake",
           "historical": true,
@@ -1091,11 +1104,31 @@
         },
         {
           "from": "us:wall-1997:us:playing:live:us-offer-handshake,us-stay-wall",
-          "to": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "to": "us:nine-eleven-2001:us:playing:live:us-afghanistan,us-iran-war-2001",
           "choiceId": "us-stay-wall",
           "label": "Stay behind the wall",
           "historical": false,
           "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:nine-eleven-2001:us:playing:live:us-afghanistan,us-iran-war-2001",
+          "to": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "choiceId": "us-afghanistan",
+          "label": "Go to Afghanistan",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "us:nine-eleven-2001:us:playing:live:us-afghanistan,us-iran-war-2001",
+          "to": "us:natanz-2002:us:playing:live:us-bin-fax,us-take-fax",
+          "choiceId": "us-iran-war-2001",
+          "label": "Make this Iran's war",
+          "historical": false,
+          "artisticLicense": "al-iran-war-2001",
           "ending": null,
           "faceChange": null
         },
@@ -1490,7 +1523,7 @@
           "faceChange": null
         }
       ],
-      "terminals": 687194767361
+      "terminals": 1374389534721
     },
     "iran": {
       "nodes": [
@@ -1893,6 +1926,19 @@
           "title": "Khatami offers a dialogue of civilizations",
           "era": "street",
           "face": "rafsanjani",
+          "phase": "playing",
+          "endingId": null,
+          "endingTitle": null
+        },
+        {
+          "id": "iran:nine-eleven-2001:khatami:playing:live:ir-help-taliban,ir-sit-911",
+          "chair": "iran",
+          "cardId": "nine-eleven-2001",
+          "year": 2001,
+          "yearLabel": "2001",
+          "title": "September 11: Al-Qaeda hits New York and Washington",
+          "era": "war",
+          "face": "khatami",
           "phase": "playing",
           "endingId": null,
           "endingTitle": null
@@ -2660,7 +2706,7 @@
         },
         {
           "from": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
-          "to": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "to": "iran:nine-eleven-2001:khatami:playing:live:ir-help-taliban,ir-sit-911",
           "choiceId": "ir-cnn",
           "label": "Talk to the people",
           "historical": true,
@@ -2670,13 +2716,33 @@
         },
         {
           "from": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
-          "to": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "to": "iran:nine-eleven-2001:khatami:playing:live:ir-help-taliban,ir-sit-911",
           "choiceId": "ir-meet-secretary",
           "label": "Meet the Secretary",
           "historical": false,
           "artisticLicense": "al-handshake",
           "ending": null,
           "faceChange": "rafsanjani -> khatami"
+        },
+        {
+          "from": "iran:nine-eleven-2001:khatami:playing:live:ir-help-taliban,ir-sit-911",
+          "to": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "choiceId": "ir-help-taliban",
+          "label": "Help against the Taliban",
+          "historical": true,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
+        },
+        {
+          "from": "iran:nine-eleven-2001:khatami:playing:live:ir-help-taliban,ir-sit-911",
+          "to": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
+          "choiceId": "ir-sit-911",
+          "label": "Sit it out",
+          "historical": false,
+          "artisticLicense": null,
+          "ending": null,
+          "faceChange": null
         },
         {
           "from": "iran:natanz-2002:khatami:playing:live:ir-keep-spinning,ir-pause-natanz",
@@ -3069,7 +3135,7 @@
           "faceChange": null
         }
       ],
-      "terminals": 16131314706
+      "terminals": 32262607890
     }
   },
   "collapses": [
@@ -3368,6 +3434,21 @@
       "choiceLabels": [
         "Offer the handshake",
         "Stay behind the wall"
+      ],
+      "landCardId": "nine-eleven-2001",
+      "landTitle": "September 11: Al-Qaeda hits New York and Washington",
+      "landFace": "bush43"
+    },
+    {
+      "chair": "us",
+      "from": "us:nine-eleven-2001:us:playing:live:us-afghanistan,us-iran-war-2001",
+      "cardId": "nine-eleven-2001",
+      "title": "September 11: Al-Qaeda hits New York and Washington",
+      "yearLabel": "2001",
+      "face": "bush43",
+      "choiceLabels": [
+        "Go to Afghanistan",
+        "Make this Iran's war"
       ],
       "landCardId": "natanz-2002",
       "landTitle": "The Natanz enrichment plant is revealed",
@@ -3863,6 +3944,21 @@
       "choiceLabels": [
         "Talk to the people",
         "Meet the Secretary"
+      ],
+      "landCardId": "nine-eleven-2001",
+      "landTitle": "September 11: Al-Qaeda hits New York and Washington",
+      "landFace": "khatami"
+    },
+    {
+      "chair": "iran",
+      "from": "iran:nine-eleven-2001:khatami:playing:live:ir-help-taliban,ir-sit-911",
+      "cardId": "nine-eleven-2001",
+      "title": "September 11: Al-Qaeda hits New York and Washington",
+      "yearLabel": "2001",
+      "face": "khatami",
+      "choiceLabels": [
+        "Help against the Taliban",
+        "Sit it out"
       ],
       "landCardId": "natanz-2002",
       "landTitle": "The Natanz enrichment plant is revealed",

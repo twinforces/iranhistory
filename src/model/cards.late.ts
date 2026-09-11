@@ -649,9 +649,84 @@ const wall1997 = play({
       deltas: { europeans: 10, irgc: -12, street: 4, media: 10 },
     },
   ],
+  next: "nine-eleven-2001",
+  clocksOn: false,
+  factions: REVOLUTION,
+});
+
+const nineEleven2001 = play({
+  id: "nine-eleven-2001",
+  year: 2001,
+  yearLabel: "2001",
+  title: "September 11: Al-Qaeda hits New York and Washington",
+  era: "war",
+  situationUs:
+    "11 September. Two towers, the Pentagon, a field in Pennsylvania. 2,977 dead. The hijackers are mostly Saudi. The cave is in Afghanistan. Al-Qaeda. The Taliban.\n\nKhamenei is not the top of the board this week. Iran is an older file. You can go to Afghanistan, or you can make this Iran's war.",
+  situationIran:
+    "The Americans were hit. Nineteen men, mostly Saudi. Not you. They will go to Afghanistan. They may go to Iraq later. You already have a file on the Taliban.\n\nYou can help against the cave, or you can wait for them to remember the older list.",
+  referee: [
+    "LT: 11 September 2001, 2,977 dead. Fifteen of nineteen hijackers Saudi. Al-Qaeda, Taliban. Iran is not the perpetrator. Iran quietly helps the Northern Alliance and the Bonn process. January 2002 Bush names Iran in the axis of evil anyway. 1998-2000 the handshake from 1997 does not arrive.",
+    "IT: The top enemy changed. That is the week. Helping does not get you off the older list. Making it Iran's war is AL: the cave is not in Tehran.",
+  ],
+  al: [
+    {
+      id: "al-iran-war-2001",
+      title: "Make this Iran's war",
+      body: "Historically the war is Afghanistan, then Iraq. Nineteen Saudis. A cave in Kandahar. Iran helped against the Taliban. Hitting Tehran in 2001 is the wrong map. AL.",
+    },
+  ],
+  briefings: [
+    b("cia", "us", "Al-Qaeda. Taliban. The hijackers are Saudi. Iran is not the headline. Khamenei just fell off the top of the board. Go to the cave."),
+    b("my_party", "us", "Afghanistan photographs. Do not look like you are still fighting 1979."),
+    b("opposing_party", "us", "If he does not smash someone we will say he froze. If he smashes Iran we will say he missed the cave."),
+    b("media", "us", "Two towers open the show. A process story about an older enemy in Tehran dies in an hour."),
+    b("saudis", "us", "Fifteen of the nineteen were ours. Look at Kabul. Not Riyadh. Iran is still a problem. Not this week's."),
+    b("europeans", "us", "Article 5. We are with you in Afghanistan. Do not make this a war on a mosque, and do not skip to Tehran."),
+    b("irgc", "iran", "Help. The Taliban are not our cousins. The Americans will smash whoever is on the list. Be useful. Then Iraq is a later file.", "khatami"),
+    b("leader", "iran", "We are not the ones who did this. Help against the cave. Do not volunteer a handshake. The guns stay here.", "khatami"),
+    b("street", "iran", "Nineteen Saudis. Not our boys. Groceries do not care whose tower fell. Do not volunteer a war.", "khatami"),
+  ],
+  us: [
+    {
+      id: "us-afghanistan",
+      label: "Go to Afghanistan",
+      summary: "The cave. Not Tehran.",
+      kind: "hard",
+      historical: true,
+      deltas: { my_party: 8, cia: 6, saudis: 4, europeans: 6, media: 10 },
+    },
+    {
+      id: "us-iran-war-2001",
+      label: "Make this Iran's war",
+      summary: "The older enemy. The file you already have.",
+      kind: "bomb",
+      artisticLicense: "al-iran-war-2001",
+      deltas: { my_party: 4, cia: -6, irgc: 8, europeans: -10, saudis: -6, media: 8 },
+    },
+  ],
+  iran: [
+    {
+      id: "ir-help-taliban",
+      label: "Help against the Taliban",
+      summary: "The Northern Alliance. You are not the one who did this.",
+      kind: "deal",
+      historical: true,
+      face: "khatami",
+      deltas: { irgc: 4, europeans: 6, leader: 4, street: 2 },
+    },
+    {
+      id: "ir-sit-911",
+      label: "Sit it out",
+      summary: "It was not you. Do not volunteer.",
+      kind: "walk",
+      face: "khatami",
+      deltas: { irgc: 6, europeans: -4, street: 4 },
+    },
+  ],
   next: "natanz-2002",
   clocksOn: false,
   factions: REVOLUTION,
+  sources: ["cfr-timeline"],
 });
 
 const natanz2002 = play({
@@ -736,17 +811,17 @@ const baghdad2003 = play({
   situationUs:
     "You are going to Baghdad. Or you already went in 1991 and this is a rerun. Saddam is the statue. Iran is watching.\n\nThe Guards will inherit the pieces. You can take the capital, or stop at the border again.",
   situationIran:
-    "The Americans are taking the man who gassed you. For free. The pieces of Iraq will be Shiite, or they will be chaos.\n\nYou can watch, or you can send the militias now.",
+    "The Americans are taking the man who gassed you. For free. The pieces of Iraq will be Shiite, or they will be chaos.\n\nYou can watch, or you can send the militias now. Send them and they start killing American soldiers this year.",
   referee: [
-    "LT: March 2003 the US takes Baghdad. Iran watches, then the militias harvest the pieces. Historical Iran in 2003 is watch, then later send.",
-    "IT: The Guards inherit Iraq. A tutorial stop. Both buttons next.",
+    "LT: March 2003 the US takes Baghdad. Iran watches, then the militias harvest the pieces. Historical Iran in 2003 is watch, then later send. Iranian-backed networks and explosively formed penetrators kill US soldiers in Iraq from 2004. The later toll from those networks is in the hundreds.",
+    "IT: The Guards inherit Iraq either way. Watch still sends. Send-now is the same harvest on an earlier calendar. The soldiers are the invoice.",
   ],
   briefings: [
-    b("cia", "us", "Take Baghdad. The statue falls. The government is the hard part. Iran will smile in the rubble."),
+    b("cia", "us", "Take Baghdad. The statue falls. Then the Guards send the cousins. Explosively formed penetrators. Your soldiers. Watch or send, they still come. The difference is when."),
     b("my_party", "us", "The good war was 1991. This one photographs as a statue. Do not look like you have no plan for Monday."),
     b("saudis", "us", "Get Saddam. Do not hand Baghdad to the Guards. We will not go first."),
-    b("irgc", "iran", "Watch. Then the militias. Iraq is a file we have waited twenty years to open.", "khatami"),
-    b("leader", "iran", "The enemy of the man who gassed us is not a friend. Watch. Do not volunteer a war.", "khatami"),
+    b("irgc", "iran", "Send them. The Americans just opened the file we waited twenty years for. The cousins will kill their soldiers. That is the classroom, not a confession. Watch still sends. Later is slower.", "khatami"),
+    b("leader", "iran", "The enemy of the man who gassed us is not a friend. Watch. Do not volunteer a war with a man who just took Baghdad. The cousins can wait until the occupation is a mess.", "khatami"),
     b("street", "iran", "A statue falling in Baghdad photographs. Groceries do not.", "khatami"),
   ],
   us: [
@@ -2043,6 +2118,7 @@ export const LATE_CARDS: readonly Card[] = [
   dual1993,
   khobar1996,
   wall1997,
+  nineEleven2001,
   natanz2002,
   baghdad2003,
   myth2005,

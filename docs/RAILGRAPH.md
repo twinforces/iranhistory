@@ -9,10 +9,10 @@ over and over. The unique graph is small.
 
 | Chair | Unique nodes | Edges | Terminal path counts |
 | --- | --- | --- | --- |
-| US | 48 | 86 | 687194767361 |
-| Iran | 54 | 87 | 16131314706 |
+| US | 49 | 88 | 1374389534721 |
+| Iran | 55 | 89 | 32262607890 |
 
-Collapses: 69 live (playing to the same next card).
+Collapses: 71 live (playing to the same next card).
 Cup continues to the robe. 2026 is history arriving.
 
 Unwired playable from 1953: (none)
@@ -63,6 +63,7 @@ flowchart TB
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one["1993 clinton"]:::collapse
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar["1996 clinton"]:::collapse
   us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall["1997 clinton"]:::collapse
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001["2001 bush43"]:::collapse
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax["2002 bush43"]:::collapse
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad["2003 bush43"]:::collapse
   us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth["2005 bush43"]:::collapse
@@ -130,8 +131,10 @@ flowchart TB
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -->|"H Do not strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -.->|"AL Strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"H Go to Afghanistan"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -.->|"AL Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -->|"H Bin the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -.->|"AL Take the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"H Take Baghdad"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth
@@ -216,6 +219,7 @@ flowchart TB
   iran_kuwait_1990_rafsanjani_ended_kuwait_grave_{{"1990 kuwait_grave"}}:::grave
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar["1996 rafsanjani"]:::collapse
   iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary["1997 rafsanjani"]:::collapse
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911["2001 khatami"]:::collapse
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz["2002 khatami"]:::collapse
   iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad["2003 khatami"]:::collapse
   iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth["2005 khatami"]:::collapse
@@ -285,8 +289,10 @@ flowchart TB
   iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -->|"Keep the revolution loud"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"H Deny"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"Own it"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
-  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -->|"H Talk to the people =  khatami"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
-  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -.->|"AL Meet the Secretary =  khatami"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
+  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -->|"H Talk to the people =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
+  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -.->|"AL Meet the Secretary =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"H Help against the Taliban"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"Sit it out"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -->|"H Keep spinning"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -.->|"AL Pause"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -->|"H Watch"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
@@ -363,6 +369,7 @@ flowchart TB
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one["1993 Clinton contains Iraq and Iran together / clinton"]:::collapse
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar["1996 Khobar Towers: nineteen airmen dead / clinton"]:::collapse
   us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall["1997 Khatami offers a dialogue of civilizations / clinton"]:::collapse
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001["2001 September 11: Al-Qaeda hits New York and Washington / bush43"]:::collapse
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax["2002 The Natanz enrichment plant is revealed / bush43"]:::collapse
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad["2003 The United States takes Baghdad / bush43"]:::collapse
   us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth["2005 Ahmadinejad calls the Holocaust a myth / bush43"]:::collapse
@@ -430,8 +437,10 @@ flowchart TB
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -->|"H Do not strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -.->|"AL Strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"H Go to Afghanistan"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -.->|"AL Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -->|"H Bin the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -.->|"AL Take the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"H Take Baghdad"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth
@@ -518,6 +527,7 @@ flowchart TB
   iran_kuwait_1990_rafsanjani_ended_kuwait_grave_{{"1990 GRAVE Suicide for a man who gassed you"}}:::grave
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar["1996 Khobar Towers: nineteen airmen dead / rafsanjani"]:::collapse
   iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary["1997 Khatami offers a dialogue of civilizations / rafsanjani"]:::collapse
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911["2001 September 11: Al-Qaeda hits New York and Washington / khatami"]:::collapse
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz["2002 The Natanz enrichment plant is revealed / khatami"]:::collapse
   iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad["2003 The United States takes Baghdad / khatami"]:::collapse
   iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth["2005 Ahmadinejad calls the Holocaust a myth / khatami"]:::collapse
@@ -587,8 +597,10 @@ flowchart TB
   iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -->|"Keep the revolution loud"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"H Deny"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"Own it"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
-  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -->|"H Talk to the people =  khatami"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
-  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -.->|"AL Meet the Secretary =  khatami"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
+  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -->|"H Talk to the people =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
+  iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -.->|"AL Meet the Secretary =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"H Help against the Taliban"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"Sit it out"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -->|"H Keep spinning"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -.->|"AL Pause"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -->|"H Watch"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
@@ -653,7 +665,8 @@ flowchart TB
 | us | 1990 | bush41 | Iraq invades Kuwait | Stop at the border / Go to Baghdad | Clinton contains Iraq and Iran together (clinton) |
 | us | 1993 | clinton | Clinton contains Iraq and Iran together | Name both as the problem / Pick one | Khobar Towers: nineteen airmen dead (clinton) |
 | us | 1996 | clinton | Khobar Towers: nineteen airmen dead | Do not strike / Strike | Khatami offers a dialogue of civilizations (clinton) |
-| us | 1997 | clinton | Khatami offers a dialogue of civilizations | Offer the handshake / Stay behind the wall | The Natanz enrichment plant is revealed (bush43) |
+| us | 1997 | clinton | Khatami offers a dialogue of civilizations | Offer the handshake / Stay behind the wall | September 11: Al-Qaeda hits New York and Washington (bush43) |
+| us | 2001 | bush43 | September 11: Al-Qaeda hits New York and Washington | Go to Afghanistan / Make this Iran's war | The Natanz enrichment plant is revealed (bush43) |
 | us | 2002 | bush43 | The Natanz enrichment plant is revealed | Bin the fax / Take the fax | The United States takes Baghdad (bush43) |
 | us | 2003 | bush43 | The United States takes Baghdad | Take Baghdad / Stop at the border again | Ahmadinejad calls the Holocaust a myth (bush43) |
 | us | 2005 | bush43 | Ahmadinejad calls the Holocaust a myth | Condemn / Ignore | Iran's Green Movement (obama) |
@@ -686,7 +699,8 @@ flowchart TB
 | iran | 1989 | khamenei | Khomeini dies. Khamenei becomes Supreme Leader | Take the robe / Remain president | Iraq invades Kuwait (rafsanjani) |
 | iran | 1993 | rafsanjani | Clinton contains Iraq and Iran together | Rebuild / Keep the revolution loud | Khobar Towers: nineteen airmen dead (rafsanjani) |
 | iran | 1996 | rafsanjani | Khobar Towers: nineteen airmen dead | Deny / Own it | Khatami offers a dialogue of civilizations (rafsanjani) |
-| iran | 1997 | rafsanjani | Khatami offers a dialogue of civilizations | Talk to the people / Meet the Secretary | The Natanz enrichment plant is revealed (khatami) |
+| iran | 1997 | rafsanjani | Khatami offers a dialogue of civilizations | Talk to the people / Meet the Secretary | September 11: Al-Qaeda hits New York and Washington (khatami) |
+| iran | 2001 | khatami | September 11: Al-Qaeda hits New York and Washington | Help against the Taliban / Sit it out | The Natanz enrichment plant is revealed (khatami) |
 | iran | 2002 | khatami | The Natanz enrichment plant is revealed | Keep spinning / Pause | The United States takes Baghdad (khatami) |
 | iran | 2003 | khatami | The United States takes Baghdad | Watch / Send the militias now | Ahmadinejad calls the Holocaust a myth (khatami) |
 | iran | 2005 | khatami | Ahmadinejad calls the Holocaust a myth | Say it / Do not say it | Iran's Green Movement (ahmadinejad) |
