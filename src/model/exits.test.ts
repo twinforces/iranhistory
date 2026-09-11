@@ -15,7 +15,7 @@ describe("peace exits catalog", () => {
     assert.equal(peaceCount("us"), 2);
     assert.equal(peaceCount("iran"), 3);
     assert.equal(EXITS.filter((e) => e.kind === "nukes").length, 1);
-    assert.equal(EXITS.filter((e) => e.kind === "cso").length, 8);
+    assert.equal(EXITS.filter((e) => e.kind === "cso").length, 9);
     assert.equal(EXITS.filter((e) => e.kind === "memoirs").length, 1);
   });
 
@@ -70,6 +70,14 @@ describe("peace exits catalog", () => {
     assert.equal(store.phase, "playing");
     const fpl = applyChoice(newGame({ chair: "iran", party: "D", cardId: "veil-1979" }), "ir-keep-fpl");
     assert.deepEqual(detectExits(fpl), ["cso-fpl"]);
+  });
+
+  it("Mossadegh hiring the British engineers is the first convenience store", () => {
+    const g = applyChoice(newGame({ chair: "iran", party: "D" }), "ir-deal-london");
+    assert.equal(g.ending?.id, "mossadegh_street");
+    assert.deepEqual(detectExits(g), ["cso-london"]);
+    const moscow = applyChoice(newGame({ chair: "iran", party: "D" }), "ir-deal-moscow");
+    assert.deepEqual(detectExits(moscow), []);
   });
 
   it("leaving Hamas is a peace exit, not a convenience store", () => {

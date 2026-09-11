@@ -357,6 +357,7 @@ const EXIT_CAPTION: Record<string, UiKey> = {
   "hamas-us": "exitHamas",
   fordow: "exitImamLives",
   nukes: "exitNukes",
+  "cso-london": "csoLondon",
   "cso-fpl": "csoFpl",
   "cso-stamp": "csoStamp",
   "cso-artesh": "csoArtesh",

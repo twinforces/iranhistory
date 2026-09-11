@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - The first convenience store
+
+What: Mossadegh hiring the British engineers ticks Convenience store owners. Moscow does not. The later 7-Elevens still do.
+
+Why: Chevron's man with a nationalist haircut is the first store. Stalin in a turban is not.
+
+
 ## 2026-09-11 - Peace exits at the top
 
 What: Peace exits sit at the top of Play. Iran and US counts, and the hunt sentence, are the first thing on the board. Nukes, convenience stores, and memoirs stay on the meters.

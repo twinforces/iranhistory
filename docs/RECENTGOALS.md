@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## The first convenience store, 2026-09-11
+
+What: Hire the British engineers is CSO number one. The 7-Eleven morals still stack. Moscow is not a store.
+
+Why: The bazaar dumps you. Then you write the book.
+
+
 ## Peace exits at the top, 2026-09-11
 
 What: Peace exits are the first chrome on Play. The meters keep the other jokes.

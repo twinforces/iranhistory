@@ -64,6 +64,13 @@ export const EXITS: readonly ExitDef[] = [
     endingId: "nuke_splat",
   },
   {
+    id: "cso-london",
+    chair: "iran",
+    kind: "cso",
+    found: "You hired the British engineers",
+    choiceId: "ir-deal-london",
+  },
+  {
     id: "cso-fpl",
     chair: "iran",
     kind: "cso",

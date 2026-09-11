@@ -146,6 +146,7 @@ const EN = {
   memoirsCounter: "Best selling memoirs",
   memoirsBlurb:
     "Presidents who have to leave office early write best selling memoirs. It's a moral victory. But the machinery grinds on.",
+  csoLondon: "You hired the British engineers",
   csoFpl: "You kept Family Protection",
   csoStamp: "You refused the letterhead",
   csoArtesh: "You kept Artesh",
@@ -301,6 +302,7 @@ const FA: { [K in keyof typeof EN]: string } = {
   memoirsCounter: "خاطرات پرفروش",
   memoirsBlurb:
     "رئیس‌جمهورهایی که زود صندلی را ترک می‌کنند خاطرات پرفروش می‌نویسند. پیروزی اخلاقی است. اما ماشین ادامه می‌دهد.",
+  csoLondon: "مهندسان بریتانیایی را استخدام کردی",
   csoFpl: "قانون حمایت خانواده را نگه داشتی",
   csoStamp: "سربرگ را رد کردی",
   csoArtesh: "ارتش را نگه داشتی",

@@ -158,6 +158,8 @@ describe("TrainViewModel", () => {
     assert.equal(ui.endingId, "mossadegh_street");
     assert.equal(ui.leader.id, "mossadegh");
     assert.match(ui.endingBody ?? "", /Lawrence|Venezuela|bazaar/i);
+    assert.equal(ui.museum.csoFound, 1);
+    assert.match(ui.museum.csoNames.join(" "), /British engineers/);
   });
 
   it("Iran nationalize seats the Shah and says so", () => {
