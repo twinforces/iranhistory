@@ -167,7 +167,7 @@ const coup1953: Card = {
     {
       id: "us-walk",
       label: "Walk away",
-      summary: "Hands off. Let them keep the company.",
+      summary: "Hands off. Let Iran keep the oil company.",
       kind: "walk",
       artisticLicense: "al-satrap",
       ending: "satrap_1953",
@@ -637,7 +637,7 @@ const weapons1972: Card = {
       artisticLicense: "al-soviet-catalog",
       ...adapts(
         "The Shah shops Moscow",
-        "You held the American catalog. He still wants boom-booms. Moscow will sell tanks that do not need a Congressional window. CIA writes the nightmare cable. The Saudis watch the other pillar shop east. The clinics you wanted get a slice. The later spare-parts war still knows how to shop in the dark. Contra is not gated.",
+        "You held the American catalog. He still wants tanks and jets. Moscow will sell tanks that do not need a Congressional window. CIA writes the nightmare cable. The Saudis watch the other pillar shop east. The clinics you wanted get a slice. The later spare-parts war still knows how to shop in the dark. Contra is not gated.",
       ),
       deltas: { cia: -14, my_party: -6, saudis: -10, leader: 4, street: 8, liberals: 6, opposing_party: 6, hard_currency: 8 },
     },
@@ -646,7 +646,7 @@ const weapons1972: Card = {
     {
       id: "ir-buy-catalog",
       label: "Buy the American catalog",
-      summary: "Boom-booms. The oil pays. Tehran already looks like a capital.",
+      summary: "F-14s. The oil pays. Tehran already looks like a capital.",
       kind: "hard",
       historical: true,
       face: "shah",
@@ -956,7 +956,7 @@ const veil1979: Card = {
     },
     {
       id: "ir-repeal-fpl",
-      label: "Let the Imam repeal it",
+      label: "Let the Imam repeal the law",
       summary: "The guns are not yours. Do not pretend the statute is.",
       kind: "walk",
       historical: true,
@@ -1094,7 +1094,7 @@ const hostages1979: Card = {
     },
     {
       id: "ir-let-students",
-      label: "Let the students hold it",
+      label: "Let the students hold the embassy",
       summary: "The guns are not yours. Do not pretend the cable is.",
       kind: "hard",
       face: "bazargan",
@@ -1284,7 +1284,7 @@ const youHimFight1980: Card = {
     {
       faction: "cia",
       audience: "us",
-      rant: "Let them bleed. Do not put your fingerprints on an invasion while Americans are in a basement. The Saudis will write the check.",
+      rant: "Let Iran and Iraq bleed. Do not put your fingerprints on an invasion while Americans are in a basement. The Saudis will write the check.",
     },
     {
       faction: "my_party",
@@ -1411,7 +1411,7 @@ const iranIraq1980: Card = {
     {
       faction: "cia",
       audience: "us",
-      rant: "The hostages are the exam. A tilt is a later file. Let them bleed without your fingerprints this week. A rescue is not this card.",
+      rant: "The hostages are the exam. A tilt is a later file. Let Iran and Iraq bleed without your fingerprints this week. A rescue is not this card.",
     },
     {
       faction: "my_party",
@@ -1461,7 +1461,7 @@ const iranIraq1980: Card = {
     {
       id: "us-tilt-iraq",
       label: "Tilt to Iraq",
-      summary: "Let them bleed. Baghdad gets the quiet help.",
+      summary: "Let Iran and Iraq bleed. Baghdad gets the quiet help.",
       kind: "covert",
       artisticLicense: "al-tilt-early",
       ...adapts(
@@ -1726,7 +1726,7 @@ const delist1982: Card = {
     },
     {
       id: "us-keep-iraq-listed",
-      label: "Keep them on the list",
+      label: "Keep Iraq on the list",
       summary: "A terrorist is a terrorist. The chemistry stays locked.",
       kind: "walk",
       ...serve(
@@ -2015,7 +2015,7 @@ const lebanon1983: Card = {
     paragraphs: [
       "LT: 23 October 1983, a truck bomb at the Beirut airport barracks. 241 US dead, 58 French the same morning. Marines withdraw February 1984. Later US court: Hezbollah at Iranian direction.",
       "IT: Iran's briefing is the sermon. Washington took Saddam off the terrorism list in February 1982. Europe sells him plants and precursors. France built him a reactor; Israel cratered Osirak in June 1981; the picture in the sermon does not care. They cannot be trusted. Death to America. Death to Europe. Death to Israel. The Marines are in Beirut. The classroom answers. That is the incentive reading, not a cable that says the truck is a reply to the list.",
-      "IT: Bring them home photographs as a lesson. Stay and hit the Bekaa photographs as a war. Both still ride to a later channel in the dark. Iran's keep-the-war-at-home is the off-ramp. The export is the golden path.",
+      "IT: Bring the Marines home photographs as a lesson. Stay and hit the Bekaa photographs as a war. Both still ride to a later channel in the dark. Iran's keep-the-war-at-home is the off-ramp. The export is the golden path.",
     ],
   },
   artisticLicense: [
@@ -2034,12 +2034,12 @@ const lebanon1983: Card = {
     {
       faction: "cia",
       audience: "us",
-      rant: "A cousin of the Guards is in the Bekaa. A barracks is a target. Bring them home and own the lesson. Stay and own the crater. We are asking you which film develops.",
+      rant: "A cousin of the Guards is in the Bekaa. A barracks is a target. Bring the Marines home and own the lesson. Stay and own the crater. We are asking you which film develops.",
     },
     {
       faction: "my_party",
       audience: "us",
-      rant: "The walk was the clip. A second clip of Marines in a basement is a gift to the other paper. Bring them home. Lebanon is not the Gulf.",
+      rant: "The walk was the clip. A second clip of Marines in a basement is a gift to the other paper. Bring the Marines home. Lebanon is not the Gulf.",
     },
     {
       faction: "opposing_party",
@@ -2083,8 +2083,8 @@ const lebanon1983: Card = {
   usChoices: [
     {
       id: "us-bring-home",
-      label: "Bring them home",
-      summary: "The barracks is a target. Do not sit a second clip.",
+      label: "Bring the Marines home",
+      summary: "The Marine barracks in Beirut is a target. Do not sit another disaster on the evening news.",
       kind: "walk",
       historical: true,
       nextCard: "iran-contra-1985",
@@ -2218,7 +2218,7 @@ const iranContra1985: Card = {
   usChoices: [
     {
       id: "us-sell-missiles",
-      label: "Sell them the missiles",
+      label: "Sell Iran the missiles",
       summary: "Hostages for parts. The profit can walk south.",
       kind: "covert",
       historical: true,

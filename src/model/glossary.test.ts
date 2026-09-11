@@ -17,6 +17,11 @@ describe("glossary", () => {
   it("explains Ajax on the title and the court in a rant", () => {
     const title = linkify("Ajax is still a cable");
     assert.equal(title.some((p) => p.id === "ajax" && p.text === "Ajax"), true);
+    assert.equal(title.some((p) => p.id === "cable"), true);
+    const ajax = glossaryById("ajax");
+    assert.match(ajax?.definition ?? "", /code name/);
+    assert.match(ajax?.definition ?? "", /coup/);
+    assert.match(ajax?.definition ?? "", /Shah/);
     const rant = linkify("The court still has the army. We have the square.");
     assert.equal(rant.some((p) => p.id === "court"), true);
     const young = glossaryById("shah");
@@ -26,6 +31,16 @@ describe("glossary", () => {
   it("does not swallow ordinary words", () => {
     const parts = linkify("The next card is already written.");
     assert.equal(parts.some((p) => p.id), false);
+  });
+
+  it("explains a second clip as evening-news footage, not a haircut", () => {
+    const parts = linkify("Do not sit a second clip.");
+    assert.equal(parts.some((p) => p.id === "clip"), true);
+    const def = glossaryById("clip")?.definition ?? "";
+    assert.match(def, /evening news/);
+    assert.match(def, /haircut/);
+    const Marines = linkify("Bring the Marines home");
+    assert.equal(Marines.some((p) => p.id === "marines"), true);
   });
 
   it("marks White Revolution and Khomeini", () => {

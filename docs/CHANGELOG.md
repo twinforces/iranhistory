@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Hover the house dialect
+
+What: Ajax, cable, clip, letterhead, square, barracks, hinterland, and the rest of the spoken dialect hover. Home and chair copy use the glossary. Buttons name the noun: Bring the Marines home, Keep Iraq on the list, Sell Iran the missiles. Choice tiles no longer eat the hover. 241 still stays off the Beirut button.
+
+Why: "Them" is not a term. A second clip is not a haircut. The opening line was Ajax is still a cable, with no way to ask.
+
+
 ## 2026-09-10 - You serve somebody
 
 What: Collapsing off-paths are serve or adapts overlays, not "you chose wrong, stamp it." Carter's warning to Saddam is Blue Dogs killing the domestic agenda. Nixon holding the catalog makes the Shah shop Moscow. Commerce still unlocks the chemistry. 7-Eleven morals stay moral. Hamas cut off is the map answering. Historical path unchanged. Contra is not gated. Keep-him-out still reaches hostages.

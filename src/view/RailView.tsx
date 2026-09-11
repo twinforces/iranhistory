@@ -6,6 +6,7 @@ import { cardFa } from "../i18n/cards.ts";
 import { faDigits } from "../i18n/digits.ts";
 import type { Locale } from "../i18n/types.ts";
 import { TagChip, RefereeText } from "./TagChip.tsx";
+import { GlossText } from "./Gloss.tsx";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "./LocaleContext.tsx";
 
@@ -26,7 +27,9 @@ export function RailView() {
       <header>
         <p className="kicker">{t("railKicker")}</p>
         <h1 className="mt-1 font-serif text-3xl font-semibold text-fg">{t("railTitle")}</h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">{t("railLead")}</p>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+          <GlossText text={t("railLead")} />
+        </p>
       </header>
       <ol className="flex flex-col gap-2">
         {CARDS.map((card, i) => {

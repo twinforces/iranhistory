@@ -366,11 +366,6 @@
     cursor: help;
   }
 
-  .choice-tile .gloss-term {
-    pointer-events: none;
-    cursor: inherit;
-  }
-
   .chair-card {
     display: flex;
     min-width: 0;

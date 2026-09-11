@@ -1,4 +1,5 @@
 import { systemsCopy } from "../i18n/systems.ts";
+import { GlossText } from "./Gloss.tsx";
 import { useLocale } from "./LocaleContext.tsx";
 
 export function SystemsView() {
@@ -9,7 +10,9 @@ export function SystemsView() {
       <header>
         <p className="kicker">{t("systemsKicker")}</p>
         <h1 className="mt-1 font-serif text-3xl font-semibold text-fg">{t("systemsTitle")}</h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">{t("systemsLead")}</p>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+          <GlossText text={t("systemsLead")} />
+        </p>
       </header>
 
       <div className="overflow-x-auto rounded-[var(--radius-lg)] bg-surface shadow-border">

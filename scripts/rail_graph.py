@@ -65,7 +65,7 @@ PLOT_NEXT = [
         "id": "bekaa-gates-contra",
         "card": "lebanon-1983",
         "later": "iran-contra-1985",
-        "now": "Bring them home and stay-and-hit both land on the channel. Iran's keep-the-war-at-home is a grave, not a skip.",
+        "now": "Bring the Marines home and stay-and-hit both land on the channel. Iran's keep-the-war-at-home is a grave, not a skip.",
         "plot": "No Bekaa, maybe no later hostages, maybe no TOW trade. Or the war still eats spare parts without Beirut.",
     },
 ]

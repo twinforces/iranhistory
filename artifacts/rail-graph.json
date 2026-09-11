@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T02:57:13.694Z",
+  "generated": "2026-09-11T14:12:21.865Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -926,7 +926,7 @@
           "from": "us:delist-1982:us:playing:live:us-delist-iraq,us-keep-iraq-listed",
           "to": "us:tilt-1982:us:playing:live:us-cia-baghdad,us-stay-neutral",
           "choiceId": "us-keep-iraq-listed",
-          "label": "Keep them on the list",
+          "label": "Keep Iraq on the list",
           "historical": false,
           "artisticLicense": null,
           "ending": null,
@@ -956,7 +956,7 @@
           "from": "us:lebanon-1983:us:playing:live:us-bring-home,us-hit-bekaa",
           "to": "us:iran-contra-1985:us:playing:live:us-keep-embargo,us-sell-missiles",
           "choiceId": "us-bring-home",
-          "label": "Bring them home",
+          "label": "Bring the Marines home",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -976,7 +976,7 @@
           "from": "us:iran-contra-1985:us:playing:live:us-keep-embargo,us-sell-missiles",
           "to": "us:cup-1988:us:playing:live:us-call-mistake,us-own-shot",
           "choiceId": "us-sell-missiles",
-          "label": "Sell them the missiles",
+          "label": "Sell Iran the missiles",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -1466,7 +1466,7 @@
           "from": "us:direct-fire-2024:us:playing:live:us-help-shoot,us-stay-out-fire",
           "to": "us:sit-pezeshkian-2024:us:playing:live:us-sit-2024",
           "choiceId": "us-help-shoot",
-          "label": "Help shoot them down",
+          "label": "Help shoot the missiles down",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -2448,7 +2448,7 @@
           "from": "iran:veil-1979:bazargan:playing:live:ir-keep-fpl,ir-repeal-fpl",
           "to": "iran:hostages-1979:bazargan:playing:live:ir-demand-leave,ir-let-students",
           "choiceId": "ir-repeal-fpl",
-          "label": "Let the Imam repeal it",
+          "label": "Let the Imam repeal the law",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -2468,7 +2468,7 @@
           "from": "iran:hostages-1979:bazargan:playing:live:ir-demand-leave,ir-let-students",
           "to": "iran:resigned-1979:banisadr:playing:live:ir-refuse-letterhead,ir-sit-presidency",
           "choiceId": "ir-let-students",
-          "label": "Let the students hold it",
+          "label": "Let the students hold the embassy",
           "historical": false,
           "artisticLicense": "al-bazargan-stays",
           "ending": null,
@@ -2698,7 +2698,7 @@
           "from": "iran:khobar-1996:rafsanjani:playing:live:ir-deny-khobar,ir-own-khobar",
           "to": "iran:wall-1997:rafsanjani:playing:live:ir-cnn,ir-meet-secretary",
           "choiceId": "ir-own-khobar",
-          "label": "Own it",
+          "label": "Own the bombing",
           "historical": false,
           "artisticLicense": "al-own-khobar",
           "ending": null,
@@ -2808,7 +2808,7 @@
           "from": "iran:green-2009:ahmadinejad:playing:live:ir-count-green,ir-crush-green",
           "to": "iran:stuxnet-2010:ahmadinejad:playing:live:ir-keep-spin-stux,ir-pause-stux",
           "choiceId": "ir-crush-green",
-          "label": "Steal it and crush it",
+          "label": "Steal the count and crush the square",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -2878,7 +2878,7 @@
           "from": "iran:white-wednesdays-2017:rouhani:playing:live:ir-arrest-white,ir-let-post",
           "to": "iran:archive-2018:rouhani:playing:live:ir-sprint-tonight,ir-wait-europe",
           "choiceId": "ir-let-post",
-          "label": "Let them post",
+          "label": "Let the women post",
           "historical": false,
           "artisticLicense": null,
           "ending": null,
@@ -2958,7 +2958,7 @@
           "from": "iran:soleimani-2020:rouhani:playing:live:ir-eat-airport,ir-missiles-752",
           "to": "iran:abraham-2020:rouhani:playing:live:ir-drop-quds,ir-keep-quds",
           "choiceId": "ir-eat-airport",
-          "label": "Eat it",
+          "label": "Swallow the strike",
           "historical": false,
           "artisticLicense": null,
           "ending": null,
@@ -3008,7 +3008,7 @@
           "from": "iran:mahsa-2022:raisi:playing:live:ir-crush-mahsa,ir-fire-morality",
           "to": "iran:saudi-accord-2023:raisi:playing:live:ir-fund-hamas,ir-leave-hamas",
           "choiceId": "ir-crush-mahsa",
-          "label": "Crush it",
+          "label": "Crush the protest",
           "historical": true,
           "artisticLicense": null,
           "ending": null,
@@ -3298,7 +3298,7 @@
       "face": "reagan",
       "choiceLabels": [
         "Take Iraq off the list",
-        "Keep them on the list"
+        "Keep Iraq on the list"
       ],
       "landCardId": "tilt-1982",
       "landTitle": "Iran is winning. Reagan tilts to Iraq",
@@ -3327,7 +3327,7 @@
       "yearLabel": "1982–1983",
       "face": "reagan",
       "choiceLabels": [
-        "Bring them home",
+        "Bring the Marines home",
         "Stay and hit the Bekaa"
       ],
       "landCardId": "iran-contra-1985",
@@ -3342,7 +3342,7 @@
       "yearLabel": "1985–1987",
       "face": "reagan",
       "choiceLabels": [
-        "Sell them the missiles",
+        "Sell Iran the missiles",
         "Keep the embargo"
       ],
       "landCardId": "cup-1988",
@@ -3687,7 +3687,7 @@
       "yearLabel": "2024",
       "face": "biden",
       "choiceLabels": [
-        "Help shoot them down",
+        "Help shoot the missiles down",
         "Stay out"
       ],
       "landCardId": "sit-pezeshkian-2024",
@@ -3793,7 +3793,7 @@
       "face": "bazargan",
       "choiceLabels": [
         "Keep the Family Protection Law",
-        "Let the Imam repeal it"
+        "Let the Imam repeal the law"
       ],
       "landCardId": "hostages-1979",
       "landTitle": "Students occupy the US embassy",
@@ -3808,7 +3808,7 @@
       "face": "bazargan",
       "choiceLabels": [
         "Demand they leave",
-        "Let the students hold it"
+        "Let the students hold the embassy"
       ],
       "landCardId": "resigned-1979",
       "landTitle": "Bazargan resigns",
@@ -3928,7 +3928,7 @@
       "face": "rafsanjani",
       "choiceLabels": [
         "Deny",
-        "Own it"
+        "Own the bombing"
       ],
       "landCardId": "wall-1997",
       "landTitle": "Khatami offers a dialogue of civilizations",
@@ -4017,7 +4017,7 @@
       "yearLabel": "2009",
       "face": "ahmadinejad",
       "choiceLabels": [
-        "Steal it and crush it",
+        "Steal the count and crush the square",
         "Count the votes"
       ],
       "landCardId": "stuxnet-2010",
@@ -4063,7 +4063,7 @@
       "face": "rouhani",
       "choiceLabels": [
         "Arrest",
-        "Let them post"
+        "Let the women post"
       ],
       "landCardId": "archive-2018",
       "landTitle": "Mossad steals Iran's nuclear archive",
@@ -4108,7 +4108,7 @@
       "face": "rouhani",
       "choiceLabels": [
         "Missiles, then the airliner",
-        "Eat it"
+        "Swallow the strike"
       ],
       "landCardId": "abraham-2020",
       "landTitle": "Abraham Accords: Arab states recognize Israel",
@@ -4152,7 +4152,7 @@
       "yearLabel": "2022",
       "face": "raisi",
       "choiceLabels": [
-        "Crush it",
+        "Crush the protest",
         "Fire the morality police"
       ],
       "landCardId": "saudi-accord-2023",

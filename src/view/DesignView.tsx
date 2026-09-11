@@ -95,6 +95,11 @@ const QUESTIONS: { q: string; freeze: string }[] = [
       "Dylan. The chair looks like a decision. Most binary cards still land on the same next stop. Do not shrug 'you chose wrong, stamp it.' Either a faction that owns the chair forces capitulation onto history (serve: Blue Dogs kill Carter's warning, Commerce unlocks the chemistry, Joint Chiefs take the SOFA, the Imam keeps the slogan), or the other desk answers with a real bill (adapts: Shah shops Moscow, students seize anyway, Israel runs the channel). Serve is not AL: you did not execute the counterfactual. Adapts keeps AL labelled. 7-Eleven letterhead morals stay moral overlays. Real forks stay forks: graves, 1953, hinterland hold, refuse the cup, Kuwait grave, JCPOA limits, Hamas cut off, keep the 2026 war. Nixon's catalog does not gate Contra. Keep-him-out still reaches hostages. Historical: true never graves except the_leader.",
   },
   {
+    q: "House dialect / hover glossary?",
+    freeze:
+      "Spoken copy stays spoken. Hover explains it. Ajax is the CIA/MI6 code name for installing the Shah. A cable is an intelligence telegram. A clip is evening-news footage. Letterhead is the civilian who stamps. The square is the crowd, not a government. Buttons still have to name the noun: Bring the Marines home, not Bring them home. Second clip is not a haircut. Pronouns on buttons are not a hover problem, they are a writing problem. Glossary aliases must not swallow ordinary words. Design freeze and receipts source titles stay English.",
+  },
+  {
     q: "Hormuz",
     freeze:
       "The 2019 drone and tanker card sits on the train after Europe bounces. Hormuz as a map is still a different play style. Leave that off the Play landing.",

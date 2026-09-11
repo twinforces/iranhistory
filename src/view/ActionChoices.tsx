@@ -24,7 +24,9 @@ export function ActionChoices({
             onClick={() => onChoose(c.id, c.artisticLicenseId)}
             className={i % 2 === 0 ? "choice-tile choice-tile-a" : "choice-tile choice-tile-b"}
           >
-            <span className="choice-label">{c.label}</span>
+            <span className="choice-label">
+              <GlossText text={c.label} nested />
+            </span>
             <span className="choice-summary">
               <GlossText text={c.grey ? c.greyText : c.summary} nested />
             </span>

@@ -74,7 +74,20 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
     term: "Ajax",
     aliases: ["Operation Ajax", "TPAJAX", "Ajax"],
     definition:
-      "The CIA and MI6 name for a coup they want to run against Mossadegh. In the later files it is TPAJAX. Right now it is a cable on a desk. It is not a fact until someone signs it.",
+      "CIA and MI6 code name for a coup to remove Mossadegh and put the Shah in charge. In 1953 it is still a proposal on Eisenhower's desk, not a fact. Later files call it TPAJAX.",
+  },
+  {
+    id: "cable",
+    term: "cable",
+    aliases: [
+      "still a cable",
+      "write a cable",
+      "a cable",
+      "the cable",
+      "this is still a cable",
+    ],
+    definition:
+      "An intelligence telegram. Classified, on a desk, waiting for a signature. Not a public speech. Not a fact until someone signs it.",
   },
   {
     id: "stalin-turban",
@@ -259,7 +272,7 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
   {
     id: "irgc",
     term: "IRGC",
-    aliases: ["IRGC"],
+    aliases: ["IRGC", "the Guards", "The Guards", "Guards"],
     definition:
       "The Islamic Revolutionary Guard Corps. Stood up in 1979 to protect the revolution from the regular army, the leftists, and the smiling face. Once you have a parallel army with its own budget, reform-from-inside is a rounding error.",
   },
@@ -407,6 +420,200 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
     aliases: ["Hamas"],
     definition:
       "The Palestinian Islamist movement that runs Gaza. Iran's proxy file, with its own agenda. When a public Saudi-Israel courtship looks like the neighborhood is leaving, they shop for a sponsor.",
+  },
+  {
+    id: "clip",
+    term: "clip",
+    aliases: ["a second clip", "second clip", "the clip", "a clip", "news clip"],
+    definition:
+      "News footage. A photograph that runs on television. A second clip is another disaster on the evening news, not a haircut.",
+  },
+  {
+    id: "letterhead",
+    term: "letterhead",
+    aliases: ["the letterhead", "letterhead", "Human rights letterhead"],
+    definition:
+      "The civilian who stamps the paper. Bazargan, Banisadr, a president. He has a title. He does not have the guns. The Imam and the Guards do.",
+  },
+  {
+    id: "barracks",
+    term: "barracks",
+    aliases: ["the barracks", "a barracks", "Marine barracks", "No barracks", "not a barracks"],
+    definition:
+      "Who has the guns. An army, a camp, a building that can hold a square. A statement is not a barracks. The Marine barracks in Beirut is also a literal building.",
+  },
+  {
+    id: "square",
+    term: "the square",
+    aliases: ["the square", "that square", "their square", "The square"],
+    definition:
+      "The protest crowd. Students, workers, women in the street. They can fill a plaza. They cannot hold a government. 1979 taught that, then 2009, then 2022.",
+  },
+  {
+    id: "nest-of-spies",
+    term: "nest of spies",
+    aliases: ["nest of spies"],
+    definition:
+      "What the students called the American embassy when they occupied it on 4 November 1979. They wanted the Shah and the files. Khomeini did not send them home.",
+  },
+  {
+    id: "hinterland",
+    term: "hinterland",
+    aliases: ["the hinterland", "hinterland"],
+    definition:
+      "The villages outside Tehran. Roads, clinics, water. The Shah spent the oil on jets instead. If he spends it here, the square in 1979 stays thin.",
+  },
+  {
+    id: "smiling-face",
+    term: "smiling face",
+    aliases: ["the smiling face", "smiling face", "smiling faces"],
+    definition:
+      "The civilian the Guards tolerate until they do not. Bazargan smiling on television. A president who thinks he runs a coalition. They replace smiling faces.",
+  },
+  {
+    id: "exam",
+    term: "the exam",
+    aliases: ["the next exam", "the exam", "this exam"],
+    definition:
+      "The crisis that grades this presidency. For Carter it is the hostages. For Reagan it is Beirut, then the dark channel. The test, not a school.",
+  },
+  {
+    id: "stamp",
+    term: "stamp",
+    aliases: ["the stamp", "You stamp", "stamp the", "Stamp the"],
+    definition:
+      "Sign the paper. Issue the order. The letterhead stamps. The guns belong to someone else.",
+  },
+  {
+    id: "rail",
+    term: "the rail",
+    aliases: ["the rail", "The rail", "this rail"],
+    definition:
+      "The historical timeline you are riding. Cards in order. History is the golden path. A recap would tell you how it ends. The rail does not, until you sit it.",
+  },
+  {
+    id: "chemistry",
+    term: "the chemistry",
+    aliases: ["the chemistry", "Europe's chemistry"],
+    definition:
+      "Chemical weapons precursors. Dual-use pesticide plants that are not pesticide plants. Mustard and nerve agent. Taking Iraq off the terrorism list is how the licenses, and Europe's sales, can move.",
+  },
+  {
+    id: "furnace",
+    term: "furnace",
+    aliases: ["the furnace", "your furnace"],
+    definition:
+      "The Iran-Iraq war as a meat grinder. Keep it even so neither side wins. Hundreds of thousands dead. Not a boiler.",
+  },
+  {
+    id: "dark-channel",
+    term: "channel in the dark",
+    aliases: [
+      "channel in the dark",
+      "a channel in the dark",
+      "the later channel",
+      "the dark channel",
+    ],
+    definition:
+      "Iran-Contra. Missiles to Tehran through Israel, profit walked to the Nicaraguan Contras, hostages as the cover. Congress forbade the funding. The warehouse did it anyway.",
+  },
+  {
+    id: "marines",
+    term: "Marines",
+    aliases: ["the Marines", "Marines"],
+    definition:
+      "US Marines in Beirut, 1982-1984. They landed after the Israeli invasion of Lebanon. 23 October 1983 a truck bomb hits their barracks. 241 dead. They go home in February 1984.",
+  },
+  {
+    id: "blue-dogs",
+    term: "Blue Dogs",
+    aliases: ["Blue Dogs", "Blue Dog"],
+    definition:
+      "Conservative Democrats in the House. They can kill a president's domestic agenda if he spends the week on a foreign fight they do not want. Carter's people. They have the votes.",
+  },
+  {
+    id: "quds",
+    term: "Quds Force",
+    aliases: ["Quds Force", "Quds"],
+    definition:
+      "The IRGC's foreign arm. Proxies in Iraq, Syria, Lebanon, Gaza. Soleimani ran it until a drone killed him at Baghdad airport.",
+  },
+  {
+    id: "fordow",
+    term: "Fordow",
+    aliases: ["Fordow"],
+    definition:
+      "The enrichment plant inside a mountain near Qom. Buried so a normal bomb is an argument, not a fact. The 2025-26 campaign treats it as the hole that has to be real.",
+  },
+  {
+    id: "natanz",
+    term: "Natanz",
+    aliases: ["Natanz"],
+    definition:
+      "Iran's main enrichment site. Revealed in 2002. Stuxnet hit it. The later sprints start from this floor.",
+  },
+  {
+    id: "osirak",
+    term: "Osirak",
+    aliases: ["Osirak"],
+    definition:
+      "The French-built Iraqi reactor. Israel cratered it in June 1981. Iran's Beirut sermon still talks as if the plant is alive. The picture in the sermon does not care.",
+  },
+  {
+    id: "basij",
+    term: "Basij",
+    aliases: ["the Basij", "Basij"],
+    definition:
+      "The volunteer militia under the Guards. They empty squares. Green 2009, Mahsa 2022. Clubs and motorcycles, not a regular army.",
+  },
+  {
+    id: "artesh",
+    term: "Artesh",
+    aliases: ["Artesh", "the leftover army"],
+    definition:
+      "Iran's regular army, leftover from the Shah. The revolution built the Guards so it would not have to trust these officers. Banisadr trying to command it is a letterhead gag.",
+  },
+  {
+    id: "hail-mary",
+    term: "Hail Mary",
+    aliases: ["Hail Mary"],
+    definition:
+      "A desperate last throw. For Carter in 1980: one more raid, one more channel, one more speech after Desert One already failed. The party will not roll it.",
+  },
+  {
+    id: "robe",
+    term: "the robe",
+    aliases: ["the robe", "Take the robe"],
+    definition:
+      "The Supreme Leader's chair. Khomeini dies. Khamenei puts on the robe. You were the letterhead. They are offering you the guns.",
+  },
+  {
+    id: "noose",
+    term: "the noose",
+    aliases: ["the noose"],
+    definition:
+      "Hormuz. Squeeze the Strait, insurance rates jump, tankers stop, the oil price is the rope. A lever, not a hanging.",
+  },
+  {
+    id: "dual-use",
+    term: "dual-use",
+    aliases: ["dual-use", "dual use"],
+    definition:
+      "Civilian gear that also makes weapons. Pesticide plants that make mustard. Export licenses are the lock. The terrorism list is how you throw it.",
+  },
+  {
+    id: "instex",
+    term: "INSTEX",
+    aliases: ["INSTEX"],
+    definition:
+      "Europe's 2019 special purpose vehicle to keep trading with Iran after Trump voided the JCPOA. It barely paid for anything. The check bounced.",
+  },
+  {
+    id: "aumf",
+    term: "AUMF",
+    aliases: ["AUMF", "the authorization"],
+    definition:
+      "Authorization for Use of Military Force. The 2002 Iraq vote. The building tells a president it is not a suggestion. You take Baghdad.",
   },
 ];
 

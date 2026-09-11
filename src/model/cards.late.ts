@@ -632,7 +632,7 @@ const khobar1996 = play({
     },
     {
       id: "ir-own-khobar",
-      label: "Own it",
+      label: "Own the bombing",
       summary: "The Guards had a shot. Say so.",
       kind: "hard",
       face: "rafsanjani",
@@ -1114,7 +1114,7 @@ const green2009 = play({
   iran: [
     {
       id: "ir-crush-green",
-      label: "Steal it and crush it",
+      label: "Steal the count and crush the square",
       summary: "The Basij empty the square. The count already happened.",
       kind: "hard",
       historical: true,
@@ -1363,7 +1363,7 @@ const whiteWed2017 = play({
     },
     {
       id: "ir-let-post",
-      label: "Let them post",
+      label: "Let the women post",
       summary: "A white scarf is not a barracks.",
       kind: "soft",
       face: "rouhani",
@@ -1614,7 +1614,7 @@ const soleimani2020 = play({
     },
     {
       id: "ir-eat-airport",
-      label: "Eat it",
+      label: "Swallow the strike",
       summary: "A general is dead. A war is a bill.",
       kind: "soft",
       face: "rouhani",
@@ -1855,7 +1855,7 @@ const mahsa2022 = play({
   iran: [
     {
       id: "ir-crush-mahsa",
-      label: "Crush it",
+      label: "Crush the protest",
       summary: "The scarf is the law. The square empties.",
       kind: "hard",
       historical: true,
@@ -2077,7 +2077,7 @@ const directFire2024 = play({
   us: [
     {
       id: "us-help-shoot",
-      label: "Help shoot them down",
+      label: "Help shoot the missiles down",
       summary: "Incoming photographs. A hole in the sky is worse.",
       kind: "hard",
       historical: true,

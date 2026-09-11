@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Hover the house dialect, 2026-09-11
+
+What: Glossary covers the spoken dialect. Buttons name the noun. Home hovers Ajax.
+
+Why: References that are clear to the author are not clear to anyone else.
+
+
 ## Choice is an illusion, 2026-09-10
 
 What: Collapsing off-paths no longer shrug stamp-it. Serve: a faction that owns the chair forces capitulation onto history. Adapts: the other desk answers with a real bill. 7-Eleven stays moral. Real forks stay forks.

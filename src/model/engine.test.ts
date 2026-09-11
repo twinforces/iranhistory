@@ -898,6 +898,10 @@ describe("late rail", () => {
     assert.match(leader?.rant ?? "", /Death to Europe/);
     const blob = [...card.usChoices, ...card.iranChoices].map((c) => `${c.label} ${c.summary}`).join(" ");
     assert.equal(/hostages|contra|241|truck bomb/i.test(blob), false);
+    const home = card.usChoices.find((c) => c.id === "us-bring-home");
+    assert.equal(home?.label, "Bring the Marines home");
+    assert.match(home?.summary ?? "", /Marine barracks/);
+    assert.match(home?.summary ?? "", /evening news/);
     const barracks = RECEIPTS.find((r) => r.id === "beirut-1983");
     assert.deepEqual(barracks?.usedFor, ["lebanon-1983"]);
     const nsa = RECEIPTS.find((r) => r.id === "nsarchive-iraq-tilt");
