@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Moral victories and the graves that walked
+
+What: Surviving graves tick Convenience store owners. Shot graves do not. Moral victories (CSO plus book deals) sit on the master scoreboard with Peace exits. Need a map is an opt-in on the peace row.
+
+Why: CIA wants the debrief. The exits were too well hidden.
+
+
 ## 2026-09-11 - The first convenience store
 
 What: Mossadegh hiring the British engineers ticks Convenience store owners. Moscow does not. The later 7-Elevens still do.

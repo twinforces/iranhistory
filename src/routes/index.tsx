@@ -5,7 +5,7 @@ import { RailPending } from "../view/RailPending.tsx";
 
 export const Route = createFileRoute("/")({
   pendingComponent: RailPending,
-  pendingMs: 0,
+  pendingMs: 400,
   component: Home,
 });
 

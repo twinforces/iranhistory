@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 /** Drops the first-paint boot rail once React is actually on the page. */
 export function HydrateMark() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.classList.add("hydrated");
   }, []);
   return null;

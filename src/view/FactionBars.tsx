@@ -43,32 +43,58 @@ function MuseumCell({
   );
 }
 
-export function PeaceExits({ museum }: { museum: PresentedMuseum }) {
+export function PlayScoreboard({ museum }: { museum: PresentedMuseum }) {
   const { t } = useLocale();
   return (
-    <header className="peace-exits-banner">
-      <div className="min-w-0">
-        <p className="kicker">{t("peaceExits")}</p>
-        <p className="mt-1 font-serif text-sm leading-relaxed text-muted">
-          {t("exitsHunt")}
-        </p>
+    <header className="play-scoreboard">
+      <div className="play-scoreboard-row">
+        <div className="min-w-0">
+          <p className="kicker">{t("peaceExits")}</p>
+          <p className="mt-1 font-serif text-sm leading-relaxed text-muted">{t("exitsHunt")}</p>
+        </div>
+        <dl className="grid min-w-[12rem] grid-cols-2 gap-2">
+          <MuseumCell
+            label={t("iranExits")}
+            found={museum.iranFound}
+            total={museum.iranTotal}
+            names={museum.iranNames}
+            hunt={t("exitsHunt")}
+          />
+          <MuseumCell
+            label={t("usExits")}
+            found={museum.usFound}
+            total={museum.usTotal}
+            names={museum.usNames}
+            hunt={t("exitsHunt")}
+          />
+        </dl>
       </div>
-      <dl className="grid min-w-[12rem] grid-cols-2 gap-2">
-        <MuseumCell
-          label={t("iranExits")}
-          found={museum.iranFound}
-          total={museum.iranTotal}
-          names={museum.iranNames}
-          hunt={t("exitsHunt")}
-        />
-        <MuseumCell
-          label={t("usExits")}
-          found={museum.usFound}
-          total={museum.usTotal}
-          names={museum.usNames}
-          hunt={t("exitsHunt")}
-        />
-      </dl>
+      <details className="exits-map">
+        <summary>{t("exitsStuck")}</summary>
+        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapIran")}</p>
+        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapUs")}</p>
+      </details>
+      <div className="play-scoreboard-row">
+        <div className="min-w-0">
+          <p className="kicker">{t("moralVictories")}</p>
+        </div>
+        <dl className="grid min-w-[12rem] grid-cols-2 gap-2">
+          <MuseumCell
+            label={t("csoCounter")}
+            found={museum.csoFound}
+            names={museum.csoNames}
+            hunt={t("csoBlurb")}
+            sticky
+          />
+          <MuseumCell
+            label={t("memoirsCounter")}
+            found={museum.memoirsFound}
+            names={museum.memoirsNames}
+            hunt={t("memoirsBlurb")}
+            sticky
+          />
+        </dl>
+      </div>
     </header>
   );
 }
@@ -117,20 +143,6 @@ export function FactionBars({
             found={museum.nukesFound}
             names={museum.nukesNames}
             hunt={t("nukesNotYet")}
-          />
-          <MuseumCell
-            label={t("csoCounter")}
-            found={museum.csoFound}
-            names={museum.csoNames}
-            hunt={t("csoBlurb")}
-            sticky
-          />
-          <MuseumCell
-            label={t("memoirsCounter")}
-            found={museum.memoirsFound}
-            names={museum.memoirsNames}
-            hunt={t("memoirsBlurb")}
-            sticky
           />
         </dl>
       </div>

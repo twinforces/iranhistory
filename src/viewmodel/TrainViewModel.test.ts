@@ -162,6 +162,20 @@ describe("TrainViewModel", () => {
     assert.match(ui.museum.csoNames.join(" "), /British engineers/);
   });
 
+  it("Moscow is a surviving grave store, Kuwait is a shot grave", () => {
+    const moscow = new TrainViewModel("iran", "D", undefined, { museum: memoryMuseumStore() });
+    moscow.choose("ir-deal-moscow");
+    const m = moscow.getState();
+    assert.equal(m.endingId, "mossadegh_falls");
+    assert.equal(m.museum.csoFound, 1);
+    assert.match(m.museum.csoNames.join(" "), /embassy/);
+    const kuwait = new TrainViewModel("iran", "D", "kuwait-1990", { museum: memoryMuseumStore() });
+    kuwait.choose("ir-side-saddam");
+    const k = kuwait.getState();
+    assert.equal(k.endingId, "kuwait_grave");
+    assert.equal(k.museum.csoFound, 0);
+  });
+
   it("Iran nationalize seats the Shah and says so", () => {
     const vm = new TrainViewModel("iran", "D");
     assert.equal(vm.getState().leader.id, "mossadegh");

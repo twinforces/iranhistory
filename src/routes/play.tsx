@@ -6,7 +6,7 @@ import type { Chair } from "../model/types.ts";
 
 export const Route = createFileRoute("/play")({
   pendingComponent: RailPending,
-  pendingMs: 0,
+  pendingMs: 400,
   validateSearch: (s: Record<string, unknown>) => {
     const out: { card?: string; chair?: Chair } = {};
     if (typeof s.card === "string" && s.card.length > 0) out.card = s.card;

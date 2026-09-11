@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { TagChip, RefereeText } from "./TagChip.tsx";
-import { FactionBars, PeaceExits } from "./FactionBars.tsx";
+import { FactionBars, PlayScoreboard } from "./FactionBars.tsx";
 import { ChairSelect } from "./ChairSelect.tsx";
 import { AdvisorList } from "./AdvisorList.tsx";
 import { ActionChoices } from "./ActionChoices.tsx";
@@ -55,7 +55,7 @@ export function PlayView({
 
   return (
     <div className="flex flex-col gap-6">
-      <PeaceExits museum={ui.museum} />
+      <PlayScoreboard museum={ui.museum} />
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="kicker">
           {ui.chair === "us" ? t("unitedStates") : t("iran")} · {ui.faceLabel} · {ui.card.yearLabel}

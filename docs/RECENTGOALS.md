@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Moral victories and the graves that walked, 2026-09-11
+
+What: Graves are stores if you walked out. Shot is not. Moral victories sit at the top with Peace exits. Need a map names the five peace forks.
+
+Why: The hunt was too quiet. CIA still wants the file.
+
+
 ## The first convenience store, 2026-09-11
 
 What: Hire the British engineers is CSO number one. The 7-Eleven morals still stack. Moscow is not a store.

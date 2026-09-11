@@ -55,6 +55,10 @@ describe("Farsi overlay", () => {
     assert.equal(ui("en", "csoCounter"), "Convenience store owners");
     assert.match(ui("en", "csoBlurb"), /convenience store/);
     assert.match(ui("en", "memoirsBlurb"), /best selling memoirs/);
+    assert.equal(ui("en", "moralVictories"), "Moral victories");
+    assert.equal(ui("en", "exitsStuck"), "Need a map?");
+    assert.match(ui("en", "exitsMapIran"), /villages/);
+    assert.match(ui("en", "exitsMapUs"), /Fordow/);
   });
 
   it("applyDocumentLocale sets rtl", () => {

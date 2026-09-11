@@ -133,16 +133,21 @@ const EN = {
   iranExits: "Iran",
   usExits: "United States",
   nukesCounter: "Iran gets nukes",
-  exitsHunt: "Can you find all the exits?",
+  exitsHunt: "The exits are real forks, not the overlay gags. Can you find them?",
+  exitsStuck: "Need a map?",
+  exitsMapIran:
+    "Iran: 1972, spend the oil on the villages. Then stay when the square fills. 2019, keep the limits after Europe bounces. 2023, do not fund Hamas.",
+  exitsMapUs: "United States: 2023, do the Saudi talks in private. 2026, stop after Fordow.",
   nukesNotYet: "Not yet.",
   exitHinterland: "The hinterland held 1979",
   exitLimits: "You kept the limits",
   exitHamas: "Hamas cut off",
   exitImamLives: "The Imam lives",
   exitNukes: "Breakout hit zero",
+  moralVictories: "Moral victories",
   csoCounter: "Convenience store owners",
   csoBlurb:
-    "Deposed Iranian leaders defect to the West, claim asylum, work for the CIA for a year on deep background, write the book, open a convenience store with the proceeds. It's a moral victory. But the machinery grinds on.",
+    "Deposed Iranian leaders defect to the West, claim asylum, work for the CIA for a year on deep background, write the book, open a convenience store with the proceeds. The graves count if you walked out. Shot is not a store. CIA wants the debrief. It's a moral victory. But the machinery grinds on.",
   memoirsCounter: "Best selling memoirs",
   memoirsBlurb:
     "Presidents who have to leave office early write best selling memoirs. It's a moral victory. But the machinery grinds on.",
@@ -155,6 +160,10 @@ const EN = {
   csoRobe: "You remained letterhead",
   csoGreen: "You counted Green",
   csoMahsa: "You fired the morality police",
+  csoMoscow: "You asked the other embassy",
+  csoFace: "The face did not have the guns",
+  csoSideline: "Sidelined twice",
+  csoPurge: "The Guards installed a new face",
   memoirsFound: "The other party took the chair",
 } as const;
 
@@ -289,16 +298,21 @@ const FA: { [K in keyof typeof EN]: string } = {
   iranExits: "ایران",
   usExits: "ایالات متحده",
   nukesCounter: "ایران بمب می‌گیرد",
-  exitsHunt: "می‌توانی همهٔ خروج‌ها را پیدا کنی؟",
+  exitsHunt: "خروج‌ها انشعاب واقعی‌اند، نه شوخیِ روکش. می‌توانی پیدایشان کنی؟",
+  exitsStuck: "نقشه می‌خواهی؟",
+  exitsMapIran:
+    "ایران: ۱۹۷۲، نفت را خرج روستاها کن. بعد وقتی میدان پر شد بمان. ۲۰۱۹، بعد از برگشت چک اروپا سقف‌ها را نگه دار. ۲۰۲۳، حماس را تأمین نکن.",
+  exitsMapUs: "ایالات متحده: ۲۰۲۳، گفتگو با سعودی را خصوصی نگه دار. ۲۰۲۶، بعد از فردو بایست.",
   nukesNotYet: "هنوز نه.",
   exitHinterland: "پس‌کرانه ۱۹۷۹ را نگه داشت",
   exitLimits: "سقف‌ها را نگه داشتی",
   exitHamas: "حماس قطع شد",
   exitImamLives: "امام زنده است",
   exitNukes: "گریز به صفر رسید",
+  moralVictories: "پیروزی‌های اخلاقی",
   csoCounter: "صاحب‌های سوپرمارکت",
   csoBlurb:
-    "رهبران معزول ایران به غرب پناهنده می‌شوند، یک سال برای سیا پس‌زمینه عمیق کار می‌کنند، کتاب را می‌نویسند، با پولش سوپرمارکت باز می‌کنند. پیروزی اخلاقی است. اما ماشین ادامه می‌دهد.",
+    "رهبران معزول ایران به غرب پناهنده می‌شوند، یک سال برای سیا پس‌زمینه عمیق کار می‌کنند، کتاب را می‌نویسند، با پولش سوپرمارکت باز می‌کنند. گورها هم می‌شمارند اگر پیاده بیرون آمده باشی. تیرخورده فروشگاه نیست. سیا گزارش می‌خواهد. پیروزی اخلاقی است. اما ماشین ادامه می‌دهد.",
   memoirsCounter: "خاطرات پرفروش",
   memoirsBlurb:
     "رئیس‌جمهورهایی که زود صندلی را ترک می‌کنند خاطرات پرفروش می‌نویسند. پیروزی اخلاقی است. اما ماشین ادامه می‌دهد.",
@@ -311,6 +325,10 @@ const FA: { [K in keyof typeof EN]: string } = {
   csoRobe: "سربرگ ماندی",
   csoGreen: "سبز را شمردی",
   csoMahsa: "پلیس اخلاق را برکنار کردی",
+  csoMoscow: "از سفارت دیگر پرسیدی",
+  csoFace: "چهره تفنگ نداشت",
+  csoSideline: "دو بار کنار گذاشته شدی",
+  csoPurge: "سپاه چهرهٔ تازه گذاشت",
   memoirsFound: "حزب دیگر صندلی را گرفت",
 };
 

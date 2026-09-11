@@ -8,10 +8,11 @@ import appCss from "../styles.css?url";
 const APP_NAME = "Train Ride to War";
 
 const LOCALE_BOOT = `(function(){try{var l=localStorage.getItem("trtw-locale");if(l!=="fa")return;var r=document.documentElement;r.lang="fa";r.dir="rtl";r.classList.add("locale-fa");var k=document.querySelector(".rail-boot .kicker");var t=document.querySelector(".rail-boot-title");var c=document.querySelector(".rail-boot-copy");if(k)k.textContent="قطار به سوی جنگ";if(t)t.textContent="ریل در حال آمدن است";if(c)c.textContent="بریفینگ هنوز روی سیم است.";}catch(e){}})();`;
+const BOOT_TIMEOUT = `setTimeout(function(){try{document.documentElement.classList.add("hydrated")}catch(e){}},2500);`;
 
 export const Route = createRootRoute({
   pendingComponent: RailPending,
-  pendingMs: 0,
+  pendingMs: 400,
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -57,6 +58,7 @@ export const Route = createRootRoute({
           </div>
         </div>
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOT }} />
+        <script dangerouslySetInnerHTML={{ __html: BOOT_TIMEOUT }} />
         <HydrateMark />
         <PreviewHostBridge />
         <AuthProvider>

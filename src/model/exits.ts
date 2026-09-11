@@ -1,8 +1,8 @@
 /**
  * What: the off-ramps the time machine is for.
  * Why: most of the rail is locked. Peace exits, the nuke splat, the 7-Eleven,
- * and the memoir are the museum. Catalog lives here so the chrome cannot
- * invent a sixth peace exit.
+ * surviving graves, and the memoir are the museum. Catalog lives here so the
+ * chrome cannot invent a sixth peace exit. Shot is not a store.
  */
 import type { Chair, EndingId, GameState } from "./types.ts";
 
@@ -125,6 +125,34 @@ export const EXITS: readonly ExitDef[] = [
     kind: "cso",
     found: "You fired the morality police",
     choiceId: "ir-fire-morality",
+  },
+  {
+    id: "cso-moscow",
+    chair: "iran",
+    kind: "cso",
+    found: "You asked the other embassy",
+    endingId: "mossadegh_falls",
+  },
+  {
+    id: "cso-face",
+    chair: "iran",
+    kind: "cso",
+    found: "The face did not have the guns",
+    endingId: "face_no_guns",
+  },
+  {
+    id: "cso-sideline",
+    chair: "iran",
+    kind: "cso",
+    found: "Sidelined twice",
+    endingId: "leader_sideline",
+  },
+  {
+    id: "cso-purge",
+    chair: "iran",
+    kind: "cso",
+    found: "The Guards installed a new face",
+    endingId: "irgc_purge",
   },
   {
     id: "memoirs",

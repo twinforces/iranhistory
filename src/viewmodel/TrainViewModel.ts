@@ -366,6 +366,10 @@ const EXIT_CAPTION: Record<string, UiKey> = {
   "cso-robe": "csoRobe",
   "cso-green": "csoGreen",
   "cso-mahsa": "csoMahsa",
+  "cso-moscow": "csoMoscow",
+  "cso-face": "csoFace",
+  "cso-sideline": "csoSideline",
+  "cso-purge": "csoPurge",
   memoirs: "memoirsFound",
 };
 

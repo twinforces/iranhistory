@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { applyChoice, newGame } from "./engine.ts";
+import { SOFT_PURGE_IRGC } from "./constants.ts";
 import {
   detectExits,
   EXITS,
@@ -15,7 +16,7 @@ describe("peace exits catalog", () => {
     assert.equal(peaceCount("us"), 2);
     assert.equal(peaceCount("iran"), 3);
     assert.equal(EXITS.filter((e) => e.kind === "nukes").length, 1);
-    assert.equal(EXITS.filter((e) => e.kind === "cso").length, 9);
+    assert.equal(EXITS.filter((e) => e.kind === "cso").length, 13);
     assert.equal(EXITS.filter((e) => e.kind === "memoirs").length, 1);
   });
 
@@ -77,7 +78,40 @@ describe("peace exits catalog", () => {
     assert.equal(g.ending?.id, "mossadegh_street");
     assert.deepEqual(detectExits(g), ["cso-london"]);
     const moscow = applyChoice(newGame({ chair: "iran", party: "D" }), "ir-deal-moscow");
-    assert.deepEqual(detectExits(moscow), []);
+    assert.equal(moscow.ending?.id, "mossadegh_falls");
+    assert.deepEqual(detectExits(moscow), ["cso-moscow"]);
+  });
+
+  it("surviving graves are stores; shot graves are not", () => {
+    const face = applyChoice(newGame({ chair: "iran", party: "D", cardId: "lebanon-1983" }), "ir-no-export");
+    assert.equal(face.ending?.id, "face_no_guns");
+    assert.deepEqual(detectExits(face), ["cso-face"]);
+    const cup = applyChoice(newGame({ chair: "iran", party: "D", cardId: "cup-1988" }), "ir-refuse-cup");
+    assert.equal(cup.ending?.id, "face_no_guns");
+    assert.deepEqual(detectExits(cup), ["cso-face"]);
+    const g = newGame({ chair: "iran", party: "D", cardId: "stuxnet-2010" });
+    g.bars.irgc = SOFT_PURGE_IRGC - 1;
+    const killed = applyChoice(g, "ir-pause-stux");
+    assert.equal(killed.ending?.id, "irgc_purge");
+    assert.deepEqual(detectExits(killed), ["cso-purge"]);
+    const sidelined = {
+      ...newGame({ chair: "iran", party: "D", cardId: "stuxnet-2010" }),
+      ending: {
+        id: "leader_sideline" as const,
+        title: "Sidelined twice",
+        referee: "You still have a pulse.",
+      },
+    };
+    assert.deepEqual(detectExits(sidelined), ["cso-sideline"]);
+    const kuwait = applyChoice(newGame({ chair: "iran", party: "D", cardId: "kuwait-1990" }), "ir-side-saddam");
+    assert.equal(kuwait.ending?.id, "kuwait_grave");
+    assert.deepEqual(detectExits(kuwait), []);
+    const war = applyChoice(newGame({ chair: "iran", party: "D", cardId: "the-leader-2026" }), "ir-keep-war");
+    assert.equal(war.ending?.id, "keep_the_war");
+    assert.deepEqual(detectExits(war), []);
+    const imam = applyChoice(newGame({ chair: "iran", party: "D", cardId: "the-leader-2026" }), "ir-hormuz-memo");
+    assert.equal(imam.ending?.id, "the_leader");
+    assert.deepEqual(detectExits(imam), []);
   });
 
   it("leaving Hamas is a peace exit, not a convenience store", () => {
