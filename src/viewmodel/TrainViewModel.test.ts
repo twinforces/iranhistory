@@ -641,7 +641,7 @@ describe("TrainViewModel", () => {
     const vm = new TrainViewModel("us", "R", undefined, { museum: memoryMuseumStore() });
     const ui = vm.getState();
     assert.equal(ui.museum.usFound, 0);
-    assert.equal(ui.museum.usTotal, 2);
+    assert.equal(ui.museum.usTotal, 1);
     assert.equal(ui.museum.iranFound, 0);
     assert.equal(ui.museum.iranTotal, 3);
     assert.equal(ui.museum.nukesFound, 0);
@@ -649,6 +649,17 @@ describe("TrainViewModel", () => {
     assert.equal(ui.museum.memoirsFound, 0);
     assert.deepEqual(ui.museum.usNames, []);
     assert.equal(/Imam|Fordow|hinterland|limits|Hamas/i.test(ui.museum.usNames.join(" ")), false);
+  });
+
+  it("stop after Fordow is not a peace exit and does not splat nukes", () => {
+    const vm = new TrainViewModel("us", "R", "the-leader-2026", { museum: memoryMuseumStore() });
+    vm.choose("us-stop-fordow");
+    const ui = vm.getState();
+    assert.equal(ui.endingId, "none");
+    assert.equal(ui.museum.usFound, 0);
+    assert.equal(ui.museum.nukesFound, 0);
+    assert.equal(ui.museum.usTotal, 1);
+    assert.equal(/Imam|Fordow/i.test(ui.museum.usNames.join(" ")), false);
   });
 
   it("private Saudi talks records a US peace exit and survives a new chair", () => {
@@ -662,7 +673,7 @@ describe("TrainViewModel", () => {
     const other = new TrainViewModel("iran", "D", undefined, { museum: bag }).getState();
     assert.equal(other.museum.usFound, 1);
     assert.equal(other.museum.iranFound, 0);
-    assert.equal(other.museum.usTotal, 2);
+    assert.equal(other.museum.usTotal, 1);
   });
 
   it("keeping the limits records an Iran peace exit", () => {

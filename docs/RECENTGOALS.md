@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Fordow is not peace, 2026-09-11
+
+What: Stop after Fordow is not a US peace exit. Private Saudi talks is the one. Tiles sit on the first paint so Iran play clicks.
+
+Why: A living Imam at a worse Natanz is a path to breakout. Buttons below the fold are not buttons.
+
+
 ## Moral victories and the graves that walked, 2026-09-11
 
 What: Graves are stores if you walked out. Shot is not. Moral victories sit at the top with Peace exits. Need a map names the five peace forks.

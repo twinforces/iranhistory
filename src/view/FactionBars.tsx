@@ -26,8 +26,8 @@ function MuseumCell({
   return (
     <Tooltip disableHoverableContent>
       <TooltipTrigger asChild>
-        <div className="rounded-[var(--radius-sm)] bg-surface-2 px-3 py-2" tabIndex={0} title={native}>
-          <dt className="font-mono text-2xs uppercase tracking-wide text-muted">{label}</dt>
+        <div className="rounded-[var(--radius-sm)] bg-surface-2 px-2.5 py-1.5" tabIndex={0} title={native}>
+          <dt className="truncate font-mono text-2xs uppercase tracking-wide text-muted">{label}</dt>
           <dd className="font-mono text-sm tabular-nums text-fg">{display}</dd>
         </div>
       </TooltipTrigger>
@@ -48,11 +48,8 @@ export function PlayScoreboard({ museum }: { museum: PresentedMuseum }) {
   return (
     <header className="play-scoreboard">
       <div className="play-scoreboard-row">
-        <div className="min-w-0">
-          <p className="kicker">{t("peaceExits")}</p>
-          <p className="mt-1 font-serif text-sm leading-relaxed text-muted">{t("exitsHunt")}</p>
-        </div>
-        <dl className="grid min-w-[12rem] grid-cols-2 gap-2">
+        <p className="kicker self-center">{t("peaceExits")}</p>
+        <dl className="grid min-w-0 grid-cols-2 gap-2">
           <MuseumCell
             label={t("iranExits")}
             found={museum.iranFound}
@@ -68,17 +65,8 @@ export function PlayScoreboard({ museum }: { museum: PresentedMuseum }) {
             hunt={t("exitsHunt")}
           />
         </dl>
-      </div>
-      <details className="exits-map">
-        <summary>{t("exitsStuck")}</summary>
-        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapIran")}</p>
-        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapUs")}</p>
-      </details>
-      <div className="play-scoreboard-row">
-        <div className="min-w-0">
-          <p className="kicker">{t("moralVictories")}</p>
-        </div>
-        <dl className="grid min-w-[12rem] grid-cols-2 gap-2">
+        <p className="kicker self-center">{t("moralVictories")}</p>
+        <dl className="grid min-w-0 grid-cols-2 gap-2">
           <MuseumCell
             label={t("csoCounter")}
             found={museum.csoFound}
@@ -95,6 +83,11 @@ export function PlayScoreboard({ museum }: { museum: PresentedMuseum }) {
           />
         </dl>
       </div>
+      <details className="exits-map">
+        <summary>{t("exitsStuck")}</summary>
+        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapIran")}</p>
+        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapUs")}</p>
+      </details>
     </header>
   );
 }

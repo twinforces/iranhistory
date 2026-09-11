@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Fordow is not peace. Iran clicks reach the tiles.
+
+What: Stop after Fordow is off the US peace catalog. The Imam lives at a worse Natanz; that is a path to breakout, not an exit. Nukes still only tick on the splat. US peace is private Saudi talks. Play chrome sits tighter so the 1953 Iran tiles are on the first screen, and chair blurbs no longer eat the click.
+
+Why: Leaving him alive is not peace. The time machine has to have buttons you can press.
+
+
 ## 2026-09-11 - Moral victories and the graves that walked
 
 What: Surviving graves tick Convenience store owners. Shot graves do not. Moral victories (CSO plus book deals) sit on the master scoreboard with Peace exits. Need a map is an opt-in on the peace row.

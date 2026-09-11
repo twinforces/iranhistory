@@ -17,10 +17,16 @@ export function ActionChoices({
   const { locale } = useLocale();
   const al = truthTagCaption("AL", locale);
   const alNative = `${al.name}. ${al.blurb}`;
+  const grid =
+    choices.length === 1
+      ? "relative z-[2] grid grid-cols-1 gap-3"
+      : choices.length === 3
+        ? "relative z-[2] grid grid-cols-3 gap-2 sm:gap-3"
+        : "relative z-[2] grid grid-cols-2 gap-3";
   return (
-    <section className="flex flex-col gap-3">
+    <section className="action-choices flex flex-col gap-3">
       <h2 className="action-prompt">{prompt}</h2>
-      <div className={choices.length === 1 ? "relative z-[2] grid grid-cols-1 gap-3" : "relative z-[2] grid grid-cols-2 gap-3"}>
+      <div className={grid}>
         {choices.map((c, i) => (
           <button
             key={c.id}

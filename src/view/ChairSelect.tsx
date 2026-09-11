@@ -24,7 +24,7 @@ export function ChairSelect({ onPick }: { onPick: (chair: Chair) => void }) {
             <span className="kicker text-ink/55">{t("tehran")}</span>
             <span className="mt-1 block font-serif text-2xl font-semibold text-ink">{t("playIran")}</span>
             <span className="mt-2 block text-sm leading-relaxed text-ink/75">
-              <GlossText text={t("chairIranBlurb")} />
+              <GlossText text={t("chairIranBlurb")} nested />
             </span>
           </span>
         </button>
@@ -34,7 +34,7 @@ export function ChairSelect({ onPick }: { onPick: (chair: Chair) => void }) {
             <span className="kicker">{t("washington")}</span>
             <span className="mt-1 block font-serif text-2xl font-semibold text-fg">{t("playUs")}</span>
             <span className="mt-2 block text-sm leading-relaxed text-muted">
-              <GlossText text={t("chairUsBlurb")} />
+              <GlossText text={t("chairUsBlurb")} nested />
             </span>
           </span>
         </button>

@@ -58,7 +58,9 @@ describe("Farsi overlay", () => {
     assert.equal(ui("en", "moralVictories"), "Moral victories");
     assert.equal(ui("en", "exitsStuck"), "Need a map?");
     assert.match(ui("en", "exitsMapIran"), /villages/);
-    assert.match(ui("en", "exitsMapUs"), /Fordow/);
+    assert.match(ui("en", "exitsMapUs"), /Saudi/);
+    assert.equal(/Fordow/.test(ui("en", "exitsMapUs")), false);
+    assert.equal(/Fordow/.test(ui("fa", "exitsMapUs")), false);
   });
 
   it("applyDocumentLocale sets rtl", () => {

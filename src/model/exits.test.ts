@@ -12,8 +12,8 @@ import {
 } from "./exits.ts";
 
 describe("peace exits catalog", () => {
-  it("has two US exits and three Iran exits, plus the nuke splat", () => {
-    assert.equal(peaceCount("us"), 2);
+  it("has one US exit and three Iran exits, plus the nuke splat", () => {
+    assert.equal(peaceCount("us"), 1);
     assert.equal(peaceCount("iran"), 3);
     assert.equal(EXITS.filter((e) => e.kind === "nukes").length, 1);
     assert.equal(EXITS.filter((e) => e.kind === "cso").length, 13);
@@ -41,7 +41,7 @@ describe("peace exits catalog", () => {
     assert.deepEqual(detectExits(limits), ["limits"]);
   });
 
-  it("detects Hamas cut off per chair, and stop-after-Fordow", () => {
+  it("detects Hamas cut off per chair. Stop-after-Fordow is not peace", () => {
     const us = applyChoice(newGame({ chair: "us", party: "R", cardId: "saudi-accord-2023" }), "us-private-saudi");
     assert.deepEqual(detectExits(us), ["hamas-us"]);
     const iran = applyChoice(
@@ -53,8 +53,9 @@ describe("peace exits catalog", () => {
       newGame({ chair: "us", party: "R", cardId: "the-leader-2026" }),
       "us-stop-fordow",
     );
-    assert.deepEqual(detectExits(fordow), ["fordow"]);
+    assert.deepEqual(detectExits(fordow), []);
     assert.equal(fordow.ending?.id, "none");
+    assert.notEqual(fordow.clocks.nuke_breakout_months, 0);
   });
 
   it("memory store survives a second load the way chair switch remounts", () => {

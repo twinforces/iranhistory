@@ -36,7 +36,7 @@ export function HomeView() {
             <span className="kicker text-ink/55">{t("tehran")}</span>
             <span className="mt-1 block font-serif text-2xl font-semibold text-ink">{t("playIran")}</span>
             <span className="mt-2 block text-sm leading-relaxed text-ink/75">
-              <GlossText text={t("homeIranBlurb")} />
+              <GlossText text={t("homeIranBlurb")} nested />
             </span>
           </span>
         </Link>
@@ -46,7 +46,7 @@ export function HomeView() {
             <span className="kicker">{t("washington")}</span>
             <span className="mt-1 block font-serif text-2xl font-semibold text-fg">{t("playUs")}</span>
             <span className="mt-2 block text-sm leading-relaxed text-muted">
-              <GlossText text={t("homeUsBlurb")} />
+              <GlossText text={t("homeUsBlurb")} nested />
             </span>
           </span>
         </Link>

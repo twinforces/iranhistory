@@ -54,7 +54,7 @@ export function PlayView({
   const endingKickerClass = holdEnding ? "kicker text-ok" : "kicker text-accent";
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       <PlayScoreboard museum={ui.museum} />
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="kicker">
@@ -73,13 +73,13 @@ export function PlayView({
         </button>
       </div>
 
-      <div className="flex min-w-0 flex-col gap-5">
+      <div className="flex min-w-0 flex-col gap-4">
           <div className={dual ? "play-flank-dual" : "play-flank-single"}>
             <PlayerPlate
               key={ui.leader.id}
               leader={ui.leader}
               yearLabel={ui.card.yearLabel}
-              layout={dual ? "stack" : "row"}
+              layout="stack"
             />
             <article className="situation-panel">
             {ui.card.art ? (
@@ -154,6 +154,19 @@ export function PlayView({
               layout="stack"
             />
           ) : null}
+          {ui.phase === "ended" && ui.endingTitle ? null : (
+            <ActionChoices
+              prompt={ui.card.actionPrompt}
+              choices={ui.choices}
+              disabled={ui.phase !== "playing"}
+              onChoose={(id, licenseId) => {
+                if (licenseId) setAlId(licenseId);
+                vm.choose(id);
+                setCalendarYear(null);
+                refresh();
+              }}
+            />
+          )}
           </div>
 
           {ui.phase === "ended" && ui.endingTitle ? (
@@ -180,19 +193,7 @@ export function PlayView({
                 </Button>
               ) : null}
             </article>
-          ) : (
-            <ActionChoices
-              prompt={ui.card.actionPrompt}
-              choices={ui.choices}
-              disabled={ui.phase !== "playing"}
-              onChoose={(id, licenseId) => {
-                if (licenseId) setAlId(licenseId);
-                vm.choose(id);
-                setCalendarYear(null);
-                refresh();
-              }}
-            />
-          )}
+          ) : null}
 
           {ui.bleed ? <p className="text-sm italic text-muted">{ui.bleed}</p> : null}
 

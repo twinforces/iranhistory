@@ -67,7 +67,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "2025-26 chapters",
     freeze:
-      "On the rail. Twelve Days 2025 and the 2026 campaign that kills the Imam, then a June memorandum. Historical is the campaign then a ceasefire. Keep-the-war is a grave. Stop-after-Fordow is AL rail hold. This is an ending, not a letterhead gag.",
+      "On the rail. Twelve Days 2025 and the 2026 campaign that kills the Imam, then a June memorandum. Historical is the campaign then a ceasefire. Keep-the-war is a grave. Stop-after-Fordow is AL rail hold at a worse Natanz, a path to breakout, not a peace exit. Do not tick nukes unless breakout hits zero. This is an ending, not a letterhead gag.",
   },
   {
     q: "Hitler easter egg",
@@ -102,7 +102,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "Peace exits / Iran gets nukes chrome?",
     freeze:
-      "Yes. Museum, not body counts. Peace exits and Moral victories sit at the top of Play. They are the goal. Found-once, localStorage, survives chair switch. US exits: private Saudi talks (Hamas cut off), stop after Fordow (Imam lives). Iran exits: hinterland 1979, keep JCPOA limits, do not fund Hamas. Need a map is an opt-in spoiler on the peace row. Unfound names stay off the empty counters. Nukes stay on the meters. Nukes is the breakout-zero splat. Convenience store owners: Mossadegh hiring the British engineers is the first store. Then the 7-Eleven letterhead morals. Then the surviving graves: Moscow, the face with no guns, sidelined twice, the Guards installing a new face. CIA wants the debrief. Shot is not a store: Kuwait, keep-the-war, the Imam crater. Best selling memoirs ticks election_loss, not Hail Mary, not serve. Hover on those two is the joke. The rail glossary is the trains-and-exits premise, not a recap slogan. Hindsight is 20/20. There are no time machines in real life. This sim is one.",
+      "Yes. Museum, not body counts. Peace exits and Moral victories sit at the top of Play. They are the goal. Found-once, localStorage, survives chair switch. US exit: private Saudi talks (Hamas cut off). Stop after Fordow is not peace: the Imam lives and Natanz is worse, a path to breakout. Iran exits: hinterland 1979, keep JCPOA limits, do not fund Hamas. Need a map is an opt-in spoiler on the peace row. Unfound names stay off the empty counters. Nukes stay on the meters. Nukes is the breakout-zero splat. Convenience store owners: Mossadegh hiring the British engineers is the first store. Then the 7-Eleven letterhead morals. Then the surviving graves: Moscow, the face with no guns, sidelined twice, the Guards installing a new face. CIA wants the debrief. Shot is not a store: Kuwait, keep-the-war, the Imam crater. Best selling memoirs ticks election_loss, not Hail Mary, not serve. Hover on those two is the joke. The rail glossary is the trains-and-exits premise, not a recap slogan. Hindsight is 20/20. There are no time machines in real life. This sim is one.",
   },
   {
     q: "Hormuz",

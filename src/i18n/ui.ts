@@ -137,7 +137,7 @@ const EN = {
   exitsStuck: "Need a map?",
   exitsMapIran:
     "Iran: 1972, spend the oil on the villages. Then stay when the square fills. 2019, keep the limits after Europe bounces. 2023, do not fund Hamas.",
-  exitsMapUs: "United States: 2023, do the Saudi talks in private. 2026, stop after Fordow.",
+  exitsMapUs: "United States: 2023, do the Saudi talks in private.",
   nukesNotYet: "Not yet.",
   exitHinterland: "The hinterland held 1979",
   exitLimits: "You kept the limits",
@@ -302,7 +302,7 @@ const FA: { [K in keyof typeof EN]: string } = {
   exitsStuck: "نقشه می‌خواهی؟",
   exitsMapIran:
     "ایران: ۱۹۷۲، نفت را خرج روستاها کن. بعد وقتی میدان پر شد بمان. ۲۰۱۹، بعد از برگشت چک اروپا سقف‌ها را نگه دار. ۲۰۲۳، حماس را تأمین نکن.",
-  exitsMapUs: "ایالات متحده: ۲۰۲۳، گفتگو با سعودی را خصوصی نگه دار. ۲۰۲۶، بعد از فردو بایست.",
+  exitsMapUs: "ایالات متحده: ۲۰۲۳، گفتگو با سعودی را خصوصی نگه دار.",
   nukesNotYet: "هنوز نه.",
   exitHinterland: "پس‌کرانه ۱۹۷۹ را نگه داشت",
   exitLimits: "سقف‌ها را نگه داشتی",

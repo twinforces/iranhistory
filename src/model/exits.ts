@@ -50,13 +50,6 @@ export const EXITS: readonly ExitDef[] = [
     choiceId: "us-private-saudi",
   },
   {
-    id: "fordow",
-    chair: "us",
-    kind: "peace",
-    found: "The Imam lives",
-    choiceId: "us-stop-fordow",
-  },
-  {
     id: "nukes",
     chair: "iran",
     kind: "nukes",
