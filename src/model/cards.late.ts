@@ -42,12 +42,21 @@ const REVOLUTION: FactionId[] = [
   "europeans",
 ];
 
-function moral(story: string): Pick<Choice, "epilogue" | "resultTitle" | "result"> {
+function moral(story: string): Pick<Choice, "epilogue" | "overlay" | "resultTitle" | "result"> {
   return {
     epilogue: true,
+    overlay: "moral",
     resultTitle: "We congratulate you on your moral choice.",
     result: `${story}\n\nHowever, Iran continues on.`,
   };
+}
+
+function serve(title: string, body: string): Pick<Choice, "overlay" | "resultTitle" | "result"> {
+  return { overlay: "serve", resultTitle: title, result: body };
+}
+
+function adapts(title: string, body: string): Pick<Choice, "overlay" | "resultTitle" | "result"> {
+  return { overlay: "adapts", resultTitle: title, result: body };
 }
 
 function b(
@@ -119,13 +128,6 @@ const sofa1964 = play({
     "LT: October 1964 the Majlis passes a status-of-forces bill, 74 to 61. Khomeini's 26 October sermon calls it a document of Iran's slavery. 4 November the Shah exiles him to Turkey, then Najaf. Fifteen years of cassette tapes start here.",
     "IT: Johnson is drowning in Vietnam. The SOFA is a clerk's bill that manufactures a revolutionary. Quiet years are not empty years.",
   ],
-  al: [
-    {
-      id: "al-no-sofa",
-      title: "No immunity",
-      body: "Historically the bill passes. Refusing it does not un-write the White Revolution. Khomeini still hates the king. The sermon is quieter. He is still the man in 1979. AL.",
-    },
-  ],
   briefings: [
     b("cia", "us", "Take the immunity. The advisors will not sit in an Iranian court. The cleric is a local problem. Vietnam is the file."),
     b("my_party", "us", "You are busy with Vietnam. Do not pick a fight with the Shah over a status bill. Sign it and get back to the real war."),
@@ -151,8 +153,11 @@ const sofa1964 = play({
       label: "Do not ask for the bill",
       summary: "Vietnam is enough of a war. Leave their courts alone.",
       kind: "walk",
-      artisticLicense: "al-no-sofa",
-      deltas: { cia: -8, my_party: -4, street: 4 },
+      ...serve(
+        "The Joint Chiefs have the mission",
+        "They tell you if an Iranian court can try a cook, the listening posts go home and Vietnam loses a quiet base. You wanted to leave their courts alone. They have the advisors. You ask for the bill. Khomeini still gets a name.",
+      ),
+      deltas: { cia: 6, my_party: 2, europeans: 2, street: -6, opposing_party: 4 },
     },
   ],
   iran: [
@@ -171,8 +176,11 @@ const sofa1964 = play({
       summary: "A king who cannot try a foreign cook is not a king.",
       kind: "soft",
       face: "shah",
-      artisticLicense: "al-no-sofa",
-      deltas: { street: 8, leader: -6, cia: -10 },
+      ...serve(
+        "The aid is tied to the bill",
+        "Johnson's people tell you the mission leaves if a cook can be tried in Qom. You wanted to be a king in your own courts. They have two hundred million. You pass it. Khomeini still gets the sermon.",
+      ),
+      deltas: { leader: 4, cia: 8, street: -14, liberals: -4 },
     },
   ],
   next: "sit-nixon-1969",
@@ -245,7 +253,7 @@ const pipeline1975 = play({
     {
       id: "al-slow-pipeline",
       title: "Slow the pipeline",
-      body: "Historically Ford keeps selling. Slowing it does not un-grow Tehran or un-exile Khomeini. Number tweak. Next.",
+      body: "You slow the American invoice. Bonn and Paris take the work. The plants still exist. Khomeini is still in Najaf. AL.",
     },
   ],
   briefings: [
@@ -271,7 +279,11 @@ const pipeline1975 = play({
       summary: "Congress wants a window. Give them one.",
       kind: "soft",
       artisticLicense: "al-slow-pipeline",
-      deltas: { my_party: 6, cia: -6, leader: -4 },
+      ...adapts(
+        "Bonn and Paris take the work",
+        "You gave Congress a window. The king still wants plants. German and French invoices replace yours. Tehran still grows. Khomeini is still in Najaf. The later sprint still has a floor.",
+      ),
+      deltas: { my_party: 6, cia: -6, europeans: 8, leader: 2 },
     },
   ],
   iran: [
@@ -291,6 +303,10 @@ const pipeline1975 = play({
       kind: "deal",
       face: "shah",
       flags: { hinterland_spent: true },
+      ...adapts(
+        "The villages will grade this in 1979",
+        "You spent it where the tapes from Najaf already live. The army likes you less. 1979 will decide whether the square stays thin.",
+      ),
       deltas: { street: 10, leader: -8, cia: -6 },
     },
   ],
@@ -312,6 +328,13 @@ const robe1989 = play({
   referee: [
     "LT: Khomeini dies 3 June 1989. The Assembly of Experts sits Khamenei as Leader. Rafsanjani sits the presidency. You never sit the turban.",
     "IT: The same man moves from letterhead to Imam plate. That is the 1989 fact. Remaining president is a 7-Eleven. Iran continues.",
+  ],
+  al: [
+    {
+      id: "al-no-note",
+      title: "Do not send a note",
+      body: "You skip the sentence. The robe still moves. Saddam is still the live file. AL.",
+    },
   ],
   briefings: [
     b("cia", "us", "The jurist is dead. The letterhead is putting on the robe. Send a note or do not. Saddam is the live file."),
@@ -336,6 +359,11 @@ const robe1989 = play({
       label: "Do not send a note",
       summary: "Saddam is the live file.",
       kind: "walk",
+      artisticLicense: "al-no-note",
+      ...adapts(
+        "The robe still moves",
+        "You sent no note. The jurist is still dead. Khamenei still puts on the robe. Saddam is still the live file. A sentence was cheap and you skipped it.",
+      ),
       deltas: { my_party: 4, europeans: -4 },
     },
   ],
@@ -389,7 +417,7 @@ const kuwait1990 = play({
     {
       id: "al-baghdad-1991",
       title: "Go to Baghdad",
-      body: "Historically the coalition stops at the border. Going to Baghdad is Iraq 2003 with a 1991 date. Saddam is gone. Iran is the remaining problem. AL, not a prediction of a better Gulf.",
+      body: "The coalition will not occupy. Baker and the Saudis stop you at the border. Saddam stays. Iran is still the remaining problem. AL, not a prediction of a better Gulf.",
     },
   ],
   briefings: [
@@ -418,6 +446,10 @@ const kuwait1990 = play({
       kind: "hard",
       artisticLicense: "al-baghdad-1991",
       flags: { went_to_baghdad: true },
+      ...adapts(
+        "The coalition will not occupy",
+        "You wanted Baghdad. Baker, Cheney, and the Saudis will not sit an occupation. The coalition stops you at the border. Saddam stays. Iran is still the remaining problem. 2003 is still a later century.",
+      ),
       deltas: { my_party: -6, media: 12, saudis: -8, europeans: -10, cia: 4 },
     },
   ],
@@ -460,6 +492,18 @@ const dual1993 = play({
     "LT: Clinton's dual containment, 1993. Iran-Libya Sanctions Act 1996. Both treated as hostile. Reconstruction in Tehran is Rafsanjani's pitch.",
     "IT: A next card that says we treated them as the same animal. The choice barely matters. The sentence does.",
   ],
+  al: [
+    {
+      id: "al-pick-one",
+      title: "Pick one",
+      body: "You name one cage. The other animal still eats. Dual containment was a sentence. AL.",
+    },
+    {
+      id: "al-stay-loud",
+      title: "Keep the revolution loud",
+      body: "You stay loud. Reconstruction still happens around you. AL.",
+    },
+  ],
   briefings: [
     b("cia", "us", "Contain both. Neither gets to be the policeman. The Balkans will eat the week."),
     b("my_party", "us", "You ran on the economy. Do not start a Gulf sermon. Sanctions are cheap."),
@@ -482,6 +526,11 @@ const dual1993 = play({
       label: "Pick one",
       summary: "Saddam is in a box. Tehran is a later file.",
       kind: "soft",
+      artisticLicense: "al-pick-one",
+      ...adapts(
+        "The one you skipped still grows",
+        "You picked a cage. The other animal still eats. ILSA still arrives. The Balkans still eat the week. Dual containment was a sentence, not a fork.",
+      ),
       deltas: { europeans: 6, saudis: -4, my_party: -4 },
     },
   ],
@@ -501,6 +550,11 @@ const dual1993 = play({
       summary: "Cages are a sermon. Answer it.",
       kind: "hard",
       face: "rafsanjani",
+      artisticLicense: "al-stay-loud",
+      ...adapts(
+        "Reconstruction still happens around you",
+        "You stayed loud. The bazaar still rebuilds. The missiles still belong to the Guards. Clinton still puts you in a cage with Saddam.",
+      ),
       deltas: { irgc: 8, street: -6, europeans: -6 },
     },
   ],
@@ -527,7 +581,12 @@ const khobar1996 = play({
     {
       id: "al-strike-khobar",
       title: "Strike Khobar",
-      body: "Historically Clinton does not bomb. A strike photographs. It does not un-write 1997. AL.",
+      body: "You bomb. The photograph lasts. 1997 still happens. The Saudis write a colder cable. AL.",
+    },
+    {
+      id: "al-own-khobar",
+      title: "Own Khobar",
+      body: "You confess. The indictment still names the Guards. Reconstruction takes the hit. AL.",
     },
   ],
   briefings: [
@@ -554,6 +613,10 @@ const khobar1996 = play({
       summary: "Nineteen airmen. Answer the hole.",
       kind: "bomb",
       artisticLicense: "al-strike-khobar",
+      ...adapts(
+        "1997 still happens",
+        "You answered the hole. The photograph lasts. The Saudis write a colder cable. Khatami still sits. Dialogue of civilizations is still the next sentence.",
+      ),
       deltas: { my_party: 8, media: 10, saudis: -10, irgc: 8 },
     },
   ],
@@ -573,6 +636,11 @@ const khobar1996 = play({
       summary: "The Guards had a shot. Say so.",
       kind: "hard",
       face: "rafsanjani",
+      artisticLicense: "al-own-khobar",
+      ...adapts(
+        "The indictment still names the Guards",
+        "You owned a shot you may not have ordered. Reconstruction takes the hit. The later US indictment still names the IRGC. 1997 still sits a smiling cleric.",
+      ),
       deltas: { irgc: -8, street: -6, europeans: -10, media: 8 },
     },
   ],
@@ -599,7 +667,12 @@ const wall1997 = play({
     {
       id: "al-handshake",
       title: "Meet the Secretary",
-      body: "Historically the minister does not come. A handshake does not move the Imam. Number tweak. Next.",
+      body: "You shake the hand. The Imam still has the guns. People to people was the most you were going to get. AL.",
+    },
+    {
+      id: "al-stay-wall",
+      title: "Stay behind the wall",
+      body: "You skip the handshake. The minister still does not come. The Imam still has the guns. AL.",
     },
   ],
   briefings: [
@@ -624,6 +697,11 @@ const wall1997 = play({
       label: "Stay behind the wall",
       summary: "Khobar is still a hole. Do not forget it.",
       kind: "walk",
+      artisticLicense: "al-stay-wall",
+      ...adapts(
+        "The minister still does not come",
+        "You stayed behind the wall. Khatami still talks to CNN. The Imam still has the guns. The apology for 1953 is still a later sentence, or it isn't. Khobar is still a hole.",
+      ),
       deltas: { my_party: 6, europeans: -6 },
     },
   ],
@@ -646,6 +724,10 @@ const wall1997 = play({
       face: "rafsanjani",
       flags: { iran_face: "khatami" },
       artisticLicense: "al-handshake",
+      ...adapts(
+        "The Imam still has the guns",
+        "You shook the hand. The street liked the photograph. The jurist still vetoes. Government to government was never the file. Axis of evil is still a later sentence.",
+      ),
       deltas: { europeans: 10, irgc: -12, street: 4, media: 10 },
     },
   ],
@@ -666,13 +748,13 @@ const nineEleven2001 = play({
     "The Americans were hit. Nineteen men, mostly Saudi. Not you. They will go to Afghanistan. They may go to Iraq later. You already have a file on the Taliban.\n\nYou can help against the cave, or you can wait for them to remember the older list.",
   referee: [
     "LT: 11 September 2001, 2,977 dead. Fifteen of nineteen hijackers Saudi. Al-Qaeda, Taliban. Iran is not the perpetrator. Iran quietly helps the Northern Alliance and the Bonn process. January 2002 Bush names Iran in the axis of evil anyway. 1998-2000 the handshake from 1997 does not arrive.",
-    "IT: The top enemy changed. That is the week. Helping does not get you off the older list. Making it Iran's war is AL: the cave is not in Tehran.",
+    "IT: The top enemy changed. That is the week. Helping does not get you off the older list. Making it Iran's war is a map the principals will not let you use. The cave is not in Tehran.",
   ],
   al: [
     {
-      id: "al-iran-war-2001",
-      title: "Make this Iran's war",
-      body: "Historically the war is Afghanistan, then Iraq. Nineteen Saudis. A cave in Kandahar. Iran helped against the Taliban. Hitting Tehran in 2001 is the wrong map. AL.",
+      id: "al-sit-911",
+      title: "Sit it out",
+      body: "You sit. They still name you in January. Helping was never going to get you off the older list. AL.",
     },
   ],
   briefings: [
@@ -700,8 +782,11 @@ const nineEleven2001 = play({
       label: "Make this Iran's war",
       summary: "The older enemy. The file you already have.",
       kind: "bomb",
-      artisticLicense: "al-iran-war-2001",
-      deltas: { my_party: 4, cia: -6, irgc: 8, europeans: -10, saudis: -6, media: 8 },
+      ...serve(
+        "The cave is in Afghanistan",
+        "The principals put the map on the table. Nineteen Saudis. A cave in Kandahar. Iran helped against the Taliban. You wanted the older enemy. They will not let you make this Tehran's war. You go to Afghanistan.",
+      ),
+      deltas: { my_party: 6, cia: 6, saudis: 4, europeans: 6, media: 8, opposing_party: 4 },
     },
   ],
   iran: [
@@ -720,6 +805,11 @@ const nineEleven2001 = play({
       summary: "It was not you. Do not volunteer.",
       kind: "walk",
       face: "khatami",
+      artisticLicense: "al-sit-911",
+      ...adapts(
+        "They still name you in January",
+        "You sat it out. The Northern Alliance still takes Kabul. You still get axis of evil in January. Helping was never going to get you off the older list. Sitting does not either.",
+      ),
       deltas: { irgc: 6, europeans: -4, street: 4 },
     },
   ],
@@ -747,7 +837,7 @@ const natanz2002 = play({
     {
       id: "al-take-fax",
       title: "Take the fax",
-      body: "Historically the fax dies. Taking it is the missing father of the JCPOA twelve years early. AL. The sprint still knows how to spin.",
+      body: "You take the fax. The sprint still knows how to spin. The missing father of the JCPOA is twelve years early and still dies. AL.",
     },
   ],
   briefings: [
@@ -773,6 +863,10 @@ const natanz2002 = play({
       summary: "Nukes, proxies, recognition. A menu. Read it.",
       kind: "deal",
       artisticLicense: "al-take-fax",
+      ...adapts(
+        "The sprint still knows how to spin",
+        "You read the menu. Nukes, proxies, recognition. The Guards still remember the cup. The fax is the missing father of a deal twelve years early, and it still dies. Natanz still has a floor.",
+      ),
       deltas: { europeans: 10, my_party: -10, cia: -6, irgc: -8 },
     },
   ],
@@ -793,6 +887,10 @@ const natanz2002 = play({
       kind: "deal",
       face: "khatami",
       artisticLicense: "al-take-fax",
+      ...adapts(
+        "The Imam has not given that sermon",
+        "You paused. The fax still dies in Washington. The cup still taught the Guards never to fight fair. The centrifuges still know how to start again.",
+      ),
       deltas: { europeans: 10, irgc: -10, nuke_breakout_months: 8 },
     },
   ],
@@ -816,6 +914,13 @@ const baghdad2003 = play({
     "LT: March 2003 the US takes Baghdad. Iran watches, then the militias harvest the pieces. Historical Iran in 2003 is watch, then later send. Iranian-backed networks and explosively formed penetrators kill US soldiers in Iraq from 2004. The later toll from those networks is in the hundreds.",
     "IT: The Guards inherit Iraq either way. Watch still sends. Send-now is the same harvest on an earlier calendar. The soldiers are the invoice.",
   ],
+  al: [
+    {
+      id: "al-send-militias",
+      title: "Send the militias now",
+      body: "You send this year. The soldiers still die. Watch still sent later. The calendar moved. AL.",
+    },
+  ],
   briefings: [
     b("cia", "us", "Take Baghdad. The statue falls. Then the Guards send the cousins. Explosively formed penetrators. Your soldiers. Watch or send, they still come. The difference is when."),
     b("my_party", "us", "The good war was 1991. This one photographs as a statue. Do not look like you have no plan for Monday."),
@@ -838,7 +943,11 @@ const baghdad2003 = play({
       label: "Stop at the border again",
       summary: "Kuwait was enough. Occupations are a later war.",
       kind: "walk",
-      deltas: { europeans: 8, my_party: -8, cia: -6 },
+      ...serve(
+        "The authorization already has a vote",
+        "The building tells you the AUMF is not a suggestion. You wanted Kuwait's border again. They have the brief and the Congress. You take Baghdad. The militias are a later invoice.",
+      ),
+      deltas: { my_party: 4, media: 12, saudis: 4, europeans: -8, irgc: 8, opposing_party: 4 },
     },
   ],
   iran: [
@@ -857,6 +966,11 @@ const baghdad2003 = play({
       summary: "The pieces are Shiite if you pick them up.",
       kind: "hard",
       face: "khatami",
+      artisticLicense: "al-send-militias",
+      ...adapts(
+        "The soldiers die on an earlier calendar",
+        "You sent them now. Explosively formed penetrators start this year, not next. The occupation is still a mess. Watch still sent. The invoice is the same. The calendar moved.",
+      ),
       deltas: { irgc: 12, europeans: -6, saudis: -8, media: 8 },
     },
   ],
@@ -878,6 +992,13 @@ const myth2005 = play({
   referee: [
     "LT: Ahmadinejad sits 2005. October, wipe Israel off the map. December, the Holocaust is a myth, move Israel to Europe or Alaska. Enrichment accelerates.",
     "IT: Both buttons next. The US choice does not matter. The sentence does. Remind people.",
+  ],
+  al: [
+    {
+      id: "al-ignore-myth",
+      title: "Ignore the slogan",
+      body: "You ignore the radio. He still says it. Enrichment is still the file. AL.",
+    },
   ],
   briefings: [
     b("cia", "us", "Condemn. The sentence is the policy. Enrichment is the file. Do not pretend they are separate."),
@@ -901,6 +1022,11 @@ const myth2005 = play({
       label: "Ignore",
       summary: "Enrichment is the file. Slogans are radio.",
       kind: "walk",
+      artisticLicense: "al-ignore-myth",
+      ...adapts(
+        "He still says it",
+        "You ignored the radio. Ahmadinejad still sits. Wipe-it-off-the-map is still the sentence. Enrichment is still the file.",
+      ),
       deltas: { europeans: -6, my_party: -4, media: -4 },
     },
   ],
@@ -922,7 +1048,11 @@ const myth2005 = play({
       kind: "soft",
       face: "khatami",
       flags: { iran_face: "ahmadinejad" },
-      deltas: { europeans: 6, irgc: -6, media: -6 },
+      ...serve(
+        "The Imam wants the slogan",
+        "The jurist tells you the Holocaust sentence is the radio, not a press release you get to skip. You wanted to spin. He has the guns. You say it. Europe still writes the colder cable.",
+      ),
+      deltas: { irgc: 10, europeans: -14, media: 12, street: 4, leader: 6 },
     },
   ],
   next: "green-2009",
@@ -974,6 +1104,10 @@ const green2009 = play({
       summary: "The square is green. Say so like it is yours.",
       kind: "hard",
       artisticLicense: "al-own-green",
+      ...adapts(
+        "The square does not grow a government",
+        "You owned the street. The photograph lasts. It does not grow a barracks. Mousavi still loses the building. The worm is still the next exam.",
+      ),
       deltas: { media: 10, europeans: 6, irgc: 8, my_party: -6 },
     },
   ],
@@ -1024,7 +1158,12 @@ const stuxnet2010 = play({
     {
       id: "al-bomb-stuxnet",
       title: "Bomb instead",
-      body: "Historically the worm runs. A bomb photographs a plant. It does not end the program. AL.",
+      body: "You bomb. A crater photographs a plant. It does not end the program. AL.",
+    },
+    {
+      id: "al-pause-stux",
+      title: "Pause the floor",
+      body: "You pause. The worm is already in. You build more either way. AL.",
     },
   ],
   briefings: [
@@ -1049,6 +1188,10 @@ const stuxnet2010 = play({
       summary: "A crater. A night you have to own.",
       kind: "bomb",
       artisticLicense: "al-bomb-stuxnet",
+      ...adapts(
+        "The plant photographs. The program continues",
+        "You bombed. A crater is a night you have to own. The worm was months. A bomb is a clip. They still build more. The later deal still has a floor.",
+      ),
       deltas: { media: 12, my_party: 6, irgc: 10, europeans: -8, nuke_breakout_months: 4 },
     },
   ],
@@ -1068,6 +1211,11 @@ const stuxnet2010 = play({
       summary: "Look at the floor. The radio can wait.",
       kind: "soft",
       face: "ahmadinejad",
+      artisticLicense: "al-pause-stux",
+      ...adapts(
+        "The worm is already in the floor",
+        "You paused. The machines were already dying. The radio still wants a slogan. You build more either way. The later deal still has a floor.",
+      ),
       deltas: { irgc: -6, europeans: 4, nuke_breakout_months: 4 },
     },
   ],
@@ -1122,6 +1270,10 @@ const jcpoa2015 = play({
       summary: "No executive agreement. Sanctions stay. Missiles and centrifuges stay theirs.",
       kind: "walk",
       artisticLicense: "al-walk-jcpoa",
+      ...adapts(
+        "Enrichment stays. The 2018 leave is cheaper",
+        "You walked in 2015. Missiles stay theirs. Centrifuges stay theirs. Kerry does not get a signature. Walking in 2018 is a later sentence you already spent.",
+      ),
       deltas: { my_party: 8, europeans: -12, nuke_breakout_months: -4 },
     },
   ],
@@ -1143,7 +1295,11 @@ const jcpoa2015 = play({
       kind: "hard",
       face: "ahmadinejad",
       flags: { iran_face: "rouhani" },
-      deltas: { irgc: 10, europeans: -12, street: -8, nuke_breakout_months: -6 },
+      ...serve(
+        "The Imam allowed the deal",
+        "The jurist tells you the cameras are the price of the pallets. You wanted the cup's lesson. He has the guns. You stamp the JCPOA. Missiles stay. Enrichment pauses at a watched number.",
+      ),
+      deltas: { street: 10, europeans: 12, irgc: -8, hard_currency: 16, nuke_breakout_months: 12 },
     },
   ],
   next: "white-wednesdays-2017",
@@ -1187,6 +1343,11 @@ const whiteWed2017 = play({
       label: "Do nothing",
       summary: "Compulsory hijab is still the law. 2022 is a later square.",
       kind: "walk",
+      artisticLicense: "al-nothing-white",
+      ...adapts(
+        "2022 is still a later square",
+        "You did nothing. The white scarves still get arrested. Compulsory hijab is still the law. Mahsa is still a later year. A tweet was cheap and you skipped it.",
+      ),
       deltas: { media: -4 },
     },
   ],
@@ -1206,7 +1367,11 @@ const whiteWed2017 = play({
       summary: "A white scarf is not a barracks.",
       kind: "soft",
       face: "rouhani",
-      deltas: { street: 6, irgc: -6, europeans: 6 },
+      ...serve(
+        "The scarf is still the law",
+        "The Guards tell you Instagram is not a statute. You wanted the posts. They have the morality police. You stamp the arrests. 2022 is still a later square.",
+      ),
+      deltas: { irgc: 8, street: -8, europeans: -6, liberals: -4 },
     },
   ],
   next: "archive-2018",
@@ -1268,6 +1433,10 @@ const archive2018 = play({
       summary: "The IAEA still inspects. A slide show is not a snapback.",
       kind: "deal",
       artisticLicense: "al-stay-deal",
+      ...adapts(
+        "The warehouse still dropped. The airport is still later",
+        "You stayed. The IAEA still inspects. Netanyahu still does the slide show. Quds still has a face. Soleimani is still a later night. Staying does not un-write the Quds Force.",
+      ),
       deltas: { europeans: 8, my_party: -10, opposing_party: 8 },
     },
   ],
@@ -1289,6 +1458,10 @@ const archive2018 = play({
       face: "rouhani",
       artisticLicense: "al-sprint-tonight",
       flags: { iran_sprinted: true },
+      ...adapts(
+        "Europe still bounces. The clock is worse",
+        "You sprinted tonight. The warehouse was already empty. Historical is wait a year. You lit the clock early. Soleimani is still a later night. The cash still does not arrive.",
+      ),
       deltas: { irgc: 10, europeans: -10, nuke_breakout_months: -8 },
     },
   ],
@@ -1342,6 +1515,11 @@ const bounce2019 = play({
       label: "Offer a ladder",
       summary: "A sentence. Sanctions still on.",
       kind: "deal",
+      artisticLicense: "al-offer-back",
+      ...adapts(
+        "INSTEX still does not pay",
+        "You offered a ladder. Sanctions stay on. Europe still cannot cash INSTEX. Their button is still their button. The step-off is still the next sentence, or the hold.",
+      ),
       deltas: { europeans: 6, my_party: -6 },
     },
   ],
@@ -1417,8 +1595,11 @@ const soleimani2020 = play({
       label: "Hold the shot",
       summary: "Quds still has a face. The proxies do not retire.",
       kind: "walk",
-      artisticLicense: "al-hold-soleimani",
-      deltas: { my_party: -8, opposing_party: 6, irgc: -4 },
+      ...serve(
+        "The embassy already burned",
+        "After the militia storm, Pompeo and the party tell you holding the shot is a second clip of an American compound. You wanted Quds to keep a face. They have the night. The drone flies. The proxies do not retire.",
+      ),
+      deltas: { my_party: 6, media: 12, irgc: 10, cia: 8, europeans: -6, opposing_party: 4 },
     },
   ],
   iran: [
@@ -1437,7 +1618,11 @@ const soleimani2020 = play({
       summary: "A general is dead. A war is a bill.",
       kind: "soft",
       face: "rouhani",
-      deltas: { irgc: -10, street: 6, europeans: 6 },
+      ...serve(
+        "The line is resistance",
+        "The Imam tells you a hole at the airport is a sermon, not a bill you get to skip. You wanted to eat it. He has the guns. You answer. Missiles, then the airliner.",
+      ),
+      deltas: { irgc: 10, leader: 6, street: -12, europeans: -10, media: 10 },
     },
   ],
   next: "abraham-2020",
@@ -1497,6 +1682,10 @@ const abraham2020 = play({
       summary: "No lawn ceremony. The old map stays.",
       kind: "walk",
       artisticLicense: "al-no-accords",
+      ...adapts(
+        "UAE still signs. The old map still cracks",
+        "You left the boycott in place. The Emirates still want the photograph. They still find a way. Soleimani is already dead. The pariah seat still exists. The Accords still exist.",
+      ),
       deltas: { my_party: -8, europeans: 4, saudis: -4 },
     },
   ],
@@ -1518,6 +1707,10 @@ const abraham2020 = play({
       face: "rouhani",
       artisticLicense: "al-drop-quds",
       flags: { dropped_death_to_israel: true },
+      ...adapts(
+        "The Accords still exist. Hamas still exists",
+        "You dropped the slogan. The Imam swallowed a pillar. Iran is less of a pariah. UAE and Bahrain still signed. Hamas still has a tunnel. The nuclear file is still the nuclear file.",
+      ),
       deltas: { europeans: 10, saudis: 8, irgc: -12, leader: -8, street: 6 },
     },
   ],
@@ -1571,8 +1764,11 @@ const unleave2021 = play({
       label: "Snap back in",
       summary: "Sign. Lift. Hope the next man cannot walk.",
       kind: "deal",
-      artisticLicense: "al-snap-in",
-      deltas: { europeans: 10, my_party: -12, opposing_party: 8, nuke_breakout_months: 6 },
+      ...serve(
+        "The Senate will not ratify",
+        "The floor math and the other party's hearing calendar tell you there is no snapback you can lock. You wanted a signature. They have the votes. You talk forever. Sixty percent still spins.",
+      ),
+      deltas: { europeans: 4, my_party: -8, cia: 2, opposing_party: 6 },
     },
   ],
   iran: [
@@ -1593,7 +1789,11 @@ const unleave2021 = play({
       kind: "deal",
       face: "rouhani",
       flags: { iran_face: "raisi" },
-      deltas: { europeans: 6, irgc: -6, street: 4 },
+      ...serve(
+        "Sixty percent is already the photograph",
+        "The Guards tell you talking is how a letterhead begs. You wanted Vienna. They have the clock. You sprint. Raisi still sits. Mahsa is still next year's square.",
+      ),
+      deltas: { irgc: 8, leader: 6, europeans: -8, nuke_breakout_months: -6 },
     },
   ],
   next: "mahsa-2022",
@@ -1645,6 +1845,10 @@ const mahsa2022 = play({
       summary: "Woman, Life, Freedom. Say it like it is yours.",
       kind: "hard",
       artisticLicense: "al-own-mahsa",
+      ...adapts(
+        "The square does not grow a barracks",
+        "You owned the street. Woman, Life, Freedom photographs. It does not grow a government. 1979 already taught that. The Basij still empty the square. Schoolyards stay a DK.",
+      ),
       deltas: { media: 10, irgc: 6, my_party: -4 },
     },
   ],
@@ -1659,7 +1863,6 @@ const mahsa2022 = play({
       resultTitle: "The square empties",
       result:
         "Mahsa Amini. Woman, Life, Freedom. The Basij empty the square. Later that year schoolgirls are poisoned in clusters. Who did it is DK. The state treats speech as the crime. The street is not a government.",
-      epilogue: true,
       deltas: { irgc: 10, leader: 6, street: -14, europeans: -8, liberals: -8 },
     },
     {
@@ -1736,6 +1939,7 @@ const saudiAccord2023 = play({
       flags: { accords_private: true, hamas_cut_off: true },
       nextCard: "sit-pezeshkian-2024",
       epilogue: true,
+      overlay: "adapts",
       resultTitle: "Hamas is cut off",
       result:
         "The Saudis signed with Israel before Hamas could shop. Qatar still has a channel. The war room in Gaza does not have an Iranian green light this week. 7 October does not happen. Raisi still dies in a helicopter. The nuclear file is still the nuclear file.",
@@ -1763,6 +1967,7 @@ const saudiAccord2023 = play({
       flags: { hamas_cut_off: true },
       nextCard: "sit-pezeshkian-2024",
       epilogue: true,
+      overlay: "adapts",
       resultTitle: "Hamas is cut off",
       result:
         "You did not write the check. Hamas still has Qatar and the tunnel. It does not have an Iranian green light this week. 7 October does not happen. Raisi still dies in a helicopter. The nuclear file is still the nuclear file.",
@@ -1811,6 +2016,11 @@ const oct72023 = play({
       label: "Go first",
       summary: "A first shot. A different century.",
       kind: "bomb",
+      artisticLicense: "al-go-first",
+      ...adapts(
+        "Israel still owns the war",
+        "You went first. The photograph lasts. Israel still has the war. Direct fire from Iranian soil is still next year's card. The proxy layer still photographed.",
+      ),
       deltas: { media: 12, my_party: -8, europeans: -8, irgc: 8 },
     },
   ],
@@ -1830,6 +2040,11 @@ const oct72023 = play({
       summary: "The layer just photographed. Own it.",
       kind: "hard",
       face: "raisi",
+      artisticLicense: "al-shoot-now",
+      ...adapts(
+        "Direct fire is still next year's card",
+        "You shot from Iran now. The deniability was already gone. April 2024 still happens. A helicopter is still a later month. You just spent the fingerprint early.",
+      ),
       deltas: { irgc: 10, media: 10, europeans: -10, street: -6 },
     },
   ],
@@ -1873,7 +2088,11 @@ const directFire2024 = play({
       label: "Stay out",
       summary: "Their sky. Their invoice.",
       kind: "walk",
-      deltas: { my_party: -8, europeans: 4, media: -6 },
+      ...serve(
+        "Incoming photographs",
+        "The party tells you a hole in the sky is a clip you do not survive. You wanted their invoice. They have the interceptors. You help shoot. Raisi still dies in a helicopter.",
+      ),
+      deltas: { my_party: 4, saudis: 6, media: 8, irgc: 4, opposing_party: 4 },
     },
   ],
   iran: [
@@ -1892,7 +2111,11 @@ const directFire2024 = play({
       summary: "Direct fire is a later night.",
       kind: "soft",
       face: "raisi",
-      deltas: { irgc: -6, europeans: 4 },
+      ...serve(
+        "The layer already thinned",
+        "The Imam tells you a shot from Iran is the sermon, not a later night. You wanted the proxies. He has the guns. You fire. A helicopter is still a later month.",
+      ),
+      deltas: { irgc: 10, leader: 6, media: 10, europeans: -8 },
     },
   ],
   next: "sit-pezeshkian-2024",
@@ -1994,6 +2217,10 @@ const twelveDays2025 = play({
       summary: "Their night. Their invoice. The plants stay standing.",
       kind: "walk",
       artisticLicense: "al-stay-twelve",
+      ...adapts(
+        "The plants stay standing. 2026 is still on the desk",
+        "You stayed out of Israel's war. Fordow is not a crater this week. The mountain still has a floor. The campaign that can kill the Imam is still next year's card. The invoice moved. The rail did not.",
+      ),
       deltas: { my_party: -10, europeans: 6, media: -6 },
     },
   ],
@@ -2013,7 +2240,11 @@ const twelveDays2025 = play({
       summary: "A crater is us. A memorandum is cheaper.",
       kind: "deal",
       face: "pezeshkian",
-      deltas: { europeans: 8, street: 6, irgc: -8, leader: -4 },
+      ...serve(
+        "The plants are his",
+        "The Imam tells you a deal is a later sermon. You wanted a memorandum. He has the guns. You absorb and strike. Twelve days still happen. 2026 is still on the desk.",
+      ),
+      deltas: { irgc: 10, leader: 8, street: -10, europeans: -8 },
     },
   ],
   next: "the-leader-2026",

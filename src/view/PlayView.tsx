@@ -237,11 +237,17 @@ export function PlayView({
           className="fixed inset-0 z-50 flex items-end justify-center bg-bg/70 p-4 sm:items-center"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="moral-title"
+          aria-labelledby="result-title"
         >
           <div className="dossier w-full max-w-lg px-5 py-5">
-            <p className="kicker text-accent">{t("moralVictory")}</p>
-            <h3 id="moral-title" className="mt-1 font-serif text-xl text-ink">
+            <p className="kicker text-accent">
+              {ui.lastResult.kind === "serve"
+                ? t("serveSomebody")
+                : ui.lastResult.kind === "adapts"
+                  ? t("mapAnswers")
+                  : t("moralVictory")}
+            </p>
+            <h3 id="result-title" className="mt-1 font-serif text-xl text-ink">
               {ui.lastResult.title}
             </h3>
             {ui.lastResult.body.split("\n\n").map((para) => (
@@ -258,7 +264,11 @@ export function PlayView({
                 refresh();
               }}
             >
-              {t("iranContinues")}
+              {ui.lastResult.kind === "serve"
+                ? t("youCapitulate")
+                : ui.lastResult.kind === "adapts"
+                  ? t("railContinues")
+                  : t("iranContinues")}
             </Button>
           </div>
         </div>

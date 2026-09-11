@@ -46,12 +46,21 @@ const REVOLUTION: FactionId[] = [
 
 const LETTERHEAD: readonly IranFace[] = ["bazargan", "banisadr", "khamenei"];
 
-function moralEpilogue(story: string): Pick<Choice, "epilogue" | "resultTitle" | "result"> {
+function moralEpilogue(story: string): Pick<Choice, "epilogue" | "overlay" | "resultTitle" | "result"> {
   return {
     epilogue: true,
+    overlay: "moral",
     resultTitle: "We congratulate you on your moral choice.",
     result: `${story}\n\nHowever, Iran continues on.`,
   };
+}
+
+function serve(title: string, body: string): Pick<Choice, "overlay" | "resultTitle" | "result"> {
+  return { overlay: "serve", resultTitle: title, result: body };
+}
+
+function adapts(title: string, body: string): Pick<Choice, "overlay" | "resultTitle" | "result"> {
+  return { overlay: "adapts", resultTitle: title, result: body };
 }
 
 const coup1953: Card = {
@@ -277,12 +286,19 @@ const atoms1957: Card = {
     "You are Mohammad Reza Pahlavi. Mohammad Mossadegh is under house arrest. The army is yours. The oil is coming back through a consortium.\n\nEisenhower is selling Atoms for Peace, the American Atomic Age export: a civilian nuclear program, a Tehran Research Reactor, and the fuel that goes in it. It was never the plan for Iran to enrich uranium. Washington's bargain is they provide the fuel. A national enrichment plant is not in the offer.\n\nYou kept the throne. You did not keep the country quiet. The hinterlands still do not see the boom.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT"],
+    tags: ["LT", "IT", "AL"],
     paragraphs: [
       "LT: Eisenhower sets up a civilian nuclear program in Iran via Atoms for Peace, the American Atomic Age export. The United States supplies the Tehran Research Reactor and the fuel. Iran later signs the Non-Proliferation Treaty. It was never the plan for Iran to enrich uranium. The original bargain is: we provide the fuel, they do not sprint to a national enrichment plant.",
       "IT: Tehran's cities boom. The hinterlands do not. Client kings get old and frightened. Viziers start running things.",
     ],
   },
+  artisticLicense: [
+    {
+      id: "al-let-enrich",
+      title: "A plant of their own",
+      body: "Historically Washington keeps the fuel. A national cycle in 1957 still leaves 1979 on the rail. The later sprint is a later file. AL.",
+    },
+  ],
   briefings: [
     {
       faction: "cia",
@@ -353,6 +369,11 @@ const atoms1957: Card = {
       label: "Let them run the fuel cycle",
       summary: "A plant of their own. The leash comes off.",
       kind: "hard",
+      artisticLicense: "al-let-enrich",
+      ...adapts(
+        "The plants still have a later file",
+        "You let him run the cycle. CIA hates the photograph. The later sprint still knows how to spin. 1979 is still the next exam. A national plant in 1957 does not un-write the mosque.",
+      ),
       deltas: { cia: -12, europeans: -8, leader: 4, street: 6 },
     },
   ],
@@ -372,6 +393,11 @@ const atoms1957: Card = {
       summary: "If they can have atoms, we can have a plant.",
       kind: "hard",
       face: "shah",
+      artisticLicense: "al-let-enrich",
+      ...adapts(
+        "Washington keeps the invoice anyway",
+        "You talked plant. They still send the fuel and keep the cycle. CIA writes a colder cable. The later sprint is not born this week. 1979 is still the exam.",
+      ),
       deltas: { street: 8, cia: -12, europeans: -8, leader: -6 },
     },
   ],
@@ -396,13 +422,20 @@ const whiteRevolution1963: Card = {
     "You are Mohammad Reza Pahlavi. Kennedy wants a White Revolution: take land from the landlords, give women the vote, send a literacy corps into the villages. The bazaar and the mosque will hate it. Tehran's women will not.\n\nA relatively obscure ayatollah in Qom, Ruhollah Khomeini, is finding his voice.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT"],
+    tags: ["LT", "IT", "AL"],
     paragraphs: [
       "LT: In 1961-62 Kennedy's Iran Task Force treats Ali Amini's reform cabinet as maybe the last chance to stop a slide. The Shah launches the White Revolution in January 1963: land reform, literacy and health corps, profit-sharing, women's suffrage. A 15 June 1963 uprising around Khomeini is crushed. He is arrested, later exiled.",
       "IT: Washington sells reform as anti-communist insurance. It also grows an urban liberal and feminist constituency that has no guns. The mosque and the bazaar lose land, status, and the chador-as-default. That is the constituency Khomeini will speak for.",
       "The years after this card still include Johnson's 1964 Status of Forces agreement, which Khomeini names, and the exile to Turkey then Najaf. Those are on the rail whether you press or not. The liberals meter is the thing you are actually choosing.",
     ],
   },
+  artisticLicense: [
+    {
+      id: "al-send-tanks",
+      title: "Send him tanks instead",
+      body: "You send hardware. The court still launches a thinner White Revolution because Kennedy's people already started it. The mosque still hates the king. 1979 still grades the square. AL.",
+    },
+  ],
   briefings: [
     {
       faction: "cia",
@@ -467,6 +500,11 @@ const whiteRevolution1963: Card = {
       label: "Send him tanks instead",
       summary: "The king wants hardware. Hardware is quiet. Reform is not.",
       kind: "hard",
+      artisticLicense: "al-send-tanks",
+      ...adapts(
+        "The court still takes the land",
+        "You sent tanks. Kennedy's people in Tehran already started the land file. He still launches a thinner White Revolution. The mosque still hates him. Liberals grow less. 1979 still grades the square.",
+      ),
       deltas: { cia: -8, saudis: 8, leader: 10, street: 4, liberals: -4, my_party: 4 },
     },
   ],
@@ -486,7 +524,11 @@ const whiteRevolution1963: Card = {
       summary: "The mosque still has the village. Do not pick that fight.",
       kind: "soft",
       face: "shah",
-      deltas: { street: 8, leader: -6, cia: -10, liberals: -6, saudis: 6 },
+      ...serve(
+        "Kennedy is not asking",
+        "The embassy tells you reform or they look at you the way they looked at the last man in this chair. You wanted the landlords quiet. They have the cable. You launch the White Revolution. The mosque still hates you. The liberals still grow.",
+      ),
+      deltas: { leader: 6, cia: 8, europeans: 6, street: -12, saudis: -4, liberals: 26 },
     },
   ],
   sources: ["white-rev-britannica", "frus-kennedy-iran", "cfr-timeline"],
@@ -509,7 +551,7 @@ const weapons1972: Card = {
     "Iran muddles along. You shook off Soviet influence. You buy American weapons. Tehran is prosperous and cosmopolitan. Rural Iran is not.\n\nNixon is in town. He will sell you anything that is not a bomb. SAVAK is yours. The Family Protection Law is on the books. The cleric you exiled is still writing from Najaf.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT"],
+    tags: ["LT", "IT", "AL"],
     paragraphs: [
       "LT: Britain completed the east-of-Suez withdrawal in 1971. The Nixon Doctrine said no more American infantries for Asian wars. The Shah had oil money. Twin pillars: Iran and Saudi Arabia as Gulf policemen. May 1972, Nixon and Kissinger in Tehran. The Shah may buy any US conventional weapons system, any quantity. Arms sales jump from the low hundreds of millions toward the billions after the oil shock. Family Protection Law 1967, expanded 1975: divorce through courts, marriage age up, polygamy squeezed.",
       "IT: Tehran's cafes, cinemas, universities, and unveiled women are real. So is the hinterland that never saw the boom. Growing liberals looks like anti-communist hygiene. It is also a constituency with no barracks. Johnson's Status of Forces fight and Khomeini's exile already happened on the way here.",
@@ -520,7 +562,12 @@ const weapons1972: Card = {
     {
       id: "al-hinterland",
       title: "Spend the oil on the villages",
-      body: "Historically the catalog won. A king who buys clinics instead of F-14s might keep the hinterland off the square. If it works, that is the successful fork. Khomeini loses the village. The army likes him less. AL on whether that holds 1979.",
+      body: "A king who buys clinics instead of F-14s might keep the hinterland off the square. If it works, that is the successful fork. Khomeini loses the village. The army likes him less. AL on whether that holds 1979.",
+    },
+    {
+      id: "al-soviet-catalog",
+      title: "The Shah shops Moscow",
+      body: "You held the American catalog. He still wants boom-booms. Moscow will sell. Twin pillars crack. The later spare-parts war still knows how to shop in the dark. AL. Contra is not gated.",
     },
   ],
   briefings: [
@@ -587,7 +634,12 @@ const weapons1972: Card = {
       label: "Make him spend on the hinterland first",
       summary: "Clinics and roads before F-14s. He will hate the sermon.",
       kind: "soft",
-      deltas: { cia: -8, my_party: -6, saudis: -6, leader: -10, street: 10, liberals: 6, opposing_party: 6 },
+      artisticLicense: "al-soviet-catalog",
+      ...adapts(
+        "The Shah shops Moscow",
+        "You held the American catalog. He still wants boom-booms. Moscow will sell tanks that do not need a Congressional window. CIA writes the nightmare cable. The Saudis watch the other pillar shop east. The clinics you wanted get a slice. The later spare-parts war still knows how to shop in the dark. Contra is not gated.",
+      ),
+      deltas: { cia: -14, my_party: -6, saudis: -10, leader: 4, street: 8, liberals: 6, opposing_party: 6, hard_currency: 8 },
     },
   ],
   iranChoices: [
@@ -607,6 +659,10 @@ const weapons1972: Card = {
       kind: "deal",
       face: "shah",
       artisticLicense: "al-hinterland",
+      ...adapts(
+        "The villages will grade this in 1979",
+        "The oil went to the hinterland. The catalog can wait. The army likes you less. CIA writes a colder cable. 1979 will decide whether the square stays thin.",
+      ),
       flags: { hinterland_spent: true },
       deltas: { street: 16, leader: -12, cia: -10, liberals: 4, saudis: -6 },
     },
@@ -642,7 +698,12 @@ const revolution1979: Card = {
     {
       id: "al-keep-shah-out",
       title: "Keeping him out",
-      body: "It hurts. The hospital was the decent thing. You did not do the decent thing. The soul is not a meter. Historically the seizure follows the admission. Keeping him out does not un-grow Khomeini, and it does not give the feminists a barracks. The embassy still happens. AL on the spark, not a liberal-fantasy off-ramp.",
+      body: "It hurts. The hospital was the decent thing. You did not do the decent thing. The soul is not a meter. Keeping him out does not un-grow Khomeini, and it does not give the feminists a barracks. The students still seize the embassy. AL on the spark, not a liberal-fantasy off-ramp.",
+    },
+    {
+      id: "al-fire-crowd",
+      title: "Fire on the crowd",
+      body: "You shoot. The clip is yours. The square does not empty. The plane is still the ending. AL.",
     },
     {
       id: "al-hinterland-holds",
@@ -718,6 +779,10 @@ const revolution1979: Card = {
       kind: "walk",
       artisticLicense: "al-keep-shah-out",
       flags: { shah_admitted: false },
+      ...adapts(
+        "The students seize it anyway",
+        "You kept him out. The soul is not a meter. The hospital was the decent thing and you did not do it. The students still take the nest of spies. The spark is leverage, not lymphoma. The embassy still happens. The feminists still do not get a barracks.",
+      ),
       deltas: { my_party: 4, opposing_party: -4, media: -6, cia: 4, saudis: 4, europeans: 4 },
       nextCard: "veil-1979",
     },
@@ -731,6 +796,11 @@ const revolution1979: Card = {
       face: "shah",
       unlessFlag: "hinterland_spent",
       flags: { iran_face: "bazargan" },
+      artisticLicense: "al-fire-crowd",
+      ...adapts(
+        "The army still puts you on a plane",
+        "You fired. The clip is yours. The square does not empty. The army still asks whether you will shoot tomorrow. You still leave. Bazargan still sits the letterhead.",
+      ),
       deltas: { street: -16, leader: -8, cia: -6, liberals: -8, media: 12 },
       nextCard: "veil-1979",
     },
@@ -787,7 +857,12 @@ const veil1979: Card = {
     {
       id: "al-keep-fpl",
       title: "Keeping Family Protection",
-      body: "Historically the Imam voids it. A smiling face who tries to keep the law is deposed. He can live. A replacement sits the stamp. The embassy is already the next exam. Stamp it.",
+      body: "The Imam voids it. A smiling face who tries to keep the law is deposed. He can live. A replacement sits the stamp. The embassy is already the next exam. AL.",
+    },
+    {
+      id: "al-statement-women",
+      title: "Issue a statement",
+      body: "A statement photographs. It does not grow a barracks. The Imam still voids the law. AL.",
     },
   ],
   briefings: [
@@ -846,6 +921,11 @@ const veil1979: Card = {
       label: "Issue a statement",
       summary: "Human rights letterhead. No barracks behind it.",
       kind: "soft",
+      artisticLicense: "al-statement-women",
+      ...adapts(
+        "The Imam voids it anyway",
+        "You issued a statement. Human rights letterhead. No barracks behind it. The Imam still voids the Family Protection Law. The embassy is still the next exam.",
+      ),
       deltas: { media: 8, my_party: 4, opposing_party: 4, saudis: -4, liberals: 4 },
       nextCard: "hostages-1979",
     },
@@ -916,12 +996,12 @@ const hostages1979: Card = {
     {
       id: "al-skip-raid",
       title: "No raid",
-      body: "Historically Carter authorizes Eagle Claw. A Washington that keeps talking still has a clip. The hostages still walk the morning of the oath. Stamp it.",
+      body: "You kept talking. There is no wreck at Tabas. The hostages still walk the morning of the oath. The clip is still the campaign. AL.",
     },
     {
       id: "al-bazargan-stays",
       title: "The smiling face stays",
-      body: "Historically Bazargan resigns two days after the seizure. A prime minister who lets the students hold the embassy still does not have the guns. The next letterhead inherits the same exam. Stamp it.",
+      body: "You let the students hold it. You still do not have the guns. Two days later the chair is someone else's. The next letterhead inherits the same exam. AL.",
     },
   ],
   briefings: [
@@ -992,6 +1072,10 @@ const hostages1979: Card = {
       kind: "deal",
       artisticLicense: "al-skip-raid",
       flags: { eagle_claw: false },
+      ...adapts(
+        "The hostages still walk the oath",
+        "You kept talking. There is no wreck at Tabas. Algeria still does the paperwork. The fifty-two still walk the morning Reagan sits. The clip is still the campaign. The Saudis still line Saddam up.",
+      ),
       deltas: { my_party: -10, opposing_party: 8, media: -6, cia: 4, europeans: 4, saudis: -6 },
       nextCard: "you-him-fight-1980",
     },
@@ -1017,6 +1101,10 @@ const hostages1979: Card = {
       artisticLicense: "al-bazargan-stays",
       flags: { iran_face: "banisadr" },
       nextCard: "resigned-1979",
+      ...adapts(
+        "You still do not have the guns",
+        "You let the students hold it. The Imam did not send them home. Two days later you still resign. Banisadr inherits the same exam. The barracks were never yours.",
+      ),
       deltas: { leader: 10, irgc: 12, street: 6, europeans: -8, cia: -10, liberals: -6 },
     },
   ],
@@ -1047,7 +1135,7 @@ const resigned1979: Card = {
     {
       id: "al-refuse-letterhead",
       title: "Refusing the letterhead",
-      body: "Historically Banisadr sits. A face who will not take the stamp still does not get the guns. Iran continues. Someone else sits. Stamp it.",
+      body: "Banisadr sits. A face who will not take the stamp still does not get the guns. Iran continues. Someone else sits. AL.",
     },
   ],
   briefings: [
@@ -1185,20 +1273,13 @@ const youHimFight1980: Card = {
     "The neighborhood is lining up. The Saudis want Saddam to smash the Shia republic. Washington and Europe will not stop him. They would like you and him to fight.\n\nYou are the letterhead. The guns are not yours. The invasion is not a question of if.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT", "AL"],
+    tags: ["LT", "IT"],
     paragraphs: [
       "LT: Gulf monarchies, led by Saudi Arabia, encourage Saddam and later write the checks. Carter's official line is neutrality because of the hostages. Europe will sell to both. Saddam invades on 22 September 1980.",
       "IT: Let's you and him fight. A Shia republic that chants Death to America is a sermon Riyadh does not want preached to its own oil workers. Washington's incentive is two enemies bleeding each other. A 1992 British investigation put the European objective in one line: sustain the war so neither side wins.",
       "Carter does not green-light the way a later ambassador will be accused of green-lighting Kuwait. He also does not stop it. Staying out of the way is the file.",
     ],
   },
-  artisticLicense: [
-    {
-      id: "al-warn-saddam",
-      title: "Tell Saddam no",
-      body: "Historically Carter does not stop the invasion. A warning from a president who cannot land a helicopter does not un-write the checks from Riyadh. Saddam still comes. Stamp it.",
-    },
-  ],
   briefings: [
     {
       faction: "cia",
@@ -1264,8 +1345,11 @@ const youHimFight1980: Card = {
       label: "Tell Saddam no",
       summary: "A human-rights president does not green-light an invasion.",
       kind: "soft",
-      artisticLicense: "al-warn-saddam",
-      deltas: { saudis: -10, europeans: -4, media: 6, my_party: 4, cia: -6 },
+      ...serve(
+        "The Blue Dogs have the House",
+        "They tell you a warning to Baghdad kills the domestic agenda on the floor. Energy. Prices. The committee chairs who still like you. You wanted the human-rights sentence. They have the votes. You stay out of the way. Saddam still comes. The Saudis still write the check.",
+      ),
+      deltas: { saudis: 8, europeans: 4, cia: 4, my_party: -6, opposing_party: 4 },
       nextCard: "iran-iraq-1980",
     },
   ],
@@ -1315,12 +1399,12 @@ const iranIraq1980: Card = {
     {
       id: "al-tilt-early",
       title: "Tilt in 1980",
-      body: "Carter stayed officially neutral. The hostages were the exam. The tilt is Reagan's 1982 file, after Iran started winning. A 1980 tilt is too early. Stamp it.",
+      body: "Carter stayed officially neutral. The hostages were the exam. The tilt is Reagan's 1982 file, after Iran started winning. A 1980 tilt is too early. You tilted anyway. The hostages still walk. 1982 still happens. AL.",
     },
     {
       id: "al-artesh-war",
       title: "Keep the regular army in command",
-      body: "Historically the Guards take the war. A letterhead who tries to command the leftover army still does not have the guns. He can live. Iran continues. Stamp it.",
+      body: "The Guards take the war. A letterhead who tries to command the leftover army still does not have the guns. He can live. Iran continues. AL.",
     },
   ],
   briefings: [
@@ -1380,6 +1464,10 @@ const iranIraq1980: Card = {
       summary: "Let them bleed. Baghdad gets the quiet help.",
       kind: "covert",
       artisticLicense: "al-tilt-early",
+      ...adapts(
+        "The hostages are still the exam",
+        "You tilted early. The Saudis like it. The hostages still walk the morning of the oath. Reagan still inherits a war. 1982 still delists so Europe can sell the chemistry. You just spent the fingerprint early.",
+      ),
       deltas: { cia: 8, saudis: 10, europeans: 6, my_party: -4, opposing_party: 6, media: 4 },
       nextCard: "election-1980",
     },
@@ -1438,20 +1526,13 @@ const election1980: Card = {
     "The hostages are still inside. Saddam is still in Iran. The clip is eating the term.\n\nA raid may already be wreckage in the sand. Talking may still be a channel through Algeria. Neither one has brought the fifty-two home. The other party has a sentence ready. The nightly open still has a flag and a blindfold.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT", "AL"],
+    tags: ["LT", "IT"],
     paragraphs: [
       "LT: 4 November 1980, Reagan beats Carter. The hostages are still held. They walk the morning of the oath, 20 January 1981. 444 days.",
       "IT: The clip ate the term. A sitting president with Americans in a basement does not get a second one. The raid is already wreckage or it is still in the drawer. Neither version un-loses November.",
-      "Carter does not step aside. He runs. A Hail Mary is a stunt. Reagan still sits.",
+      "Carter does not step aside. He runs. A Hail Mary is a stunt the party will not let you throw. Reagan still sits.",
     ],
   },
-  artisticLicense: [
-    {
-      id: "al-hail-mary",
-      title: "A Hail Mary",
-      body: "The clip still eats the term. A last throw does not un-lose 1980. Reagan still sits. AL on the stunt, not the math.",
-    },
-  ],
   briefings: [
     {
       faction: "cia",
@@ -1499,9 +1580,12 @@ const election1980: Card = {
       label: "Throw a Hail Mary",
       summary: "One more raid, one more channel, one more speech. The clip is still the campaign.",
       kind: "hard",
-      artisticLicense: "al-hail-mary",
+      ...serve(
+        "The party will not roll another raid",
+        "Hamilton Jordan and the Blue Dogs tell you another Desert One kills the Senate. You wanted one more helicopter. They have the ballot. You run the campaign you already have. The hostages still walk the morning of the oath. Reagan still sits.",
+      ),
       nextCard: "inaugurated-1981",
-      deltas: { my_party: -8, opposing_party: 6, media: 10, cia: -4 },
+      deltas: { my_party: -8, opposing_party: 10, media: 6 },
     },
   ],
   iranChoices: [],
@@ -1592,19 +1676,12 @@ const delist1982: Card = {
     "Iraq is on the State Sponsors of Terrorism list. That list is why dual-use licenses are blocked, and why a European pesticide plant for Baghdad is still a diplomatic problem. Iran is turning the war. Baghdad is not doing well.\n\nTake them off and the licenses open. Europe can sell the plants and the precursors. Keep them on and you keep the lock. The Saudis want the furnace even. The cable is on the desk.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT", "AL"],
+    tags: ["LT", "IT"],
     paragraphs: [
       "LT: 26 February 1982, the Reagan administration removes Iraq from the State Department list of state sponsors of terrorism. Iraq had been on it since 1979 with Syria, Libya, and South Yemen. The list is an Export Administration Act lock: dual-use licenses, credits, a signal to allies. Congress objects. The House later votes to put them back. State does not. Haig says he was not consulted. The press guidance says the decision has no implications for the war.",
       "IT: The public line is that Iraq reduced support for terrorism. A Pentagon counterterrorism man later said the real reason was to help them succeed against Iran. An NSC man said they were terrified Iraq would lose. Taking them off unlocks US dual-use and tells Europe the chemistry can move. German firms build pesticide plants that are not pesticide plants. From 1983 Iraq uses mustard and nerve agent on Iranian troops. Washington knows. The tilt continues. This is one of the original sins of the 1980s.",
     ],
   },
-  artisticLicense: [
-    {
-      id: "al-keep-iraq-listed",
-      title: "Keep them on the list",
-      body: "Historically they come off. Keeping them on does not un-write the war, the intel tilt, or the Bekaa. Europe still wants the oil to move. Stamp it.",
-    },
-  ],
   briefings: [
     {
       faction: "cia",
@@ -1652,8 +1729,11 @@ const delist1982: Card = {
       label: "Keep them on the list",
       summary: "A terrorist is a terrorist. The chemistry stays locked.",
       kind: "walk",
-      artisticLicense: "al-keep-iraq-listed",
-      deltas: { europeans: -10, saudis: -8, cia: -6, opposing_party: -4, media: 6 },
+      ...serve(
+        "Commerce has the licenses",
+        "State, Commerce, and the European desk tell you the same thing. If Iraq stays listed, Bonn and Paris cannot sell the dual-use, Baghdad falls, the oil stops, and the energy vote dies in the House. You wanted a terrorist to stay a terrorist. They have the lock. You take them off. The chemistry moves.",
+      ),
+      deltas: { europeans: 12, saudis: 8, cia: 6, my_party: 2, opposing_party: 8, media: 4 },
       nextCard: "tilt-1982",
     },
   ],
@@ -1687,7 +1767,7 @@ const tilt1982: Card = {
     {
       id: "al-no-tilt-1982",
       title: "Stay out in 1982",
-      body: "Historically Reagan tilts. A Washington that stays neutral after Iran starts winning is a fork. The war still happens. The Bekaa is still the next exam. Stamp it.",
+      body: "You stay official-neutral. Israel still arms Iran. The Gulf still writes checks to Baghdad. The Bekaa is still the next exam. AL.",
     },
   ],
   briefings: [
@@ -1738,6 +1818,10 @@ const tilt1982: Card = {
       summary: "The hostages walked. The furnace is not yours.",
       kind: "walk",
       artisticLicense: "al-no-tilt-1982",
+      ...adapts(
+        "Israel and the Gulf do the work",
+        "You stayed official-neutral. Israel still arms Iran. Riyadh still writes the check to Baghdad. The furnace stays even without your maps. The Bekaa is still the next exam.",
+      ),
       deltas: { cia: -8, saudis: -10, europeans: -4, my_party: -4 },
       nextCard: "lebanon-1983",
     },
@@ -1773,7 +1857,7 @@ const impeached1981: Card = {
     {
       id: "al-defy-majles",
       title: "Defying the Majlis",
-      body: "Historically he runs. A letterhead who stays to fight the vote still does not have the guns. He can live. Iran continues. Someone else sits. Stamp it.",
+      body: "He runs. A letterhead who stays to fight the vote still does not have the guns. He can live. Iran continues. Someone else sits. AL.",
     },
   ],
   briefings: [
@@ -1854,7 +1938,7 @@ const seated1981: Card = {
     {
       id: "al-refuse-khamenei",
       title: "Refusing the next stamp",
-      body: "Historically he sits. A face who will not take the letterhead still does not get the guns. He can live. Iran continues. Stamp it.",
+      body: "He sits. A face who will not take the letterhead still does not get the guns. He can live. Iran continues. AL.",
     },
   ],
   briefings: [
@@ -1938,7 +2022,7 @@ const lebanon1983: Card = {
     {
       id: "al-hit-bekaa",
       title: "Stay and hit the Bekaa",
-      body: "Historically the Marines leave. A Washington that stays and shoots still has a later hostage file. The channel in the dark is not cancelled by a crater. Stamp it.",
+      body: "You stay and shoot. A later hostage file still arrives. The channel in the dark is not cancelled by a crater. AL.",
     },
     {
       id: "al-no-export",
@@ -2012,6 +2096,10 @@ const lebanon1983: Card = {
       summary: "A cousin did this. Answer in the valley.",
       kind: "bomb",
       artisticLicense: "al-hit-bekaa",
+      ...adapts(
+        "The later hostage file still arrives",
+        "You stayed and shot. The valley photographs. A later hostage file still arrives. The channel in the dark is not cancelled by a crater. Contra still knows the warehouse.",
+      ),
       nextCard: "iran-contra-1985",
       deltas: { my_party: -6, opposing_party: 4, media: 10, cia: 6, saudis: 4, irgc: 8 },
     },
@@ -2069,12 +2157,12 @@ const iranContra1985: Card = {
     {
       id: "al-keep-embargo",
       title: "Keep the embargo",
-      body: "Historically the channel runs. A Washington that keeps the embargo still has a later cup. The war still happens. Stamp it.",
+      body: "You keep the embargo. Israel still runs a channel. The hangars still take American bolts. The cup still arrives. AL. Contra is not gated.",
     },
     {
       id: "al-refuse-crates",
       title: "Refuse the crates",
-      body: "Historically Iran takes the parts. A letterhead who refuses still does not have a second supplier that is not the black market. The cup still arrives. Stamp it.",
+      body: "You refuse the crates. The barracks still shop the black market. The cup still arrives. AL.",
     },
   ],
   briefings: [
@@ -2144,6 +2232,10 @@ const iranContra1985: Card = {
       kind: "sanction",
       artisticLicense: "al-keep-embargo",
       nextCard: "cup-1988",
+      ...adapts(
+        "Israel still runs the channel",
+        "You kept the law. Israel still knows the warehouse. The hangars still take American bolts. The Contras still find a bag. The cup still arrives. Contra is not gated.",
+      ),
       deltas: { cia: -8, my_party: 4, opposing_party: -4, media: 4, saudis: 6, irgc: -4 },
     },
   ],
@@ -2164,9 +2256,12 @@ const iranContra1985: Card = {
       summary: "Death to America is the line. Stamp the speech, not the invoice.",
       kind: "hard",
       face: "khamenei",
-      artisticLicense: "al-refuse-crates",
+      ...serve(
+        "The hangars take the crates anyway",
+        "The Guards tell you Death to America is a speech and the airframes are a war. You wanted the slogan. They have the front. You stamp the crate. The cup still arrives.",
+      ),
       nextCard: "cup-1988",
-      deltas: { irgc: -6, leader: 6, street: 4, cia: -8 },
+      deltas: { irgc: 8, leader: 2, street: -4, cia: 6, europeans: -4 },
     },
   ],
   sources: ["iran-contra", "cfr-timeline", "nixon-twin-pillars"],
@@ -2200,7 +2295,7 @@ const cup1988: Card = {
     {
       id: "al-own-shot",
       title: "Own the shot",
-      body: "Historically Washington calls it a mistake. Owning it does not un-drink the cup. The ceasefire still arrives. Stamp it.",
+      body: "You own the shot. The hearing lasts. The Imam still drinks. Two hundred ninety is still the number. The ceasefire still arrives. AL.",
     },
     {
       id: "al-refuse-cup",
@@ -2278,9 +2373,10 @@ const cup1988: Card = {
       kind: "hard",
       artisticLicense: "al-own-shot",
       nextCard: "robe-1989",
-      resultTitle: "The cup, and two hundred ninety",
-      result:
-        "You owned the shot. The hearing lasts. The Imam still drinks. Two hundred ninety is still the number. The ceasefire still arrives. Natanz is a later file.",
+      ...adapts(
+        "The Imam still drinks",
+        "You owned the shot. The hearing lasts. Two hundred ninety is still the number. Eighteen days later the Imam still drinks the cup. The ceasefire still arrives. Natanz is a later file.",
+      ),
       deltas: { my_party: -8, opposing_party: 8, media: 10, europeans: -6, saudis: -4 },
     },
   ],
@@ -2417,12 +2513,19 @@ const hormuz2019: Card = {
     "A Global Hawk is down. Tankers are a lever. The Strait is a noose if you pull it. The Guards want the shot. The street is tired.\n\nYou are not 1979. You are the letterhead of a later year, or you are the Guards' problem. Hold fire and they will remember. Shoot and the map leaks.",
   actionPrompt: "What do you want to do?",
   referee: {
-    tags: ["LT", "IT"],
+    tags: ["LT", "IT", "AL"],
     paragraphs: [
       "LT: June 2019, Iran shoots down a US Global Hawk. Tanker seizures in the Strait. Abqaiq is hit in September. Trump aborts a strike.",
       "IT: Aborting after you talked tough costs the caucus. Bombing leaks a map of holes. Hormuz as a map is a different play style. This card is a proof, not that train.",
     ],
   },
+  artisticLicense: [
+    {
+      id: "al-hormuz-shot",
+      title: "Take the shot",
+      body: "You shoot. The map of holes leaks. Soleimani is still a later night. AL.",
+    },
+  ],
   briefings: [
     {
       faction: "cia",
@@ -2485,6 +2588,11 @@ const hormuz2019: Card = {
       label: "Take the shot",
       summary: "A drone is not a carrier. Answer anyway.",
       kind: "bomb",
+      artisticLicense: "al-hormuz-shot",
+      ...adapts(
+        "Soleimani is still a later night",
+        "You took the shot. The map of holes leaks. A drone is not a carrier. The airport is still next year's card. The caucus liked the clip. The Guards remember.",
+      ),
       deltas: { my_party: 8, irgc: 10, media: 12, cia: 4, saudis: 6, drone_holes_known: 1 },
     },
   ],
@@ -2494,7 +2602,11 @@ const hormuz2019: Card = {
       label: "Hold fire",
       summary: "A drone is a lesson. A war is a bill.",
       kind: "soft",
-      deltas: { irgc: -10, street: 6, leader: -6, europeans: 4 },
+      ...serve(
+        "The Strait is already theirs",
+        "The Guards tell you a drone is a lesson and holding fire is a smiling face. You wanted the bill to wait. They have the noose. You squeeze the Strait. Soleimani is still a later night.",
+      ),
+      deltas: { irgc: 8, leader: 6, street: -8, oil_pain: 10 },
     },
     {
       id: "ir-squeeze",

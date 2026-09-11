@@ -1,6 +1,14 @@
 # CHANGELOG
 
+## 2026-09-10 - You serve somebody
+
+What: Collapsing off-paths are serve or adapts overlays, not "you chose wrong, stamp it." Carter's warning to Saddam is Blue Dogs killing the domestic agenda. Nixon holding the catalog makes the Shah shop Moscow. Commerce still unlocks the chemistry. 7-Eleven morals stay moral. Hamas cut off is the map answering. Historical path unchanged. Contra is not gated. Keep-him-out still reaches hostages.
+
+Why: Choice is an illusion. The chair looks like a decision. Someone always owns it.
+
+
 ## 2026-09-10 - September 11 is on the rail
+
 
 What: Wall 1997 no longer jumps to Natanz. 11 September sits in between. Al-Qaeda, not Khamenei, is the top of the US board that week. Historical Iran helps against the Taliban and still gets axis of evil. Making it Iran's war is AL. Baghdad's Iran briefing now names the invoice: send the militias and they start killing American soldiers. Watch still sends later. No dead/captured scoreboard on the chrome. LT numbers live on the card.
 

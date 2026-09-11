@@ -17,7 +17,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "What actually forks?",
     freeze:
-      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, and Contra crates only move meters. Eagle Claw now has a Desert One result card; keep talking skips it; both still meet the Saudis lining Saddam up before the invasion. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Carter 1980 stays out of the war. Reagan's February 1982 original sin is taking Iraq off the terrorism list so Europe can sell the chemistry. The later 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold. 9/11 is a tutorial stop: Khamenei is not the top enemy that week; both buttons next.",
+      "Most binary cards collapse onto the next stop. White Revolution, admit-the-Shah, and Contra crates only move meters. Eagle Claw now has a Desert One result card; keep talking skips it; both still meet the Saudis lining Saddam up before the invasion. Real forks are graves, the 1953 face split, hinterland villages holding 1979 (a win), refusing the cup, joining Saddam after Kuwait, keeping the JCPOA limits (olive hold: nuclear war cards go away), doing the 2023 Saudi-Israel talks in private (Hamas cut off, no 7 October), and keeping the 2026 war. Nixon weapons do not yet gate Contra. Letterhead morals are the same next event with a 7-Eleven overlay and a stick-figure plate. Collapsing off-paths are not stamp-it shrugs: either a faction that owns the chair forces capitulation onto history (serve: Blue Dogs, Commerce, Joint Chiefs, the Imam), or the other desk answers with a real bill (adapts: Shah shops Moscow, students seize anyway, Israel runs the channel). Choice is an illusion. You serve somebody. Carter 1980 stays out of the war. Reagan's February 1982 original sin is taking Iraq off the terrorism list so Europe can sell the chemistry. The later 1982 tilt is the intel-to-Baghdad card. Go-to-Baghdad in 1991 is a live AL fork. The Guards do not veto the keep-limits hold. 9/11 is a tutorial stop: Khamenei is not the top enemy that week; both buttons next.",
   },
   {
     q: "Mossadegh dead end?",
@@ -82,12 +82,17 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "9/11 and Khamenei as top enemy?",
     freeze:
-      "After 11 September Khamenei is not the top US enemy. Al-Qaeda is. Iran is not the perpetrator. Historical Iran helps against the Taliban and still gets axis of evil in January 2002. Making it Iran's war is AL: the cave is not in Tehran. Both buttons next. Baghdad: if Iran sends the militias they start killing US soldiers. Watch still sends later. The soldiers still die. The difference is the calendar. That lives in the briefing, not on the button.",
+      "After 11 September Khamenei is not the top US enemy. Al-Qaeda is. Iran is not the perpetrator. Historical Iran helps against the Taliban and still gets axis of evil in January 2002. Making it Iran's war is a map the principals will not let you use: the cave is not in Tehran. You go to Afghanistan. Baghdad: if Iran sends the militias they start killing US soldiers. Watch still sends later. The soldiers still die. The difference is the calendar. That lives in the briefing, not on the button.",
   },
   {
     q: "Body-count chrome?",
     freeze:
       "No. A running US Dead / Iranian Dead / Captured scoreboard is the morality play the home copy exists to kill. Iran-Iraq is hundreds of thousands. Beirut is 241. Khobar is 19. 9/11 is 2,977. Iraq EFPs are hundreds. Protester slaughters and school poisonings are different kinds of killing. Mixing them into one ticker lets the war dead wash out the rest, and makes Iran look like the victim of a war it also chose. LT numbers live on the card. Do not add captured/dead counters to the meters.",
+  },
+  {
+    q: "Choice is an illusion / You serve somebody?",
+    freeze:
+      "Dylan. The chair looks like a decision. Most binary cards still land on the same next stop. Do not shrug 'you chose wrong, stamp it.' Either a faction that owns the chair forces capitulation onto history (serve: Blue Dogs kill Carter's warning, Commerce unlocks the chemistry, Joint Chiefs take the SOFA, the Imam keeps the slogan), or the other desk answers with a real bill (adapts: Shah shops Moscow, students seize anyway, Israel runs the channel). Serve is not AL: you did not execute the counterfactual. Adapts keeps AL labelled. 7-Eleven letterhead morals stay moral overlays. Real forks stay forks: graves, 1953, hinterland hold, refuse the cup, Kuwait grave, JCPOA limits, Hamas cut off, keep the 2026 war. Nixon's catalog does not gate Contra. Keep-him-out still reaches hostages. Historical: true never graves except the_leader.",
   },
   {
     q: "Hormuz",

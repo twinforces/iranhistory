@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T00:29:34.557Z",
+  "generated": "2026-09-11T02:57:13.694Z",
   "chairs": {
     "us": {
       "nodes": [
@@ -678,7 +678,7 @@
           "choiceId": "us-let-enrich",
           "label": "Let them run the fuel cycle",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-let-enrich",
           "ending": null,
           "faceChange": null
         },
@@ -698,7 +698,7 @@
           "choiceId": "us-send-tanks",
           "label": "Send him tanks instead",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-send-tanks",
           "ending": null,
           "faceChange": null
         },
@@ -718,7 +718,7 @@
           "choiceId": "us-skip-sofa",
           "label": "Do not ask for the bill",
           "historical": false,
-          "artisticLicense": "al-no-sofa",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -748,7 +748,7 @@
           "choiceId": "us-hinterland-first",
           "label": "Make him spend on the hinterland first",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-soviet-catalog",
           "ending": null,
           "faceChange": null
         },
@@ -798,7 +798,7 @@
           "choiceId": "us-statement-women",
           "label": "Issue a statement",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-statement-women",
           "ending": null,
           "faceChange": null
         },
@@ -858,7 +858,7 @@
           "choiceId": "us-warn-saddam",
           "label": "Tell Saddam no",
           "historical": false,
-          "artisticLicense": "al-warn-saddam",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -898,7 +898,7 @@
           "choiceId": "us-hail-mary",
           "label": "Throw a Hail Mary",
           "historical": false,
-          "artisticLicense": "al-hail-mary",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -928,7 +928,7 @@
           "choiceId": "us-keep-iraq-listed",
           "label": "Keep them on the list",
           "historical": false,
-          "artisticLicense": "al-keep-iraq-listed",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -1028,7 +1028,7 @@
           "choiceId": "us-no-note",
           "label": "Do not send a note",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-no-note",
           "ending": null,
           "faceChange": null
         },
@@ -1068,7 +1068,7 @@
           "choiceId": "us-pick-one",
           "label": "Pick one",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-pick-one",
           "ending": null,
           "faceChange": null
         },
@@ -1108,7 +1108,7 @@
           "choiceId": "us-stay-wall",
           "label": "Stay behind the wall",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-stay-wall",
           "ending": null,
           "faceChange": null
         },
@@ -1128,7 +1128,7 @@
           "choiceId": "us-iran-war-2001",
           "label": "Make this Iran's war",
           "historical": false,
-          "artisticLicense": "al-iran-war-2001",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -1188,7 +1188,7 @@
           "choiceId": "us-ignore-myth",
           "label": "Ignore",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-ignore-myth",
           "ending": null,
           "faceChange": null
         },
@@ -1268,7 +1268,7 @@
           "choiceId": "us-nothing-white",
           "label": "Do nothing",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-nothing-white",
           "ending": null,
           "faceChange": null
         },
@@ -1308,7 +1308,7 @@
           "choiceId": "us-offer-back",
           "label": "Offer a ladder",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-offer-back",
           "ending": null,
           "faceChange": null
         },
@@ -1328,7 +1328,7 @@
           "choiceId": "us-bomb",
           "label": "Take the shot",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-hormuz-shot",
           "ending": null,
           "faceChange": null
         },
@@ -1348,7 +1348,7 @@
           "choiceId": "us-hold-soleimani",
           "label": "Hold the shot",
           "historical": false,
-          "artisticLicense": "al-hold-soleimani",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -1388,7 +1388,7 @@
           "choiceId": "us-snap-in",
           "label": "Snap back in",
           "historical": false,
-          "artisticLicense": "al-snap-in",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -1448,7 +1448,7 @@
           "choiceId": "us-go-first",
           "label": "Go first",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-go-first",
           "ending": null,
           "faceChange": null
         },
@@ -2300,7 +2300,7 @@
           "choiceId": "ir-shah-plant",
           "label": "Talk about a national plant",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-let-enrich",
           "ending": null,
           "faceChange": null
         },
@@ -2340,7 +2340,7 @@
           "choiceId": "ir-refuse-sofa",
           "label": "Refuse Washington",
           "historical": false,
-          "artisticLicense": "al-no-sofa",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -2400,7 +2400,7 @@
           "choiceId": "ir-fire-crowd",
           "label": "Fire on the crowd",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-fire-crowd",
           "ending": null,
           "faceChange": "shah -> bazargan"
         },
@@ -2600,7 +2600,7 @@
           "choiceId": "ir-refuse-crates",
           "label": "Refuse the crates",
           "historical": false,
-          "artisticLicense": "al-refuse-crates",
+          "artisticLicense": null,
           "ending": null,
           "faceChange": null
         },
@@ -2680,7 +2680,7 @@
           "choiceId": "ir-stay-loud",
           "label": "Keep the revolution loud",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-stay-loud",
           "ending": null,
           "faceChange": null
         },
@@ -2700,7 +2700,7 @@
           "choiceId": "ir-own-khobar",
           "label": "Own it",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-own-khobar",
           "ending": null,
           "faceChange": null
         },
@@ -2740,7 +2740,7 @@
           "choiceId": "ir-sit-911",
           "label": "Sit it out",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-sit-911",
           "ending": null,
           "faceChange": null
         },
@@ -2780,7 +2780,7 @@
           "choiceId": "ir-send-militias",
           "label": "Send the militias now",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-send-militias",
           "ending": null,
           "faceChange": null
         },
@@ -2840,7 +2840,7 @@
           "choiceId": "ir-pause-stux",
           "label": "Pause",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-pause-stux",
           "ending": null,
           "faceChange": null
         },
@@ -3060,7 +3060,7 @@
           "choiceId": "ir-shoot-now",
           "label": "Shoot from Iran now",
           "historical": false,
-          "artisticLicense": null,
+          "artisticLicense": "al-shoot-now",
           "ending": null,
           "faceChange": null
         },

@@ -539,6 +539,7 @@ describe("TrainViewModel", () => {
     assert.equal(ui.leader.youAre, "You are the replacement");
     assert.equal(ui.leader.portrait, "/leaders/letterhead.jpg");
     assert.equal(ui.lastResult?.title, "We congratulate you on your moral choice.");
+    assert.equal(ui.lastResult?.kind, "moral");
     assert.match(ui.lastResult?.body ?? "", /convenience store/);
     assert.match(ui.lastResult?.body ?? "", /However, Iran continues on/);
     vm.dismissResult();
@@ -546,15 +547,15 @@ describe("TrainViewModel", () => {
     assert.equal(vm.getState().card.id, "you-him-fight-1980");
   });
 
-  it("Hail Mary AL is still findable after the card advances to Reagan", () => {
+  it("Hail Mary is a party capitulation, then Reagan still sits", () => {
     const vm = new TrainViewModel("us", "R", "election-1980");
     vm.choose("us-hail-mary");
     const ui = vm.getState();
     assert.equal(ui.card.id, "inaugurated-1981");
     assert.equal(ui.leader.id, "reagan");
-    const license = vm.licenseById("al-hail-mary");
-    assert.ok(license);
-    assert.match(license.body, /Reagan still sits/);
+    assert.equal(ui.lastResult?.kind, "serve");
+    assert.match(ui.lastResult?.body ?? "", /Blue Dogs/);
+    assert.match(ui.lastResult?.body ?? "", /Reagan still sits/);
   });
 
   it("keeping Family Protection deposes Bazargan onto a stick figure, then the embassy", () => {
@@ -612,5 +613,6 @@ describe("TrainViewModel", () => {
     const ui = vm.getState();
     assert.equal(ui.card.id, "sit-pezeshkian-2024");
     assert.match(ui.lastResult?.body ?? "", /7 October does not happen/);
+    assert.equal(ui.lastResult?.kind, "adapts");
   });
 });

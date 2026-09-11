@@ -30,6 +30,7 @@ import {
   type FactionId,
   type GameState,
   type IranFace,
+  type OverlayKind,
   type Party,
   type Receipt,
   type TruthTag,
@@ -106,7 +107,7 @@ export interface TrainViewState {
   endingTitle: string | null;
   endingBody: string | null;
   endingId: string | null;
-  lastResult: { title: string; body: string } | null;
+  lastResult: { title: string; body: string; kind: OverlayKind } | null;
   canBackOne: boolean;
   canBackBranch: boolean;
   canFurtherBack: boolean;
@@ -329,7 +330,8 @@ function presentChoices(state: GameState, card: Card, locale: Locale): Presented
 }
 
 function localizeBleed(raw: string, locale: Locale, months: number | null): string {
-  if (locale !== "fa" || !raw) return raw;
+  if (!raw) return "";
+  if (locale !== "fa") return raw;
   const bits: string[] = [];
   if (raw.includes("Street will remember")) bits.push(ui("fa", "bleedStreet"));
   if (raw.includes("IRGC will remember")) bits.push(ui("fa", "bleedIrgc"));
@@ -386,8 +388,9 @@ export class TrainViewModel {
     let lastResult = this.state.lastResult;
     if (locale === "fa" && lastResult) {
       lastResult = {
-        title: choiceFa?.resultTitle ?? ui("fa", "congratulate"),
+        title: choiceFa?.resultTitle ?? lastResult.title,
         body: choiceFa?.result ?? lastResult.body,
+        kind: lastResult.kind,
       };
     }
     return {

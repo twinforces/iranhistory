@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Choice is an illusion, 2026-09-10
+
+What: Collapsing off-paths no longer shrug stamp-it. Serve: a faction that owns the chair forces capitulation onto history. Adapts: the other desk answers with a real bill. 7-Eleven stays moral. Real forks stay forks.
+
+Why: Dylan. You gotta serve somebody. The chair is not a morality play with a skip button.
+
+
 ## September 11 is on the rail, 2026-09-10
 
 What: 9/11 is a tutorial stop. Khamenei is not the top US enemy that week. Baghdad names the soldiers if the militias go. No body-count chrome.

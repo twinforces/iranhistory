@@ -89,32 +89,32 @@ flowchart TB
   us_coup_1953_us_playing_live_us_back_shah_us_walk -->|"H Back the Shah (covert)"| us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich
   us_coup_1953_us_playing_live_us_back_shah_us_walk -.->|"AL Walk away"| us_coup_1953_us_ended_satrap_1953_
   us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -->|"H Keep sending the fuel"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
-  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -->|"Let them run the fuel cycle"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
+  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -.->|"AL Let them run the fuel cycle"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
   us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -->|"H Press him to reform"| us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa
-  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -->|"Send him tanks instead"| us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa
+  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -.->|"AL Send him tanks instead"| us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa
   us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa -->|"H Take the immunity"| us_sit_nixon_1969_us_playing_live_us_sit_nixon
-  us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa -.->|"AL Do not ask for the bill"| us_sit_nixon_1969_us_playing_live_us_sit_nixon
+  us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa -->|"Do not ask for the bill"| us_sit_nixon_1969_us_playing_live_us_sit_nixon
   us_sit_nixon_1969_us_playing_live_us_sit_nixon -->|"H Sit the presidency"| us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first
   us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -->|"H Sign the blank check"| us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline
-  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -->|"Make him spend on the hinterland first"| us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline
+  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -.->|"AL Make him spend on the hinterland first"| us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline -->|"H Keep selling"| us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline -.->|"AL Slow the pipeline"| us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -->|"H Let him in for treatment"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -.->|"AL Keep him out"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
-  us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
+  us_veil_1979_us_playing_live_us_statement_women_us_stay_out -.->|"AL Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"H Stay out"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_eagle_claw_1980_us_playing_live_us_see_wreckage
   us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
   us_eagle_claw_1980_us_playing_live_us_see_wreckage -->|"H The hostages are still inside"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
   us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"H Stay out of the way"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
-  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -.->|"AL Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -.->|"AL Tilt to Iraq"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
-  us_election_1980_us_playing_live_us_hail_mary_us_run_again -.->|"AL Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
+  us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
   us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed
   us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -->|"H Take Iraq off the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
-  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -.->|"AL Keep them on the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -->|"Keep them on the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -->|"H Share the intel with Baghdad"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -.->|"AL Stay out of the war"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa -->|"H Bring them home"| us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles
@@ -124,23 +124,23 @@ flowchart TB
   us_cup_1988_us_playing_live_us_call_mistake_us_own_shot -->|"H Call it a mistake"| us_robe_1989_us_playing_live_us_no_note_us_note_robe
   us_cup_1988_us_playing_live_us_call_mistake_us_own_shot -.->|"AL Own the shot"| us_robe_1989_us_playing_live_us_no_note_us_note_robe
   us_robe_1989_us_playing_live_us_no_note_us_note_robe -->|"H Send a note"| us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border
-  us_robe_1989_us_playing_live_us_no_note_us_note_robe -->|"Do not send a note"| us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border
+  us_robe_1989_us_playing_live_us_no_note_us_note_robe -.->|"AL Do not send a note"| us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border
   us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border -->|"H Stop at the border"| us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one
   us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border -.->|"AL Go to Baghdad"| us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"H Name both as the problem"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
-  us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
+  us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -.->|"AL Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -->|"H Do not strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -.->|"AL Strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -.->|"AL Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
   us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"H Go to Afghanistan"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
-  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -.->|"AL Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -->|"H Bin the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -.->|"AL Take the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"H Take Baghdad"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"Stop at the border again"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth
   us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth -->|"H Condemn"| us_green_2009_us_playing_live_us_not_own_green_us_own_green
-  us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth -->|"Ignore"| us_green_2009_us_playing_live_us_not_own_green_us_own_green
+  us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth -.->|"AL Ignore"| us_green_2009_us_playing_live_us_not_own_green_us_own_green
   us_green_2009_us_playing_live_us_not_own_green_us_own_green -->|"H Do not own the street"| us_stuxnet_2010_us_playing_live_us_bomb_natanz_us_worm_run
   us_green_2009_us_playing_live_us_not_own_green_us_own_green -.->|"AL Own the street"| us_stuxnet_2010_us_playing_live_us_bomb_natanz_us_worm_run
   us_stuxnet_2010_us_playing_live_us_bomb_natanz_us_worm_run -->|"H Let the worm run"| us_jcpoa_2015_us_playing_live_us_sign_jcpoa_us_walk_jcpoa
@@ -148,25 +148,25 @@ flowchart TB
   us_jcpoa_2015_us_playing_live_us_sign_jcpoa_us_walk_jcpoa -->|"H Sign the JCPOA"| us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white
   us_jcpoa_2015_us_playing_live_us_sign_jcpoa_us_walk_jcpoa -.->|"AL Walk away"| us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white
   us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white -->|"H Tweet"| us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa
-  us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white -->|"Do nothing"| us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa
+  us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white -.->|"AL Do nothing"| us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa
   us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa -->|"H Leave the JCPOA"| us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce
   us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa -.->|"AL Stay in the JCPOA"| us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce
   us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce -->|"H Watch"| us_hormuz_2019_us_playing_live_us_abort_us_bomb
-  us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce -->|"Offer a ladder"| us_hormuz_2019_us_playing_live_us_abort_us_bomb
+  us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce -.->|"AL Offer a ladder"| us_hormuz_2019_us_playing_live_us_abort_us_bomb
   us_hormuz_2019_us_playing_live_us_abort_us_bomb -->|"H Call it off"| us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani
-  us_hormuz_2019_us_playing_live_us_abort_us_bomb -->|"Take the shot"| us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani
+  us_hormuz_2019_us_playing_live_us_abort_us_bomb -.->|"AL Take the shot"| us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani
   us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani -->|"H Kill him"| us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords
-  us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani -.->|"AL Hold the shot"| us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords
+  us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani -->|"Hold the shot"| us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords
   us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords -->|"H Broker the Accords"| us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever
   us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords -.->|"AL Leave the boycott in place"| us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever
   us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever -->|"H Talk forever"| us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa
-  us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever -.->|"AL Snap back in"| us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa
+  us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever -->|"Snap back in"| us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa
   us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa -->|"H Issue a statement"| us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi
   us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa -.->|"AL Own the street"| us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi
   us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi -->|"H Do the talks in public"| us_oct7_2023_us_playing_live_us_arm_israel_us_go_first
   us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi -.->|"AL Do the talks in private"| us_sit_pezeshkian_2024_us_playing_live_us_sit_2024
   us_oct7_2023_us_playing_live_us_arm_israel_us_go_first -->|"H Arm Israel"| us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire
-  us_oct7_2023_us_playing_live_us_arm_israel_us_go_first -->|"Go first"| us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire
+  us_oct7_2023_us_playing_live_us_arm_israel_us_go_first -.->|"AL Go first"| us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire
   us_sit_pezeshkian_2024_us_playing_live_us_sit_2024 -->|"H Note the crash"| us_twelve_days_2025_us_playing_live_us_hit_fordow_us_stay_twelve
   us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire -->|"H Help shoot them down"| us_sit_pezeshkian_2024_us_playing_live_us_sit_2024
   us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire -->|"Stay out"| us_sit_pezeshkian_2024_us_playing_live_us_sit_2024
@@ -248,17 +248,17 @@ flowchart TB
   iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize -.->|"AL Cut a deal with Moscow"| iran_coup_1953_mossadegh_ended_mossadegh_falls_
   iran_deposed_1953_shah_playing_live_ir_sit_throne -->|"H Sit the throne"| iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant
   iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -->|"H Take the American fuel"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
-  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -->|"Talk about a national plant"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
+  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -.->|"AL Talk about a national plant"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
   iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev -->|"H Launch the White Revolution"| iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa
   iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev -->|"Keep the landlords and the clergy quiet"| iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa
   iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa -->|"H Pass the bill"| iran_sit_nixon_1969_shah_playing_live_ir_nixon_next
-  iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa -.->|"AL Refuse Washington"| iran_sit_nixon_1969_shah_playing_live_ir_nixon_next
+  iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa -->|"Refuse Washington"| iran_sit_nixon_1969_shah_playing_live_ir_nixon_next
   iran_sit_nixon_1969_shah_playing_live_ir_nixon_next -->|"H Keep buying"| iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages
   iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages -->|"H Buy the American catalog"| iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again
   iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages -.->|"AL Spend the oil on the villages"| iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again
   iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again -->|"H Keep buying"| iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave
   iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again -->|"Spend on the villages"| iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave
-  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -->|"Fire on the crowd =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
+  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -.->|"AL Fire on the crowd =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
   iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -->|"H Leave =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
   iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave -->|"H Leave =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
   iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave -.->|"AL Stay. The villages are quiet."| iran_revolution_1979_shah_ended_shah_holds_
@@ -278,7 +278,7 @@ flowchart TB
   iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export -->|"H Send the Guards to the Bekaa"| iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts
   iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export -.->|"AL Keep the war at home"| iran_lebanon_1983_khamenei_ended_face_no_guns_
   iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -->|"H Take the American parts"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
-  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -.->|"AL Refuse the crates"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
+  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -->|"Refuse the crates"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
   iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup -->|"H Stamp the cup"| iran_robe_1989_khamenei_playing_live_ir_remain_letterhead_ir_take_robe
   iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup -.->|"AL Refuse the ceasefire"| iran_cup_1988_khamenei_ended_face_no_guns_
   iran_robe_1989_khamenei_playing_live_ir_remain_letterhead_ir_take_robe -->|"H Take the robe =  rafsanjani"| iran_kuwait_1990_rafsanjani_playing_live_ir_side_saddam_ir_stay_out_kuwait
@@ -286,23 +286,23 @@ flowchart TB
   iran_kuwait_1990_rafsanjani_playing_live_ir_side_saddam_ir_stay_out_kuwait -->|"H Stay out"| iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud
   iran_kuwait_1990_rafsanjani_playing_live_ir_side_saddam_ir_stay_out_kuwait -->|"Side with Saddam"| iran_kuwait_1990_rafsanjani_ended_kuwait_grave_
   iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -->|"H Rebuild"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
-  iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -->|"Keep the revolution loud"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
+  iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -.->|"AL Keep the revolution loud"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"H Deny"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
-  iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"Own it"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
+  iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -.->|"AL Own it"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
   iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -->|"H Talk to the people =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
   iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -.->|"AL Meet the Secretary =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
   iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"H Help against the Taliban"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
-  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"Sit it out"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -.->|"AL Sit it out"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -->|"H Keep spinning"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -.->|"AL Pause"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -->|"H Watch"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
-  iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -->|"Send the militias now"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
+  iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -.->|"AL Send the militias now"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
   iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth -->|"H Say it =  ahmadinejad"| iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green
   iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth -->|"Do not say it =  ahmadinejad"| iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green
   iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green -->|"H Steal it and crush it"| iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux
   iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green -->|"Count the votes"| iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux
   iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux -->|"H Keep spinning"| iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa
-  iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux -->|"Pause"| iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa
+  iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux -.->|"AL Pause"| iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa
   iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa -->|"H Accept the JCPOA =  rouhani"| iran_white_wednesdays_2017_rouhani_playing_live_ir_arrest_white_ir_let_post
   iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa -->|"Keep enriching =  rouhani"| iran_white_wednesdays_2017_rouhani_playing_live_ir_arrest_white_ir_let_post
   iran_white_wednesdays_2017_rouhani_playing_live_ir_arrest_white_ir_let_post -->|"H Arrest"| iran_archive_2018_rouhani_playing_live_ir_sprint_tonight_ir_wait_europe
@@ -324,7 +324,7 @@ flowchart TB
   iran_saudi_accord_2023_raisi_playing_live_ir_fund_hamas_ir_leave_hamas -->|"H Fund Hamas"| iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now
   iran_saudi_accord_2023_raisi_playing_live_ir_fund_hamas_ir_leave_hamas -.->|"AL Do not fund Hamas"| iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian
   iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now -->|"H Keep the proxy layer"| iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies
-  iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now -->|"Shoot from Iran now"| iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies
+  iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now -.->|"AL Shoot from Iran now"| iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies
   iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian -->|"H Sit the presidency =  pezeshkian"| iran_twelve_days_2025_pezeshkian_playing_live_ir_absorb_strike_ir_deal_now
   iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies -->|"H Fire from Iran"| iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian
   iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies -->|"Stay with the proxies"| iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian
@@ -395,32 +395,32 @@ flowchart TB
   us_coup_1953_us_playing_live_us_back_shah_us_walk -->|"H Back the Shah (covert)"| us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich
   us_coup_1953_us_playing_live_us_back_shah_us_walk -.->|"AL Walk away"| us_coup_1953_us_ended_satrap_1953_
   us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -->|"H Keep sending the fuel"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
-  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -->|"Let them run the fuel cycle"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
+  us_atoms_1957_us_playing_live_us_keep_fuel_us_let_enrich -.->|"AL Let them run the fuel cycle"| us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks
   us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -->|"H Press him to reform"| us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa
-  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -->|"Send him tanks instead"| us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa
+  us_white_revolution_1963_us_playing_live_us_press_reform_us_send_tanks -.->|"AL Send him tanks instead"| us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa
   us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa -->|"H Take the immunity"| us_sit_nixon_1969_us_playing_live_us_sit_nixon
-  us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa -.->|"AL Do not ask for the bill"| us_sit_nixon_1969_us_playing_live_us_sit_nixon
+  us_sofa_1964_us_playing_live_us_skip_sofa_us_take_sofa -->|"Do not ask for the bill"| us_sit_nixon_1969_us_playing_live_us_sit_nixon
   us_sit_nixon_1969_us_playing_live_us_sit_nixon -->|"H Sit the presidency"| us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first
   us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -->|"H Sign the blank check"| us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline
-  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -->|"Make him spend on the hinterland first"| us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline
+  us_weapons_1972_us_playing_live_us_blank_check_us_hinterland_first -.->|"AL Make him spend on the hinterland first"| us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline -->|"H Keep selling"| us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out
   us_pipeline_1975_us_playing_live_us_keep_selling_us_slow_pipeline -.->|"AL Slow the pipeline"| us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -->|"H Let him in for treatment"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
   us_revolution_1979_us_playing_live_us_admit_shah_us_keep_shah_out -.->|"AL Keep him out"| us_veil_1979_us_playing_live_us_statement_women_us_stay_out
-  us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
+  us_veil_1979_us_playing_live_us_statement_women_us_stay_out -.->|"AL Issue a statement"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_veil_1979_us_playing_live_us_statement_women_us_stay_out -->|"H Stay out"| us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking
   us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -->|"H Authorize a rescue"| us_eagle_claw_1980_us_playing_live_us_see_wreckage
   us_hostages_1979_us_playing_live_us_eagle_claw_us_keep_talking -.->|"AL Keep talking"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
   us_eagle_claw_1980_us_playing_live_us_see_wreckage -->|"H The hostages are still inside"| us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam
   us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"H Stay out of the way"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
-  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -.->|"AL Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
+  us_you_him_fight_1980_us_playing_live_us_let_saddam_us_warn_saddam -->|"Tell Saddam no"| us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -.->|"AL Tilt to Iraq"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_iran_iraq_1980_us_playing_live_us_no_tilt_us_tilt_iraq -->|"H Stay out of the war"| us_election_1980_us_playing_live_us_hail_mary_us_run_again
   us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"H Run again"| us_inaugurated_1981_us_playing_live_us_sit_reagan
-  us_election_1980_us_playing_live_us_hail_mary_us_run_again -.->|"AL Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
+  us_election_1980_us_playing_live_us_hail_mary_us_run_again -->|"Throw a Hail Mary"| us_inaugurated_1981_us_playing_live_us_sit_reagan
   us_inaugurated_1981_us_playing_live_us_sit_reagan -->|"H Sit the presidency"| us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed
   us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -->|"H Take Iraq off the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
-  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -.->|"AL Keep them on the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
+  us_delist_1982_us_playing_live_us_delist_iraq_us_keep_iraq_listed -->|"Keep them on the list"| us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -->|"H Share the intel with Baghdad"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_tilt_1982_us_playing_live_us_cia_baghdad_us_stay_neutral -.->|"AL Stay out of the war"| us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa
   us_lebanon_1983_us_playing_live_us_bring_home_us_hit_bekaa -->|"H Bring them home"| us_iran_contra_1985_us_playing_live_us_keep_embargo_us_sell_missiles
@@ -430,23 +430,23 @@ flowchart TB
   us_cup_1988_us_playing_live_us_call_mistake_us_own_shot -->|"H Call it a mistake"| us_robe_1989_us_playing_live_us_no_note_us_note_robe
   us_cup_1988_us_playing_live_us_call_mistake_us_own_shot -.->|"AL Own the shot"| us_robe_1989_us_playing_live_us_no_note_us_note_robe
   us_robe_1989_us_playing_live_us_no_note_us_note_robe -->|"H Send a note"| us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border
-  us_robe_1989_us_playing_live_us_no_note_us_note_robe -->|"Do not send a note"| us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border
+  us_robe_1989_us_playing_live_us_no_note_us_note_robe -.->|"AL Do not send a note"| us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border
   us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border -->|"H Stop at the border"| us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one
   us_kuwait_1990_us_playing_live_us_go_baghdad_us_stop_border -.->|"AL Go to Baghdad"| us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one
   us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"H Name both as the problem"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
-  us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -->|"Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
+  us_dual_containment_1993_us_playing_live_us_name_both_us_pick_one -.->|"AL Pick one"| us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -->|"H Do not strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_khobar_1996_us_playing_live_us_no_strike_khobar_us_strike_khobar -.->|"AL Strike"| us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall
   us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"H Offer the handshake"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
-  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -->|"Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
+  us_wall_1997_us_playing_live_us_offer_handshake_us_stay_wall -.->|"AL Stay behind the wall"| us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001
   us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"H Go to Afghanistan"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
-  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -.->|"AL Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
+  us_nine_eleven_2001_us_playing_live_us_afghanistan_us_iran_war_2001 -->|"Make this Iran's war"| us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -->|"H Bin the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_natanz_2002_us_playing_live_us_bin_fax_us_take_fax -.->|"AL Take the fax"| us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"H Take Baghdad"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth
   us_baghdad_2003_us_playing_live_us_stop_again_us_take_baghdad -->|"Stop at the border again"| us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth
   us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth -->|"H Condemn"| us_green_2009_us_playing_live_us_not_own_green_us_own_green
-  us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth -->|"Ignore"| us_green_2009_us_playing_live_us_not_own_green_us_own_green
+  us_myth_2005_us_playing_live_us_condemn_myth_us_ignore_myth -.->|"AL Ignore"| us_green_2009_us_playing_live_us_not_own_green_us_own_green
   us_green_2009_us_playing_live_us_not_own_green_us_own_green -->|"H Do not own the street"| us_stuxnet_2010_us_playing_live_us_bomb_natanz_us_worm_run
   us_green_2009_us_playing_live_us_not_own_green_us_own_green -.->|"AL Own the street"| us_stuxnet_2010_us_playing_live_us_bomb_natanz_us_worm_run
   us_stuxnet_2010_us_playing_live_us_bomb_natanz_us_worm_run -->|"H Let the worm run"| us_jcpoa_2015_us_playing_live_us_sign_jcpoa_us_walk_jcpoa
@@ -454,25 +454,25 @@ flowchart TB
   us_jcpoa_2015_us_playing_live_us_sign_jcpoa_us_walk_jcpoa -->|"H Sign the JCPOA"| us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white
   us_jcpoa_2015_us_playing_live_us_sign_jcpoa_us_walk_jcpoa -.->|"AL Walk away"| us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white
   us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white -->|"H Tweet"| us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa
-  us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white -->|"Do nothing"| us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa
+  us_white_wednesdays_2017_us_playing_live_us_nothing_white_us_tweet_white -.->|"AL Do nothing"| us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa
   us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa -->|"H Leave the JCPOA"| us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce
   us_archive_2018_us_playing_live_us_leave_jcpoa_us_stay_jcpoa -.->|"AL Stay in the JCPOA"| us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce
   us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce -->|"H Watch"| us_hormuz_2019_us_playing_live_us_abort_us_bomb
-  us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce -->|"Offer a ladder"| us_hormuz_2019_us_playing_live_us_abort_us_bomb
+  us_bounce_2019_us_playing_live_us_offer_back_us_watch_bounce -.->|"AL Offer a ladder"| us_hormuz_2019_us_playing_live_us_abort_us_bomb
   us_hormuz_2019_us_playing_live_us_abort_us_bomb -->|"H Call it off"| us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani
-  us_hormuz_2019_us_playing_live_us_abort_us_bomb -->|"Take the shot"| us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani
+  us_hormuz_2019_us_playing_live_us_abort_us_bomb -.->|"AL Take the shot"| us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani
   us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani -->|"H Kill him"| us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords
-  us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani -.->|"AL Hold the shot"| us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords
+  us_soleimani_2020_us_playing_live_us_hold_soleimani_us_kill_soleimani -->|"Hold the shot"| us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords
   us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords -->|"H Broker the Accords"| us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever
   us_abraham_2020_us_playing_live_us_broker_accords_us_skip_accords -.->|"AL Leave the boycott in place"| us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever
   us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever -->|"H Talk forever"| us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa
-  us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever -.->|"AL Snap back in"| us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa
+  us_unleave_2021_us_playing_live_us_snap_in_us_talk_forever -->|"Snap back in"| us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa
   us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa -->|"H Issue a statement"| us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi
   us_mahsa_2022_us_playing_live_us_own_mahsa_us_statement_mahsa -.->|"AL Own the street"| us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi
   us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi -->|"H Do the talks in public"| us_oct7_2023_us_playing_live_us_arm_israel_us_go_first
   us_saudi_accord_2023_us_playing_live_us_private_saudi_us_public_saudi -.->|"AL Do the talks in private"| us_sit_pezeshkian_2024_us_playing_live_us_sit_2024
   us_oct7_2023_us_playing_live_us_arm_israel_us_go_first -->|"H Arm Israel"| us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire
-  us_oct7_2023_us_playing_live_us_arm_israel_us_go_first -->|"Go first"| us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire
+  us_oct7_2023_us_playing_live_us_arm_israel_us_go_first -.->|"AL Go first"| us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire
   us_sit_pezeshkian_2024_us_playing_live_us_sit_2024 -->|"H Note the crash"| us_twelve_days_2025_us_playing_live_us_hit_fordow_us_stay_twelve
   us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire -->|"H Help shoot them down"| us_sit_pezeshkian_2024_us_playing_live_us_sit_2024
   us_direct_fire_2024_us_playing_live_us_help_shoot_us_stay_out_fire -->|"Stay out"| us_sit_pezeshkian_2024_us_playing_live_us_sit_2024
@@ -556,17 +556,17 @@ flowchart TB
   iran_coup_1953_mossadegh_playing_live_ir_deal_london_ir_deal_moscow_ir_nationalize -.->|"AL Cut a deal with Moscow"| iran_coup_1953_mossadegh_ended_mossadegh_falls_
   iran_deposed_1953_shah_playing_live_ir_sit_throne -->|"H Sit the throne"| iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant
   iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -->|"H Take the American fuel"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
-  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -->|"Talk about a national plant"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
+  iran_atoms_1957_shah_playing_live_ir_shah_fuel_ir_shah_plant -.->|"AL Talk about a national plant"| iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev
   iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev -->|"H Launch the White Revolution"| iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa
   iran_white_revolution_1963_shah_playing_live_ir_keep_quiet_ir_white_rev -->|"Keep the landlords and the clergy quiet"| iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa
   iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa -->|"H Pass the bill"| iran_sit_nixon_1969_shah_playing_live_ir_nixon_next
-  iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa -.->|"AL Refuse Washington"| iran_sit_nixon_1969_shah_playing_live_ir_nixon_next
+  iran_sofa_1964_shah_playing_live_ir_pass_sofa_ir_refuse_sofa -->|"Refuse Washington"| iran_sit_nixon_1969_shah_playing_live_ir_nixon_next
   iran_sit_nixon_1969_shah_playing_live_ir_nixon_next -->|"H Keep buying"| iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages
   iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages -->|"H Buy the American catalog"| iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again
   iran_weapons_1972_shah_playing_live_ir_buy_catalog_ir_spend_villages -.->|"AL Spend the oil on the villages"| iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again
   iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again -->|"H Keep buying"| iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave
   iran_pipeline_1975_shah_playing_live_ir_keep_catalog_ir_villages_again -->|"Spend on the villages"| iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave
-  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -->|"Fire on the crowd =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
+  iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -.->|"AL Fire on the crowd =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
   iran_revolution_1979_shah_playing_live_ir_fire_crowd_ir_shah_leave -->|"H Leave =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
   iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave -->|"H Leave =  bazargan"| iran_veil_1979_bazargan_playing_live_ir_keep_fpl_ir_repeal_fpl
   iran_revolution_1979_shah_playing_live_ir_shah_hold_ir_shah_leave -.->|"AL Stay. The villages are quiet."| iran_revolution_1979_shah_ended_shah_holds_
@@ -586,7 +586,7 @@ flowchart TB
   iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export -->|"H Send the Guards to the Bekaa"| iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts
   iran_lebanon_1983_khamenei_playing_live_ir_bekah_ir_no_export -.->|"AL Keep the war at home"| iran_lebanon_1983_khamenei_ended_face_no_guns_
   iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -->|"H Take the American parts"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
-  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -.->|"AL Refuse the crates"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
+  iran_iran_contra_1985_khamenei_playing_live_ir_refuse_crates_ir_take_parts -->|"Refuse the crates"| iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup
   iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup -->|"H Stamp the cup"| iran_robe_1989_khamenei_playing_live_ir_remain_letterhead_ir_take_robe
   iran_cup_1988_khamenei_playing_live_ir_refuse_cup_ir_stamp_cup -.->|"AL Refuse the ceasefire"| iran_cup_1988_khamenei_ended_face_no_guns_
   iran_robe_1989_khamenei_playing_live_ir_remain_letterhead_ir_take_robe -->|"H Take the robe =  rafsanjani"| iran_kuwait_1990_rafsanjani_playing_live_ir_side_saddam_ir_stay_out_kuwait
@@ -594,23 +594,23 @@ flowchart TB
   iran_kuwait_1990_rafsanjani_playing_live_ir_side_saddam_ir_stay_out_kuwait -->|"H Stay out"| iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud
   iran_kuwait_1990_rafsanjani_playing_live_ir_side_saddam_ir_stay_out_kuwait -->|"Side with Saddam"| iran_kuwait_1990_rafsanjani_ended_kuwait_grave_
   iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -->|"H Rebuild"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
-  iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -->|"Keep the revolution loud"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
+  iran_dual_containment_1993_rafsanjani_playing_live_ir_rebuild_ir_stay_loud -.->|"AL Keep the revolution loud"| iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar
   iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"H Deny"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
-  iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -->|"Own it"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
+  iran_khobar_1996_rafsanjani_playing_live_ir_deny_khobar_ir_own_khobar -.->|"AL Own it"| iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary
   iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -->|"H Talk to the people =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
   iran_wall_1997_rafsanjani_playing_live_ir_cnn_ir_meet_secretary -.->|"AL Meet the Secretary =  khatami"| iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911
   iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"H Help against the Taliban"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
-  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -->|"Sit it out"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
+  iran_nine_eleven_2001_khatami_playing_live_ir_help_taliban_ir_sit_911 -.->|"AL Sit it out"| iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -->|"H Keep spinning"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_natanz_2002_khatami_playing_live_ir_keep_spinning_ir_pause_natanz -.->|"AL Pause"| iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad
   iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -->|"H Watch"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
-  iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -->|"Send the militias now"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
+  iran_baghdad_2003_khatami_playing_live_ir_send_militias_ir_watch_baghdad -.->|"AL Send the militias now"| iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth
   iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth -->|"H Say it =  ahmadinejad"| iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green
   iran_myth_2005_khatami_playing_live_ir_dont_say_myth_ir_say_myth -->|"Do not say it =  ahmadinejad"| iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green
   iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green -->|"H Steal it and crush it"| iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux
   iran_green_2009_ahmadinejad_playing_live_ir_count_green_ir_crush_green -->|"Count the votes"| iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux
   iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux -->|"H Keep spinning"| iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa
-  iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux -->|"Pause"| iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa
+  iran_stuxnet_2010_ahmadinejad_playing_live_ir_keep_spin_stux_ir_pause_stux -.->|"AL Pause"| iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa
   iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa -->|"H Accept the JCPOA =  rouhani"| iran_white_wednesdays_2017_rouhani_playing_live_ir_arrest_white_ir_let_post
   iran_jcpoa_2015_ahmadinejad_playing_live_ir_accept_jcpoa_ir_keep_spin_jcpoa -->|"Keep enriching =  rouhani"| iran_white_wednesdays_2017_rouhani_playing_live_ir_arrest_white_ir_let_post
   iran_white_wednesdays_2017_rouhani_playing_live_ir_arrest_white_ir_let_post -->|"H Arrest"| iran_archive_2018_rouhani_playing_live_ir_sprint_tonight_ir_wait_europe
@@ -632,7 +632,7 @@ flowchart TB
   iran_saudi_accord_2023_raisi_playing_live_ir_fund_hamas_ir_leave_hamas -->|"H Fund Hamas"| iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now
   iran_saudi_accord_2023_raisi_playing_live_ir_fund_hamas_ir_leave_hamas -.->|"AL Do not fund Hamas"| iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian
   iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now -->|"H Keep the proxy layer"| iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies
-  iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now -->|"Shoot from Iran now"| iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies
+  iran_oct7_2023_raisi_playing_live_ir_keep_layer_ir_shoot_now -.->|"AL Shoot from Iran now"| iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies
   iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian -->|"H Sit the presidency =  pezeshkian"| iran_twelve_days_2025_pezeshkian_playing_live_ir_absorb_strike_ir_deal_now
   iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies -->|"H Fire from Iran"| iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian
   iran_direct_fire_2024_raisi_playing_live_ir_fire_iran_ir_stay_proxies -->|"Stay with the proxies"| iran_sit_pezeshkian_2024_raisi_playing_live_ir_sit_pezeshkian

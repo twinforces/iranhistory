@@ -133,18 +133,27 @@ describe("2019 US abort vs bomb", () => {
 
 describe("IRGC purge", () => {
   it("a soft move with IRGC under 35 kills the Iran chair", () => {
-    const g = newGame({ chair: "iran", party: "D", cardId: "hormuz-2019" });
+    const g = newGame({ chair: "iran", party: "D", cardId: "stuxnet-2010" });
     g.bars.irgc = SOFT_PURGE_IRGC - 1;
-    const next = applyChoice(g, "ir-hold-fire");
+    const next = applyChoice(g, "ir-pause-stux");
     assert.equal(next.ending?.id, "irgc_purge");
   });
 
   it("the same soft move is survivable at IRGC 60", () => {
-    const g = newGame({ chair: "iran", party: "D", cardId: "hormuz-2019" });
+    const g = newGame({ chair: "iran", party: "D", cardId: "stuxnet-2010" });
     g.bars.irgc = 60;
-    const next = applyChoice(g, "ir-hold-fire");
+    const next = applyChoice(g, "ir-pause-stux");
     assert.equal(next.ending?.id === "irgc_purge", false);
     assert.equal(next.bars.irgc < 60, true);
+  });
+
+  it("capitulating on hold-fire does not purge: you squeezed instead", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "hormuz-2019" });
+    g.bars.irgc = SOFT_PURGE_IRGC - 1;
+    const next = applyChoice(g, "ir-hold-fire");
+    assert.equal(next.ending?.id === "irgc_purge", false);
+    assert.equal(next.lastResult?.kind, "serve");
+    assert.equal(next.bars.irgc > g.bars.irgc, true);
   });
 });
 
@@ -378,7 +387,8 @@ describe("Ike to Carter", () => {
     assert.ok(delist);
     assert.equal(delist.usChoices.find((c) => c.id === "us-delist-iraq")?.historical, true);
     assert.equal(delist.usChoices.find((c) => c.id === "us-delist-iraq")?.nextCard, "tilt-1982");
-    assert.equal(delist.usChoices.find((c) => c.id === "us-keep-iraq-listed")?.artisticLicense, "al-keep-iraq-listed");
+    assert.equal(delist.usChoices.find((c) => c.id === "us-keep-iraq-listed")?.overlay, "serve");
+    assert.equal(delist.usChoices.find((c) => c.id === "us-keep-iraq-listed")?.artisticLicense, undefined);
     assert.equal(delist.iranChoices.length, 0);
     const tilt = cardById("tilt-1982");
     assert.ok(tilt);
@@ -404,6 +414,7 @@ describe("Ike to Carter", () => {
     assert.equal(next.phase, "playing");
     assert.equal(next.flags.letterhead_generic, true);
     assert.equal(next.lastResult?.title, "We congratulate you on your moral choice.");
+    assert.equal(next.lastResult?.kind, "moral");
   });
 
   it("the White House party follows the face: Ike R, Kennedy D, Nixon R, Carter D", () => {
@@ -587,7 +598,7 @@ describe("golden path", () => {
     assert.equal(next.ending, null);
     assert.equal(next.flags.letterhead_generic, true);
     assert.equal(next.lastResult?.title, "We congratulate you on your moral choice.");
-    assert.match(next.lastResult?.body ?? "", /convenience store/);
+    assert.equal(next.lastResult?.kind, "moral");
     assert.match(next.lastResult?.body ?? "", /However, Iran continues on/);
     const sit = applyChoice(g, "ir-sit-presidency");
     const lined = applyChoice(sit, "ir-watch-lineup");
@@ -808,6 +819,7 @@ describe("late rail", () => {
     assert.equal(priv.cardId, "sit-pezeshkian-2024");
     assert.equal(priv.flags.hamas_cut_off, true);
     assert.equal(priv.lastResult?.title, "Hamas is cut off");
+    assert.equal(priv.lastResult?.kind, "adapts");
     assert.match(priv.lastResult?.body ?? "", /7 October does not happen/);
   });
 
@@ -845,7 +857,8 @@ describe("late rail", () => {
     assert.match(lineup.situationUs ?? "", /Shia/);
     assert.match(lineup.situationIran ?? "", /Saudis/);
     assert.equal(lineup.usChoices.find((c) => c.id === "us-let-saddam")?.historical, true);
-    assert.equal(lineup.usChoices.find((c) => c.id === "us-warn-saddam")?.artisticLicense, "al-warn-saddam");
+    assert.equal(lineup.usChoices.find((c) => c.id === "us-warn-saddam")?.overlay, "serve");
+    assert.equal(lineup.usChoices.find((c) => c.id === "us-warn-saddam")?.artisticLicense, undefined);
   });
 
   it("taking Iraq off the terrorism list is how the chemistry moves; keeping them on still reaches the intel tilt", () => {
@@ -892,5 +905,104 @@ describe("late rail", () => {
     assert.equal(nsa?.usedFor.includes("delist-1982"), true);
     const wiki = RECEIPTS.find((r) => r.id === "us-iraq-tilt");
     assert.equal(wiki?.usedFor.includes("lebanon-1983"), true);
+  });
+});
+
+describe("you serve somebody", () => {
+  it("Carter warning Saddam is a Blue Dog capitulation, not a stamp-it AL", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "you-him-fight-1980" });
+    const warn = applyChoice(g, "us-warn-saddam");
+    const stay = applyChoice(g, "us-let-saddam");
+    assert.equal(warn.cardId, "iran-iraq-1980");
+    assert.equal(warn.lastResult?.kind, "serve");
+    assert.match(warn.lastResult?.title ?? "", /Blue Dogs/);
+    assert.match(warn.lastResult?.body ?? "", /capitulat|stay out|Saddam still comes/i);
+    assert.equal(warn.lastResult?.body?.includes("Stamp it"), false);
+    assert.equal(stay.lastResult, null);
+    assert.equal(warn.bars.saudis >= stay.bars.saudis - 1, true);
+    const choice = cardById("you-him-fight-1980")?.usChoices.find((c) => c.id === "us-warn-saddam");
+    assert.equal(choice?.artisticLicense, undefined);
+    assert.equal(choice?.overlay, "serve");
+  });
+
+  it("Nixon holding the catalog makes the Shah shop Moscow; Contra still later", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "weapons-1972" });
+    const next = applyChoice(g, "us-hinterland-first");
+    assert.equal(next.cardId, "pipeline-1975");
+    assert.equal(next.lastResult?.kind, "adapts");
+    assert.match(next.lastResult?.title ?? "", /Moscow/);
+    assert.match(next.lastResult?.body ?? "", /Contra is not gated/);
+    assert.equal(next.flags.hinterland_spent, false);
+    const hist = applyChoice(g, "us-blank-check");
+    assert.equal(next.bars.cia < hist.bars.cia, true);
+    const contra = newGame({ chair: "us", party: "R", cardId: "iran-contra-1985" });
+    assert.equal(choicesFor(contra).length >= 2, true);
+    const embargo = applyChoice(contra, "us-keep-embargo");
+    assert.equal(embargo.cardId, "cup-1988");
+    assert.equal(embargo.phase, "playing");
+    assert.equal(embargo.lastResult?.kind, "adapts");
+  });
+
+  it("keeping the Shah out still reaches the embassy", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "revolution-1979" });
+    const next = applyChoice(g, "us-keep-shah-out");
+    assert.equal(next.flags.shah_admitted, false);
+    assert.equal(next.cardId, "veil-1979");
+    assert.equal(next.lastResult?.kind, "adapts");
+    assert.match(next.lastResult?.body ?? "", /embassy/);
+    const hostages = applyChoice(next, "us-stay-out");
+    assert.equal(hostages.cardId, "hostages-1979");
+  });
+
+  it("a letterhead 7-Eleven is still a moral overlay, not a serve", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "resigned-1979" });
+    const next = applyChoice(g, "ir-refuse-letterhead");
+    assert.equal(next.lastResult?.kind, "moral");
+    assert.match(next.lastResult?.body ?? "", /convenience store/);
+    assert.equal(next.flags.letterhead_generic, true);
+  });
+
+  it("keeping Iraq listed still reaches the tilt; Commerce forces the delist", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "delist-1982" });
+    const keep = applyChoice(g, "us-keep-iraq-listed");
+    assert.equal(keep.cardId, "tilt-1982");
+    assert.equal(keep.lastResult?.kind, "serve");
+    assert.match(keep.lastResult?.body ?? "", /chemistry/);
+    const hist = applyChoice(g, "us-delist-iraq");
+    assert.equal(keep.bars.europeans, hist.bars.europeans);
+  });
+
+  it("empty bleed does not shrug that the next card is already written", () => {
+    const g = newGame({ chair: "us", party: "R", cardId: "atoms-1957" });
+    const next = applyChoice(g, "us-keep-fuel");
+    assert.equal(next.lastBleed.includes("already written"), false);
+  });
+
+  it("every collapsing off-path has a serve, adapts, or moral overlay", () => {
+    for (const card of CARDS) {
+      for (const side of [card.usChoices, card.iranChoices] as const) {
+        const hist = side.find((c) => c.historical);
+        if (!hist) continue;
+        if (hist.ending && hist.ending !== "none") continue;
+        const nextH = hist.nextCard ?? card.next;
+        for (const c of side) {
+          if (c.historical) continue;
+          if (c.ending && c.ending !== "none") continue;
+          const nextC = c.nextCard ?? card.next;
+          if (nextC !== nextH) continue;
+          assert.ok(
+            c.overlay || c.epilogue,
+            `${c.id} on ${card.id} collapses onto ${nextC} without an overlay`,
+          );
+        }
+      }
+    }
+  });
+
+  it("historical crush does not interrupt the golden path with an overlay", () => {
+    const g = newGame({ chair: "iran", party: "D", cardId: "mahsa-2022" });
+    const crush = applyChoice(g, "ir-crush-mahsa");
+    assert.equal(crush.lastResult, null);
+    assert.equal(crush.cardId, "saudi-accord-2023");
   });
 });

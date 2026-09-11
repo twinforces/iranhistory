@@ -83,6 +83,9 @@ export type ChoiceKind =
 
 export type CardStatus = "playable" | "spine";
 
+/** After-choice overlay. Choice is an illusion: you serve somebody, or the map answers. */
+export type OverlayKind = "moral" | "serve" | "adapts";
+
 export type Era =
   | "prologue"
   | "shah"
@@ -104,6 +107,12 @@ export interface Choice {
   /** Golden-path: what actually happened. Never shown on the button. */
   readonly historical?: boolean;
   readonly artisticLicense?: string;
+  /**
+   * After-choice overlay. moral is the 7-Eleven letterhead. serve is a
+   * faction forcing capitulation onto history. adapts is the other desk
+   * answering with a real bill. Stamp-it shrugs are not a kind.
+   */
+  readonly overlay?: OverlayKind;
   readonly requires?: ReadonlyArray<{ faction: FactionId; min: number }>;
   readonly greyText?: string;
   readonly deltas: Deltas;
@@ -227,7 +236,7 @@ export interface GameState {
   lastBleed: string;
   lastChoiceId: string | null;
   lastChoiceWasSoft: boolean;
-  lastResult: { title: string; body: string } | null;
+  lastResult: { title: string; body: string; kind: OverlayKind } | null;
   sidelineCount: number;
   ending: Ending | null;
   outParty: boolean;

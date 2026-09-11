@@ -32,6 +32,7 @@ import type {
   GameState,
   IranFace,
   MeterId,
+  OverlayKind,
   Party,
 } from "./types.ts";
 
@@ -240,8 +241,15 @@ function bleedSentence(state: GameState, choice: Choice, card: Card): string {
   if (state.clocks.nuke_breakout_months !== null) {
     bits.push(`Breakout ${state.clocks.nuke_breakout_months} months.`);
   }
-  if (bits.length === 0) return "The next card is already written.";
+  if (bits.length === 0) return "";
   return bits.join(" ");
+}
+
+export function overlayKindOf(choice: Choice): OverlayKind | null {
+  if (choice.historical) return null;
+  if (choice.overlay) return choice.overlay;
+  if (choice.epilogue) return "moral";
+  return null;
 }
 
 function iranLoseCheck(state: GameState, choice: Choice, card: Card): Ending | null {
@@ -581,10 +589,14 @@ export function applyChoice(state: GameState, choiceId: string): GameState {
     return next;
   }
 
-  if (choice.epilogue && (choice.resultTitle || choice.result)) {
+  const kind = overlayKindOf(choice);
+  if (kind && (choice.resultTitle || choice.result)) {
     next.lastResult = {
-      title: choice.resultTitle ?? "We congratulate you on your moral choice.",
+      title:
+        choice.resultTitle ??
+        (kind === "moral" ? "We congratulate you on your moral choice." : "The rail continues"),
       body: choice.result ?? "",
+      kind,
     };
   }
 
