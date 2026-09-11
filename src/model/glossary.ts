@@ -9,6 +9,8 @@ export interface GlossaryEntry {
   readonly term: string;
   readonly aliases: readonly string[];
   readonly definition: string;
+  /** Exact case. Short caps that would eat names: AL vs Al-Qaeda. */
+  readonly caseSensitive?: boolean;
 }
 
 export const GLOSSARY: readonly GlossaryEntry[] = [
@@ -618,7 +620,8 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
   {
     id: "al-mark",
     term: "AL",
-    aliases: ["AL.", "AL,"],
+    aliases: ["AL.", "AL,", "AL"],
+    caseSensitive: true,
     definition:
       "Artistic license. History did not do this. The button is labelled. The popup is required.",
   },
@@ -660,8 +663,8 @@ function boundary(text: string, start: number, len: number): boolean {
   return !isLetter(text[start - 1]) && !isLetter(text[start + len]);
 }
 
-const NEEDLES: { alias: string; id: string }[] = GLOSSARY.flatMap((e) =>
-  e.aliases.map((alias) => ({ alias, id: e.id })),
+const NEEDLES: { alias: string; id: string; caseSensitive: boolean }[] = GLOSSARY.flatMap((e) =>
+  e.aliases.map((alias) => ({ alias, id: e.id, caseSensitive: Boolean(e.caseSensitive) })),
 ).sort((a, b) => b.alias.length - a.alias.length);
 
 /** Split copy into plain text and glossary hits. Longest alias wins. */
@@ -669,11 +672,14 @@ export function linkify(text: string): GlossPart[] {
   const parts: GlossPart[] = [];
   let i = 0;
   while (i < text.length) {
-    let hit: { alias: string; id: string } | null = null;
+    let hit: { alias: string; id: string; caseSensitive: boolean } | null = null;
     const slice = text.slice(i);
     for (const needle of NEEDLES) {
       if (slice.length < needle.alias.length) continue;
-      if (slice.slice(0, needle.alias.length).toLowerCase() !== needle.alias.toLowerCase()) {
+      const got = slice.slice(0, needle.alias.length);
+      if (needle.caseSensitive) {
+        if (got !== needle.alias) continue;
+      } else if (got.toLowerCase() !== needle.alias.toLowerCase()) {
         continue;
       }
       if (!boundary(text, i, needle.alias.length)) continue;

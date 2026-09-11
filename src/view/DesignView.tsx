@@ -97,7 +97,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "House dialect / hover glossary?",
     freeze:
-      "Spoken copy stays spoken. Hover explains it. Ajax is the CIA/MI6 code name for installing the Shah. A cable is an intelligence telegram. A clip is evening-news footage. Letterhead is the civilian who stamps. The square is the crowd, not a government. Buttons still have to name the noun: Bring the Marines home, not Bring them home. Second clip is not a haircut. Pronouns on buttons are not a hover problem, they are a writing problem. Glossary aliases must not swallow ordinary words. AL chips always hover, even when they open a license. AL. and AL, in copy hover. Bare AL does not, or it would swallow Al-Qaeda. Design freeze and receipts source titles stay English.",
+      "Spoken copy stays spoken. Hover explains it. Ajax is the CIA/MI6 code name for installing the Shah. A cable is an intelligence telegram. A clip is evening-news footage. Letterhead is the civilian who stamps. The square is the crowd, not a government. Buttons still have to name the noun: Bring the Marines home, not Bring them home. Second clip is not a haircut. Pronouns on buttons are not a hover problem, they are a writing problem. Glossary aliases must not swallow ordinary words. AL chips always hover, even when they open a license. AL in copy is case-sensitive, so Al-Qaeda stays a name. Design freeze and receipts source titles stay English.",
   },
   {
     q: "Peace exits / Iran gets nukes chrome?",

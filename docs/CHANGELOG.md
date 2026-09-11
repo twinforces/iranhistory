@@ -1,8 +1,15 @@
 # CHANGELOG
 
+## 2026-09-11 - AL is case-sensitive
+
+What: Bare AL in copy hovers. The match is exact case. Al-Qaeda is a name.
+
+Why: Caps are the tag. Title case is the network.
+
+
 ## 2026-09-11 - Find the exits
 
-What: AL chips are hoverable marks, not buttons that eat the tooltip. AL. and AL, in copy hover. Bare AL does not, or it would swallow Al-Qaeda. The rail glossary is the trains-and-exits premise. Peace-exit counters for Iran and the US, plus Iran gets nukes, live on the meters as a found-once museum. Unfound names stay off the chrome.
+What: AL chips are hoverable marks, not buttons that eat the tooltip. AL in copy hovers when the letters are the tag. The rail glossary is the trains-and-exits premise. Peace-exit counters for Iran and the US, plus Iran gets nukes, live on the meters as a found-once museum. Unfound names stay off the chrome.
 
 Why: Once the train is moving, most of the players stay on the rails. Hindsight is 20/20. The time machine is the gift. The exits are the work.
 

@@ -53,15 +53,17 @@ describe("glossary", () => {
     assert.equal(parts.some((p) => p.id === "rail" && p.text === "The rail"), true);
   });
 
-  it("AL. and AL, hover, and do not swallow Al-Qaeda", () => {
+  it("case-sensitive AL hovers, and does not swallow Al-Qaeda", () => {
     const period = linkify("This is the successful path. AL.");
     assert.equal(period.some((p) => p.id === "al-mark" && p.text === "AL."), true);
     const comma = linkify("AL, not a prediction.");
     assert.equal(comma.some((p) => p.id === "al-mark" && p.text === "AL,"), true);
+    const bare = linkify("AL is labelled.");
+    assert.equal(bare.some((p) => p.id === "al-mark" && p.text === "AL"), true);
     const qaeda = linkify("Al-Qaeda is the top of the board that week.");
     assert.equal(qaeda.some((p) => p.id === "al-mark"), false);
-    const bare = linkify("AL is labelled.");
-    assert.equal(bare.some((p) => p.id === "al-mark"), false);
+    const already = linkify("The next card is already written.");
+    assert.equal(already.some((p) => p.id === "al-mark"), false);
   });
 
   it("marks White Revolution and Khomeini", () => {
