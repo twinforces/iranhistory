@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Nixon takes office is off the rail, 2026-09-11
+
+What: SOFA goes to Twin Pillars. The sit-Nixon funnel is gone.
+
+Why: One button that only seats the next briefing is not a card.
+
+
 ## Plate wraps, Author's Note, 2026-09-11
 
 What: Restore the full plate. Stick figure only while you stay that letterhead. Glossary for TOW, Khobar, Stuxnet, AMAD, Swiss fax. Author's Note in the header.

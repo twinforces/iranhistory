@@ -220,8 +220,6 @@ describe("Ike to Carter", () => {
     assert.equal(g.clocks.liberals > beforeReform, true);
     assert.equal(g.party, "D");
     g = applyChoice(g, "us-take-sofa");
-    assert.equal(g.cardId, "sit-nixon-1969");
-    g = applyChoice(g, "us-sit-nixon");
     assert.equal(g.cardId, "weapons-1972");
     assert.equal(g.party, "R");
     g = applyChoice(g, "us-blank-check");
@@ -286,8 +284,6 @@ describe("Ike to Carter", () => {
     g = applyChoice(g, "ir-white-rev");
     assert.equal(g.cardId, "sofa-1964");
     g = applyChoice(g, "ir-pass-sofa");
-    assert.equal(g.cardId, "sit-nixon-1969");
-    g = applyChoice(g, "ir-nixon-next");
     assert.equal(g.cardId, "weapons-1972");
     g = applyChoice(g, "ir-buy-catalog");
     assert.equal(g.cardId, "pipeline-1975");
@@ -431,7 +427,6 @@ describe("Ike to Carter", () => {
     assert.equal(g.cardId, "sofa-1964");
     assert.equal(g.party, "D");
     g = applyChoice(g, "us-take-sofa");
-    g = applyChoice(g, "us-sit-nixon");
     assert.equal(g.cardId, "weapons-1972");
     assert.equal(g.party, "R");
     g = applyChoice(g, "us-blank-check");
@@ -533,7 +528,6 @@ describe("golden path", () => {
     assert.equal(skip.cardId, "sofa-1964");
     assert.equal(skip.clocks.liberals < histLibs, true);
     skip = applyChoice(skip, "us-take-sofa");
-    skip = applyChoice(skip, "us-sit-nixon");
     skip = applyChoice(skip, "us-hinterland-first");
     assert.equal(skip.phase, "playing");
     assert.equal(skip.cardId, "pipeline-1975");
@@ -548,8 +542,7 @@ describe("golden path", () => {
     assert.equal(quiet.phase, "playing");
     assert.equal(quiet.cardId, "sofa-1964");
     const afterSofa = applyChoice(quiet, "ir-pass-sofa");
-    const afterNixon = applyChoice(afterSofa, "ir-nixon-next");
-    const next = applyChoice(afterNixon, "ir-spend-villages");
+    const next = applyChoice(afterSofa, "ir-spend-villages");
     assert.equal(next.phase, "playing");
     assert.equal(next.cardId, "pipeline-1975");
     assert.equal(next.ending, null);
@@ -658,7 +651,7 @@ describe("late rail", () => {
     assert.match(g.ending?.referee ?? "", /History arrived/);
     for (const id of [
       "sofa-1964",
-      "sit-nixon-1969",
+      "weapons-1972",
       "pipeline-1975",
       "robe-1989",
       "nine-eleven-2001",

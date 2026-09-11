@@ -343,7 +343,6 @@ const SHAH_ISOLATION = new Set([
   "atoms-1957",
   "white-revolution-1963",
   "sofa-1964",
-  "sit-nixon-1969",
   "weapons-1972",
   "pipeline-1975",
   "revolution-1979",
@@ -505,11 +504,10 @@ export function newGame(opts: NewGameOpts): GameState {
     cardId === "weapons-1972" ||
     cardId === "white-revolution-1963" ||
     cardId === "sofa-1964" ||
-    cardId === "sit-nixon-1969" ||
     cardId === "pipeline-1975"
   ) {
     if (cardId === "white-revolution-1963") clocks.liberals = 18;
-    if (cardId === "sofa-1964" || cardId === "sit-nixon-1969") clocks.liberals = 40;
+    if (cardId === "sofa-1964") clocks.liberals = 40;
     if (cardId === "weapons-1972") clocks.liberals = 42;
     if (cardId === "pipeline-1975") clocks.liberals = 50;
     if (SEED_1979_CARDS.has(cardId)) {

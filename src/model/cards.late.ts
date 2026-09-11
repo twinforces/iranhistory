@@ -183,56 +183,9 @@ const sofa1964 = play({
       deltas: { leader: 4, cia: 8, street: -14, liberals: -4 },
     },
   ],
-  next: "sit-nixon-1969",
-  clocksOn: false,
-  sources: ["cfr-timeline", "frus-johnson-iran"],
-});
-
-const sitNixon1969 = play({
-  id: "sit-nixon-1969",
-  year: 1969,
-  yearLabel: "1969",
-  title: "Nixon takes office",
-  era: "shah",
-  situationUs:
-    "You inherited Vietnam. Iran is the pillar you will need when you leave Asia. The blank check is a later card.\n\nThe cleric is in Najaf. The king is still buying.",
-  situationIran:
-    "Johnson is gone. A new American is sitting. Vietnam is still their war. The catalog is still open.\n\nNajaf is sending tapes. The village is listening. Tehran is not.",
-  referee: [
-    "LT: Nixon sits January 1969. The Twin Pillars doctrine is not yet a blank check. That is 1972, after Britain leaves east of Suez.",
-    "IT: A sit card is a history lesson. We ignored Iran. Say so.",
-  ],
-  briefings: [
-    b("cia", "us", "Vietnam first. Iran is the policeman we will need when we leave Asia. Keep him armed. Do not write the check until you have to."),
-    b("my_party", "us", "End Vietnam. Do not start a sermon about a king. The catalog can wait a year."),
-    b("opposing_party", "us", "He ran on ending the war. If he buys the king a navy we will call it a new one."),
-    b("media", "us", "Vietnam. Moon. A king in Tehran is furniture."),
-    b("leader", "iran", "A new American. Same catalog. Keep buying. Najaf is a cassette, not a division.", "shah"),
-    b("street", "iran", "The tapes from Najaf are better radio than the court. You are not listening.", "shah"),
-  ],
-  us: [
-    {
-      id: "us-sit-nixon",
-      label: "Sit the presidency",
-      summary: "Vietnam is the file. Iran is the pillar you will need later.",
-      kind: "walk",
-      historical: true,
-      deltas: { my_party: 4 },
-    },
-  ],
-  iran: [
-    {
-      id: "ir-nixon-next",
-      label: "Keep buying",
-      summary: "A new American. Same catalog.",
-      kind: "walk",
-      historical: true,
-      face: "shah",
-      deltas: { leader: 4, cia: 4 },
-    },
-  ],
   next: "weapons-1972",
   clocksOn: false,
+  sources: ["cfr-timeline", "frus-johnson-iran"],
 });
 
 const pipeline1975 = play({
@@ -2342,7 +2295,6 @@ const theLeader2026 = play({
 
 export const LATE_CARDS: readonly Card[] = [
   sofa1964,
-  sitNixon1969,
   pipeline1975,
   robe1989,
   kuwait1990,

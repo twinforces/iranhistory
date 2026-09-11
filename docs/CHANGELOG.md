@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Nixon takes office is off the rail
+
+What: The SOFA lands on Twin Pillars. The 1969 sit card was a funnel with one button. Nixon still sits in 1972.
+
+Why: A card that only says the next card is coming is a waste of a card.
+
+
 ## 2026-09-11 - Plate wraps. Author's Note. New letterhead is real.
 
 What: The Shah plate is a full row again, and the you-are line wraps. A moral 7-Eleven does not sit the next historical letterhead as a replacement. TOW, HAWK, Khobar Towers, Stuxnet, AMAD, the Swiss fax, MEK, axis of evil, and Al-Qaeda hover. Bern is off the copy. Author's Note sits next to Receipts.
