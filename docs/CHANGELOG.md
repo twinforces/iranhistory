@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-10 - Farsi edition
+
+What: EN | فا in the header. Locale is view-layer, not GameState. Every playable card overlays Persian: titles, situations, briefings, referee, buttons, licenses, endings, plates. html.dir=rtl. Vazirmatn. Receipts source titles stay English. Design freeze stays English. LT/IT/DK/AL/GR prefixes stay Latin.
+
+Why: The other desk already speaks Persian. The rail should too.
+
+
 ## 2026-09-10 - The later letterheads are cartoons
 
 What: Rafsanjani, Khatami, Ahmadinejad, Rouhani, Raisi, and Pezeshkian are ink busts like Mossadegh and Khamenei. Clerics keep the turban. Ahmadinejad and Pezeshkian do not. The stick-figure replacement stays a stick figure.

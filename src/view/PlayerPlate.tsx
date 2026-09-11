@@ -1,4 +1,5 @@
 import type { Leader } from "../model/leaders.ts";
+import { useLocale } from "./LocaleContext.tsx";
 
 export function PlayerPlate({
   leader,
@@ -11,6 +12,7 @@ export function PlayerPlate({
   variant?: "player" | "imam" | "grave";
   layout?: "row" | "stack";
 }) {
+  const { t } = useLocale();
   const kicker = leader.partyLabel ? `${leader.playing} · ${leader.partyLabel}` : leader.playing;
   const meta = leader.partyLabel
     ? `${leader.name} · ${leader.partyLabel} · ${leader.role}`
@@ -38,7 +40,7 @@ export function PlayerPlate({
   ]
     .filter(Boolean)
     .join(" ");
-  const aria = imam ? "The Imam" : grave ? leader.name : undefined;
+  const aria = imam ? t("theImam") : grave ? leader.name : undefined;
   return (
     <aside className={className} aria-live={imam || grave ? undefined : "polite"} aria-label={aria}>
       <img

@@ -75,6 +75,11 @@ const QUESTIONS: { q: string; freeze: string }[] = [
       "No labelled button. The 1953 year is the calendar. Click it. It counts backward. When it hits 1938, you are there.",
   },
   {
+    q: "Farsi edition?",
+    freeze:
+      "Locale is view-layer, not GameState. EN | فا in the header. Engine stays English. Overlay JSON keyed by card id. historical: true never graves except the_leader. Headlines still name the event. Receipts source titles stay English. Design freeze stays English. Vazirmatn for Persian. html.dir=rtl. LT/IT/DK/AL/GR prefixes stay Latin then Persian.",
+  },
+  {
     q: "Hormuz",
     freeze:
       "The 2019 drone and tanker card sits on the train after Europe bounces. Hormuz as a map is still a different play style. Leave that off the Play landing.",

@@ -9,6 +9,7 @@ import { GlossText } from "./Gloss.tsx";
 import { PlayerPlate } from "./PlayerPlate.tsx";
 import { TrainViewModel } from "../viewmodel/TrainViewModel.ts";
 import type { Chair, Party } from "../model/types.ts";
+import { useLocale } from "./LocaleContext.tsx";
 
 export function PlayView({
   initialCard,
@@ -17,6 +18,7 @@ export function PlayView({
   initialCard?: string;
   initialChair?: Chair;
 }) {
+  const { locale, t } = useLocale();
   const [chair, setChair] = useState<Chair | null>(initialChair ?? null);
   const [tick, setTick] = useState(0);
   const [alId, setAlId] = useState<string | null>(null);
@@ -32,18 +34,18 @@ export function PlayView({
     return <ChairSelect onPick={setChair} />;
   }
 
-  const ui = vm.getState();
+  const ui = vm.getState(locale);
   const refresh = () => setTick((n) => n + 1);
-  const license = ui.lastResult ? null : alId ? vm.licenseById(alId) : null;
+  const license = ui.lastResult ? null : alId ? vm.licenseById(alId, locale) : null;
   const flank = ui.imam ?? ui.grave;
   const dual = Boolean(flank);
   const holdEnding = ui.endingId === "shah_holds" || ui.endingId === "jcpoa_holds";
   const historyEnding = ui.endingId === "none" || ui.endingId === "the_leader";
   const endingKicker = holdEnding
-    ? "Successful path"
+    ? t("successfulPath")
     : historyEnding
-      ? "Rail hold"
-      : "End of this chair";
+      ? t("railHold")
+      : t("endOfChair");
   const endingClass = holdEnding
     ? "hold-panel"
     : historyEnding
@@ -55,7 +57,7 @@ export function PlayView({
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="kicker">
-          {ui.chair === "us" ? "United States" : "Iran"} · {ui.faceLabel} · {ui.card.yearLabel}
+          {ui.chair === "us" ? t("unitedStates") : t("iran")} · {ui.faceLabel} · {ui.card.yearLabel}
         </p>
         <button
           type="button"
@@ -66,7 +68,7 @@ export function PlayView({
             setCalendarYear(null);
           }}
         >
-          Sit a different chair
+          {t("sitDifferent")}
         </button>
       </div>
 
@@ -82,6 +84,7 @@ export function PlayView({
             {ui.card.art ? (
               <img src={ui.card.art} alt="" className="situation-art" />
             ) : null}
+            {ui.slogan ? <p className="kicker mb-2">{ui.slogan}</p> : null}
             <div className="situation-body">
               <div className="flex flex-wrap items-center gap-2">
                 {ui.canFurtherBack ? (
@@ -106,11 +109,11 @@ export function PlayView({
                 ) : (
                   <span className="font-mono text-xs text-ink/55">{ui.card.yearLabel}</span>
                 )}
-                {ui.card.tags.map((t) => (
+                {ui.card.tags.map((tag) => (
                   <TagChip
-                    key={t}
-                    tag={t}
-                    onClick={t === "AL" ? () => setAlId(ui.card.licenses?.[0]?.id ?? null) : undefined}
+                    key={tag}
+                    tag={tag}
+                    onClick={tag === "AL" ? () => setAlId(ui.card.licenses?.[0]?.id ?? null) : undefined}
                   />
                 ))}
               </div>
@@ -125,7 +128,7 @@ export function PlayView({
               {ui.card.referee.length > 0 ? (
                 <details className="mt-2">
                   <summary className="cursor-pointer font-mono text-2xs uppercase tracking-wide text-ink/55">
-                    Referee notes
+                    {t("refereeNotes")}
                   </summary>
                   <div className="mt-2 flex flex-col gap-2 text-sm leading-relaxed text-ink/70">
                     {ui.card.referee.map((p) => (
@@ -169,7 +172,7 @@ export function PlayView({
                     refresh();
                   }}
                 >
-                  1953 is still waiting
+                  {t("stillWaiting")}
                 </Button>
               ) : null}
             </article>
@@ -201,7 +204,7 @@ export function PlayView({
                 refresh();
               }}
             >
-              Time travel: back one
+              {t("timeTravelBack")}
             </Button>
             <Button
               size="sm"
@@ -214,7 +217,7 @@ export function PlayView({
                 refresh();
               }}
             >
-              Last branch
+              {t("lastBranch")}
             </Button>
           </div>
 
@@ -237,7 +240,7 @@ export function PlayView({
           aria-labelledby="moral-title"
         >
           <div className="dossier w-full max-w-lg px-5 py-5">
-            <p className="kicker text-accent">Moral victory</p>
+            <p className="kicker text-accent">{t("moralVictory")}</p>
             <h3 id="moral-title" className="mt-1 font-serif text-xl text-ink">
               {ui.lastResult.title}
             </h3>
@@ -255,7 +258,7 @@ export function PlayView({
                 refresh();
               }}
             >
-              However, Iran continues on.
+              {t("iranContinues")}
             </Button>
           </div>
         </div>
@@ -267,7 +270,7 @@ export function PlayView({
           aria-labelledby="al-title"
         >
           <div className="dossier w-full max-w-lg px-5 py-5">
-            <p className="kicker text-accent">Artistic license</p>
+            <p className="kicker text-accent">{t("artisticLicense")}</p>
             <h3 id="al-title" className="mt-1 font-serif text-xl text-ink">
               {license.title}
             </h3>
@@ -275,7 +278,7 @@ export function PlayView({
               <GlossText text={license.body} />
             </p>
             <Button className="mt-4" variant="default" onClick={() => setAlId(null)}>
-              Close
+              {t("close")}
             </Button>
           </div>
         </div>

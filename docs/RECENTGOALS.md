@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Farsi edition, 2026-09-10
+
+What: Full playable Farsi. Language switch EN | فا. RTL. Overlay JSON, not a second engine.
+
+Why: The other chair already thinks in Persian.
+
+
 ## The later letterheads are cartoons, 2026-09-10
 
 What: Rafsanjani through Pezeshkian are editorial ink busts. Clerics keep the turban. The jacket and the suit do not get one.

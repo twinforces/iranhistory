@@ -45,6 +45,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  html.locale-fa {
+    --font-sans: "Vazirmatn", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Vazirmatn", "IBM Plex Serif", "Times New Roman", serif;
+  }
+
   html,
   body,
   #app {
@@ -90,6 +95,20 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--color-muted);
+  }
+
+  html.locale-fa .kicker,
+  html.locale-fa .advisor-name,
+  html.locale-fa .player-year {
+    font-family: var(--font-sans);
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+
+  html.locale-fa .player-plate .kicker,
+  html.locale-fa .player-plate .player-meta {
+    overflow-wrap: anywhere;
+    letter-spacing: 0;
   }
 
   .rail-boot {
@@ -272,7 +291,7 @@
     .advisor-list {
       max-height: 32rem;
       overflow-y: auto;
-      padding-right: 0.25rem;
+      padding-inline-end: 0.25rem;
     }
   }
 

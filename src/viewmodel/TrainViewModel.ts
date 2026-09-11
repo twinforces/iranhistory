@@ -1,9 +1,3 @@
-/**
- * What: the only object the View is allowed to talk to.
- * Why: React must not apply deltas. Tests in this folder ask "what would
- * the user see?" without mounting a component. If a caption is wrong,
- * the bug is here, not in JSX.
- */
 import {
   applyChoice,
   canTimeTravel,
@@ -40,6 +34,13 @@ import {
   type Receipt,
   type TruthTag,
 } from "../model/index.ts";
+import { cardFa } from "../i18n/cards.ts";
+import { faDigits } from "../i18n/digits.ts";
+import { ENDINGS_FA } from "../i18n/endings-fa.ts";
+import { FACTION_BLURB_FA, FACTION_LABEL_FA } from "../i18n/factions-fa.ts";
+import { LEADERS_FA } from "../i18n/leaders-fa.ts";
+import { ui } from "../i18n/ui.ts";
+import type { CardFa, Locale } from "../i18n/types.ts";
 
 export interface PresentedChoice {
   id: string;
@@ -119,28 +120,43 @@ export interface TrainViewState {
   grave: Leader | null;
 }
 
-export function truthTagCaption(tag: TruthTag): { name: string; blurb: string } {
+export function truthTagCaption(tag: TruthTag, locale: Locale = "en"): { name: string; blurb: string } {
+  if (locale === "fa") {
+    const names = { LT: "ltName", IT: "itName", DK: "dkName", AL: "alName", GR: "grName" } as const;
+    const blurbs = { LT: "ltBlurb", IT: "itBlurb", DK: "dkBlurb", AL: "alBlurb", GR: "grBlurb" } as const;
+    return { name: ui("fa", names[tag]), blurb: ui("fa", blurbs[tag]) };
+  }
   return { name: TRUTH_TAG_NAME[tag], blurb: TRUTH_TAG_BLURB[tag] };
 }
 
-function sloganFor(state: GameState, card: Card): string | null {
+function sloganFor(state: GameState, card: Card, locale: Locale): string | null {
   if (card.year < 1979 && (card.sloganVolume ?? 0) === 0) return null;
   if (state.chair !== "iran") return null;
   if ((card.sloganVolume ?? 0) >= 1 || card.year >= 1979) {
-    if (state.flags.dropped_death_to_israel) return "Death to America.";
-    if (card.id === "lebanon-1983") return "Death to America. Death to Europe. Death to Israel.";
-    return "Death to America. Death to Israel.";
+    if (state.flags.dropped_death_to_israel) return ui(locale, "sloganAmerica");
+    if (card.id === "lebanon-1983") return ui(locale, "sloganBeirut");
+    return ui(locale, "sloganAmericaIsrael");
   }
-  return "Death to America.";
+  return ui(locale, "sloganAmerica");
 }
 
-function briefingLabel(faction: FactionId, card: Card, chair: Chair, party: Party): string {
-  if (faction === "leader" && card.year < 1979) return "The court";
-  if (faction === "my_party") return chair === "us" ? `My party (${party})` : "My party";
-  if (faction === "opposing_party") {
-    return chair === "us" ? `Opposing (${otherParty(party)})` : "Opposing";
+function briefingLabel(
+  faction: FactionId,
+  card: Card,
+  chair: Chair,
+  party: Party,
+  locale: Locale,
+): string {
+  if (faction === "leader" && card.year < 1979) return ui(locale, "court");
+  if (faction === "my_party") {
+    const letter = chair === "us" ? ` (${party})` : "";
+    return `${ui(locale, "myParty")}${letter}`;
   }
-  return FACTION_LABEL[faction];
+  if (faction === "opposing_party") {
+    const letter = chair === "us" ? ` (${otherParty(party)})` : "";
+    return `${ui(locale, "opposing")}${letter}`;
+  }
+  return locale === "fa" ? FACTION_LABEL_FA[faction] : FACTION_LABEL[faction];
 }
 
 function faceMatches(filter: IranFace | readonly IranFace[] | undefined, face: IranFace): boolean {
@@ -148,111 +164,191 @@ function faceMatches(filter: IranFace | readonly IranFace[] | undefined, face: I
   return typeof filter === "string" ? filter === face : filter.includes(face);
 }
 
-function presentCard(card: Card, chair: Chair, party: Party, face: IranFace): PresentedCard {
-  const situation =
-    chair === "iran" && face === "shah" && card.situationIranShah
-      ? card.situationIranShah
-      : chair === "iran" && face === "banisadr" && card.situationIranBanisadr
-        ? card.situationIranBanisadr
-        : chair === "iran" && face === "khamenei" && card.situationIranKhamenei
-          ? card.situationIranKhamenei
-          : ((chair === "iran" ? card.situationIran : card.situationUs) ??
-            card.situation ??
-            card.referee.paragraphs[0] ??
-            "");
+function briefingKey(faction: string, audience: string, face: IranFace | readonly IranFace[] | undefined): string {
+  const faceBit = typeof face === "string" ? face : "";
+  return `${faction}:${audience}:${faceBit}`;
+}
+
+function localizeLeader(leader: Leader, locale: Locale): Leader {
+  if (locale !== "fa") return leader;
+  const fa = LEADERS_FA[leader.id];
+  if (!fa) return leader;
+  return {
+    ...leader,
+    youAre: fa.youAre,
+    playing: fa.playing,
+    name: fa.name,
+    role: fa.role,
+    partyLabel: fa.partyLabel === undefined ? leader.partyLabel : fa.partyLabel,
+  };
+}
+
+function pickSituation(card: Card, chair: Chair, face: IranFace, fa: CardFa | undefined): string {
+  if (fa) {
+    if (chair === "iran" && face === "shah" && fa.situationIranShah) return fa.situationIranShah;
+    if (chair === "iran" && face === "banisadr" && fa.situationIranBanisadr) return fa.situationIranBanisadr;
+    if (chair === "iran" && face === "khamenei" && fa.situationIranKhamenei) return fa.situationIranKhamenei;
+    if (chair === "iran" && fa.situationIran) return fa.situationIran;
+    if (chair === "us" && fa.situationUs) return fa.situationUs;
+    if (fa.situation) return fa.situation;
+  }
+  if (chair === "iran" && face === "shah" && card.situationIranShah) return card.situationIranShah;
+  if (chair === "iran" && face === "banisadr" && card.situationIranBanisadr) return card.situationIranBanisadr;
+  if (chair === "iran" && face === "khamenei" && card.situationIranKhamenei) return card.situationIranKhamenei;
+  return (chair === "iran" ? card.situationIran : card.situationUs) ?? card.situation ?? card.referee.paragraphs[0] ?? "";
+}
+
+function presentCard(card: Card, chair: Chair, party: Party, face: IranFace, locale: Locale): PresentedCard {
+  const fa = locale === "fa" ? cardFa(card.id) : undefined;
+  const situation = pickSituation(card, chair, face, fa);
+  const titleEn = (chair === "iran" ? card.titleIran : card.titleUs) ?? card.title;
+  const title =
+    fa == null
+      ? titleEn
+      : ((chair === "iran" ? fa.titleIran : fa.titleUs) ?? fa.title ?? titleEn);
+  const yearLabel = locale === "fa" ? faDigits(card.yearLabel) : card.yearLabel;
+  const licenses =
+    fa?.licenses && card.artisticLicense
+      ? card.artisticLicense.map((l) => {
+          const hit = fa.licenses?.[l.id];
+          return hit ? { ...l, title: hit.title, body: hit.body } : l;
+        })
+      : card.artisticLicense;
   return {
     id: card.id,
     year: card.year,
-    yearLabel: card.yearLabel,
-    title: (chair === "iran" ? card.titleIran : card.titleUs) ?? card.title,
+    yearLabel,
+    title,
     era: card.era,
     status: card.status,
     situation,
-    actionPrompt: card.actionPrompt ?? "What do you want to do?",
+    actionPrompt: fa?.actionPrompt ?? card.actionPrompt ?? ui(locale, "actionPrompt"),
     art: card.art ?? null,
     secret: Boolean(card.secret),
-    referee: card.referee.paragraphs,
+    referee: fa?.referee ?? card.referee.paragraphs,
     tags: card.referee.tags,
     briefings: card.briefings
       .filter((b) => b.audience === chair)
       .filter((b) => faceMatches(b.face, face))
-      .map((b) => ({
-        faction: b.faction,
-        label: briefingLabel(b.faction, card, chair, party),
-        rant: b.rant,
-        closer: b.closer ?? null,
-        future: false,
-        glossaryId: glossaryForFaction(b.faction, card.year)?.id ?? null,
-      })),
-    licenses: card.artisticLicense,
+      .map((b) => {
+        const key = briefingKey(b.faction, b.audience, b.face);
+        const rantFa = fa?.briefings?.[key];
+        return {
+          faction: b.faction,
+          label: briefingLabel(b.faction, card, chair, party, locale),
+          rant: rantFa?.rant ?? b.rant,
+          closer: rantFa?.closer ?? b.closer ?? null,
+          future: false,
+          glossaryId: glossaryForFaction(b.faction, card.year)?.id ?? null,
+        };
+      }),
+    licenses,
     sources: card.sources,
   };
 }
 
-function presentBars(state: GameState, card: Card, inRoom: ReadonlySet<FactionId>): PresentedBar[] {
+function presentBars(
+  state: GameState,
+  card: Card,
+  inRoom: ReadonlySet<FactionId>,
+  locale: Locale,
+): PresentedBar[] {
   return FACTION_ORDER.filter((id) => card.visibleFactions.includes(id) && inRoom.has(id)).map((id) => {
     const court = id === "leader" && card.year < 1979;
-    const usParty =
-      id === "my_party"
-        ? `My party (${state.party})`
-        : id === "opposing_party"
-          ? `Opposing (${otherParty(state.party)})`
-          : null;
+    let label: string;
+    if (court) label = ui(locale, "court");
+    else if (id === "my_party") label = `${ui(locale, "myParty")}${state.chair === "us" ? ` (${state.party})` : ""}`;
+    else if (id === "opposing_party") {
+      label = `${ui(locale, "opposing")}${state.chair === "us" ? ` (${otherParty(state.party)})` : ""}`;
+    } else label = locale === "fa" ? FACTION_LABEL_FA[id] : FACTION_LABEL[id];
+    const blurb = court
+      ? ui(locale, "courtBlurb")
+      : locale === "fa"
+        ? FACTION_BLURB_FA[id]
+        : FACTION_BLURB[id];
     return {
       id,
-      label: court ? "The court" : (usParty ?? FACTION_LABEL[id]),
+      label,
       value: state.bars[id],
-      blurb: court
-        ? "The Shah's palace, family, and the army that answers to them. Not parliament."
-        : FACTION_BLURB[id],
+      blurb,
       red: state.bars[id] < 35,
       glossaryId: glossaryForFaction(id, card.year)?.id ?? null,
     };
   });
 }
 
-function presentClocks(state: GameState, card: Card): PresentedClock[] {
+function presentClocks(state: GameState, card: Card, locale: Locale): PresentedClock[] {
+  const num = (n: number) => (locale === "fa" ? faDigits(n) : String(n));
   const liberals: PresentedClock = {
     id: "liberals",
-    label: "Urban liberals",
-    display: String(state.clocks.liberals),
+    label: ui(locale, "urbanLiberals"),
+    display: num(state.clocks.liberals),
   };
   const early = !card.clocksOn && state.clocks.nuke_breakout_months === null;
   if (early) {
     const row: PresentedClock[] = [
-      { id: "hard_currency", label: "Hard currency", display: String(state.clocks.hard_currency) },
-      { id: "oil_pain", label: "Oil pain", display: String(state.clocks.oil_pain) },
+      { id: "hard_currency", label: ui(locale, "hardCurrency"), display: num(state.clocks.hard_currency) },
+      { id: "oil_pain", label: ui(locale, "oilPain"), display: num(state.clocks.oil_pain) },
     ];
     if (card.year >= 1963) row.unshift(liberals);
     return row;
   }
+  const off = ui(locale, "clockOff");
+  const mo = ui(locale, "clockMonths");
   const nuke =
-    state.clocks.nuke_breakout_months === null ? "off" : `${state.clocks.nuke_breakout_months} mo`;
+    state.clocks.nuke_breakout_months === null ? off : `${num(state.clocks.nuke_breakout_months)} ${mo}`;
   const missiles =
     state.clocks.missile_inventory_months === null
-      ? "off"
-      : `${state.clocks.missile_inventory_months} mo`;
+      ? off
+      : `${num(state.clocks.missile_inventory_months)} ${mo}`;
   const late: PresentedClock[] = [
-    { id: "nuke", label: "Breakout", display: nuke },
-    { id: "missiles", label: "Missile cupboard", display: missiles },
-    { id: "hard_currency", label: "Hard currency", display: String(state.clocks.hard_currency) },
-    { id: "oil_pain", label: "Oil pain", display: String(state.clocks.oil_pain) },
-    { id: "holes", label: "Holes known", display: String(state.clocks.drone_holes_known) },
+    { id: "nuke", label: ui(locale, "breakout"), display: nuke },
+    { id: "missiles", label: ui(locale, "missileCupboard"), display: missiles },
+    { id: "hard_currency", label: ui(locale, "hardCurrency"), display: num(state.clocks.hard_currency) },
+    { id: "oil_pain", label: ui(locale, "oilPain"), display: num(state.clocks.oil_pain) },
+    { id: "holes", label: ui(locale, "holesKnown"), display: num(state.clocks.drone_holes_known) },
   ];
   if (card.year >= 1963) late.push(liberals);
   return late;
 }
 
-function presentChoices(state: GameState, card: Card): PresentedChoice[] {
-  return choicesFor(state, card).map((c) => ({
-    id: c.id,
-    label: c.label,
-    summary: c.summary,
-    kind: c.kind,
-    grey: isGrey(state, c),
-    greyText: c.greyText ?? "The Guards will not send that cable.",
-    artisticLicenseId: c.artisticLicense ?? null,
-  }));
+function presentChoices(state: GameState, card: Card, locale: Locale): PresentedChoice[] {
+  const fa = locale === "fa" ? cardFa(card.id) : undefined;
+  return choicesFor(state, card).map((c) => {
+    const hit = fa?.choices?.[c.id];
+    return {
+      id: c.id,
+      label: hit?.label ?? c.label,
+      summary: hit?.summary ?? c.summary,
+      kind: c.kind,
+      grey: isGrey(state, c),
+      greyText: hit?.greyText ?? c.greyText ?? ui(locale, "greyGuards"),
+      artisticLicenseId: c.artisticLicense ?? null,
+    };
+  });
+}
+
+function localizeBleed(raw: string, locale: Locale, months: number | null): string {
+  if (locale !== "fa" || !raw) return raw;
+  const bits: string[] = [];
+  if (raw.includes("Street will remember")) bits.push(ui("fa", "bleedStreet"));
+  if (raw.includes("IRGC will remember")) bits.push(ui("fa", "bleedIrgc"));
+  if (raw.includes("next card is already written")) bits.push(ui("fa", "bleedIgnore"));
+  if (raw.includes("Shooting leaks")) bits.push(ui("fa", "bleedBomb"));
+  if (raw.includes("Breakout") && months !== null) {
+    bits.push(`${ui("fa", "bleedBreakout")} ${faDigits(months)} ${ui("fa", "bleedMonths")}`);
+  }
+  return bits.length > 0 ? bits.join(" ") : ui("fa", "bleedIgnore");
+}
+
+function localizeFaceLabel(leader: Leader, locale: Locale): string {
+  if (locale === "fa") {
+    return leader.youAre
+      .replace(/^تو /, "")
+      .replace(/ هستی$/, "")
+      .replace(/ نصیبت می‌شود$/, "");
+  }
+  return leader.youAre.replace(/^You (are|get) /, "");
 }
 
 export class TrainViewModel {
@@ -262,44 +358,65 @@ export class TrainViewModel {
     this.state = newGame({ chair, party, cardId });
   }
 
-  getState(): TrainViewState {
+  getState(locale: Locale = "en"): TrainViewState {
     const card = currentCard(this.state);
     const travel = canTimeTravel(this.state);
     const face = iranFaceOf(this.state);
-    const presented = presentCard(card, this.state.chair, this.state.party, face);
+    const presented = presentCard(card, this.state.chair, this.state.party, face, locale);
     const inRoom = new Set(presented.briefings.map((b) => b.faction));
-    const seated = leaderFor({
-      chair: this.state.chair,
-      year: card.year,
-      iranFace: face,
-      generic: Boolean(this.state.flags.letterhead_generic),
-    });
-    const imam = imamFor({ chair: this.state.chair, iranFace: face });
-    const satrap = graveLeader(this.state.ending?.id);
+    const seated = localizeLeader(
+      leaderFor({
+        chair: this.state.chair,
+        year: card.year,
+        iranFace: face,
+        generic: Boolean(this.state.flags.letterhead_generic),
+      }),
+      locale,
+    );
+    const imamRaw = imamFor({ chair: this.state.chair, iranFace: face });
+    const imam = imamRaw ? localizeLeader(imamRaw, locale) : null;
+    const satrapRaw = graveLeader(this.state.ending?.id);
+    const satrap = satrapRaw ? localizeLeader(satrapRaw, locale) : null;
     const leader = satrap && this.state.chair === "iran" ? satrap : seated;
     const grave = satrap && this.state.chair === "us" ? satrap : null;
-    const faceLabel = leader.youAre.replace(/^You (are|get) /, "");
+    const faCard = locale === "fa" ? cardFa(card.id) : undefined;
+    const endingId = this.state.ending?.id ?? null;
+    const endingFa = locale === "fa" && endingId && endingId !== "none" ? ENDINGS_FA[endingId] : undefined;
+    const choiceFa = this.state.lastChoiceId ? faCard?.choices?.[this.state.lastChoiceId] : undefined;
+    let lastResult = this.state.lastResult;
+    if (locale === "fa" && lastResult) {
+      lastResult = {
+        title: choiceFa?.resultTitle ?? ui("fa", "congratulate"),
+        body: choiceFa?.result ?? lastResult.body,
+      };
+    }
     return {
       chair: this.state.chair,
       party: this.state.party,
       phase: this.state.phase,
       card: presented,
-      choices: presentChoices(this.state, card),
-      bars: presentBars(this.state, card, inRoom),
-      clocks: presentClocks(this.state, card),
-      bleed: this.state.lastBleed,
-      endingTitle: this.state.ending?.title ?? null,
-      endingBody: this.state.ending?.referee ?? null,
-      endingId: this.state.ending?.id ?? null,
-      lastResult: this.state.lastResult,
+      choices: presentChoices(this.state, card, locale),
+      bars: presentBars(this.state, card, inRoom, locale),
+      clocks: presentClocks(this.state, card, locale),
+      bleed: localizeBleed(this.state.lastBleed, locale, this.state.clocks.nuke_breakout_months),
+      endingTitle:
+        locale === "fa"
+          ? (choiceFa?.resultTitle ?? endingFa?.title ?? this.state.ending?.title ?? null)
+          : (this.state.ending?.title ?? null),
+      endingBody:
+        locale === "fa"
+          ? (choiceFa?.result ?? endingFa?.body ?? this.state.ending?.referee ?? null)
+          : (this.state.ending?.referee ?? null),
+      endingId,
+      lastResult,
       canBackOne: travel.backOne,
       canBackBranch: travel.backToBranch,
       canFurtherBack: travel.furtherBack,
       outParty: this.state.outParty,
       log: this.state.log,
-      slogan: sloganFor(this.state, card),
+      slogan: sloganFor(this.state, card, locale),
       face: this.state.chair === "iran" ? face : null,
-      faceLabel,
+      faceLabel: localizeFaceLabel(leader, locale),
       leader,
       imam,
       grave,
@@ -335,10 +452,15 @@ export class TrainViewModel {
     this.state = newGame({ chair, party, cardId });
   }
 
-  licenseById(id: string) {
+  licenseById(id: string, locale: Locale = "en") {
     for (const card of CARDS) {
       const hit = card.artisticLicense?.find((l) => l.id === id);
-      if (hit) return hit;
+      if (!hit) continue;
+      if (locale === "fa") {
+        const fa = cardFa(card.id)?.licenses?.[id];
+        if (fa) return { ...hit, title: fa.title, body: fa.body };
+      }
+      return hit;
     }
     return null;
   }
@@ -360,8 +482,8 @@ export class TrainViewModel {
     return RECEIPTS.filter((r) => card.sources.includes(r.id));
   }
 
-  peekCard(id: string): PresentedCard | null {
+  peekCard(id: string, locale: Locale = "en"): PresentedCard | null {
     const card = cardById(id);
-    return card ? presentCard(card, this.state.chair, this.state.party, iranFaceOf(this.state)) : null;
+    return card ? presentCard(card, this.state.chair, this.state.party, iranFaceOf(this.state), locale) : null;
   }
 }

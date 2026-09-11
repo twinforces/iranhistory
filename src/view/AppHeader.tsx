@@ -1,17 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { X_PROFILE } from "../model/constants.ts";
 import { cn } from "@/lib/utils";
-
-const NAV = [
-  { to: "/", label: "Frame" },
-  { to: "/systems", label: "Systems" },
-  { to: "/rail", label: "Rail" },
-  { to: "/play", label: "Play" },
-  { to: "/receipts", label: "Receipts" },
-  { to: "/design", label: "Design" },
-] as const;
+import { LangSwitch } from "./LangSwitch.tsx";
+import { useLocale } from "./LocaleContext.tsx";
 
 export function AppHeader({ current }: { current: string }) {
+  const { t } = useLocale();
+  const nav = [
+    { to: "/", label: t("navFrame") },
+    { to: "/systems", label: t("navSystems") },
+    { to: "/rail", label: t("navRail") },
+    { to: "/play", label: t("navPlay") },
+    { to: "/receipts", label: t("navReceipts") },
+    { to: "/design", label: t("navDesign") },
+  ] as const;
   return (
     <header className="border-b border-border bg-bg">
       <div className="rail-ties h-1.5 w-full bg-surface" />
@@ -24,24 +26,23 @@ export function AppHeader({ current }: { current: string }) {
           className="size-8 shrink-0 rounded-full object-cover ring-1 ring-border"
         />
         <div className="min-w-0 flex-1">
-          <p className="font-serif text-lg font-semibold tracking-tight text-fg sm:text-xl">
-            Train Ride to War
-          </p>
+          <p className="font-serif text-lg font-semibold tracking-tight text-fg sm:text-xl">{t("product")}</p>
           <a
             href={X_PROFILE}
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-muted hover:text-fg"
           >
-            a GrumpyTechBro joint
+            {t("joint")}
           </a>
         </div>
+        <LangSwitch />
       </div>
       <nav
-        aria-label="Sections"
+        aria-label={t("navSections")}
         className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-3 pb-3 sm:px-5"
       >
-        {NAV.map((item) => {
+        {nav.map((item) => {
           const active = current === item.to;
           return (
             <Link

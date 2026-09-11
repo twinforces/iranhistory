@@ -1,7 +1,11 @@
 import type { PresentedBar, PresentedClock } from "../viewmodel/TrainViewModel.ts";
+import { faDigits } from "../i18n/digits.ts";
 import { GlossLabel } from "./Gloss.tsx";
+import { useLocale } from "./LocaleContext.tsx";
 
 export function FactionBars({ bars, clocks }: { bars: PresentedBar[]; clocks: PresentedClock[] }) {
+  const { locale } = useLocale();
+  const num = (n: number) => (locale === "fa" ? faDigits(n) : String(n));
   return (
     <div className="flex flex-col gap-4">
       <ul className="flex flex-col gap-2">
@@ -16,7 +20,7 @@ export function FactionBars({ bars, clocks }: { bars: PresentedBar[]; clocks: Pr
                 style={{ width: `${bar.value}%` }}
               />
             </div>
-            <span className="text-right font-mono text-xs tabular-nums text-fg">{bar.value}</span>
+            <span className="text-end font-mono text-xs tabular-nums text-fg">{num(bar.value)}</span>
           </li>
         ))}
       </ul>

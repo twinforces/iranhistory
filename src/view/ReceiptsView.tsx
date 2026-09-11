@@ -1,37 +1,39 @@
 import { RECEIPTS } from "../model/receipts.ts";
+import { faDigits } from "../i18n/digits.ts";
+import type { UiKey } from "../i18n/ui.ts";
 import { truthTagCaption } from "../viewmodel/TrainViewModel.ts";
 import type { TruthTag } from "../model/types.ts";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { useLocale } from "./LocaleContext.tsx";
 
-const KIND: Record<(typeof RECEIPTS)[number]["kind"], string> = {
-  primary: "Primary",
-  timeline: "Timeline",
-  news: "News",
-  investigation: "Investigation",
-  reference: "Index",
+const KIND: Record<(typeof RECEIPTS)[number]["kind"], UiKey> = {
+  primary: "kindPrimary",
+  timeline: "kindTimeline",
+  news: "kindNews",
+  investigation: "kindInvestigation",
+  reference: "kindReference",
 };
 
 function TruthMark({ truth }: { truth: (typeof RECEIPTS)[number]["truth"] }) {
+  const { locale, t } = useLocale();
   if (truth === "mixed") {
-    const native = "Mixed. Some of this is a date or a document. Some of it is argued. Read the note.";
+    const native = `${t("mixed")}. ${t("mixedBlurb")}`;
     return (
       <Tooltip disableHoverableContent>
         <TooltipTrigger asChild>
           <span className="gloss-term" tabIndex={0} title={native}>
-            mixed
+            {t("mixed")}
           </span>
         </TooltipTrigger>
         <TooltipContent side="top" collisionPadding={12} className="pointer-events-none">
-          <p className="font-serif text-sm text-fg">Mixed</p>
-          <p className="mt-1 text-xs leading-relaxed text-muted">
-            Some of this is a date or a document. Some of it is argued. Read the note.
-          </p>
+          <p className="font-serif text-sm text-fg">{t("mixed")}</p>
+          <p className="mt-1 text-xs leading-relaxed text-muted">{t("mixedBlurb")}</p>
         </TooltipContent>
       </Tooltip>
     );
   }
   const tag = truth as TruthTag;
-  const { name, blurb } = truthTagCaption(tag);
+  const { name, blurb } = truthTagCaption(tag, locale);
   const native = `${name}. ${blurb}`;
   return (
     <Tooltip disableHoverableContent>
@@ -49,21 +51,20 @@ function TruthMark({ truth }: { truth: (typeof RECEIPTS)[number]["truth"] }) {
 }
 
 export function ReceiptsView() {
+  const { locale, t } = useLocale();
+  const num = (n: string | number) => (locale === "fa" ? faDigits(n) : String(n));
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <p className="font-mono text-2xs uppercase tracking-[0.18em] text-muted">Receipts</p>
-        <h1 className="mt-1 font-serif text-3xl font-semibold text-fg">Annotated bibliography</h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-          Standing rule: if we used it, it lives here. LT is the date or the document. IT is the
-          incentive reading. DK stays DK. AL is labelled on the card, not laundered into the referee.
-        </p>
+        <p className="kicker">{t("receiptsKicker")}</p>
+        <h1 className="mt-1 font-serif text-3xl font-semibold text-fg">{t("receiptsTitle")}</h1>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">{t("receiptsLead")}</p>
       </header>
       <ol className="flex flex-col gap-3">
         {RECEIPTS.map((r, i) => (
           <li key={r.id} className="rounded-[var(--radius-lg)] bg-surface p-4 shadow-border">
             <p className="font-mono text-2xs text-faint">
-              {String(i + 1).padStart(2, "0")} · {KIND[r.kind]} · <TruthMark truth={r.truth} />
+              {num(String(i + 1).padStart(2, "0"))} · {t(KIND[r.kind])} · <TruthMark truth={r.truth} />
             </p>
             <a
               href={r.url}
@@ -75,7 +76,9 @@ export function ReceiptsView() {
             </a>
             <p className="text-xs text-muted">{r.publisher}</p>
             <p className="mt-2 text-sm leading-relaxed text-muted">{r.note}</p>
-            <p className="mt-2 font-mono text-2xs text-faint">cards: {r.usedFor.join(", ")}</p>
+            <p className="mt-2 font-mono text-2xs text-faint">
+              {t("cardsPrefix")}: {r.usedFor.join(", ")}
+            </p>
           </li>
         ))}
       </ol>

@@ -1,13 +1,15 @@
 import type { PresentedBriefing } from "../viewmodel/TrainViewModel.ts";
 import { ADVISOR_PORTRAIT } from "./portraits.ts";
 import { GlossLabel, GlossText } from "./Gloss.tsx";
+import { useLocale } from "./LocaleContext.tsx";
 
 export function AdvisorList({ briefings }: { briefings: readonly PresentedBriefing[] }) {
+  const { t } = useLocale();
   if (briefings.length === 0) return null;
   return (
     <section className="advisor-panel">
-      <h2 className="kicker">Advisors</h2>
-      <p className="mt-1 text-sm text-muted">They are briefing you now. They do not know the ending.</p>
+      <h2 className="kicker">{t("advisors")}</h2>
+      <p className="mt-1 text-sm text-muted">{t("advisorsBlurb")}</p>
       <ul className="advisor-list">
         {briefings.map((b) => (
           <li key={b.faction} className={b.future ? "advisor-row advisor-row-future" : "advisor-row"}>

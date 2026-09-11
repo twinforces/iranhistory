@@ -2,13 +2,15 @@ import type { ReactNode } from "react";
 import type { TruthTag } from "../model/types.ts";
 import { truthTagCaption } from "../viewmodel/TrainViewModel.ts";
 import { GlossText } from "./Gloss.tsx";
+import { useLocale } from "./LocaleContext.tsx";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 const PREFIX = /^(LT|IT|DK|AL|GR):\s*/;
 
 function Tip({ tag, children }: { tag: TruthTag; children: ReactNode }) {
-  const { name, blurb } = truthTagCaption(tag);
+  const { locale } = useLocale();
+  const { name, blurb } = truthTagCaption(tag, locale);
   const native = `${name}. ${blurb}`;
   return (
     <Tooltip disableHoverableContent>
@@ -26,7 +28,8 @@ function Tip({ tag, children }: { tag: TruthTag; children: ReactNode }) {
 }
 
 export function TagChip({ tag, onClick }: { tag: TruthTag; onClick?: () => void }) {
-  const { name, blurb } = truthTagCaption(tag);
+  const { locale } = useLocale();
+  const { name, blurb } = truthTagCaption(tag, locale);
   const native = `${name}. ${blurb}`;
   const Comp = onClick ? "button" : "span";
   return (
