@@ -36,6 +36,10 @@ US: election cards. Opposing ahead by 10, or a tie with bad media / red oil.
 
 Off until a card sets `clocksOn`. 1953 has no Natanz.
 
+## Museum
+
+Peace exits and the nuke splat are found-once chrome in the ViewModel, persisted in localStorage (`trtw-exits`), not GameState. Unfound names stay off the meters. Not a body-count ticker.
+
 ## Play
 
 Chair first (Iran or US). Then the present-tense situation, the header "What do you want to do?", two choice columns, then Advisors as a scrolling list with cartoon busts. 1953 is a decision still on the desk. Time travel from a fresh 1953 can skip a groove. Ike to 2026 is playable stops. Quiet years still get a sentence. Johnson's SOFA is why Khomeini has a name. Ford keeps the pipeline. After the cup, Khamenei takes the robe and Rafsanjani sits. Keep the JCPOA limits and the nuclear war cards go away. Abraham Accords 2020. A public Saudi-Israel courtship is how 7 October arrives. Iran's 1981 is a face change: Banisadr leaves, Khamenei sits, the Imam stays. After 1989 the Imam plate is Khamenei. Urban liberals are a clock. 1979 spends them. Hostages are a card, not a footnote. A raid is not a grave. Taking Iraq off the terrorism list is how the chemistry moves. Iran's Beirut briefing preaches that as the because. History is not a grave. After the revolution Iran has two portraits. Packing the chair is. Mossadegh's dead end is Stalin in a turban, not a liberal oil republic. The US plate names the party: Kennedy is a Democrat. Johnson is a Democrat. Reagan is a Republican.

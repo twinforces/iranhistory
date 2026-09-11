@@ -49,6 +49,9 @@ describe("Farsi overlay", () => {
     assert.equal(faDigits("1982"), "۱۹۸۲");
     assert.equal(isLocale("fa"), true);
     assert.equal(isLocale("de"), false);
+    assert.equal(ui("en", "peaceExits"), "Peace exits");
+    assert.equal(ui("fa", "peaceExits"), "خروج‌های صلح");
+    assert.equal(ui("en", "nukesCounter"), "Iran gets nukes");
   });
 
   it("applyDocumentLocale sets rtl", () => {

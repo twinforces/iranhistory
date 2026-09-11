@@ -1,10 +1,59 @@
-import type { PresentedBar, PresentedClock } from "../viewmodel/TrainViewModel.ts";
+import type { PresentedBar, PresentedClock, PresentedMuseum } from "../viewmodel/TrainViewModel.ts";
 import { faDigits } from "../i18n/digits.ts";
 import { GlossLabel } from "./Gloss.tsx";
 import { useLocale } from "./LocaleContext.tsx";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
-export function FactionBars({ bars, clocks }: { bars: PresentedBar[]; clocks: PresentedClock[] }) {
+function MuseumCell({
+  label,
+  found,
+  total,
+  names,
+  hunt,
+}: {
+  label: string;
+  found: number;
+  total?: number;
+  names: readonly string[];
+  hunt: string;
+}) {
   const { locale } = useLocale();
+  const num = (n: number) => (locale === "fa" ? faDigits(n) : String(n));
+  const native = names.length > 0 ? names.join(". ") : hunt;
+  const display = total === undefined ? num(found) : `${num(found)} / ${num(total)}`;
+  return (
+    <Tooltip disableHoverableContent>
+      <TooltipTrigger asChild>
+        <div className="rounded-[var(--radius-sm)] bg-surface-2 px-3 py-2" tabIndex={0} title={native}>
+          <dt className="font-mono text-2xs uppercase tracking-wide text-muted">{label}</dt>
+          <dd className="font-mono text-sm tabular-nums text-fg">{display}</dd>
+        </div>
+      </TooltipTrigger>
+      <TooltipContent side="top" collisionPadding={12} className="pointer-events-none">
+        {names.length > 0 ? (
+          names.map((name) => (
+            <p key={name} className="font-serif text-sm text-fg">
+              {name}
+            </p>
+          ))
+        ) : (
+          <p className="font-serif text-sm text-fg">{hunt}</p>
+        )}
+      </TooltipContent>
+    </Tooltip>
+  );
+}
+
+export function FactionBars({
+  bars,
+  clocks,
+  museum,
+}: {
+  bars: PresentedBar[];
+  clocks: PresentedClock[];
+  museum: PresentedMuseum;
+}) {
+  const { locale, t } = useLocale();
   const num = (n: number) => (locale === "fa" ? faDigits(n) : String(n));
   return (
     <div className="flex flex-col gap-4">
@@ -32,6 +81,33 @@ export function FactionBars({ bars, clocks }: { bars: PresentedBar[]; clocks: Pr
           </div>
         ))}
       </dl>
+      <div className="museum-strip">
+        <p className="kicker mb-2">{t("peaceExits")}</p>
+        <dl className="grid grid-cols-2 gap-2">
+          <MuseumCell
+            label={t("iranExits")}
+            found={museum.iranFound}
+            total={museum.iranTotal}
+            names={museum.iranNames}
+            hunt={t("exitsHunt")}
+          />
+          <MuseumCell
+            label={t("usExits")}
+            found={museum.usFound}
+            total={museum.usTotal}
+            names={museum.usNames}
+            hunt={t("exitsHunt")}
+          />
+        </dl>
+        <dl className="mt-2">
+          <MuseumCell
+            label={t("nukesCounter")}
+            found={museum.nukesFound}
+            names={museum.nukesNames}
+            hunt={t("nukesNotYet")}
+          />
+        </dl>
+      </div>
     </div>
   );
 }

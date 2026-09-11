@@ -487,9 +487,9 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
   {
     id: "rail",
     term: "the rail",
-    aliases: ["the rail", "The rail", "this rail"],
+    aliases: ["the rail", "The rail", "this rail", "their rails", "the rails"],
     definition:
-      "The historical timeline you are riding. Cards in order. History is the golden path. A recap would tell you how it ends. The rail does not, until you sit it.",
+      "Once set in motion, most of the players were locked into the outcome. Trains stay on their rails. Hindsight is 20/20. There are no time machines in real life. This sim is one. Can you find all the exits?",
   },
   {
     id: "chemistry",
@@ -614,6 +614,13 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
     aliases: ["AUMF", "the authorization"],
     definition:
       "Authorization for Use of Military Force. The 2002 Iraq vote. The building tells a president it is not a suggestion. You take Baghdad.",
+  },
+  {
+    id: "al-mark",
+    term: "AL",
+    aliases: ["AL.", "AL,"],
+    definition:
+      "Artistic license. History did not do this. The button is labelled. The popup is required.",
   },
 ];
 

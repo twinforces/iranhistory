@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Find the exits, 2026-09-11
+
+What: AL chips hover. The rail is trains stuck on rails, a gifted time machine, and a hunt for peace exits. Museum counters for Iran, the US, and Iran gets nukes. Unfound names stay off the chrome.
+
+Why: Hindsight is 20/20. There are no time machines in real life. This one is a gift.
+
+
 ## Hover the house dialect, 2026-09-11
 
 What: Glossary covers the spoken dialect. Buttons name the noun. Home hovers Ajax.

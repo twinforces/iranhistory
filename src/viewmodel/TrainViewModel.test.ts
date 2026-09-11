@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
+import { memoryMuseumStore } from "../model/exits.ts";
 import { TrainViewModel, truthTagCaption } from "./TrainViewModel.ts";
 
 describe("TrainViewModel", () => {
@@ -614,5 +615,50 @@ describe("TrainViewModel", () => {
     assert.equal(ui.card.id, "sit-pezeshkian-2024");
     assert.match(ui.lastResult?.body ?? "", /7 October does not happen/);
     assert.equal(ui.lastResult?.kind, "adapts");
+  });
+
+  it("museum starts empty and does not name unfound exits", () => {
+    const vm = new TrainViewModel("us", "R", undefined, { museum: memoryMuseumStore() });
+    const ui = vm.getState();
+    assert.equal(ui.museum.usFound, 0);
+    assert.equal(ui.museum.usTotal, 2);
+    assert.equal(ui.museum.iranFound, 0);
+    assert.equal(ui.museum.iranTotal, 3);
+    assert.equal(ui.museum.nukesFound, 0);
+    assert.deepEqual(ui.museum.usNames, []);
+    assert.equal(/Imam|Fordow|hinterland|limits|Hamas/i.test(ui.museum.usNames.join(" ")), false);
+  });
+
+  it("private Saudi talks records a US peace exit and survives a new chair", () => {
+    const bag = memoryMuseumStore();
+    const vm = new TrainViewModel("us", "R", "saudi-accord-2023", { museum: bag });
+    vm.choose("us-private-saudi");
+    const ui = vm.getState();
+    assert.equal(ui.museum.usFound, 1);
+    assert.deepEqual([...ui.museum.usNames], ["Hamas cut off"]);
+    assert.equal(/Imam|Fordow/i.test(ui.museum.usNames.join(" ")), false);
+    const other = new TrainViewModel("iran", "D", undefined, { museum: bag }).getState();
+    assert.equal(other.museum.usFound, 1);
+    assert.equal(other.museum.iranFound, 0);
+    assert.equal(other.museum.usTotal, 2);
+  });
+
+  it("keeping the limits records an Iran peace exit", () => {
+    const vm = new TrainViewModel("iran", "D", "bounce-2019", { museum: memoryMuseumStore() });
+    vm.choose("ir-keep-limits");
+    const ui = vm.getState();
+    assert.equal(ui.endingId, "jcpoa_holds");
+    assert.equal(ui.museum.iranFound, 1);
+    assert.match(ui.museum.iranNames.join(" "), /limits/);
+    assert.equal(ui.museum.usFound, 0);
+  });
+
+  it("Farsi museum captions localize found names only", () => {
+    const vm = new TrainViewModel("us", "R", "saudi-accord-2023", { museum: memoryMuseumStore() });
+    vm.choose("us-private-saudi");
+    const fa = vm.getState("fa");
+    assert.equal(fa.museum.usFound, 1);
+    assert.match(fa.museum.usNames.join(" "), /حماس/);
+    assert.equal(fa.museum.usNames.length, 1);
   });
 });

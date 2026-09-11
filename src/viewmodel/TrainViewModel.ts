@@ -5,6 +5,8 @@ import {
   CARDS,
   choicesFor,
   currentCard,
+  detectExits,
+  EXITS,
   FACTION_BLURB,
   FACTION_LABEL,
   FACTION_ORDER,
@@ -15,8 +17,11 @@ import {
   imamFor,
   graveLeader,
   type Leader,
+  localMuseumStore,
+  type MuseumStore,
   newGame,
   otherParty,
+  peaceCount,
   playableCards,
   RECEIPTS,
   TRUTH_TAG_BLURB,
@@ -40,7 +45,7 @@ import { faDigits } from "../i18n/digits.ts";
 import { ENDINGS_FA } from "../i18n/endings-fa.ts";
 import { FACTION_BLURB_FA, FACTION_LABEL_FA } from "../i18n/factions-fa.ts";
 import { LEADERS_FA } from "../i18n/leaders-fa.ts";
-import { ui } from "../i18n/ui.ts";
+import { ui, type UiKey } from "../i18n/ui.ts";
 import type { CardFa, Locale } from "../i18n/types.ts";
 
 export interface PresentedChoice {
@@ -66,6 +71,17 @@ export interface PresentedClock {
   id: string;
   label: string;
   display: string;
+}
+
+export interface PresentedMuseum {
+  iranFound: number;
+  iranTotal: number;
+  usFound: number;
+  usTotal: number;
+  nukesFound: number;
+  iranNames: readonly string[];
+  usNames: readonly string[];
+  nukesNames: readonly string[];
 }
 
 export interface PresentedBriefing {
@@ -103,6 +119,7 @@ export interface TrainViewState {
   choices: PresentedChoice[];
   bars: PresentedBar[];
   clocks: PresentedClock[];
+  museum: PresentedMuseum;
   bleed: string;
   endingTitle: string | null;
   endingBody: string | null;
@@ -329,6 +346,38 @@ function presentChoices(state: GameState, card: Card, locale: Locale): Presented
   });
 }
 
+const EXIT_CAPTION: Record<string, UiKey> = {
+  hinterland: "exitHinterland",
+  limits: "exitLimits",
+  "hamas-iran": "exitHamas",
+  "hamas-us": "exitHamas",
+  fordow: "exitImamLives",
+  nukes: "exitNukes",
+};
+
+function captionForExit(id: string, locale: Locale): string {
+  const key = EXIT_CAPTION[id];
+  if (key) return ui(locale, key);
+  return EXITS.find((e) => e.id === id)?.found ?? id;
+}
+
+function presentMuseum(found: ReadonlySet<string>, locale: Locale): PresentedMuseum {
+  const names = (kind: "peace" | "nukes", chair?: Chair) =>
+    EXITS.filter((e) => e.kind === kind && (chair === undefined || e.chair === chair) && found.has(e.id)).map((e) =>
+      captionForExit(e.id, locale),
+    );
+  return {
+    iranFound: names("peace", "iran").length,
+    iranTotal: peaceCount("iran"),
+    usFound: names("peace", "us").length,
+    usTotal: peaceCount("us"),
+    nukesFound: names("nukes").length,
+    iranNames: names("peace", "iran"),
+    usNames: names("peace", "us"),
+    nukesNames: names("nukes"),
+  };
+}
+
 function localizeBleed(raw: string, locale: Locale, months: number | null): string {
   if (!raw) return "";
   if (locale !== "fa") return raw;
@@ -355,9 +404,13 @@ function localizeFaceLabel(leader: Leader, locale: Locale): string {
 
 export class TrainViewModel {
   private state: GameState;
+  private readonly museumStore: MuseumStore;
+  private found: Set<string>;
 
-  constructor(chair: Chair = "us", party: Party = "R", cardId?: string) {
+  constructor(chair: Chair = "us", party: Party = "R", cardId?: string, opts?: { museum?: MuseumStore }) {
     this.state = newGame({ chair, party, cardId });
+    this.museumStore = opts?.museum ?? localMuseumStore();
+    this.found = this.museumStore.load();
   }
 
   getState(locale: Locale = "en"): TrainViewState {
@@ -401,6 +454,7 @@ export class TrainViewModel {
       choices: presentChoices(this.state, card, locale),
       bars: presentBars(this.state, card, inRoom, locale),
       clocks: presentClocks(this.state, card, locale),
+      museum: presentMuseum(this.found, locale),
       bleed: localizeBleed(this.state.lastBleed, locale, this.state.clocks.nuke_breakout_months),
       endingTitle:
         locale === "fa"
@@ -428,6 +482,19 @@ export class TrainViewModel {
 
   choose(choiceId: string): void {
     this.state = applyChoice(this.state, choiceId);
+    this.collectExits();
+  }
+
+  private collectExits(): void {
+    const hits = detectExits(this.state);
+    if (hits.length === 0) return;
+    let dirty = false;
+    for (const id of hits) {
+      if (this.found.has(id)) continue;
+      this.found.add(id);
+      dirty = true;
+    }
+    if (dirty) this.museumStore.save(this.found);
   }
 
   dismissResult(): void {

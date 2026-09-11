@@ -31,16 +31,25 @@ export function TagChip({ tag, onClick }: { tag: TruthTag; onClick?: () => void 
   const { locale } = useLocale();
   const { name, blurb } = truthTagCaption(tag, locale);
   const native = `${name}. ${blurb}`;
-  const Comp = onClick ? "button" : "span";
   return (
     <Tooltip disableHoverableContent>
       <TooltipTrigger asChild>
-        <Comp
-          type={onClick ? "button" : undefined}
+        <span
           onClick={onClick}
+          onKeyDown={
+            onClick
+              ? (event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    onClick();
+                  }
+                }
+              : undefined
+          }
           title={native}
           tabIndex={0}
           aria-label={native}
+          data-tag={tag}
           className={cn(
             "inline-flex h-7 cursor-help items-center rounded-full px-2 font-mono text-2xs font-medium uppercase tracking-wide",
             tag === "LT" && "bg-lt/20 text-lt",
@@ -51,7 +60,7 @@ export function TagChip({ tag, onClick }: { tag: TruthTag; onClick?: () => void 
           )}
         >
           {tag}
-        </Comp>
+        </span>
       </TooltipTrigger>
       <TooltipContent side="top" collisionPadding={12} className="pointer-events-none">
         <p className="font-serif text-sm text-fg">{name}</p>

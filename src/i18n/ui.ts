@@ -22,7 +22,7 @@ const EN = {
     "What people think this is about: a morality play. Either theocratic psychos racing for a bomb, or Washington and Tel Aviv never let Iran be a normal country.",
   homeP2:
     "What the machinery is actually doing: two regimes optimizing for survival under bad maps. The buttons look simple. Sitting the chair is not.",
-  homeP3: "You sit the chair in 1953. Ajax is still a cable. The rail is not a recap.",
+  homeP3: "You sit the chair in 1953. Ajax is still a cable. The rail is not a recap. Can you find all the exits?",
   tehran: "Tehran",
   washington: "Washington",
   playIran: "Play as Iran",
@@ -76,7 +76,7 @@ const EN = {
   railKicker: "The rail",
   railTitle: "The rail, not eighty stations",
   railLead:
-    "Playable means the eight-voice card is written and the engine will take a button. Quiet years still get a sentence. This is a history tutorial, not a jump cut.",
+    "Playable means the eight-voice card is written and the engine will take a button. Quiet years still get a sentence. This is a history tutorial, not a jump cut. Trains stay on their rails. The exits are the work.",
   playThisCard: "Play this card",
   receiptsKicker: "Receipts",
   receiptsTitle: "Annotated bibliography",
@@ -129,6 +129,17 @@ const EN = {
   dkBlurb: "Nobody has a clean file. We say so.",
   alBlurb: "History did not do this. The button is labelled. The popup is required.",
   grBlurb: "Not a counterfactual claim. The engine needs a number.",
+  peaceExits: "Peace exits",
+  iranExits: "Iran",
+  usExits: "United States",
+  nukesCounter: "Iran gets nukes",
+  exitsHunt: "Can you find all the exits?",
+  nukesNotYet: "Not yet.",
+  exitHinterland: "The hinterland held 1979",
+  exitLimits: "You kept the limits",
+  exitHamas: "Hamas cut off",
+  exitImamLives: "The Imam lives",
+  exitNukes: "Breakout hit zero",
 } as const;
 
 const FA: { [K in keyof typeof EN]: string } = {
@@ -153,7 +164,7 @@ const FA: { [K in keyof typeof EN]: string } = {
     "آنچه مردم خیال می‌کنند: یک نمایش اخلاقی. یا روان‌پریش‌های فقیه که به سوی بمب می‌دوند، یا واشنگتن و تل‌آویو نگذاشتند ایران کشور معمولی باشد.",
   homeP2:
     "آنچه ماشین واقعاً می‌کند: دو رژیم برای بقا زیر نقشه‌های بد بهینه می‌شوند. دکمه‌ها ساده به نظر می‌رسند. نشستن روی صندلی ساده نیست.",
-  homeP3: "تو سال ۱۹۵۳ روی صندلی می‌نشینی. آژاکس هنوز یک تلگراف است. ریل خلاصه نیست.",
+  homeP3: "تو سال ۱۹۵۳ روی صندلی می‌نشینی. آژاکس هنوز یک تلگراف است. ریل خلاصه نیست. می‌توانی همهٔ خروج‌ها را پیدا کنی؟",
   tehran: "تهران",
   washington: "واشنگتن",
   playIran: "بازی در نقش ایران",
@@ -206,7 +217,7 @@ const FA: { [K in keyof typeof EN]: string } = {
   railKicker: "ریل",
   railTitle: "ریل، نه هشتاد ایستگاه",
   railLead:
-    "قابل بازی یعنی کارت هشت‌صدایی نوشته شده و موتور دکمه را می‌گیرد. سال‌های آرام هم یک جمله می‌گیرند. این یک آموزش تاریخ است، نه پرش ناگهانی.",
+    "قابل بازی یعنی کارت هشت‌صدایی نوشته شده و موتور دکمه را می‌گیرد. سال‌های آرام هم یک جمله می‌گیرند. این یک آموزش تاریخ است، نه پرش ناگهانی. قطارها روی ریل می‌مانند. خروج‌ها کار توست.",
   playThisCard: "این کارت را بازی کن",
   receiptsKicker: "رسیدها",
   receiptsTitle: "کتابشناسی حاشیه‌دار",
@@ -258,6 +269,17 @@ const FA: { [K in keyof typeof EN]: string } = {
   dkBlurb: "هیچ‌کس پروندهٔ تمیز ندارد. همین را می‌گوییم.",
   alBlurb: "تاریخ این کار را نکرد. دکمه برچسب دارد. پنجره اجباری است.",
   grBlurb: "ادعاى خلاف‌واقع نیست. موتور به یک عدد نیاز دارد.",
+  peaceExits: "خروج‌های صلح",
+  iranExits: "ایران",
+  usExits: "ایالات متحده",
+  nukesCounter: "ایران بمب می‌گیرد",
+  exitsHunt: "می‌توانی همهٔ خروج‌ها را پیدا کنی؟",
+  nukesNotYet: "هنوز نه.",
+  exitHinterland: "پس‌کرانه ۱۹۷۹ را نگه داشت",
+  exitLimits: "سقف‌ها را نگه داشتی",
+  exitHamas: "حماس قطع شد",
+  exitImamLives: "امام زنده است",
+  exitNukes: "گریز به صفر رسید",
 };
 
 const TABLE = { en: EN, fa: FA };

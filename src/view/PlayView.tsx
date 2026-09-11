@@ -109,13 +109,16 @@ export function PlayView({
                 ) : (
                   <span className="font-mono text-xs text-ink/55">{ui.card.yearLabel}</span>
                 )}
-                {ui.card.tags.map((tag) => (
-                  <TagChip
-                    key={tag}
-                    tag={tag}
-                    onClick={tag === "AL" ? () => setAlId(ui.card.licenses?.[0]?.id ?? null) : undefined}
-                  />
-                ))}
+                {ui.card.tags.map((tag) => {
+                  const alId = ui.card.licenses?.[0]?.id;
+                  return (
+                    <TagChip
+                      key={tag}
+                      tag={tag}
+                      onClick={tag === "AL" && alId ? () => setAlId(alId) : undefined}
+                    />
+                  );
+                })}
               </div>
               <h1 className="mt-1 font-serif text-xl font-semibold text-ink">
                 <GlossText text={ui.card.title} />
@@ -227,7 +230,7 @@ export function PlayView({
               <p className="kicker mb-3">
                 {ui.faceLabel} · {ui.party}
               </p>
-              <FactionBars bars={ui.bars} clocks={ui.clocks} />
+              <FactionBars bars={ui.bars} clocks={ui.clocks} museum={ui.museum} />
             </aside>
           </div>
         </div>

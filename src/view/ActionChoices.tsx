@@ -1,5 +1,7 @@
 import type { PresentedChoice } from "../viewmodel/TrainViewModel.ts";
+import { truthTagCaption } from "../viewmodel/TrainViewModel.ts";
 import { GlossText } from "./Gloss.tsx";
+import { useLocale } from "./LocaleContext.tsx";
 
 export function ActionChoices({
   prompt,
@@ -12,6 +14,9 @@ export function ActionChoices({
   disabled: boolean;
   onChoose: (id: string, artisticLicenseId: string | null) => void;
 }) {
+  const { locale } = useLocale();
+  const al = truthTagCaption("AL", locale);
+  const alNative = `${al.name}. ${al.blurb}`;
   return (
     <section className="flex flex-col gap-3">
       <h2 className="action-prompt">{prompt}</h2>
@@ -25,7 +30,14 @@ export function ActionChoices({
             className={i % 2 === 0 ? "choice-tile choice-tile-a" : "choice-tile choice-tile-b"}
           >
             <span className="choice-label">
-              <GlossText text={c.label} nested />
+              <span>
+                <GlossText text={c.label} nested />
+              </span>
+              {c.artisticLicenseId ? (
+                <abbr className="choice-al" title={alNative}>
+                  AL
+                </abbr>
+              ) : null}
             </span>
             <span className="choice-summary">
               <GlossText text={c.grey ? c.greyText : c.summary} nested />

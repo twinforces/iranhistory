@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Find the exits
+
+What: AL chips are hoverable marks, not buttons that eat the tooltip. AL. and AL, in copy hover. Bare AL does not, or it would swallow Al-Qaeda. The rail glossary is the trains-and-exits premise. Peace-exit counters for Iran and the US, plus Iran gets nukes, live on the meters as a found-once museum. Unfound names stay off the chrome.
+
+Why: Once the train is moving, most of the players stay on the rails. Hindsight is 20/20. The time machine is the gift. The exits are the work.
+
+
 ## 2026-09-11 - Hover the house dialect
 
 What: Ajax, cable, clip, letterhead, square, barracks, hinterland, and the rest of the spoken dialect hover. Home and chair copy use the glossary. Buttons name the noun: Bring the Marines home, Keep Iraq on the list, Sell Iran the missiles. Choice tiles no longer eat the hover. 241 still stays off the Beirut button.
