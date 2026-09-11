@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Players get Play and Receipts
+
+What: Header is Play and Receipts. Title and pfp go home. Frame, Systems, Rail, and Design are off the player tabs. GitHub stays on the landing.
+
+Why: Those four are the architect's desk. The chair is Play.
+
+
 ## 2026-09-11 - Peace is two chairs with 20/20 hindsight
 
 What: US peace is four: do not force the White Revolution vote, do not force the catalog, Ford splits the invoice, private Saudi talks. Iran still three. The Peace Map is off the board. Moral victories is one found/possible counter; CSO, memoirs, and nukes sit on the meters, also found/possible. Twin Pillars and the SOFA hover. Early enrichment starts the breakout clock; nukes still only tick on the splat.

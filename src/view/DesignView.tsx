@@ -105,6 +105,11 @@ const QUESTIONS: { q: string; freeze: string }[] = [
       "Yes. Museum, not body counts. Peace is two chairs with 20/20 hindsight. Peace exits sit at the top of Play with one Moral victories counter. Found/possible on every cell. The CSO / memoirs / nukes split lives on the meters, also found/possible. Found-once, localStorage, survives chair switch. US exits: do not force the White Revolution vote, do not force the catalog (he gets cover for the villages), Ford splits the invoice fifty-fifty, private Saudi talks (Hamas cut off). Stop after Fordow is not peace: the Imam lives and Natanz is worse, a path to breakout. Iran exits: hinterland 1979, keep JCPOA limits, do not fund Hamas. Iran has more because they can mostly not enrich. Early enrichment (1957 plant) starts the breakout clock; it is the evil sprint, not a peace tick, and it does not splat until the clock hits zero. There is no Peace Map on the board. Unfound names stay off the empty counters. Nukes is the breakout-zero splat. Convenience store owners: Mossadegh hiring the British engineers is the first store. Then the 7-Eleven letterhead morals. Then the surviving graves: Moscow, the face with no guns, sidelined twice, the Guards installing a new face. CIA wants the debrief. Shot is not a store: Kuwait, keep-the-war, the Imam crater. Best selling memoirs ticks election_loss, not Hail Mary, not serve. Hover on those two is the joke. The rail glossary is the trains-and-exits premise, not a recap slogan. Hindsight is 20/20. There are no time machines in real life. This sim is one.",
   },
   {
+    q: "Player chrome?",
+    freeze:
+      "Header is Play and Receipts. Title and pfp go home. Frame, Systems, Rail, and Design stay on their URLs. They are not player tabs. EN | فا stays. GitHub on the landing is the restore, not a fourth tab.",
+  },
+  {
     q: "Hormuz",
     freeze:
       "The 2019 drone and tanker card sits on the train after Europe bounces. Hormuz as a map is still a different play style. Leave that off the Play landing.",

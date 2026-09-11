@@ -52,10 +52,7 @@ export function HomeView() {
         </Link>
       </section>
 
-      <section className="flex flex-col gap-3 sm:flex-row">
-        <Button asChild variant="secondary">
-          <Link to="/systems">{t("readSystems")}</Link>
-        </Button>
+      <section>
         <Button asChild variant="ghost">
           <a href={GITHUB_REPO} target="_blank" rel="noopener noreferrer">
             {t("github")}

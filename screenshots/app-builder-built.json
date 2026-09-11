@@ -7,9 +7,9 @@
       "status": 200,
       "title": "Train Ride to War",
       "hasCanvas": false,
-      "bodyTextLen": 727,
-      "bodyTextHash": "e4d58424426f67f5464102471793224f4669f9ee41b957d0c6098bc4dd515ee5",
-      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint EN فا Frame Systems Rail",
+      "bodyTextLen": 684,
+      "bodyTextHash": "9cf5c6ad79fb0a9d0e7eef6aa1101bf70f7b9a82904d8c672cf8eae03aac9171",
+      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint Play Receipts EN \u0641\u0627 A TI",
       "horizontalOverflow": false,
       "consoleErrors": [],
       "pageErrors": [],
@@ -21,9 +21,9 @@
       "status": 200,
       "title": "Train Ride to War",
       "hasCanvas": false,
-      "bodyTextLen": 806,
-      "bodyTextHash": "5714b29afed26b22917a18e5e67b36d42969244be52d1e21f2df8005d6251268",
-      "bodyTextPrefix": "TRAIN RIDE TO WAR Loading the rail The briefing is still coming ",
+      "bodyTextLen": 684,
+      "bodyTextHash": "9cf5c6ad79fb0a9d0e7eef6aa1101bf70f7b9a82904d8c672cf8eae03aac9171",
+      "bodyTextPrefix": "Train Ride to War a GrumpyTechBro joint Play Receipts EN \u0641\u0627 A TI",
       "horizontalOverflow": false,
       "consoleErrors": [],
       "pageErrors": [],
@@ -32,9 +32,5 @@
   },
   "brandWarnings": [],
   "authWarnings": [],
-  "verdictFile": "/workspace/screenshots/app-builder-built.json",
-  "divergesFromBaseline": true,
-  "baselineReasons": [
-    "mobile: body text changed (727 -> 806 chars, hash mismatch)"
-  ]
+  "verdictFile": "/workspace/screenshots/app-builder-built.json"
 }

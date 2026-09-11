@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Players get Play and Receipts, 2026-09-11
+
+What: Header is Play and Receipts. Title goes home. Architect pages stay at their URLs.
+
+Why: Players sit a chair. They do not need the lab map.
+
+
 ## Peace is two chairs, 2026-09-11
 
 What: Four US 20/20 peace listens. No Peace Map. Moral is one counter. CSO/memoirs/nukes split at the bottom, all found/possible. Early enrichment starts the clock.
