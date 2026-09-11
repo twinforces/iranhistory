@@ -646,6 +646,76 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
       "Authorization for Use of Military Force. The 2002 Iraq vote. The building tells a president it is not a suggestion. You take Baghdad.",
   },
   {
+    id: "tow",
+    term: "TOW missiles",
+    aliases: ["TOW missiles", "TOW crate", "a TOW crate", "TOW"],
+    definition:
+      "Tube-launched, optically tracked, wire-guided anti-tank missiles. The 1985-86 dark channel sold them to Tehran, with HAWK anti-aircraft parts, for hostages and cash that walked to the Contras.",
+  },
+  {
+    id: "hawk",
+    term: "HAWK",
+    aliases: ["HAWK parts", "HAWK"],
+    definition:
+      "US Hawk surface-to-air missiles, or their spare parts. The same dark channel as the TOWs. Iran still had the airframes from the catalog years. The hangars needed the parts.",
+  },
+  {
+    id: "khobar",
+    term: "Khobar Towers",
+    aliases: ["Khobar Towers", "Khobar"],
+    definition:
+      "Dhahran, 25 June 1996. A truck bomb kills 19 US airmen. Clinton investigates and does not strike. The later US indictment names the IRGC and Saudi Hezbollah.",
+  },
+  {
+    id: "stuxnet",
+    term: "Stuxnet",
+    aliases: ["Stuxnet", "Olympic Games"],
+    definition:
+      "A worm in the Natanz centrifuges, 2007-2010. Olympic Games is the file name. US and Israel, LT-to-IT. It buys months. It does not buy a government.",
+  },
+  {
+    id: "amad",
+    term: "AMAD",
+    aliases: ["AMAD paper", "AMAD-era", "AMAD"],
+    definition:
+      "Iran's structured nuclear weapons work through 2003. The Shorabad warehouse is the paperwork Mossad lifts in 2018. How much stayed live after 2003 is DK.",
+  },
+  {
+    id: "swiss-fax",
+    term: "Swiss fax",
+    aliases: ["Swiss ambassador's fax", "Swiss fax", "grand bargain"],
+    definition:
+      "2003. The Swiss ambassador in Tehran sends Washington a fax: Iran offers to talk about the nuclear program, the proxies, and recognition. It dies on the desk. The missing father of the later deal.",
+  },
+  {
+    id: "mek",
+    term: "MEK",
+    aliases: ["the MEK", "MEK"],
+    definition:
+      "Mujahedin-e Khalq. Iranian opposition in exile. They dump Natanz in 2002. Nobody's favorite cousin.",
+  },
+  {
+    id: "axis-of-evil",
+    term: "axis of evil",
+    aliases: ["axis of evil"],
+    definition:
+      "Bush's January 2002 line: Iraq, Iran, North Korea. Iran had just helped against the Taliban. The speech still names them.",
+  },
+  {
+    id: "al-qaeda",
+    term: "Al-Qaeda",
+    aliases: ["Al-Qaeda"],
+    definition:
+      "The group that did 11 September. Fifteen of nineteen hijackers were Saudi. Not Iran. After that week they are the top of the US board.",
+  },
+  {
+    id: "hindsight",
+    term: "Hindsight is 20/20",
+    aliases: ["Hindsight is 20/20", "hindsight is 20/20"],
+    definition:
+      "You can see the exits after the train has already gone. There are no time machines in real life. This sim is one.",
+  },
+  {
     id: "al-mark",
     term: "AL",
     aliases: ["AL.", "AL,", "AL"],

@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Plate wraps, Author's Note, 2026-09-11
+
+What: Restore the full plate. Stick figure only while you stay that letterhead. Glossary for TOW, Khobar, Stuxnet, AMAD, Swiss fax. Author's Note in the header.
+
+Why: Banisadr's store is not Khamenei's face. Bern was cutesy. The note is the thesis.
+
+
 ## Players get Play and Receipts, 2026-09-11
 
 What: Header is Play and Receipts. Title goes home. Architect pages stay at their URLs.

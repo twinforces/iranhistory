@@ -137,4 +137,25 @@ describe("glossary", () => {
     assert.equal(sofa.some((p) => p.id === "sofa"), true);
     assert.equal(linkify("Fordow is a mountain.").some((p) => p.id === "ford"), false);
   });
+
+  it("marks TOW, Khobar Towers, Stuxnet, AMAD, and the Swiss fax", () => {
+    const contra = linkify("A channel in the dark can sell TOW missiles and HAWK parts.");
+    assert.equal(contra.some((p) => p.id === "tow" && p.text === "TOW missiles"), true);
+    assert.equal(contra.some((p) => p.id === "hawk" && p.text === "HAWK parts"), true);
+    const khobar = linkify("Khobar Towers: nineteen airmen dead");
+    assert.equal(khobar.some((p) => p.id === "khobar" && p.text === "Khobar Towers"), true);
+    const worm = linkify("Stuxnet: a worm. Olympic Games is the file name.");
+    assert.equal(worm.some((p) => p.id === "stuxnet"), true);
+    assert.equal(worm.some((p) => p.id === "stuxnet" && p.text === "Olympic Games"), true);
+    const amad = linkify("Half a ton of AMAD paper is in Tel Aviv.");
+    assert.equal(amad.some((p) => p.id === "amad"), true);
+    const fax = linkify("A Swiss ambassador's fax can offer a grand bargain.");
+    assert.equal(fax.some((p) => p.id === "swiss-fax"), true);
+    const mek = linkify("The MEK dumps Natanz. You still get axis of evil.");
+    assert.equal(mek.some((p) => p.id === "mek"), true);
+    assert.equal(mek.some((p) => p.id === "axis-of-evil"), true);
+    const qaeda = linkify("Al-Qaeda is the top of the board that week.");
+    assert.equal(qaeda.some((p) => p.id === "al-qaeda"), true);
+    assert.equal(qaeda.some((p) => p.id === "al-mark"), false);
+  });
 });

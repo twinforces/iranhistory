@@ -54,7 +54,7 @@ export function PlayView({
   const endingKickerClass = holdEnding ? "kicker text-ok" : "kicker text-accent";
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
       <PlayScoreboard museum={ui.museum} />
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="kicker">
@@ -73,13 +73,13 @@ export function PlayView({
         </button>
       </div>
 
-      <div className="flex min-w-0 flex-col gap-4">
+      <div className="flex min-w-0 flex-col gap-5">
           <div className={dual ? "play-flank-dual" : "play-flank-single"}>
             <PlayerPlate
               key={ui.leader.id}
               leader={ui.leader}
               yearLabel={ui.card.yearLabel}
-              layout="stack"
+              layout={dual ? "stack" : "row"}
             />
             <article className="situation-panel">
             {ui.card.art ? (

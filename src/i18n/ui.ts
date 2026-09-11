@@ -8,6 +8,7 @@ const EN = {
   navRail: "Rail",
   navPlay: "Play",
   navReceipts: "Receipts",
+  navNote: "Author's Note",
   navDesign: "Design",
   langEn: "EN",
   langFa: "فا",
@@ -82,6 +83,18 @@ const EN = {
   receiptsTitle: "Annotated bibliography",
   receiptsLead:
     "Standing rule: if we used it, it lives here. LT is the date or the document. IT is the incentive reading. DK stays DK. AL is labelled on the card, not laundered into the referee.",
+  noteKicker: "A GrumpyTechBro joint",
+  noteTitle: "Author's Note",
+  noteP1:
+    "If you're reading history and one side seems like they're the good guys, you're reading a fairy tale or a Sunday school polemic, not reality. Humans are messy. So history is messy.",
+  noteP2:
+    "Peace does not happen until people start listening to each other and understanding each other. Building this sim taught me a lot about the history. The US was arrogant, had its own problems after WW2. Europe had dumped their fucked up colonies in our lap and asked us to keep them from going Red. Iran had systemic problems as well; the Shah was trying to modernize his country, change sucks.",
+  noteP3:
+    "If either side had understood the other, we wouldn't be where we are now; often it was good intentions that drove us towards war as much as bad intentions. Hindsight is 20/20.",
+  noteP4:
+    "Playing towards peace is trivial from both sides. It's hard to do from just one side. I don't let you play from both sides at once. That's life.",
+  noteP5:
+    "Is that a slightly cynical view? I'm Grumpy Tech Bro, not Happy Go Lucky Tech Bro. Deal with it.",
   mixed: "mixed",
   mixedBlurb: "Some of this is a date or a document. Some of it is argued. Read the note.",
   kindPrimary: "Primary",
@@ -176,6 +189,7 @@ const FA: { [K in keyof typeof EN]: string } = {
   navRail: "ریل",
   navPlay: "بازی",
   navReceipts: "رسیدها",
+  navNote: "یادداشت نویسنده",
   navDesign: "طرح",
   langEn: "EN",
   langFa: "فا",
@@ -249,6 +263,18 @@ const FA: { [K in keyof typeof EN]: string } = {
   receiptsTitle: "کتابشناسی حاشیه‌دار",
   receiptsLead:
     "قاعدهٔ ثابت: اگر استفاده کردیم، اینجاست. LT تاریخ یا سند است. IT خوانش انگیزه است. DK همان DK می‌ماند. AL روی کارت برچسب می‌خورد، به داور قاچاق نمی‌شود.",
+  noteKicker: "اثری از GrumpyTechBro",
+  noteTitle: "یادداشت نویسنده",
+  noteP1:
+    "اگر تاریخ می‌خوانی و یک طرف خوب به نظر می‌رسد، قصهٔ پریان یا جدل یکشنبه‌مدرسه‌ای می‌خوانی، نه واقعیت. آدم‌ها شلوغ‌اند. پس تاریخ شلوغ است.",
+  noteP2:
+    "صلح اتفاق نمی‌افتد تا وقتی مردم شروع کنند به گوش دادن به هم و فهمیدن هم. ساختن این شبیه‌سازی خیلی چیز از تاریخ به من یاد داد. آمریکا متکبر بود، بعد از جنگ جهانی دوم مشکلات خودش را داشت. اروپا مستعمره‌های خرابشان را در دامن ما انداخت و خواست از سرخ شدن نگه‌شان داریم. ایران هم مشکلات ساختاری داشت؛ شاه می‌خواست کشور را مدرن کند، تغییر درد دارد.",
+  noteP3:
+    "اگر هر طرف طرف دیگر را می‌فهمید، الان اینجا نبودیم؛ اغلب نیت خوب همان‌قدر ما را به جنگ برد که نیت بد. عاقبت‌بینی بیست‌بیست است.",
+  noteP4:
+    "بازی به سوی صلح از هر دو طرف آسان است. از یک طرف سخت است. نمی‌گذارم هم‌زمان از هر دو طرف بازی کنی. زندگی همین است.",
+  noteP5:
+    "نگاه کمی بدبینانه است؟ من Grumpy Tech Bro هستم، Happy Go Lucky Tech Bro نه. باهاش کنار بیا.",
   mixed: "آمیخته",
   mixedBlurb: "بخشی تاریخ یا سند است. بخشی محل بحث است. یادداشت را بخوان.",
   kindPrimary: "اصلی",

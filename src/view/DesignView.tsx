@@ -12,7 +12,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "When does a chair die?",
     freeze:
-      "When the player picks a grave. Walk away, hire the British engineers, cut a deal with Moscow, keep the war at home, refuse the cup, side with Saddam, keep the 2026 war. A rescue is not a grave. History is the golden path: it always rides to the end of the wired rail. Carter losing seats Reagan. Banisadr losing seats Khamenei. Khamenei taking the robe seats Rafsanjani and moves the Imam plate. Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis, keep Family Protection, remain president, count the Green votes, fire the morality police) retire you to a 7-Eleven. Iran continues with a stick-figure replacement. History keeps the real portraits. Beirut rides through a channel in the dark to the cup. The 2026 campaign that kills the Imam is history arriving, a rail hold, not a letterhead gag. Some forks only tweak numbers. Keeping the embargo is that kind. White Revolution and the Nixon catalog still land on the next stop; the US 20/20 listen ticks peace without leaving the rail. The Shah can hold 1979 if he spent the oil on the villages: that is a successful path, not a grave. Keeping the JCPOA limits after Europe bounces is the same kind of olive hold. Mossadegh's dead end is the street, or Stalin in a turban. The Saudis enter the Soviet sphere.",
+      "When the player picks a grave. Walk away, hire the British engineers, cut a deal with Moscow, keep the war at home, refuse the cup, side with Saddam, keep the 2026 war. A rescue is not a grave. History is the golden path: it always rides to the end of the wired rail. Carter losing seats Reagan. Banisadr losing seats Khamenei. Khamenei taking the robe seats Rafsanjani and moves the Imam plate. Letterhead morals (refuse the stamp, keep Artesh, defy the Majlis, keep Family Protection, remain president, count the Green votes, fire the morality police) retire you to a 7-Eleven. Iran continues with a stick-figure replacement while you stay that same letterhead. A new historical face is real: Banisadr's 7-Eleven does not sit Khamenei as a replacement. History keeps the real portraits. Beirut rides through a channel in the dark to the cup. The 2026 campaign that kills the Imam is history arriving, a rail hold, not a letterhead gag. Some forks only tweak numbers. Keeping the embargo is that kind. White Revolution and the Nixon catalog still land on the next stop; the US 20/20 listen ticks peace without leaving the rail. The Shah can hold 1979 if he spent the oil on the villages: that is a successful path, not a grave. Keeping the JCPOA limits after Europe bounces is the same kind of olive hold. Mossadegh's dead end is the street, or Stalin in a turban. The Saudis enter the Soviet sphere.",
   },
   {
     q: "What actually forks?",
@@ -107,7 +107,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "Player chrome?",
     freeze:
-      "Header is Play and Receipts. Title and pfp go home. Frame, Systems, Rail, and Design stay on their URLs. They are not player tabs. EN | فا stays. GitHub on the landing is the restore, not a fourth tab.",
+      "Header is Play, Receipts, and Author's Note. Title and pfp go home. Frame, Systems, Rail, and Design stay on their URLs. They are not player tabs. EN | فا stays. GitHub on the landing is the restore, not a fourth tab.",
   },
   {
     q: "Hormuz",

@@ -61,6 +61,9 @@ describe("Farsi overlay", () => {
     assert.equal(ui("en", "exitUsVillages"), "You made him spend on the villages");
     assert.equal(ui("en", "exitFordMix"), "You split the invoice");
     assert.equal(ui("fa", "exitWrListen"), "رأی را تحمیل نکردی");
+    assert.equal(ui("en", "navNote"), "Author's Note");
+    assert.match(ui("en", "noteP3"), /Hindsight is 20\/20/);
+    assert.equal(/—/.test(ui("en", "noteP2") + ui("en", "noteP3")), false);
   });
 
   it("applyDocumentLocale sets rtl", () => {

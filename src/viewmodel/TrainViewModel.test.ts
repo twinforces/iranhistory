@@ -592,6 +592,18 @@ describe("TrainViewModel", () => {
     assert.match(ui.lastResult?.body ?? "", /convenience store/);
   });
 
+  it("Banisadr's 7-Eleven does not sit Khamenei as a replacement", () => {
+    const vm = new TrainViewModel("iran", "D", "impeached-1981");
+    assert.equal(vm.getState().leader.id, "banisadr");
+    vm.choose("ir-defy-majles");
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "seated-1981");
+    assert.equal(ui.leader.id, "khamenei");
+    assert.equal(ui.leader.youAre, "You are Khamenei");
+    assert.equal(ui.leader.portrait, "/leaders/khamenei.jpg");
+    assert.equal(ui.lastResult?.kind, "moral");
+  });
+
   it("after the robe the player is Rafsanjani and the Imam plate is Khamenei", () => {
     const vm = new TrainViewModel("iran", "D", "robe-1989");
     const before = vm.getState();

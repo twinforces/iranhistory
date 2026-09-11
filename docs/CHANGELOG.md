@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Plate wraps. Author's Note. New letterhead is real.
+
+What: The Shah plate is a full row again, and the you-are line wraps. A moral 7-Eleven does not sit the next historical letterhead as a replacement. TOW, HAWK, Khobar Towers, Stuxnet, AMAD, the Swiss fax, MEK, axis of evil, and Al-Qaeda hover. Bern is off the copy. Author's Note sits next to Receipts.
+
+Why: The chip was a fold hack. A new face is history. Bern was cute. The note is the thesis.
+
+
 ## 2026-09-11 - Players get Play and Receipts
 
 What: Header is Play and Receipts. Title and pfp go home. Frame, Systems, Rail, and Design are off the player tabs. GitHub stays on the landing.

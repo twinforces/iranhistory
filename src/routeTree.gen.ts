@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DesignRouteImport } from './routes/design'
+import { Route as NoteRouteImport } from './routes/note'
 import { Route as PlayRouteImport } from './routes/play'
 import { Route as RailRouteImport } from './routes/rail'
 import { Route as ReceiptsRouteImport } from './routes/receipts'
@@ -24,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const DesignRoute = DesignRouteImport.update({
   id: '/design',
   path: '/design',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoteRoute = NoteRouteImport.update({
+  id: '/note',
+  path: '/note',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlayRoute = PlayRouteImport.update({
@@ -50,6 +56,7 @@ const SystemsRoute = SystemsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/design': typeof DesignRoute
+  '/note': typeof NoteRoute
   '/play': typeof PlayRoute
   '/rail': typeof RailRoute
   '/receipts': typeof ReceiptsRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/design': typeof DesignRoute
+  '/note': typeof NoteRoute
   '/play': typeof PlayRoute
   '/rail': typeof RailRoute
   '/receipts': typeof ReceiptsRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/design': typeof DesignRoute
+  '/note': typeof NoteRoute
   '/play': typeof PlayRoute
   '/rail': typeof RailRoute
   '/receipts': typeof ReceiptsRoute
@@ -74,16 +83,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/design' | '/play' | '/rail' | '/receipts' | '/systems'
+  fullPaths:
+    '/' | '/design' | '/note' | '/play' | '/rail' | '/receipts' | '/systems'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/design' | '/play' | '/rail' | '/receipts' | '/systems'
+  to: '/' | '/design' | '/note' | '/play' | '/rail' | '/receipts' | '/systems'
   id:
-    '__root__' | '/' | '/design' | '/play' | '/rail' | '/receipts' | '/systems'
+    | '__root__'
+    | '/'
+    | '/design'
+    | '/note'
+    | '/play'
+    | '/rail'
+    | '/receipts'
+    | '/systems'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DesignRoute: typeof DesignRoute
+  NoteRoute: typeof NoteRoute
   PlayRoute: typeof PlayRoute
   RailRoute: typeof RailRoute
   ReceiptsRoute: typeof ReceiptsRoute
@@ -104,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/design'
       fullPath: '/design'
       preLoaderRoute: typeof DesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/note': {
+      id: '/note'
+      path: '/note'
+      fullPath: '/note'
+      preLoaderRoute: typeof NoteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/play': {
@@ -140,6 +165,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DesignRoute: DesignRoute,
+  NoteRoute: NoteRoute,
   PlayRoute: PlayRoute,
   RailRoute: RailRoute,
   ReceiptsRoute: ReceiptsRoute,

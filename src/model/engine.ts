@@ -564,7 +564,11 @@ export function applyChoice(state: GameState, choiceId: string): GameState {
   applyDeltas(next, state.delayed);
   next.delayed = { ...(choice.delayedDeltas ?? {}) };
   applyDeltas(next, choice.deltas);
+  const priorFace = next.flags.iran_face;
   if (choice.flags) Object.assign(next.flags, choice.flags);
+  if (choice.flags?.iran_face && choice.flags.iran_face !== priorFace) {
+    next.flags.letterhead_generic = false;
+  }
   if (next.flags.early_enrichment && next.clocks.nuke_breakout_months === null) {
     next.clocks.nuke_breakout_months = 18;
     next.clocks.missile_inventory_months = 10;

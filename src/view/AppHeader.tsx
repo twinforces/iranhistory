@@ -9,6 +9,7 @@ export function AppHeader({ current }: { current: string }) {
   const nav = [
     { to: "/play", label: t("navPlay") },
     { to: "/receipts", label: t("navReceipts") },
+    { to: "/note", label: t("navNote") },
   ] as const;
   return (
     <header className="border-b border-border bg-bg">

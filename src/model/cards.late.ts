@@ -828,7 +828,7 @@ const natanz2002 = play({
   situationUs:
     "The MEK dumps Natanz. You have Afghanistan. You are about to have Iraq. The axis of evil already includes Iran.\n\nA Swiss fax is coming. A grand bargain: nukes, proxies, recognition. You can take it, or you can bin it.",
   situationIran:
-    "Natanz is in the open. The Americans put you on a list with Iraq and North Korea. A fax through Bern can offer everything: the program, the proxies, a handshake.\n\nYou can keep spinning, or you can pause and see if they mean it.",
+    "Natanz is in the open. The Americans put you on a list with Iraq and North Korea. A Swiss ambassador's fax can offer everything: the program, the proxies, a handshake.\n\nYou can keep spinning, or you can pause and see if they mean it.",
   referee: [
     "LT: August 2002 Natanz is revealed. January 2002 axis of evil. 2003 Swiss fax offers a grand bargain. It dies.",
     "IT: The cup taught the Guards never to fight fair. Enrichment is how they keep the lesson. Pause is AL.",

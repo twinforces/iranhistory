@@ -611,6 +611,7 @@ describe("golden path", () => {
     assert.equal(defy.phase, "playing");
     assert.equal(defy.cardId, "seated-1981");
     assert.equal(defy.flags.iran_face, "khamenei");
+    assert.equal(defy.flags.letterhead_generic, false);
     assert.match(defy.lastResult?.body ?? "", /Los Angeles/);
   });
 
