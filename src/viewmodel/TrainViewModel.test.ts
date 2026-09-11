@@ -641,12 +641,17 @@ describe("TrainViewModel", () => {
     const vm = new TrainViewModel("us", "R", undefined, { museum: memoryMuseumStore() });
     const ui = vm.getState();
     assert.equal(ui.museum.usFound, 0);
-    assert.equal(ui.museum.usTotal, 1);
+    assert.equal(ui.museum.usTotal, 4);
     assert.equal(ui.museum.iranFound, 0);
     assert.equal(ui.museum.iranTotal, 3);
     assert.equal(ui.museum.nukesFound, 0);
+    assert.equal(ui.museum.nukesTotal, 1);
     assert.equal(ui.museum.csoFound, 0);
+    assert.equal(ui.museum.csoTotal, 13);
     assert.equal(ui.museum.memoirsFound, 0);
+    assert.equal(ui.museum.memoirsTotal, 1);
+    assert.equal(ui.museum.moralFound, 0);
+    assert.equal(ui.museum.moralTotal, 14);
     assert.deepEqual(ui.museum.usNames, []);
     assert.equal(/Imam|Fordow|hinterland|limits|Hamas/i.test(ui.museum.usNames.join(" ")), false);
   });
@@ -658,7 +663,7 @@ describe("TrainViewModel", () => {
     assert.equal(ui.endingId, "none");
     assert.equal(ui.museum.usFound, 0);
     assert.equal(ui.museum.nukesFound, 0);
-    assert.equal(ui.museum.usTotal, 1);
+    assert.equal(ui.museum.usTotal, 4);
     assert.equal(/Imam|Fordow/i.test(ui.museum.usNames.join(" ")), false);
   });
 
@@ -673,7 +678,7 @@ describe("TrainViewModel", () => {
     const other = new TrainViewModel("iran", "D", undefined, { museum: bag }).getState();
     assert.equal(other.museum.usFound, 1);
     assert.equal(other.museum.iranFound, 0);
-    assert.equal(other.museum.usTotal, 1);
+    assert.equal(other.museum.usTotal, 4);
   });
 
   it("keeping the limits records an Iran peace exit", () => {
@@ -708,5 +713,31 @@ describe("TrainViewModel", () => {
     assert.match(joined, /letterhead/);
     assert.match(joined, /morality/);
     assert.equal(/Family Protection/.test(joined), false);
+  });
+
+  it("not forcing the vote records a US peace exit and still sits Johnson", () => {
+    const vm = new TrainViewModel("us", "R", "white-revolution-1963", { museum: memoryMuseumStore() });
+    vm.choose("us-send-tanks");
+    const ui = vm.getState();
+    assert.equal(ui.phase, "playing");
+    assert.equal(ui.card.id, "sofa-1964");
+    assert.equal(ui.leader.youAre, "You are Johnson");
+    assert.equal(ui.museum.usFound, 1);
+    assert.deepEqual([...ui.museum.usNames], ["You did not force the vote"]);
+    assert.equal(ui.lastResult?.kind, "adapts");
+  });
+
+  it("early enrichment shows the breakout clock and does not tick nukes", () => {
+    const vm = new TrainViewModel("us", "R", "atoms-1957", { museum: memoryMuseumStore() });
+    assert.equal(vm.getState().clocks.some((c) => c.id === "nuke"), false);
+    vm.choose("us-let-enrich");
+    const ui = vm.getState();
+    assert.equal(ui.card.id, "white-revolution-1963");
+    const nuke = ui.clocks.find((c) => c.id === "nuke");
+    assert.ok(nuke);
+    assert.match(nuke?.display ?? "", /18/);
+    assert.equal(ui.museum.nukesFound, 0);
+    assert.equal(ui.museum.usFound, 0);
+    assert.equal(ui.lastResult?.kind, "adapts");
   });
 });

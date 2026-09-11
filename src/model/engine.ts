@@ -565,6 +565,10 @@ export function applyChoice(state: GameState, choiceId: string): GameState {
   next.delayed = { ...(choice.delayedDeltas ?? {}) };
   applyDeltas(next, choice.deltas);
   if (choice.flags) Object.assign(next.flags, choice.flags);
+  if (next.flags.early_enrichment && next.clocks.nuke_breakout_months === null) {
+    next.clocks.nuke_breakout_months = 18;
+    next.clocks.missile_inventory_months = 10;
+  }
   if (card.sloganVolume !== undefined) next.sloganVolume = card.sloganVolume;
   next.lastChoiceId = choice.id;
   next.lastChoiceWasSoft = isSoft(choice);

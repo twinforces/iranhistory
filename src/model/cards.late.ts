@@ -247,13 +247,13 @@ const pipeline1975 = play({
     "The catalog is still open. The oil is still paying. Congress is restless. The villages are still the villages.\n\nYou can keep buying, or you can spend it where the tapes from Najaf already live.",
   referee: [
     "LT: Ford keeps Nixon's blank check. Congress writes a 30-day veto into arms sales. The Shah's orders still clear. 1974-76 is the peak of the pipeline.",
-    "IT: Hinterland vs weapons is the same fork as 1972. If 1972 already spent on the villages, this card is a next that says the pipeline is still the policy.",
+    "IT: Hinterland vs weapons is the same fork as 1972. A fifty-fifty mix quiets Qom without emptying the catalog. If 1972 already spent on the villages, this card still lets Ford split the invoice.",
   ],
   al: [
     {
       id: "al-slow-pipeline",
-      title: "Slow the pipeline",
-      body: "You slow the American invoice. Bonn and Paris take the work. The plants still exist. Khomeini is still in Najaf. AL.",
+      title: "Split the invoice",
+      body: "You do not cancel the policeman. You do not feed only the tarmac. Half weapons, half villages. Qom sees a clinic. AL.",
     },
   ],
   briefings: [
@@ -275,15 +275,15 @@ const pipeline1975 = play({
     },
     {
       id: "us-slow-pipeline",
-      label: "Slow the pipeline",
-      summary: "Congress wants a window. Give them one.",
-      kind: "soft",
+      label: "Split the invoice",
+      summary: "Half weapons, half villages. Fifty-fifty. Qom sees a clinic.",
+      kind: "deal",
       artisticLicense: "al-slow-pipeline",
       ...adapts(
-        "Bonn and Paris take the work",
-        "You gave Congress a window. The king still wants plants. German and French invoices replace yours. Tehran still grows. Khomeini is still in Najaf. The later sprint still has a floor.",
+        "Qom sees a clinic",
+        "You did not cancel the policeman. You did not feed only the tarmac. Half the oil buys roads. Qom shouts less. 1979 still grades the square unless the villages hold.",
       ),
-      deltas: { my_party: 6, cia: -6, europeans: 8, leader: 2 },
+      deltas: { my_party: 4, cia: -2, street: 8, saudis: 2, liberals: -2, leader: 2 },
     },
   ],
   iran: [

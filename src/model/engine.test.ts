@@ -506,7 +506,7 @@ describe("golden path", () => {
     }
   });
 
-  it("White Revolution both buttons continue; only the liberals clock moves", () => {
+  it("White Revolution both buttons continue; not forcing the vote grows liberals less", () => {
     const start = newGame({ chair: "us", party: "R", cardId: "white-revolution-1963" });
     const press = applyChoice(start, "us-press-reform");
     const tanks = applyChoice(start, "us-send-tanks");
@@ -929,12 +929,12 @@ describe("you serve somebody", () => {
     assert.equal(choice?.overlay, "serve");
   });
 
-  it("Nixon holding the catalog makes the Shah shop Moscow; Contra still later", () => {
+  it("Nixon not forcing the catalog gives village cover; Contra still later", () => {
     const g = newGame({ chair: "us", party: "R", cardId: "weapons-1972" });
     const next = applyChoice(g, "us-hinterland-first");
     assert.equal(next.cardId, "pipeline-1975");
     assert.equal(next.lastResult?.kind, "adapts");
-    assert.match(next.lastResult?.title ?? "", /Moscow/);
+    assert.match(next.lastResult?.title ?? "", /villages/);
     assert.match(next.lastResult?.body ?? "", /Contra is not gated/);
     assert.equal(next.flags.hinterland_spent, false);
     const hist = applyChoice(g, "us-blank-check");

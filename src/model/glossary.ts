@@ -227,7 +227,21 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
     term: "Nixon Doctrine",
     aliases: ["Nixon Doctrine"],
     definition:
-      "Asian allies defend themselves. America sells the weapons and holds the nuclear umbrella. In the Gulf that means twin pillars: Iran and Saudi Arabia as policemen. The May 1972 Tehran visit is the blank check.",
+      "Asian allies defend themselves. America sells the weapons and holds the nuclear umbrella. In the Gulf that becomes Twin Pillars. The May 1972 Tehran visit is the blank check.",
+  },
+  {
+    id: "twin-pillars",
+    term: "Twin Pillars",
+    aliases: ["Twin Pillars", "Twin pillars", "twin pillars"],
+    definition:
+      "Nixon's Gulf doctrine after Britain left east of Suez: Iran and Saudi Arabia as the two policemen. America sells the weapons and holds the nuclear umbrella. The May 1972 Tehran visit is the blank check. Not a building.",
+  },
+  {
+    id: "east-of-suez",
+    term: "east of Suez",
+    aliases: ["east of Suez", "east-of-Suez"],
+    definition:
+      "Britain's 1971 withdrawal from bases east of the Suez Canal. The vacuum Nixon fills with Twin Pillars. Not a canal you sit.",
   },
   {
     id: "bazargan",
@@ -312,6 +326,20 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
     aliases: ["Richard Nixon", "Nixon"],
     definition:
       "Republican. President of the United States. The Nixon Doctrine says Asian allies defend themselves. In Tehran that becomes a blank check.",
+  },
+  {
+    id: "johnson",
+    term: "Lyndon Johnson",
+    aliases: ["Lyndon Johnson", "Johnson"],
+    definition:
+      "Democrat. President of the United States, 1963 to 1969. Vietnam is why he barely looked at the Status of Forces bill. Two hundred million in aid is tied to it. Khomeini names it a document of slavery and gets a name.",
+  },
+  {
+    id: "ford",
+    term: "Gerald Ford",
+    aliases: ["Gerald Ford", "Ford"],
+    definition:
+      "Republican. President of the United States, 1974 to 1977. He is not Nixon. The pipeline is still Nixon's check. A fifty-fifty mix is the 20/20 listen. History keeps selling.",
   },
   {
     id: "eagle-claw",
@@ -405,7 +433,7 @@ export const GLOSSARY: readonly GlossaryEntry[] = [
   {
     id: "sofa",
     term: "Status of Forces",
-    aliases: ["Status of Forces", "status-of-forces", "SOFA"],
+    aliases: ["Status of Forces", "status-of-forces bill", "status-of-forces", "the SOFA", "SOFA"],
     definition:
       "1964. A bill that says American troops and advisors in Iran cannot be tried in an Iranian court. Two hundred million in military aid is tied to it. Khomeini calls it a document of slavery. The Shah exiles him. That is how the cleric gets a name.",
   },

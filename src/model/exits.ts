@@ -2,7 +2,8 @@
  * What: the off-ramps the time machine is for.
  * Why: most of the rail is locked. Peace exits, the nuke splat, the 7-Eleven,
  * surviving graves, and the memoir are the museum. Catalog lives here so the
- * chrome cannot invent a sixth peace exit. Shot is not a store.
+ * chrome cannot invent a sixth peace exit. Shot is not a store. Peace is
+ * two chairs with 20/20 hindsight. The map stays off the board.
  */
 import type { Chair, EndingId, GameState } from "./types.ts";
 
@@ -48,6 +49,27 @@ export const EXITS: readonly ExitDef[] = [
     kind: "peace",
     found: "Hamas cut off",
     choiceId: "us-private-saudi",
+  },
+  {
+    id: "wr-listen",
+    chair: "us",
+    kind: "peace",
+    found: "You did not force the vote",
+    choiceId: "us-send-tanks",
+  },
+  {
+    id: "us-villages",
+    chair: "us",
+    kind: "peace",
+    found: "You made him spend on the villages",
+    choiceId: "us-hinterland-first",
+  },
+  {
+    id: "ford-mix",
+    chair: "us",
+    kind: "peace",
+    found: "You split the invoice",
+    choiceId: "us-slow-pipeline",
   },
   {
     id: "nukes",

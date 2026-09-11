@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Peace is two chairs with 20/20 hindsight
+
+What: US peace is four: do not force the White Revolution vote, do not force the catalog, Ford splits the invoice, private Saudi talks. Iran still three. The Peace Map is off the board. Moral victories is one found/possible counter; CSO, memoirs, and nukes sit on the meters, also found/possible. Twin Pillars and the SOFA hover. Early enrichment starts the breakout clock; nukes still only tick on the splat.
+
+Why: Peace only happens if both sides work for it. The map broke the hunt. Feminism can wait.
+
+
 ## 2026-09-11 - Fordow is not peace. Iran clicks reach the tiles.
 
 What: Stop after Fordow is off the US peace catalog. The Imam lives at a worse Natanz; that is a path to breakout, not an exit. Nukes still only tick on the splat. US peace is private Saudi talks. Play chrome sits tighter so the 1953 Iran tiles are on the first screen, and chair blurbs no longer eat the click.

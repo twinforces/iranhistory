@@ -49,7 +49,7 @@ export function PlayScoreboard({ museum }: { museum: PresentedMuseum }) {
     <header className="play-scoreboard">
       <div className="play-scoreboard-row">
         <p className="kicker self-center">{t("peaceExits")}</p>
-        <dl className="grid min-w-0 grid-cols-2 gap-2">
+        <dl className="grid min-w-0 grid-cols-3 gap-2">
           <MuseumCell
             label={t("iranExits")}
             found={museum.iranFound}
@@ -64,30 +64,16 @@ export function PlayScoreboard({ museum }: { museum: PresentedMuseum }) {
             names={museum.usNames}
             hunt={t("exitsHunt")}
           />
-        </dl>
-        <p className="kicker self-center">{t("moralVictories")}</p>
-        <dl className="grid min-w-0 grid-cols-2 gap-2">
           <MuseumCell
-            label={t("csoCounter")}
-            found={museum.csoFound}
-            names={museum.csoNames}
-            hunt={t("csoBlurb")}
-            sticky
-          />
-          <MuseumCell
-            label={t("memoirsCounter")}
-            found={museum.memoirsFound}
-            names={museum.memoirsNames}
-            hunt={t("memoirsBlurb")}
+            label={t("moralVictories")}
+            found={museum.moralFound}
+            total={museum.moralTotal}
+            names={museum.moralNames}
+            hunt={t("moralBlurb")}
             sticky
           />
         </dl>
       </div>
-      <details className="exits-map">
-        <summary>{t("exitsStuck")}</summary>
-        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapIran")}</p>
-        <p className="mt-2 font-serif text-sm leading-relaxed text-fg">{t("exitsMapUs")}</p>
-      </details>
     </header>
   );
 }
@@ -130,10 +116,27 @@ export function FactionBars({
         ))}
       </dl>
       <div className="museum-strip">
-        <dl className="grid grid-cols-1 gap-2">
+        <dl className="grid grid-cols-3 gap-2">
+          <MuseumCell
+            label={t("csoCounter")}
+            found={museum.csoFound}
+            total={museum.csoTotal}
+            names={museum.csoNames}
+            hunt={t("csoBlurb")}
+            sticky
+          />
+          <MuseumCell
+            label={t("memoirsCounter")}
+            found={museum.memoirsFound}
+            total={museum.memoirsTotal}
+            names={museum.memoirsNames}
+            hunt={t("memoirsBlurb")}
+            sticky
+          />
           <MuseumCell
             label={t("nukesCounter")}
             found={museum.nukesFound}
+            total={museum.nukesTotal}
             names={museum.nukesNames}
             hunt={t("nukesNotYet")}
           />

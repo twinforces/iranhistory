@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { glossaryById, linkify } from "./glossary.ts";
+import { GLOSSARY, glossaryById, linkify } from "./glossary.ts";
 
 describe("glossary", () => {
   it("marks Ajax, Mossadegh, CIA, and MI6 in the 1953 lede", () => {
@@ -120,5 +120,21 @@ describe("glossary", () => {
     assert.equal(ids.includes("khamenei"), true);
     assert.equal(ids.includes("majlis"), true);
     assert.equal(ids.includes("rajai"), true);
+  });
+
+  it("glossary ids are unique", () => {
+    const ids = GLOSSARY.map((e) => e.id);
+    assert.equal(ids.length, new Set(ids).size);
+  });
+
+  it("marks Twin Pillars and the SOFA", () => {
+    const title = linkify("Twin pillars, blank check");
+    assert.equal(title.some((p) => p.id === "twin-pillars" && p.text === "Twin pillars"), true);
+    const def = glossaryById("twin-pillars")?.definition ?? "";
+    assert.match(def, /Iran and Saudi/);
+    assert.match(def, /Not a building/);
+    const sofa = linkify("The SOFA is the 1964 bill. Status of Forces keeps advisors out of court.");
+    assert.equal(sofa.some((p) => p.id === "sofa"), true);
+    assert.equal(linkify("Fordow is a mountain.").some((p) => p.id === "ford"), false);
   });
 });

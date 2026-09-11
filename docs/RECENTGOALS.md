@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Peace is two chairs, 2026-09-11
+
+What: Four US 20/20 peace listens. No Peace Map. Moral is one counter. CSO/memoirs/nukes split at the bottom, all found/possible. Early enrichment starts the clock.
+
+Why: The hunt is the point. A map is a spoiler. Iran can mostly not be crazy. DC has to listen.
+
+
 ## Fordow is not peace, 2026-09-11
 
 What: Stop after Fordow is not a US peace exit. Private Saudi talks is the one. Tiles sit on the first paint so Iran play clicks.

@@ -12,8 +12,8 @@ import {
 } from "./exits.ts";
 
 describe("peace exits catalog", () => {
-  it("has one US exit and three Iran exits, plus the nuke splat", () => {
-    assert.equal(peaceCount("us"), 1);
+  it("has four US exits and three Iran exits, plus the nuke splat", () => {
+    assert.equal(peaceCount("us"), 4);
     assert.equal(peaceCount("iran"), 3);
     assert.equal(EXITS.filter((e) => e.kind === "nukes").length, 1);
     assert.equal(EXITS.filter((e) => e.kind === "cso").length, 13);
@@ -128,5 +128,34 @@ describe("peace exits catalog", () => {
       ending: { id: "election_loss" as const, title: "The other party takes the chair", referee: "US death is electoral." },
     };
     assert.deepEqual(detectExits(dumped), ["memoirs"]);
+  });
+
+  it("US 20/20 listens tick peace and still ride the rail", () => {
+    const wr = applyChoice(newGame({ chair: "us", party: "R", cardId: "white-revolution-1963" }), "us-send-tanks");
+    assert.equal(wr.phase, "playing");
+    assert.equal(wr.cardId, "sofa-1964");
+    assert.deepEqual(detectExits(wr), ["wr-listen"]);
+    const villages = applyChoice(newGame({ chair: "us", party: "R", cardId: "weapons-1972" }), "us-hinterland-first");
+    assert.equal(villages.phase, "playing");
+    assert.equal(villages.cardId, "pipeline-1975");
+    assert.equal(villages.flags.hinterland_spent, false);
+    assert.deepEqual(detectExits(villages), ["us-villages"]);
+    const mix = applyChoice(newGame({ chair: "us", party: "R", cardId: "pipeline-1975" }), "us-slow-pipeline");
+    assert.equal(mix.phase, "playing");
+    assert.equal(mix.cardId, "revolution-1979");
+    assert.deepEqual(detectExits(mix), ["ford-mix"]);
+  });
+
+  it("early enrichment starts the clock and is not peace or nukes", () => {
+    const us = applyChoice(newGame({ chair: "us", party: "R", cardId: "atoms-1957" }), "us-let-enrich");
+    assert.equal(us.clocks.nuke_breakout_months, 18);
+    assert.equal(us.phase, "playing");
+    assert.equal(us.cardId, "white-revolution-1963");
+    assert.deepEqual(detectExits(us), []);
+    const plant = applyChoice(newGame({ chair: "iran", party: "D", cardId: "atoms-1957" }), "ir-shah-plant");
+    assert.equal(plant.clocks.nuke_breakout_months, 18);
+    assert.deepEqual(detectExits(plant), []);
+    const fuel = applyChoice(newGame({ chair: "us", party: "R", cardId: "atoms-1957" }), "us-keep-fuel");
+    assert.equal(fuel.clocks.nuke_breakout_months, null);
   });
 });

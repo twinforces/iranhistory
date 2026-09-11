@@ -56,11 +56,11 @@ describe("Farsi overlay", () => {
     assert.match(ui("en", "csoBlurb"), /convenience store/);
     assert.match(ui("en", "memoirsBlurb"), /best selling memoirs/);
     assert.equal(ui("en", "moralVictories"), "Moral victories");
-    assert.equal(ui("en", "exitsStuck"), "Need a map?");
-    assert.match(ui("en", "exitsMapIran"), /villages/);
-    assert.match(ui("en", "exitsMapUs"), /Saudi/);
-    assert.equal(/Fordow/.test(ui("en", "exitsMapUs")), false);
-    assert.equal(/Fordow/.test(ui("fa", "exitsMapUs")), false);
+    assert.match(ui("en", "moralBlurb"), /split is on the meters/);
+    assert.equal(ui("en", "exitWrListen"), "You did not force the vote");
+    assert.equal(ui("en", "exitUsVillages"), "You made him spend on the villages");
+    assert.equal(ui("en", "exitFordMix"), "You split the invoice");
+    assert.equal(ui("fa", "exitWrListen"), "رأی را تحمیل نکردی");
   });
 
   it("applyDocumentLocale sets rtl", () => {

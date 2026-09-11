@@ -296,7 +296,7 @@ const atoms1957: Card = {
     {
       id: "al-let-enrich",
       title: "A plant of their own",
-      body: "Historically Washington keeps the fuel. A national cycle in 1957 still leaves 1979 on the rail. The later sprint is a later file. AL.",
+      body: "Historically Washington keeps the fuel. A national cycle in 1957 starts the later sprint now. The mosque is still the 1979 exam. The clock is a hostage you handed them. AL.",
     },
   ],
   briefings: [
@@ -367,12 +367,13 @@ const atoms1957: Card = {
     {
       id: "us-let-enrich",
       label: "Let them run the fuel cycle",
-      summary: "A plant of their own. The leash comes off.",
+      summary: "A plant of their own. The leash comes off. The sprint starts now.",
       kind: "hard",
       artisticLicense: "al-let-enrich",
+      flags: { early_enrichment: true },
       ...adapts(
-        "The plants still have a later file",
-        "You let him run the cycle. CIA hates the photograph. The later sprint still knows how to spin. 1979 is still the next exam. A national plant in 1957 does not un-write the mosque.",
+        "The sprint starts now",
+        "You let him run the cycle. CIA hates the photograph. Breakout is a clock from this week. 1979 is still the political exam. The later hostage is the plant.",
       ),
       deltas: { cia: -12, europeans: -8, leader: 4, street: 6 },
     },
@@ -390,13 +391,14 @@ const atoms1957: Card = {
     {
       id: "ir-shah-plant",
       label: "Talk about a national plant",
-      summary: "If they can have atoms, we can have a plant.",
+      summary: "If they can have atoms, we can have a plant. The sprint starts now.",
       kind: "hard",
       face: "shah",
       artisticLicense: "al-let-enrich",
+      flags: { early_enrichment: true },
       ...adapts(
-        "Washington keeps the invoice anyway",
-        "You talked plant. They still send the fuel and keep the cycle. CIA writes a colder cable. The later sprint is not born this week. 1979 is still the exam.",
+        "The sprint starts now",
+        "You talked plant. They still send the fuel this week. CIA writes a colder cable. Breakout is a clock from this week. 1979 is still the political exam. The later hostage is the plant.",
       ),
       deltas: { street: 8, cia: -12, europeans: -8, leader: -6 },
     },
@@ -425,22 +427,22 @@ const whiteRevolution1963: Card = {
     tags: ["LT", "IT", "AL"],
     paragraphs: [
       "LT: In 1961-62 Kennedy's Iran Task Force treats Ali Amini's reform cabinet as maybe the last chance to stop a slide. The Shah launches the White Revolution in January 1963: land reform, literacy and health corps, profit-sharing, women's suffrage. A 15 June 1963 uprising around Khomeini is crushed. He is arrested, later exiled.",
-      "IT: Washington sells reform as anti-communist insurance. It also grows an urban liberal and feminist constituency that has no guns. The mosque and the bazaar lose land, status, and the chador-as-default. That is the constituency Khomeini will speak for.",
-      "The years after this card still include Johnson's 1964 Status of Forces agreement, which Khomeini names, and the exile to Turkey then Najaf. Those are on the rail whether you press or not. The liberals meter is the thing you are actually choosing.",
+      "IT: Washington sells reform as anti-communist insurance. It also grows an urban liberal and feminist constituency that has no guns. The mosque and the bazaar lose land, status, and the chador-as-default. That is the constituency Khomeini will speak for. Not forcing the vote is the 20/20 listen: feminism can wait, Qom shouts less.",
+      "The years after this card still include Johnson's 1964 Status of Forces agreement, which Khomeini names, and the exile to Turkey then Najaf. Those are on the rail whether you press or not. Liberals and whether you forced the vote are the thing you are actually choosing.",
     ],
   },
   artisticLicense: [
     {
       id: "al-send-tanks",
-      title: "Send him tanks instead",
-      body: "You send hardware. The court still launches a thinner White Revolution because Kennedy's people already started it. The mosque still hates the king. 1979 still grades the square. AL.",
+      title: "Do not force the vote",
+      body: "You did not press him. The mosque keeps the chador. Liberals grow less. Feminism can wait. 1979 still grades the square unless the villages hold. AL.",
     },
   ],
   briefings: [
     {
       faction: "cia",
       audience: "us",
-      rant: "Press him. Land and the vote photograph as modernity. Tanks photograph as a client. Your Iran Task Force already told you the military baksheesh is the wrong lever. Amini was the last good chance. The Shah will take the credit. Let him.",
+      rant: "Press him. Land and the vote photograph as modernity. Not forcing the vote photographs as a client who kept the chador. Your Iran Task Force already told you the military baksheesh is the wrong lever. Amini was the last good chance. The Shah will take the credit. Let him.",
     },
     {
       faction: "my_party",
@@ -450,7 +452,7 @@ const whiteRevolution1963: Card = {
     {
       faction: "opposing_party",
       audience: "us",
-      rant: "If you lean on a king we will call it meddling. If you send him tanks we will call it a blank check. Pick which hearing you want.",
+      rant: "If you lean on a king we will call it meddling. If you leave the chador we will call it a blank check for the mosque. Pick which hearing you want.",
     },
     {
       faction: "media",
@@ -497,15 +499,15 @@ const whiteRevolution1963: Card = {
     },
     {
       id: "us-send-tanks",
-      label: "Send him tanks instead",
-      summary: "The king wants hardware. Hardware is quiet. Reform is not.",
-      kind: "hard",
+      label: "Do not force the vote",
+      summary: "Land if he wants it. The mosque keeps the chador. Feminism can wait.",
+      kind: "soft",
       artisticLicense: "al-send-tanks",
       ...adapts(
-        "The court still takes the land",
-        "You sent tanks. Kennedy's people in Tehran already started the land file. He still launches a thinner White Revolution. The mosque still hates him. Liberals grow less. 1979 still grades the square.",
+        "The mosque keeps the chador",
+        "You did not press the vote. Liberals grow less. Qom shouts less. Feminism can wait. 1979 still grades the square unless the villages hold.",
       ),
-      deltas: { cia: -8, saudis: 8, leader: 10, street: 4, liberals: -4, my_party: 4 },
+      deltas: { cia: -8, saudis: 8, leader: 10, street: 6, liberals: -4, my_party: 4 },
     },
   ],
   iranChoices: [
@@ -555,7 +557,7 @@ const weapons1972: Card = {
     paragraphs: [
       "LT: Britain completed the east-of-Suez withdrawal in 1971. The Nixon Doctrine said no more American infantries for Asian wars. The Shah had oil money. Twin pillars: Iran and Saudi Arabia as Gulf policemen. May 1972, Nixon and Kissinger in Tehran. The Shah may buy any US conventional weapons system, any quantity. Arms sales jump from the low hundreds of millions toward the billions after the oil shock. Family Protection Law 1967, expanded 1975: divorce through courts, marriage age up, polygamy squeezed.",
       "IT: Tehran's cafes, cinemas, universities, and unveiled women are real. So is the hinterland that never saw the boom. Growing liberals looks like anti-communist hygiene. It is also a constituency with no barracks. Johnson's Status of Forces fight and Khomeini's exile already happened on the way here.",
-      "The next stop is still 1979. You are choosing how fat the urban liberal bar is when the cleric comes back.",
+      "The next stop is still 1979 unless the hinterland holds. Forcing the catalog is history. Not forcing it is the 20/20 listen: he gets cover to spend on the villages.",
     ],
   },
   artisticLicense: [
@@ -565,9 +567,9 @@ const weapons1972: Card = {
       body: "A king who buys clinics instead of F-14s might keep the hinterland off the square. If it works, that is the successful fork. Khomeini loses the village. The army likes him less. AL on whether that holds 1979.",
     },
     {
-      id: "al-soviet-catalog",
-      title: "The Shah shops Moscow",
-      body: "You held the American catalog. He still wants boom-booms. Moscow will sell. Twin pillars crack. The later spare-parts war still knows how to shop in the dark. AL. Contra is not gated.",
+      id: "al-us-villages",
+      title: "Make him spend on the hinterland first",
+      body: "You did not force the catalog. He has cover to spend on clinics. The army likes him less. 1979 will grade it. AL. Contra is not gated.",
     },
   ],
   briefings: [
@@ -632,14 +634,14 @@ const weapons1972: Card = {
     {
       id: "us-hinterland-first",
       label: "Make him spend on the hinterland first",
-      summary: "Clinics and roads before F-14s. He will hate the sermon.",
+      summary: "Clinics and roads before F-14s. He gets cover for trying.",
       kind: "soft",
-      artisticLicense: "al-soviet-catalog",
+      artisticLicense: "al-us-villages",
       ...adapts(
-        "The Shah shops Moscow",
-        "You held the American catalog. He still wants tanks and jets. Moscow will sell tanks that do not need a Congressional window. CIA writes the nightmare cable. The Saudis watch the other pillar shop east. The clinics you wanted get a slice. The later spare-parts war still knows how to shop in the dark. Contra is not gated.",
+        "He has cover to spend on the villages",
+        "You did not force the catalog. The Shah has cover to put oil into clinics. The army likes him less. CIA writes a colder cable. Contra is not gated. 1979 will grade whether the square stays thin.",
       ),
-      deltas: { cia: -14, my_party: -6, saudis: -10, leader: 4, street: 8, liberals: 6, opposing_party: 6, hard_currency: 8 },
+      deltas: { cia: -8, my_party: -4, saudis: -4, leader: -4, street: 12, liberals: 4, hard_currency: 4 },
     },
   ],
   iranChoices: [

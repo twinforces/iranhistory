@@ -21,6 +21,7 @@ import {
   type MuseumStore,
   newGame,
   otherParty,
+  countKind,
   peaceCount,
   playableCards,
   RECEIPTS,
@@ -79,13 +80,19 @@ export interface PresentedMuseum {
   usFound: number;
   usTotal: number;
   nukesFound: number;
+  nukesTotal: number;
   iranNames: readonly string[];
   usNames: readonly string[];
   nukesNames: readonly string[];
   csoFound: number;
+  csoTotal: number;
   csoNames: readonly string[];
   memoirsFound: number;
+  memoirsTotal: number;
   memoirsNames: readonly string[];
+  moralFound: number;
+  moralTotal: number;
+  moralNames: readonly string[];
 }
 
 export interface PresentedBriefing {
@@ -355,6 +362,9 @@ const EXIT_CAPTION: Record<string, UiKey> = {
   limits: "exitLimits",
   "hamas-iran": "exitHamas",
   "hamas-us": "exitHamas",
+  "wr-listen": "exitWrListen",
+  "us-villages": "exitUsVillages",
+  "ford-mix": "exitFordMix",
   nukes: "exitNukes",
   "cso-london": "csoLondon",
   "cso-fpl": "csoFpl",
@@ -389,13 +399,19 @@ function presentMuseum(found: ReadonlySet<string>, locale: Locale): PresentedMus
     usFound: names("peace", "us").length,
     usTotal: peaceCount("us"),
     nukesFound: names("nukes").length,
+    nukesTotal: countKind("nukes"),
     iranNames: names("peace", "iran"),
     usNames: names("peace", "us"),
     nukesNames: names("nukes"),
     csoFound: names("cso").length,
+    csoTotal: countKind("cso"),
     csoNames: names("cso"),
     memoirsFound: names("memoirs").length,
+    memoirsTotal: countKind("memoirs"),
     memoirsNames: names("memoirs"),
+    moralFound: names("cso").length + names("memoirs").length,
+    moralTotal: countKind("cso") + countKind("memoirs"),
+    moralNames: [...names("cso"), ...names("memoirs")],
   };
 }
 
