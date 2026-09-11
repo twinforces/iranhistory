@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Convenience stores and memoirs, 2026-09-11
+
+What: CSO counter ticks 7-Eleven letterhead morals. Memoirs tick a president forced out. Hover is the joke. Not body counts.
+
+Why: It's a moral victory. But the machinery grinds on.
+
+
 ## Find the exits, 2026-09-11
 
 What: AL chips hover. Bare AL in copy is case-sensitive, so Al-Qaeda stays a name. The rail is trains stuck on rails, a gifted time machine, and a hunt for peace exits. Museum counters for Iran, the US, and Iran gets nukes. Unfound names stay off the chrome.

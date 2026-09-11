@@ -543,6 +543,8 @@ describe("TrainViewModel", () => {
     assert.equal(ui.lastResult?.kind, "moral");
     assert.match(ui.lastResult?.body ?? "", /convenience store/);
     assert.match(ui.lastResult?.body ?? "", /However, Iran continues on/);
+    assert.equal(ui.museum.csoFound, 1);
+    assert.match(ui.museum.csoNames.join(" "), /letterhead/);
     vm.dismissResult();
     assert.equal(vm.getState().lastResult, null);
     assert.equal(vm.getState().card.id, "you-him-fight-1980");
@@ -557,6 +559,8 @@ describe("TrainViewModel", () => {
     assert.equal(ui.lastResult?.kind, "serve");
     assert.match(ui.lastResult?.body ?? "", /Blue Dogs/);
     assert.match(ui.lastResult?.body ?? "", /Reagan still sits/);
+    assert.equal(ui.museum.memoirsFound, 0);
+    assert.equal(ui.museum.csoFound, 0);
   });
 
   it("keeping Family Protection deposes Bazargan onto a stick figure, then the embassy", () => {
@@ -625,6 +629,8 @@ describe("TrainViewModel", () => {
     assert.equal(ui.museum.iranFound, 0);
     assert.equal(ui.museum.iranTotal, 3);
     assert.equal(ui.museum.nukesFound, 0);
+    assert.equal(ui.museum.csoFound, 0);
+    assert.equal(ui.museum.memoirsFound, 0);
     assert.deepEqual(ui.museum.usNames, []);
     assert.equal(/Imam|Fordow|hinterland|limits|Hamas/i.test(ui.museum.usNames.join(" ")), false);
   });
@@ -660,5 +666,20 @@ describe("TrainViewModel", () => {
     assert.equal(fa.museum.usFound, 1);
     assert.match(fa.museum.usNames.join(" "), /حماس/);
     assert.equal(fa.museum.usNames.length, 1);
+  });
+
+  it("two 7-Elevens stack on the convenience store counter", () => {
+    const bag = memoryMuseumStore();
+    const first = new TrainViewModel("iran", "D", "resigned-1979", { museum: bag });
+    first.choose("ir-refuse-letterhead");
+    assert.equal(first.getState().museum.csoFound, 1);
+    const second = new TrainViewModel("iran", "D", "mahsa-2022", { museum: bag });
+    second.choose("ir-fire-morality");
+    const ui = second.getState();
+    assert.equal(ui.museum.csoFound, 2);
+    const joined = ui.museum.csoNames.join(" ");
+    assert.match(joined, /letterhead/);
+    assert.match(joined, /morality/);
+    assert.equal(/Family Protection/.test(joined), false);
   });
 });

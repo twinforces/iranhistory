@@ -10,16 +10,18 @@ function MuseumCell({
   total,
   names,
   hunt,
+  sticky,
 }: {
   label: string;
   found: number;
   total?: number;
   names: readonly string[];
   hunt: string;
+  sticky?: boolean;
 }) {
   const { locale } = useLocale();
   const num = (n: number) => (locale === "fa" ? faDigits(n) : String(n));
-  const native = names.length > 0 ? names.join(". ") : hunt;
+  const native = sticky || names.length === 0 ? hunt : names.join(". ");
   const display = total === undefined ? num(found) : `${num(found)} / ${num(total)}`;
   return (
     <Tooltip disableHoverableContent>
@@ -29,16 +31,13 @@ function MuseumCell({
           <dd className="font-mono text-sm tabular-nums text-fg">{display}</dd>
         </div>
       </TooltipTrigger>
-      <TooltipContent side="top" collisionPadding={12} className="pointer-events-none">
-        {names.length > 0 ? (
-          names.map((name) => (
-            <p key={name} className="font-serif text-sm text-fg">
-              {name}
-            </p>
-          ))
-        ) : (
-          <p className="font-serif text-sm text-fg">{hunt}</p>
-        )}
+      <TooltipContent side="top" collisionPadding={12} className="pointer-events-none max-w-80">
+        {sticky || names.length === 0 ? <p className="font-serif text-sm text-fg">{hunt}</p> : null}
+        {names.map((name) => (
+          <p key={name} className={`font-serif text-sm ${sticky ? "mt-1 text-muted" : "text-fg"}`}>
+            {name}
+          </p>
+        ))}
       </TooltipContent>
     </Tooltip>
   );
@@ -99,12 +98,26 @@ export function FactionBars({
             hunt={t("exitsHunt")}
           />
         </dl>
-        <dl className="mt-2">
+        <dl className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
           <MuseumCell
             label={t("nukesCounter")}
             found={museum.nukesFound}
             names={museum.nukesNames}
             hunt={t("nukesNotYet")}
+          />
+          <MuseumCell
+            label={t("csoCounter")}
+            found={museum.csoFound}
+            names={museum.csoNames}
+            hunt={t("csoBlurb")}
+            sticky
+          />
+          <MuseumCell
+            label={t("memoirsCounter")}
+            found={museum.memoirsFound}
+            names={museum.memoirsNames}
+            hunt={t("memoirsBlurb")}
+            sticky
           />
         </dl>
       </div>

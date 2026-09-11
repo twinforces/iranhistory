@@ -82,6 +82,10 @@ export interface PresentedMuseum {
   iranNames: readonly string[];
   usNames: readonly string[];
   nukesNames: readonly string[];
+  csoFound: number;
+  csoNames: readonly string[];
+  memoirsFound: number;
+  memoirsNames: readonly string[];
 }
 
 export interface PresentedBriefing {
@@ -353,6 +357,15 @@ const EXIT_CAPTION: Record<string, UiKey> = {
   "hamas-us": "exitHamas",
   fordow: "exitImamLives",
   nukes: "exitNukes",
+  "cso-fpl": "csoFpl",
+  "cso-stamp": "csoStamp",
+  "cso-artesh": "csoArtesh",
+  "cso-majlis": "csoMajlis",
+  "cso-chair": "csoChair",
+  "cso-robe": "csoRobe",
+  "cso-green": "csoGreen",
+  "cso-mahsa": "csoMahsa",
+  memoirs: "memoirsFound",
 };
 
 function captionForExit(id: string, locale: Locale): string {
@@ -362,7 +375,7 @@ function captionForExit(id: string, locale: Locale): string {
 }
 
 function presentMuseum(found: ReadonlySet<string>, locale: Locale): PresentedMuseum {
-  const names = (kind: "peace" | "nukes", chair?: Chair) =>
+  const names = (kind: "peace" | "nukes" | "cso" | "memoirs", chair?: Chair) =>
     EXITS.filter((e) => e.kind === kind && (chair === undefined || e.chair === chair) && found.has(e.id)).map((e) =>
       captionForExit(e.id, locale),
     );
@@ -375,6 +388,10 @@ function presentMuseum(found: ReadonlySet<string>, locale: Locale): PresentedMus
     iranNames: names("peace", "iran"),
     usNames: names("peace", "us"),
     nukesNames: names("nukes"),
+    csoFound: names("cso").length,
+    csoNames: names("cso"),
+    memoirsFound: names("memoirs").length,
+    memoirsNames: names("memoirs"),
   };
 }
 

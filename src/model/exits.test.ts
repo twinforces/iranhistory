@@ -15,8 +15,8 @@ describe("peace exits catalog", () => {
     assert.equal(peaceCount("us"), 2);
     assert.equal(peaceCount("iran"), 3);
     assert.equal(EXITS.filter((e) => e.kind === "nukes").length, 1);
-    const ids = EXITS.map((e) => e.id).sort();
-    assert.deepEqual(ids, ["fordow", "hamas-iran", "hamas-us", "hinterland", "limits", "nukes"]);
+    assert.equal(EXITS.filter((e) => e.kind === "cso").length, 8);
+    assert.equal(EXITS.filter((e) => e.kind === "memoirs").length, 1);
   });
 
   it("does not put unfound names in the serialized bag", () => {
@@ -62,5 +62,28 @@ describe("peace exits catalog", () => {
     const again = store.load();
     assert.equal(again.has("hamas-us"), true);
     assert.equal(again.has("fordow"), false);
+  });
+
+  it("7-Eleven letterhead morals tick a convenience store, not a grave", () => {
+    const store = applyChoice(newGame({ chair: "iran", party: "D", cardId: "resigned-1979" }), "ir-refuse-letterhead");
+    assert.deepEqual(detectExits(store), ["cso-stamp"]);
+    assert.equal(store.phase, "playing");
+    const fpl = applyChoice(newGame({ chair: "iran", party: "D", cardId: "veil-1979" }), "ir-keep-fpl");
+    assert.deepEqual(detectExits(fpl), ["cso-fpl"]);
+  });
+
+  it("leaving Hamas is a peace exit, not a convenience store", () => {
+    const leave = applyChoice(newGame({ chair: "iran", party: "D", cardId: "saudi-accord-2023" }), "ir-leave-hamas");
+    assert.deepEqual(detectExits(leave), ["hamas-iran"]);
+  });
+
+  it("Hail Mary is not a memoir; election_loss is", () => {
+    const hail = applyChoice(newGame({ chair: "us", party: "R", cardId: "election-1980" }), "us-hail-mary");
+    assert.deepEqual(detectExits(hail), []);
+    const dumped = {
+      ...newGame({ chair: "us", party: "D", cardId: "election-1980" }),
+      ending: { id: "election_loss" as const, title: "The other party takes the chair", referee: "US death is electoral." },
+    };
+    assert.deepEqual(detectExits(dumped), ["memoirs"]);
   });
 });

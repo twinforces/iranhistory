@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Convenience stores and memoirs
+
+What: Museum counters for Convenience store owners (7-Eleven letterhead morals) and Best selling memoirs (election_loss). Hover is the joke. Unfound names stay off. Hail Mary is not a memoir. Leaving Hamas is not a convenience store.
+
+Why: A moral victory. But the machinery grinds on.
+
+
 ## 2026-09-11 - AL is case-sensitive
 
 What: Bare AL in copy hovers. The match is exact case. Al-Qaeda is a name.

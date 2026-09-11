@@ -52,6 +52,9 @@ describe("Farsi overlay", () => {
     assert.equal(ui("en", "peaceExits"), "Peace exits");
     assert.equal(ui("fa", "peaceExits"), "خروج‌های صلح");
     assert.equal(ui("en", "nukesCounter"), "Iran gets nukes");
+    assert.equal(ui("en", "csoCounter"), "Convenience store owners");
+    assert.match(ui("en", "csoBlurb"), /convenience store/);
+    assert.match(ui("en", "memoirsBlurb"), /best selling memoirs/);
   });
 
   it("applyDocumentLocale sets rtl", () => {

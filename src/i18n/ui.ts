@@ -140,6 +140,21 @@ const EN = {
   exitHamas: "Hamas cut off",
   exitImamLives: "The Imam lives",
   exitNukes: "Breakout hit zero",
+  csoCounter: "Convenience store owners",
+  csoBlurb:
+    "Deposed Iranian leaders defect to the West, claim asylum, work for the CIA for a year on deep background, write the book, open a convenience store with the proceeds. It's a moral victory. But the machinery grinds on.",
+  memoirsCounter: "Best selling memoirs",
+  memoirsBlurb:
+    "Presidents who have to leave office early write best selling memoirs. It's a moral victory. But the machinery grinds on.",
+  csoFpl: "You kept Family Protection",
+  csoStamp: "You refused the letterhead",
+  csoArtesh: "You kept Artesh",
+  csoMajlis: "You defied the Majlis",
+  csoChair: "You refused the chair",
+  csoRobe: "You remained letterhead",
+  csoGreen: "You counted Green",
+  csoMahsa: "You fired the morality police",
+  memoirsFound: "The other party took the chair",
 } as const;
 
 const FA: { [K in keyof typeof EN]: string } = {
@@ -280,6 +295,21 @@ const FA: { [K in keyof typeof EN]: string } = {
   exitHamas: "حماس قطع شد",
   exitImamLives: "امام زنده است",
   exitNukes: "گریز به صفر رسید",
+  csoCounter: "صاحب‌های سوپرمارکت",
+  csoBlurb:
+    "رهبران معزول ایران به غرب پناهنده می‌شوند، یک سال برای سیا پس‌زمینه عمیق کار می‌کنند، کتاب را می‌نویسند، با پولش سوپرمارکت باز می‌کنند. پیروزی اخلاقی است. اما ماشین ادامه می‌دهد.",
+  memoirsCounter: "خاطرات پرفروش",
+  memoirsBlurb:
+    "رئیس‌جمهورهایی که زود صندلی را ترک می‌کنند خاطرات پرفروش می‌نویسند. پیروزی اخلاقی است. اما ماشین ادامه می‌دهد.",
+  csoFpl: "قانون حمایت خانواده را نگه داشتی",
+  csoStamp: "سربرگ را رد کردی",
+  csoArtesh: "ارتش را نگه داشتی",
+  csoMajlis: "مجلس را رد کردی",
+  csoChair: "صندلی را رد کردی",
+  csoRobe: "سربرگ ماندی",
+  csoGreen: "سبز را شمردی",
+  csoMahsa: "پلیس اخلاق را برکنار کردی",
+  memoirsFound: "حزب دیگر صندلی را گرفت",
 };
 
 const TABLE = { en: EN, fa: FA };

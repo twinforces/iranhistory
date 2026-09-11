@@ -1,13 +1,14 @@
 /**
  * What: the off-ramps the time machine is for.
- * Why: most of the rail is locked. Peace exits and the nuke splat are the
- * hunt. Catalog lives here so the chrome cannot invent a sixth exit.
+ * Why: most of the rail is locked. Peace exits, the nuke splat, the 7-Eleven,
+ * and the memoir are the museum. Catalog lives here so the chrome cannot
+ * invent a sixth peace exit.
  */
 import type { Chair, EndingId, GameState } from "./types.ts";
 
 export const EXITS_KEY = "trtw-exits";
 
-export type ExitKind = "peace" | "nukes";
+export type ExitKind = "peace" | "nukes" | "cso" | "memoirs";
 
 export interface ExitDef {
   readonly id: string;
@@ -62,6 +63,69 @@ export const EXITS: readonly ExitDef[] = [
     found: "Breakout hit zero",
     endingId: "nuke_splat",
   },
+  {
+    id: "cso-fpl",
+    chair: "iran",
+    kind: "cso",
+    found: "You kept Family Protection",
+    choiceId: "ir-keep-fpl",
+  },
+  {
+    id: "cso-stamp",
+    chair: "iran",
+    kind: "cso",
+    found: "You refused the letterhead",
+    choiceId: "ir-refuse-letterhead",
+  },
+  {
+    id: "cso-artesh",
+    chair: "iran",
+    kind: "cso",
+    found: "You kept Artesh",
+    choiceId: "ir-artesh-war",
+  },
+  {
+    id: "cso-majlis",
+    chair: "iran",
+    kind: "cso",
+    found: "You defied the Majlis",
+    choiceId: "ir-defy-majles",
+  },
+  {
+    id: "cso-chair",
+    chair: "iran",
+    kind: "cso",
+    found: "You refused the chair",
+    choiceId: "ir-refuse-khamenei",
+  },
+  {
+    id: "cso-robe",
+    chair: "iran",
+    kind: "cso",
+    found: "You remained letterhead",
+    choiceId: "ir-remain-letterhead",
+  },
+  {
+    id: "cso-green",
+    chair: "iran",
+    kind: "cso",
+    found: "You counted Green",
+    choiceId: "ir-count-green",
+  },
+  {
+    id: "cso-mahsa",
+    chair: "iran",
+    kind: "cso",
+    found: "You fired the morality police",
+    choiceId: "ir-fire-morality",
+  },
+  {
+    id: "memoirs",
+    chair: "us",
+    kind: "memoirs",
+    found: "The other party took the chair",
+    endingId: "election_loss",
+  },
 ];
 
 const BY_ID = new Map(EXITS.map((e) => [e.id, e]));
@@ -70,8 +134,12 @@ export function exitById(id: string): ExitDef | undefined {
   return BY_ID.get(id);
 }
 
+export function countKind(kind: ExitKind, chair?: Chair): number {
+  return EXITS.filter((e) => e.kind === kind && (chair === undefined || e.chair === chair)).length;
+}
+
 export function peaceCount(chair: Chair): number {
-  return EXITS.filter((e) => e.kind === "peace" && e.chair === chair).length;
+  return countKind("peace", chair);
 }
 
 /** Which catalog ids this resolve just found. Does not name the rest. */
