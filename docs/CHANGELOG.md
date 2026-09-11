@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-11 - Peace exits at the top
+
+What: Peace exits sit at the top of Play. Iran and US counts, and the hunt sentence, are the first thing on the board. Nukes, convenience stores, and memoirs stay on the meters.
+
+Why: They are the goal. We all like peace.
+
+
 ## 2026-09-11 - Convenience stores and memoirs
 
 What: Museum counters for Convenience store owners (7-Eleven letterhead morals) and Best selling memoirs (election_loss). Hover is the joke. Unfound names stay off. Hail Mary is not a memoir. Leaving Hamas is not a convenience store.

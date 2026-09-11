@@ -102,7 +102,7 @@ const QUESTIONS: { q: string; freeze: string }[] = [
   {
     q: "Peace exits / Iran gets nukes chrome?",
     freeze:
-      "Yes. Museum, not body counts. Found-once, localStorage, survives chair switch. US exits: private Saudi talks (Hamas cut off), stop after Fordow (Imam lives). Iran exits: hinterland 1979, keep JCPOA limits, do not fund Hamas. Nukes is the breakout-zero splat. Convenience store owners ticks the 7-Eleven letterhead morals, not graves. Best selling memoirs ticks election_loss, not Hail Mary, not serve. Hover on those two is the joke. Unfound names stay off the chrome. Totals are the hunt. The rail glossary is the trains-and-exits premise, not a recap slogan. Hindsight is 20/20. There are no time machines in real life. This sim is one.",
+      "Yes. Museum, not body counts. Peace exits sit at the top of Play. They are the goal. Found-once, localStorage, survives chair switch. US exits: private Saudi talks (Hamas cut off), stop after Fordow (Imam lives). Iran exits: hinterland 1979, keep JCPOA limits, do not fund Hamas. Nukes, convenience stores, and memoirs stay on the meters. Nukes is the breakout-zero splat. Convenience store owners ticks the 7-Eleven letterhead morals, not graves. Best selling memoirs ticks election_loss, not Hail Mary, not serve. Hover on those two is the joke. Unfound names stay off the chrome. Totals are the hunt. The rail glossary is the trains-and-exits premise, not a recap slogan. Hindsight is 20/20. There are no time machines in real life. This sim is one.",
   },
   {
     q: "Hormuz",

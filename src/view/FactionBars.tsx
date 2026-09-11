@@ -43,6 +43,36 @@ function MuseumCell({
   );
 }
 
+export function PeaceExits({ museum }: { museum: PresentedMuseum }) {
+  const { t } = useLocale();
+  return (
+    <header className="peace-exits-banner">
+      <div className="min-w-0">
+        <p className="kicker">{t("peaceExits")}</p>
+        <p className="mt-1 font-serif text-sm leading-relaxed text-muted">
+          {t("exitsHunt")}
+        </p>
+      </div>
+      <dl className="grid min-w-[12rem] grid-cols-2 gap-2">
+        <MuseumCell
+          label={t("iranExits")}
+          found={museum.iranFound}
+          total={museum.iranTotal}
+          names={museum.iranNames}
+          hunt={t("exitsHunt")}
+        />
+        <MuseumCell
+          label={t("usExits")}
+          found={museum.usFound}
+          total={museum.usTotal}
+          names={museum.usNames}
+          hunt={t("exitsHunt")}
+        />
+      </dl>
+    </header>
+  );
+}
+
 export function FactionBars({
   bars,
   clocks,
@@ -81,24 +111,7 @@ export function FactionBars({
         ))}
       </dl>
       <div className="museum-strip">
-        <p className="kicker mb-2">{t("peaceExits")}</p>
-        <dl className="grid grid-cols-2 gap-2">
-          <MuseumCell
-            label={t("iranExits")}
-            found={museum.iranFound}
-            total={museum.iranTotal}
-            names={museum.iranNames}
-            hunt={t("exitsHunt")}
-          />
-          <MuseumCell
-            label={t("usExits")}
-            found={museum.usFound}
-            total={museum.usTotal}
-            names={museum.usNames}
-            hunt={t("exitsHunt")}
-          />
-        </dl>
-        <dl className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <dl className="grid grid-cols-1 gap-2">
           <MuseumCell
             label={t("nukesCounter")}
             found={museum.nukesFound}

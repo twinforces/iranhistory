@@ -1,5 +1,12 @@
 # RECENTGOALS
 
+## Peace exits at the top, 2026-09-11
+
+What: Peace exits are the first chrome on Play. The meters keep the other jokes.
+
+Why: The hunt is the point of the time machine.
+
+
 ## Convenience stores and memoirs, 2026-09-11
 
 What: CSO counter ticks 7-Eleven letterhead morals. Memoirs tick a president forced out. Hover is the joke. Not body counts.
